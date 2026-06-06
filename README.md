@@ -104,8 +104,8 @@ Apresentacoes publicas. Self-contained (sem dependencias externas em runtime).
 
 | Estudo | URL | Status |
 |--------|-----|--------|
-| Rio Tietê (100K) | https://v1n1c1usjs.github.io/Research_FREnTE/ | Publicado |
-| Clarks Hill Lake | https://v1n1c1usjs.github.io/Research_FREnTE/clarks-hill/ | Em desenvolvimento |
+| Rio Tietê (100K) | https://viniciusjsdev.github.io/Research_FREnTE/ | Publicado |
+| Clarks Hill Lake | https://viniciusjsdev.github.io/Research_FREnTE/clarks-hill/ | Em desenvolvimento |
 
 ```bash
 python -m http.server 8000
