@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bacia Hidrografica de Jupia - Projeto FREnTE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+:root { --gsu-blue:#011E42; --gsu-gold:#87714D; --gsu-gold-light:#C4A86C; }
+body { font-family:'Inter',sans-serif; background:#f8fafc; color:#0f172a; }
+h1,h2,h3 { font-family:'Bitter',serif; }
+.material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; vertical-align:middle; }
+.gold-bar { height:3px; background:linear-gradient(90deg,#87714D,#C4A86C,#87714D); border-radius:999px; }
+.badge { display:inline-flex; align-items:center; font-size:10px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap; text-transform:uppercase; letter-spacing:.06em; }
+.field-label { font-weight:700; font-size:10px; color:#64748b; text-transform:uppercase; letter-spacing:.06em; display:flex; align-items:center; }
+.logo-chip { background:white; border-radius:.75rem; padding:.35rem .6rem; display:flex; align-items:center; justify-content:center; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<header style="background:var(--gsu-blue)" class="sticky top-0 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="../assets/100K.webp" alt="Projeto 100K" class="h-9 object-contain">
+      <div class="w-px h-7 bg-white/20"></div>
+      <div class="logo-chip"><img src="../assets/Georgia.png" alt="Georgia State University" class="h-7 object-contain"></div>
+      <div class="logo-chip"><img src="../assets/SENAI.svg" alt="SENAI" class="h-6 object-contain"></div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="hidden sm:inline-block text-white/40 text-xs">Projeto FREnTE - EDA</span>
+      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold" style="background:rgba(251,191,36,.15);color:#FCD34D;border:1px solid rgba(251,191,36,.25)">Novo recorte</span>
+    </div>
+  </div>
+</header>
+
+<section style="background:var(--gsu-blue)" class="pb-10 pt-8">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="text-xs font-semibold tracking-widest mb-2 uppercase" style="color:#87714D">Analise Exploratoria - Bacia Hidrografica de Jupia</p>
+    <h1 class="text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+      Bacia Hidrografica de Jupia<br>
+      <span style="color:#C4A86C">Sistema contribuinte Paranaiba, Grande, Tiete e no Parana/Jupia</span>
+    </h1>
+    <p class="text-white/75 text-sm lg:text-base max-w-4xl leading-relaxed mb-6">
+      Este relatorio cria um novo link analitico para Jupia. A leitura deixa de tratar Jupia como simples extensao da cascata do Tiete e passa a considera-lo como no integrador do Alto Parana, reunindo os sinais operacionais dos rios Paranaiba, Grande e Tiete, alem do proprio trecho Parana/Jupia e do eixo Sucuriu. A coleta ANA encontrou matches diretos para UHE JUPIA RIO SUCURIU e UHE JUPIA SUCURIU no inventario Hidro; nos dados ONS locais a serie operacional permanece como JUPIA na bacia PARANA.
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="rounded-xl px-4 py-3" style="background:rgba(255,255,255,.07)">
+        <span class="material-symbols-outlined text-2xl" style="color:#C4A86C">water</span>
+        <p class="text-white font-bold text-lg mt-1">27</p>
+        <p class="text-white/50 text-xs">Reservatorios ONS · Grande, Paranaiba, Tiete e Parana/Jupia</p>
+      </div>
+    
+
+      <div class="rounded-xl px-4 py-3" style="background:rgba(255,255,255,.07)">
+        <span class="material-symbols-outlined text-2xl" style="color:#C4A86C">travel_explore</span>
+        <p class="text-white font-bold text-lg mt-1">3</p>
+        <p class="text-white/50 text-xs">Matches ANA · UHE JUPIA SUCURIU / Rio Sucuriu</p>
+      </div>
+    
+
+      <div class="rounded-xl px-4 py-3" style="background:rgba(255,255,255,.07)">
+        <span class="material-symbols-outlined text-2xl" style="color:#C4A86C">monitoring</span>
+        <p class="text-white font-bold text-lg mt-1">8</p>
+        <p class="text-white/50 text-xs">Series ANA · 4 estacoes com CSV</p>
+      </div>
+    
+
+      <div class="rounded-xl px-4 py-3" style="background:rgba(255,255,255,.07)">
+        <span class="material-symbols-outlined text-2xl" style="color:#C4A86C">calendar_month</span>
+        <p class="text-white font-bold text-lg mt-1">2000-2025</p>
+        <p class="text-white/50 text-xs">Janela ONS · 26 anos e 248.383 registros</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 py-4"><div class="gold-bar"></div></div>
+
+<div class="max-w-6xl mx-auto px-6 mb-6">
+  <div class="rounded-xl border border-slate-200 bg-white px-6 py-4 grid lg:grid-cols-3 gap-5">
+    <div class="flex items-start gap-3">
+      <span class="material-symbols-outlined text-xl flex-shrink-0 mt-0.5" style="color:#1B75BB">travel_explore</span>
+      <div>
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Coleta e fontes</p>
+        <p class="text-sm text-slate-700"><strong>ONS + ANA/Hidro + IBGE + CETESB/ANA</strong><br>Run: <span class="font-mono text-xs">operational-collect-jupia-20260607-225450</span><br>21 artefatos coletados de 57 alvos tentados.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="material-symbols-outlined text-xl flex-shrink-0 mt-0.5" style="color:#0F7B5F">pin_drop</span>
+      <div>
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">UHE Jupia Sucuriu</p>
+        <ul class="text-sm text-slate-700 list-disc pl-4 space-y-1"><li><strong>1952023</strong> - UHE JUPIÁ RIO SUCURIÚ (sem rio no registro)</li><li><strong>63001850</strong> - UHE JUPIÁ RIO SUCURIÚ (RIO SUCURIÚ)</li><li><strong>63003300</strong> - UHE JUPIÁ SUCURIÚ (RIO PARANÁ)</li></ul>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="material-symbols-outlined text-xl flex-shrink-0 mt-0.5" style="color:#B41E1E">warning</span>
+      <div>
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Lacunas preservadas</p>
+        <ul class="text-sm text-slate-700 list-disc pl-4 space-y-1"><li>A serie operacional ONS local continua identificada como JUPIA, nao como SUCURIU; a identidade SUCURIU foi confirmada no inventario ANA/Hidro.</li><li>O codigo ANA 63003300 (UHE JUPIA SUCURIU) foi encontrado no inventario, mas nao possui CSV historico no branch dev do repositorio ANA baixado nesta rodada.</li><li>Foram preservados PDFs/HTML de qualidade da agua e poluicao; a extracao parametrica desses documentos ainda deve virar uma camada propria para correlacao.</li><li>Dados do Tiete ja usados no relatorio anterior entram aqui como uma subcamada contribuinte, nao como narrativa principal.</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-xl border border-slate-200 bg-white px-6 py-3 mt-3">
+    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Artefatos derivados</p>
+    <p class="text-xs text-slate-700 font-mono leading-relaxed">D:\Projetos\Github_ViniciusJ\Research_FREnTE\data\staging\jupia_bacia\ons_jupia_contributing_system_daily.csv<br>D:\Projetos\Github_ViniciusJ\Research_FREnTE\data\analytic\jupia_bacia\jupia_system_monthly.csv<br>D:\Projetos\Github_ViniciusJ\Research_FREnTE\data\analytic\jupia_bacia\jupia_coverage_matrix.csv<br>D:\Projetos\Github_ViniciusJ\Research_FREnTE\data\staging\jupia_bacia\ana_jupia_station_inventory_matches.csv<br>D:\Projetos\Github_ViniciusJ\Research_FREnTE\data\staging\jupia_bacia\ana_jupia_station_series_coverage.csv</p>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-6 pb-16">
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(27,117,187,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#1B75BB">account_tree</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(27,117,187,.10);color:#1B75BB">Estrutura</span>
+        <span class="text-xs text-slate-400 font-mono">FIG1</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Sistema contribuinte de Jupia</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig1_basin_system_overview.svg" alt="Sistema contribuinte de Jupia" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Diagrama dos quatro blocos operacionais usados nesta primeira leitura: Grande, Paranaiba, Tiete e Parana/Jupia.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Jupia deve ser lido como no integrador do Alto Parana. O Tiete continua relevante, mas agora aparece junto com Grande, Paranaiba e o eixo Sucuriu/Jupia confirmado no inventario ANA.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(27,117,187,.10);border-left:3px solid #1B75BB">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#1B75BB">star</span>
+      <p class="text-sm font-semibold" style="color:#1B75BB">A unidade analitica deixa de ser apenas a cascata do Tiete e passa a ser a bacia contribuinte integrada de Jupia.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(15,123,95,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#0F7B5F">waves</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(15,123,95,.10);color:#0F7B5F">Hidrologia</span>
+        <span class="text-xs text-slate-400 font-mono">FIG2</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Vazao afluente mensal por grande contribuinte</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig2_monthly_inflow_by_basin.svg" alt="Vazao afluente mensal por grande contribuinte" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Serie mensal media de vazao afluente por bacia operacional ONS, agregando os reservatorios selecionados em cada contribuinte.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">A comparacao mostra a escala relativa dos contribuintes que condicionam Jupia. Grande e Paranaiba ampliam fortemente o contexto hidrologico em relacao a uma leitura Tiete-only.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(15,123,95,.10);border-left:3px solid #0F7B5F">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#0F7B5F">star</span>
+      <p class="text-sm font-semibold" style="color:#0F7B5F">O relatorio de Jupia precisa reunir os tres grandes rios em vez de reaproveitar apenas a narrativa do Tiete.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(199,93,44,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#C75D2C">water_drop</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(199,93,44,.10);color:#C75D2C">Jupia</span>
+        <span class="text-xs text-slate-400 font-mono">FIG3</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">No Jupia: afluencia, defluencia e volume util</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig3_jupia_node_series.svg" alt="No Jupia: afluencia, defluencia e volume util" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Serie mensal da UHE Jupia no ONS, com vazoes afluente/defluente e volume util medio.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">A serie posiciona Jupia como receptor operacional do sistema. A coleta complementar ja identificou os codigos ANA ligados a UHE Jupia/Sucuriu, permitindo uma ponte posterior com series convencionais e qualidade da agua.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(199,93,44,.10);border-left:3px solid #C75D2C">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#C75D2C">star</span>
+      <p class="text-sm font-semibold" style="color:#C75D2C">Nos dados ONS, o ponto auditavel e JUPIA; no inventario ANA, UHE JUPIA SUCURIU aparece com codigo 63003300.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(180,30,30,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#B41E1E">grid_view</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(180,30,30,.10);color:#B41E1E">Estresse hidrico</span>
+        <span class="text-xs text-slate-400 font-mono">FIG4</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Anos criticos por reservatorio</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig4_annual_min_volume_heatmap.svg" alt="Anos criticos por reservatorio" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Mapa de calor do volume util minimo anual para os reservatorios selecionados.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">O painel permite identificar anos de estresse sincronizado e diferenciar respostas de cabeceira, contribuintes e no receptor.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(180,30,30,.10);border-left:3px solid #B41E1E">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#B41E1E">star</span>
+      <p class="text-sm font-semibold" style="color:#B41E1E">Eventos secos devem ser avaliados como sinais sistêmicos, nao como anomalias isoladas de uma unica cascata.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(107,72,168,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#6B48A8">bar_chart</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(107,72,168,.10);color:#6B48A8">Cobertura</span>
+        <span class="text-xs text-slate-400 font-mono">FIG5</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Cobertura de estacoes e escala hidrologica</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig5_reservoir_count_and_flow.svg" alt="Cobertura de estacoes e escala hidrologica" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Comparacao entre numero de reservatorios ONS selecionados e vazao media por bacia contribuinte.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">O grafico explicita por que a demanda pede Jupia: a bacia ampliada agrega mais pontos operacionais e maior diversidade hidrologica do que a leitura Tiete isolada.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(107,72,168,.10);border-left:3px solid #6B48A8">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#6B48A8">star</span>
+      <p class="text-sm font-semibold" style="color:#6B48A8">Paranaiba e Grande acrescentam densidade operacional e contexto hidrologico ao no Jupia.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(120,113,108,.12)">
+      <span class="material-symbols-outlined text-xl" style="color:#57534E">fact_check</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(120,113,108,.12);color:#57534E">Auditoria</span>
+        <span class="text-xs text-slate-400 font-mono">FIG6</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Cobertura temporal da base usada</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig6_coverage_matrix.svg" alt="Cobertura temporal da base usada" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Matriz de cobertura temporal por bacia e reservatorio, comparada ao alvo minimo de 20 anos.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">A base ONS local atende ao alvo temporal para os principais reservatorios selecionados. A coleta operacional acrescenta inventario ANA e documentos brutos para qualidade/poluicao, mas a serie exata 63003300 ainda nao veio como CSV historico.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(120,113,108,.12);border-left:3px solid #57534E">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#57534E">star</span>
+      <p class="text-sm font-semibold" style="color:#57534E">A camada Jupia agora tem descoberta, inventario de estacoes e coleta bruta rastreavel; falta extrair os documentos de qualidade/poluicao para variaveis tabulares.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-10">
+  <div class="px-8 pt-7 pb-4 flex items-start gap-4">
+    <div class="mt-0.5 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(27,117,187,.10)">
+      <span class="material-symbols-outlined text-xl" style="color:#1B75BB">dataset</span>
+    </div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <span class="badge" style="background:rgba(27,117,187,.10);color:#1B75BB">Coleta</span>
+        <span class="text-xs text-slate-400 font-mono">FIG7</span>
+      </div>
+      <h2 class="text-xl font-bold text-slate-800">Evidencia de coleta: estacoes Jupia/Sucuriu</h2>
+    </div>
+  </div>
+  <div class="px-8 pb-2"><div class="gold-bar"></div></div>
+  <div class="px-8 py-5"><img src="figures/fig7_station_collection_evidence.svg" alt="Evidencia de coleta: estacoes Jupia/Sucuriu" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white"></div>
+  <div class="px-8 pb-8 grid lg:grid-cols-2 gap-6">
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">description</span>O QUE MOSTRA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">Resumo dos matches ANA/Hidro para UHE Jupia/Sucuriu e das series historicas convencionais disponiveis no repositorio ANA/GitHub.</p>
+    </div>
+    <div>
+      <p class="field-label mb-2"><span class="material-symbols-outlined text-sm mr-1">lightbulb</span>INTERPRETACAO ANALITICA</p>
+      <p class="text-sm text-slate-600 leading-relaxed">A demanda UHE JUPIA SUCURIU foi localizada no inventario oficial, mas a disponibilidade de CSV historico varia por codigo. Isso separa identidade da estacao, disponibilidade de serie e lacuna operacional.</p>
+    </div>
+    <div class="lg:col-span-2 rounded-lg px-5 py-3 flex items-start gap-3" style="background:rgba(27,117,187,.10);border-left:3px solid #1B75BB">
+      <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5" style="color:#1B75BB">star</span>
+      <p class="text-sm font-semibold" style="color:#1B75BB">Foram encontrados 3 matches diretos para a estacao solicitada e 8 series CSV convencionais em codigos proximos.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--gsu-blue)" class="py-8">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <p class="text-white/40 text-xs">Projeto FREnTE - Bacia Hidrografica de Jupia - Dados: ONS, ANA/Hidro, ANA GitHub, IBGE, CETESB/ANA - Gerado automaticamente</p>
+  </div>
+</footer>
+</body>
+</html>

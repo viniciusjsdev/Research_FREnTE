@@ -106,11 +106,13 @@ Apresentacoes publicas. Self-contained (sem dependencias externas em runtime).
 |--------|-----|--------|
 | Rio Tietê (100K) | https://viniciusjsdev.github.io/Research_FREnTE/ | Publicado |
 | Clarks Hill Lake | https://viniciusjsdev.github.io/Research_FREnTE/clarks-hill/ | Em desenvolvimento |
+| Bacia Hidrográfica de Jupiá | https://viniciusjsdev.github.io/Research_FREnTE/jupia/ | Em desenvolvimento |
 
 ```bash
 python -m http.server 8000
 # Tietê:       http://localhost:8000/docs/index.html
 # Clarks Hill: http://localhost:8000/docs/clarks-hill/index.html
+# Jupiá:       http://localhost:8000/docs/jupia/index.html
 ```
 
 ## Variaveis de ambiente

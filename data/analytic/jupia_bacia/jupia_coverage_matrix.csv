@@ -1,0 +1,28 @@
+basin_key,basin_label,reservoir_key,reservoir_label,period_start,period_end,records,years,target_years,coverage_gap_years,coverage_status
+GRANDE,Rio Grande,A. VERMELHA,Agua Vermelha,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,FURNAS,Furnas,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,IGARAPAVA,Igarapava,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,L. C. BARRETO,Luis Carlos Barreto,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,MARIMBONDO,Marimbondo,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,P. COLOMBIA,Porto Colombia,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+GRANDE,Rio Grande,VOLTA GRANDE,Volta Grande,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANA,Rio Parana / Jupia,I. SOLTEIRA,Ilha Solteira,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANA,Rio Parana / Jupia,ILHA + T. IRMAOS,Ilha Solteira + Tres Irmaos,2022-01-01,2025-12-31,1461,4,20,16,below_target
+PARANA,Rio Parana / Jupia,JUPIA,Jupia,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANA,Rio Parana / Jupia,PORTO PRIMAVERA,Porto Primavera,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,BATALHA,Batalha,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,C. DOURADA,Cachoeira Dourada,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,CORUMBA,Corumba,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,CORUMBA-3,Corumba-3,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,CORUMBA-4,Corumba-4,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,EMBORCACAO,Emborcacao,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,ITUMBIARA,Itumbiara,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,MIRANDA,Miranda,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,NOVA PONTE,Nova Ponte,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+PARANAIBA,Rio Paranaiba,SAO SIMAO,Sao Simao,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,B. BONITA,Barra Bonita,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,BARIRI,Bariri,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,IBITINGA,Ibitinga,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,N. AVANHANDAVA,Nova Avanhandava,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,PROMISSAO,Promissao,2000-01-01,2025-12-31,9497,26,20,0,meets_target
+TIETE,Rio Tiete,TRES IRMAOS,Tres Irmaos,2000-01-01,2025-12-31,9497,26,20,0,meets_target

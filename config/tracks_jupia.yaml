@@ -1,0 +1,162 @@
+# ============================================================
+# Projeto 100K - Trilhas tematicas para Bacia Hidrografica de Jupia
+# ============================================================
+# Objetivo: descoberta ampla, mas priorizando fontes conhecidas primeiro.
+# Periodo alvo: 20 anos quando a fonte permitir.
+# ============================================================
+
+- research_track: n1_jupia_sucuriu_station_known_sources
+  chat_label: chat-jupia-sucuriu-estacao
+  search_profile: official_data_portals
+  target_intent: dataset_discovery
+  research_question: >
+    Qual e o identificador oficial e como acessar dados da estacao UHE JUPIA SUCURIU
+    em ANA/SNIRH/HidroWeb/Telemetria, ONS, SAR/ANA ou outros portais oficiais?
+  task_prompt: >
+    Priorize fontes oficiais conhecidas: ANA HidroWeb, SNIRH, Hidro Telemetria,
+    Metadados ANA, ONS Dados Abertos, SAR/ANA, DAEE/SP e IMASUL/MS. Busque
+    exatamente "UHE JUPIA SUCURIU", "JUPIA SUCURIU", "UHE JUPIA", "Jupia Sucuriu",
+    "Eng Souza Dias Sucuriu", "Rio Sucuriu Jupia" e variações sem acento. Retorne
+    paginas com codigo de estacao, endpoint, CSV, API, arquivo ou instrucao de
+    download. Confirmar tipo de dado: vazao, nivel, telemetria, qualidade da agua,
+    operacao de reservatorio ou posto fluviometrico.
+  priority: high
+
+- research_track: n1_geografia_bacia_jupia_ottobacias
+  chat_label: chat-geografia-bacia-jupia
+  search_profile: geospatial_data
+  target_intent: dataset_discovery
+  research_question: >
+    Quais datasets delimitam a bacia contribuinte de Jupia incluindo Paranaiba,
+    Grande, Tiete, Parana e Sucuriu?
+  task_prompt: >
+    Busque Ottobacias ANA, limites de bacias, rede hidrografica, trechos de rio,
+    unidades de planejamento, comites de bacia e shapefiles oficiais para delimitar
+    o recorte Jupia. Priorize ANA Metadados/SNIRH, IBGE, MapBiomas Agua,
+    DAEE/SP, IGAM/MG, SEMAD/GO e IMASUL/MS. Procurar links diretos, WFS, SHP,
+    GeoPackage, CSV ou API. A busca deve explicitar Paranaiba, Grande, Tiete,
+    Sucuriu e Alto Parana.
+  priority: high
+
+- research_track: n2_operacao_reservatorios_ons_sar
+  chat_label: chat-ons-sar-operacao-jupia
+  search_profile: official_data_portals
+  target_intent: dataset_discovery
+  research_question: >
+    Quais series operacionais de reservatorios existem para o sistema contribuinte
+    de Jupia em ONS, SAR/ANA e portais oficiais?
+  task_prompt: >
+    Priorize ONS Dados Abertos e SAR/ANA para series de afluencia, defluencia,
+    vazao natural, volume util, nivel, armazenamento e operacao. Recorte:
+    Paranaiba (Itumbiara, Sao Simao, Emborcacao, Nova Ponte), Grande (Furnas,
+    Marimbondo, Agua Vermelha, Porto Colombia), Tiete (Barra Bonita a Tres Irmaos)
+    e Parana/Jupia (Ilha Solteira, Jupia). Buscar dados diarios/mensais com alvo
+    de 20 anos e endpoints determinísticos.
+  priority: high
+
+- research_track: n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu
+  chat_label: chat-ana-hidroweb-hidrologia
+  search_profile: monitoring_sources
+  target_intent: dataset_discovery
+  research_question: >
+    Quais estacoes ANA/HidroWeb/SNIRH fornecem vazao, nivel, chuva ou telemetria
+    para Jupia, Sucuriu, Parana, Paranaiba, Grande e Tiete?
+  task_prompt: >
+    Buscar postos fluviometricos, pluviometricos e telemetricos no HidroWeb/SNIRH
+    para os rios Parana, Sucuriu, Paranaiba, Grande e Tiete, priorizando entorno
+    de Tres Lagoas, Castilho, Andradina, Ilha Solteira, Itapura e Pereira Barreto.
+    Procurar APIs, arquivos HidroWeb, series historicas, codigo de estacao,
+    periodo de dados e parametros. Alvo temporal: 2000-2025 ou maior.
+  priority: high
+
+- research_track: n3_qualidade_agua_cetesb_ana_infoaguas
+  chat_label: chat-qualidade-agua-jupia
+  search_profile: monitoring_sources
+  target_intent: dataset_discovery
+  research_question: >
+    Quais dados de qualidade da agua existem para Jupia e sua bacia contribuinte,
+    incluindo Tiete, Parana, Sucuriu, Grande e Paranaiba?
+  task_prompt: >
+    Priorize CETESB InfoAguas e relatorios de aguas interiores para SP, ANA/SNIRH,
+    HidroWeb qualidade da agua, IGAM/MG para Grande/Paranaiba, SEMAD/GO e IMASUL/MS
+    para Sucuriu/Mato Grosso do Sul. Parametros prioritarios: OD, pH, temperatura,
+    condutividade, turbidez, solidos suspensos, DBO, DQO, nitrogenio, fosforo,
+    clorofila-a, IET, IQA e metais quando disponiveis. Buscar series com 20 anos
+    quando possivel e endpoints/downloads.
+  priority: high
+
+- research_track: n3_poluicao_saneamento_efluentes_outorgas
+  chat_label: chat-poluicao-saneamento-jupia
+  search_profile: official_data_portals
+  target_intent: dataset_discovery
+  research_question: >
+    Quais fontes descrevem poluicao, esgoto, efluentes, outorgas, cargas organicas
+    e pressoes urbanas/agroindustriais na bacia contribuinte de Jupia?
+  task_prompt: >
+    Buscar SNIS Serie Historica, Atlas Esgotos/ANA, CETESB, DAEE/SP, IGAM/MG,
+    SEMAD/GO, IMASUL/MS, comites de bacia e relatorios oficiais. Incluir municipios
+    e regioes de Tres Lagoas, Castilho, Andradina, Ilha Solteira, Pereira Barreto,
+    bacias Grande e Paranaiba, medio/baixo Tiete e Sucuriu. Procurar dados de
+    coleta/tratamento de esgoto, DBO, ETEs, cargas, outorgas, efluentes industriais,
+    qualidade de aterros e fontes pontuais/difusas.
+  priority: high
+
+- research_track: n3_sedimentos_turbidez_assoreamento_jupia
+  chat_label: chat-sedimentos-turbidez-jupia
+  search_profile: academic_knowledge
+  target_intent: dataset_discovery
+  research_question: >
+    Quais dados e estudos existem sobre sedimentos, turbidez, solidos suspensos,
+    assoreamento ou transporte hidrossedimentologico no sistema de Jupia?
+  task_prompt: >
+    Buscar dados oficiais e literatura sobre sedimentos no Rio Parana, Jupia,
+    Rio Sucuriu, Rio Tiete, Rio Grande e Rio Paranaiba. Priorizar ANA/SNIRH,
+    HidroWeb, CPRM/SGB, universidades, artigos, teses e relatorios tecnicos com
+    tabelas ou dados. Parametros: turbidez, TSS/SST, sedimento em suspensao,
+    granulometria, assoreamento, batimetria, carga solida e series historicas.
+  priority: medium
+
+- research_track: n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge
+  chat_label: chat-uso-solo-pressao-jupia
+  search_profile: geospatial_data
+  target_intent: dataset_discovery
+  research_question: >
+    Quais dados de uso do solo, agropecuaria, queimadas e desmatamento ajudam a
+    explicar pressoes na bacia contribuinte de Jupia?
+  task_prompt: >
+    Priorize MapBiomas, MapBiomas Agua, MapBiomas Alerta, INPE BDQueimadas,
+    TerraBrasilis, IBGE/SIDRA/PAM/PPM e bases estaduais. Recorte: Paranaiba,
+    Grande, Tiete, Alto Parana e Sucuriu. Buscar series 1985-2025 quando possivel,
+    classes de agricultura, pastagem, cana, silvicultura, areas urbanas, agua,
+    vegetacao nativa, queimadas e transicoes de uso.
+  priority: medium
+
+- research_track: n2_clima_chuva_seca_jupia
+  chat_label: chat-clima-chuva-seca-jupia
+  search_profile: monitoring_sources
+  target_intent: dataset_discovery
+  research_question: >
+    Quais dados de precipitacao, temperatura, seca e clima existem para explicar
+    variabilidade hidrologica na bacia de Jupia?
+  task_prompt: >
+    Buscar INMET/BDMEP, ANA pluviometria, CHIRPS, ERA5, CEMADEN, CPTEC/INPE,
+    dados estaduais e indices de seca para Alto Parana, Paranaiba, Grande, Tiete
+    e Sucuriu. Priorizar series de 20 anos ou mais, formatos CSV/API/NetCDF e
+    cobertura espacial adequada para correlacao com vazao e volume.
+  priority: medium
+
+- research_track: n4_literatura_contexto_integrado_jupia
+  chat_label: chat-literatura-integrada-jupia
+  search_profile: academic_knowledge
+  target_intent: academic_knowledge
+  research_question: >
+    Quais artigos, teses e relatorios integrados ajudam a interpretar Jupia como
+    no receptor dos rios Paranaiba, Grande e Tiete?
+  task_prompt: >
+    Buscar literatura sobre UHE Jupia, reservatorio de Jupia, Alto Parana,
+    confluencia Tiete-Parana, Rio Sucuriu, sedimentos, materia organica,
+    eutrofizacao, qualidade da agua, contaminantes, pesca/ecologia e operacao.
+    Priorizar estudos com dados primarios, tabelas, mapas, series ou metodologia
+    replicavel. Incluir repositorios UNESP, USP, UFG, UFMS, UEMS, UFMG e artigos
+    SciELO/Google Scholar.
+  priority: medium

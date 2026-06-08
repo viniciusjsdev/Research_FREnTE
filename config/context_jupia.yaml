@@ -1,0 +1,104 @@
+# ============================================================
+# Projeto 100K - Contexto mestre para Bacia Hidrografica de Jupia
+# ============================================================
+
+context_id: ctx-jupia-bacia-v1
+
+article_goal: >
+  Caracterizar a bacia hidrografica contribuinte de Jupia como no integrador do
+  Alto Parana, reunindo os sinais dos rios Paranaiba, Grande e Tiete, alem do
+  trecho do Rio Parana e do Rio Sucuriu associados a UHE Jupia. O objetivo e
+  produzir um relatorio no mesmo padrao do Rio Tiete e de Clarks Hill, mas com
+  recorte proprio de Jupia: comportamento hidrologico, operacao de reservatorios,
+  qualidade da agua, poluicao, uso do solo, saneamento, sedimentos/turbidez e
+  pressoes ambientais que possam apoiar correlacoes analiticas posteriores.
+
+geographic_scope:
+  # --- No receptor principal ---
+  - "Reservatorio e UHE Jupia / Eng. Souza Dias, no Rio Parana, entre Tres Lagoas (MS) e Castilho/Andradina (SP)"
+  - "Estacao alvo mencionada pelo usuario: UHE JUPIA SUCURIU; tratar como alvo prioritario de busca/coleta e confirmar identificador oficial, codigo de estacao, portal e periodo"
+  - "Confluencia do Rio Tiete com o Rio Parana a montante/influencia de Jupia; dados do Tiete ja integram parte da bacia contribuinte"
+  - "Rio Sucuriu e sua conexao com o sistema de Jupia, incluindo estacoes hidrologicas ou de qualidade da agua disponiveis"
+
+  # --- Grandes contribuintes a montante ---
+  - "Rio Paranaiba: bacia contribuinte com reservatorios e estacoes a montante do Alto Parana, incluindo Itumbiara, Sao Simao, Emborcacao, Nova Ponte e demais pontos ONS/ANA"
+  - "Rio Grande: bacia contribuinte com reservatorios e estacoes a montante do Alto Parana, incluindo Furnas, Marimbondo, Agua Vermelha, Porto Colombia, Volta Grande e demais pontos ONS/ANA"
+  - "Rio Tiete: corredor Sao Paulo -> Barra Bonita -> Bariri -> Ibitinga -> Promissao -> Nova Avanhandava -> Tres Irmaos -> confluencia com o Parana"
+  - "Rio Parana / Alto Parana: Ilha Solteira, Jupia e trechos a montante/jusante necessarios para interpretar o no receptor"
+
+  # --- Recorte espacial de busca ampla ---
+  - "Estados prioritarios: Sao Paulo, Mato Grosso do Sul, Minas Gerais, Goias, Distrito Federal e porcoes relevantes do Alto Parana"
+  - "Municipios e regioes-chave: Tres Lagoas, Castilho, Andradina, Pereira Barreto, Ilha Solteira, Itapura, Santa Fe do Sul, Rubineia e entorno do reservatorio de Jupia"
+  - "Unidades hidrograficas: Bacia do Rio Parana, sub-bacias Paranaiba, Grande, Tiete e Sucuriu; usar Ottobacias/ANA quando disponivel"
+
+thematic_axes:
+  # Nivel 1 - Contexto fisico e bacia
+  - delimitacao da bacia contribuinte de Jupia e conexao Alto Parana
+  - rede hidrografica, ottobacias, estações e pontos de monitoramento
+  - clima, precipitacao, seca e variabilidade hidroclimatica
+  - uso e cobertura do solo, agricultura, urbanizacao e mudancas na paisagem
+
+  # Nivel 2 - Sinais hidrologicos e operacionais
+  - vazao, nivel, fluviometria e telemetria ANA/HidroWeb/SNIRH
+  - operacao de reservatorios ONS/SAR/ANA no Paranaiba, Grande, Tiete e Parana/Jupia
+  - afluencia, defluencia, vazao natural, volume util e tempo de residencia quando calculavel
+  - identificacao e coleta especifica da estacao UHE JUPIA SUCURIU
+
+  # Nivel 3 - Qualidade da agua e poluicao
+  - "qualidade da agua em rios e reservatorios: OD, pH, temperatura, turbidez, condutividade, DBO, DQO, nutrientes, clorofila-a, solidos suspensos"
+  - poluentes, efluentes, outorgas, saneamento, cargas organicas e fontes pontuais/difusas
+  - sedimentos, turbidez, assoreamento e transporte de material particulado
+  - indicadores oficiais CETESB, ANA, SNIRH, InfoAguas, SNIS, MapBiomas, INPE, IBGE e orgaos estaduais
+
+  # Nivel 4 - Interpretacao e correlacao
+  - relacao entre comportamento da bacia, hidrologia, operacao, poluicao e resposta do reservatorio de Jupia
+  - series temporais com alvo minimo de 20 anos quando a fonte permitir
+  - lacunas de cobertura por rio, fonte, variavel e estacao
+
+preferred_sources:
+  # Fontes conhecidas - prioridade maxima
+  - "ONS Dados Abertos (https://dados.ons.org.br/) - dados hidrologicos diarios de reservatorios"
+  - "ANA/SNIRH HidroWeb (https://www.snirh.gov.br/hidroweb) - estacoes fluviometricas, pluviometricas e qualidade da agua"
+  - "ANA Telemetria / Hidro Telemetria (https://www.snirh.gov.br/hidrotelemetria/) - estacoes telemetricas, incluindo busca por Jupia/Sucuriu"
+  - "ANA Metadados / Catalogo SNIRH (https://metadados.snirh.gov.br/) - datasets, estacoes e recortes hidrogeograficos"
+  - "SAR/ANA - acompanhamento de reservatorios e volumes"
+  - "CETESB InfoAguas / aguas interiores - qualidade da agua em SP, incluindo Tiete, Parana e reservatorios"
+  - "SNIS Serie Historica - saneamento municipal, coleta e tratamento de esgoto"
+  - "MapBiomas - uso e cobertura do solo, transicoes e agropecuaria"
+  - "INPE BDQueimadas e TerraBrasilis - focos de calor e desmatamento"
+  - "IBGE/SIDRA - agropecuaria, demografia e municipios"
+
+  # Fontes complementares a buscar
+  - "IGAM/MG - qualidade da agua e monitoramento nas bacias Grande e Paranaiba em Minas Gerais"
+  - "SEMAD/GO e orgaos de recursos hidricos de Goias - Paranaiba e afluentes"
+  - "IMASUL/MS - Rio Sucuriu, Tres Lagoas, qualidade da agua e licenciamento ambiental"
+  - "DAEE/SP - postos hidrologicos e outorgas em Sao Paulo"
+  - "CBH Tiete, CBH Baixo Tiete, CBH Grande, CBH Paranaiba e comites de bacia"
+  - "Relatorios de sustentabilidade/operacao das concessionarias apenas quando trouxerem dados metodologicos ou series verificaveis"
+  - "Literatura academica sobre Jupia, Alto Parana, Sucuriu, material organico, sedimentos, eutrofizacao e qualidade da agua"
+
+expected_outputs:
+  - "codigo oficial, URL, endpoint ou portal da estacao UHE JUPIA SUCURIU"
+  - "series de vazao, nivel, fluviometria e telemetria para Jupia, Sucuriu, Parana, Paranaiba, Grande e Tiete"
+  - "series operacionais ONS/SAR/ANA dos reservatorios contribuintes do sistema"
+  - "dados de qualidade da agua e poluicao em rios e reservatorios, com parametros e unidades preservados"
+  - "dados de saneamento municipal, carga organica, esgoto, efluentes e pressao urbana/agroindustrial"
+  - "uso e cobertura do solo, agricultura, queimadas, desmatamento e pressao ambiental"
+  - "sedimentos, turbidez, solidos suspensos, assoreamento ou proxies hidrossedimentologicos"
+  - "matriz de cobertura temporal por rio, fonte, variavel e estacao, com alvo de 20 anos"
+  - "inventario de fontes coletaveis e lacunas para nova coleta operacional"
+
+exclusions:
+  - "conteudo turistico ou recreativo sem dados"
+  - "noticias sem fonte primaria ou serie quantitativa"
+  - "fontes sem URL, endpoint, arquivo ou metodologia rastreavel"
+  - "relatorios corporativos sem dados verificaveis"
+  - "dados fora do sistema Alto Parana/Paranaiba/Grande/Tiete/Sucuriu salvo comparacao metodologica explicita"
+
+notes:
+  - "Jupia deve ser tratado como no integrador, nao apenas como foz do Tiete."
+  - "Priorizar fontes conhecidas antes de ampliar: ONS, ANA/SNIRH/HidroWeb/Telemetria, SAR/ANA, CETESB, SNIS, MapBiomas, INPE e IBGE."
+  - "A estacao UHE JUPIA SUCURIU e alvo prioritario; confirmar codigo, tipo de dado, periodo e endpoint antes de interpretar."
+  - "O relatorio deve apoiar correlacoes entre comportamento da bacia, rios, operacao e poluicao."
+  - "Periodo alvo: pelo menos 20 anos quando a fonte permitir; registrar defasagem real quando retornar menos."
+  - "Dados ja usados no Tiete podem ser reaproveitados, mas precisam ser reposicionados como subcamada contribuinte do sistema Jupia."

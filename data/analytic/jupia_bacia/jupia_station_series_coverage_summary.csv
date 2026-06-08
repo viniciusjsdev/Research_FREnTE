@@ -1,0 +1,5 @@
+status,series_type,stations,rows
+collected,cotas,4,2793
+collected,vazoes,4,1069
+error,cotas,18,0
+error,vazoes,18,0
