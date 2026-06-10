@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -127,6 +127,34 @@ class PerplexitySearchSessionRecord(BaseModel):
     links: list[PerplexityLinkRecord] = Field(default_factory=list)
     blockers: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
+    collected_at: datetime = Field(default_factory=_utcnow)
+
+
+class OpenAlexWorkRecord(BaseModel):
+    """Registro academico estruturado preservado a partir da API OpenAlex."""
+
+    query_id: str
+    search_text: str
+    openalex_id: str = ""
+    openalex_url: str = ""
+    doi: str = ""
+    title: str = ""
+    publication_year: int | None = None
+    publication_date: str | None = None
+    work_type: str = ""
+    cited_by_count: int = 0
+    is_open_access: bool = False
+    landing_page_url: str = ""
+    pdf_url: str = ""
+    oa_url: str = ""
+    source_display_name: str = ""
+    authors: list[str] = Field(default_factory=list)
+    institutions: list[str] = Field(default_factory=list)
+    countries: list[str] = Field(default_factory=list)
+    keywords: list[str] = Field(default_factory=list)
+    concepts: list[str] = Field(default_factory=list)
+    abstract: str = ""
+    raw: dict[str, Any] = Field(default_factory=dict)
     collected_at: datetime = Field(default_factory=_utcnow)
 
 

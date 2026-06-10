@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EDA_DIR = Path(__file__).resolve().parent
 FIG_DIR = EDA_DIR / "figures"
 ANALYTIC_DIR = ROOT / "data" / "analytic" / "jupia_bacia"
+STAGING_DIR = ROOT / "data" / "staging" / "jupia_bacia"
 CONTEXT_PATH = EDA_DIR / "report_context.json"
 
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -51,6 +52,91 @@ def save(fig: plt.Figure, filename: str) -> None:
     print(f"saved {path}")
 
 
+def fig0_data_origin_map() -> None:
+    path = ANALYTIC_DIR / "jupia_evidence_locations.csv"
+    if not path.exists():
+        return
+    locations = pd.read_csv(path)
+    fig, ax = plt.subplots(figsize=(11, 7.5))
+    ax.set_facecolor("#F8FAFC")
+
+    # Contorno esquematico da bacia: fonte unica em process_context_sources.BASIN_OUTLINE.
+    from process_context_sources import BASIN_OUTLINE
+
+    boundary_lon = [lon for _, lon in BASIN_OUTLINE]
+    boundary_lat = [lat for lat, _ in BASIN_OUTLINE]
+    ax.fill(boundary_lon, boundary_lat, facecolor="#DC2626", alpha=0.05, edgecolor="#DC2626", linewidth=2.6, label="Bacia contribuinte ate Jupia")
+
+    # Areas esquematicas dos principais contribuintes. Sem basemap: o objetivo e
+    # comunicar nivel espacial da fonte, nao substituir cartografia oficial.
+    areas = [
+        (-50.8, -22.8, 4.6, 2.1, "Rio Tiete", "#C75D2C"),
+        (-50.2, -20.8, 3.8, 1.6, "Rio Grande", "#1B75BB"),
+        (-51.1, -19.6, 4.4, 1.8, "Rio Paranaiba", "#0F7B5F"),
+        (-54.5, -24.9, 6.5, 5.0, "Alto Parana / La Plata", "#87714D"),
+    ]
+    for lon, lat, width, height, label, color in areas:
+        rect = plt.Rectangle((lon, lat), width, height, facecolor=color, edgecolor=color, alpha=0.08, lw=1.5)
+        ax.add_patch(rect)
+        ax.text(lon + 0.1, lat + height - 0.25, label, fontsize=9, color=color, fontweight="bold")
+
+    rivers = [
+        ("Rio Tiete", [-46.7, -48.4, -50.0, -51.45], [-23.5, -22.6, -21.8, -20.8], "#C75D2C"),
+        ("Rio Grande", [-46.8, -48.4, -50.1, -51.45], [-20.3, -20.0, -20.2, -20.8], "#1B75BB"),
+        ("Rio Paranaiba", [-47.8, -49.2, -50.5, -51.45], [-18.1, -18.8, -19.7, -20.8], "#0F7B5F"),
+        ("Rio Parana", [-51.45, -51.6, -51.7], [-20.8, -21.0, -21.7], "#011E42"),
+        ("Rio Sucuriu", [-52.6, -52.1, -51.65], [-20.0, -20.35, -20.65], "#6B48A8"),
+    ]
+    for label, xs, ys, color in rivers:
+        ax.plot(xs, ys, color=color, lw=2.5, alpha=0.8)
+        ax.annotate("", xy=(xs[-1], ys[-1]), xytext=(xs[-2], ys[-2]), arrowprops=dict(arrowstyle="->", color=color, lw=2))
+        ax.text(xs[len(xs) // 2], ys[len(ys) // 2] + 0.18, label, fontsize=8.5, color=color, fontweight="bold")
+
+    kind_styles = {
+        "estacao ANA/Hidro": ("#B41E1E", "o", 70),
+        "no receptor": ("#011E42", "*", 180),
+        "area contribuinte": ("#1B75BB", "s", 80),
+        "area academica": ("#87714D", "^", 90),
+    }
+    for kind, sub in locations.groupby("kind"):
+        color, marker, size = kind_styles.get(kind, ("#64748B", "o", 60))
+        ax.scatter(sub["longitude"], sub["latitude"], s=size, c=color, marker=marker, label=kind, alpha=0.9, edgecolors="white", linewidths=0.8)
+        for _, row in sub.iterrows():
+            label = str(row["name"]).replace("UHE JUPIÁ", "UHE Jupia").replace("UHE JUPIÃ", "UHE Jupia")
+            if kind in {"estacao ANA/Hidro", "no receptor"}:
+                ax.annotate(label[:28], (row["longitude"], row["latitude"]), xytext=(6, 5), textcoords="offset points", fontsize=8, color="#334155")
+
+    ax.scatter([-51.628], [-20.868], s=240, marker="*", c="#DC2626", edgecolors="white", linewidths=1.2, zorder=5)
+    ax.annotate(
+        "Outlet Jupia\n-20.868, -51.628",
+        (-51.628, -20.868),
+        xytext=(-53.8, -22.15),
+        textcoords="data",
+        arrowprops=dict(arrowstyle="->", color="#DC2626", lw=1.6),
+        fontsize=9,
+        color="#991B1B",
+        fontweight="bold",
+        bbox=dict(boxstyle="round,pad=0.35,rounding_size=0.08", fc="white", ec="#FCA5A5", lw=1),
+    )
+
+    ax.set_title("Recorte geografico: bacia contribuinte do Alto Parana ate a UHE Jupia")
+    ax.set_xlabel("Longitude")
+    ax.set_ylabel("Latitude")
+    ax.set_xlim(-54.8, -43.8)
+    ax.set_ylim(-25.4, -14.9)
+    ax.grid(True, color="#CBD5E1", alpha=0.45)
+    ax.legend(loc="lower left", frameon=True, fontsize=8)
+    ax.text(
+        0.01,
+        -0.15,
+        "Leitura: area vermelha = bacia contribuinte ate Jupia (~480.000 km2 no delineamento de referencia); linhas = rios estruturantes; pontos = estacoes/locais de evidencia. Fonte: ANA/Hidro, ONS, OpenAlex e delineamento de referencia informado pelo usuario. Mapa esquematico, nao cartografia oficial.",
+        transform=ax.transAxes,
+        fontsize=9,
+        color="#64748B",
+    )
+    save(fig, "fig0_data_origin_map.svg")
+
+
 def fig1_system_overview(monthly: pd.DataFrame) -> None:
     summary = (
         monthly.groupby(["basin_key", "basin_label"], as_index=False)
@@ -70,7 +156,7 @@ def fig1_system_overview(monthly: pd.DataFrame) -> None:
         ax.text(
             x,
             y,
-            f"{int(row['reservoirs'])} reservatorios\\n{row['mean_inflow']:.0f} m3/s medio",
+            f"{int(row['reservoirs'])} reservatorios\n{row['mean_inflow']:.0f} m3/s medio",
             ha="center",
             va="center",
             fontsize=11,
@@ -79,7 +165,7 @@ def fig1_system_overview(monthly: pd.DataFrame) -> None:
         )
         ax.annotate("", xy=(0.50, 0.25), xytext=(x, y - 0.11), arrowprops=dict(arrowstyle="->", lw=2, color=color))
 
-    ax.text(0.50, 0.18, "UHE JUPIA\\nno integrador do Alto Parana", ha="center", va="center", fontsize=14, fontweight="bold", color="#011E42",
+    ax.text(0.50, 0.18, "UHE JUPIA\nno integrador do Alto Parana", ha="center", va="center", fontsize=14, fontweight="bold", color="#011E42",
             bbox=dict(boxstyle="round,pad=0.65,rounding_size=0.08", fc="#F8FAFC", ec="#87714D", lw=2))
     ax.text(0.02, 0.94, "Sistema contribuinte de Jupia - leitura operacional ONS (2000-2025)", fontsize=15, fontweight="bold", color="#011E42")
     ax.text(0.02, 0.88, "Fonte: ONS Dados Hidrologicos de Reservatorios. Sucuriu nao aparece como identificador proprio na base local.", fontsize=10, color="#64748B")
@@ -238,8 +324,283 @@ def fig7_station_collection_evidence() -> None:
     save(fig, "fig7_station_collection_evidence.svg")
 
 
+def fig8_openalex_theme_coverage() -> None:
+    path = ANALYTIC_DIR / "jupia_openalex_theme_summary.csv"
+    if not path.exists():
+        return
+    summary = pd.read_csv(path).sort_values("works", ascending=True)
+    y = np.arange(len(summary))
+    fig, ax = plt.subplots(figsize=(11, 6.5))
+    ax.barh(y, summary["works"], color="#1B75BB", alpha=0.82, label="Trabalhos")
+    ax.barh(y, summary["with_pdf"], color="#C4A86C", alpha=0.85, label="Com PDF/arquivo")
+    ax.set_yticks(y, labels=summary["theme"])
+    ax.set_xlabel("Quantidade")
+    ax.set_title("OpenAlex: cobertura academica por eixo analitico")
+    ax.grid(True, axis="x", alpha=0.2)
+    for i, row in summary.iterrows():
+        ax.text(row["works"] + 0.4, list(summary.index).index(i), f"{int(row['works'])}", va="center", fontsize=9, color="#334155")
+    ax.legend(frameon=False, loc="lower right")
+    ax.text(0.0, -0.14, "Fonte: OpenAlex API /works. Eixos derivados das trilhas de busca Jupia.", transform=ax.transAxes, fontsize=9, color="#64748B")
+    save(fig, "fig8_openalex_theme_coverage.svg")
+
+
+def fig9_openalex_timeline() -> None:
+    path = ANALYTIC_DIR / "jupia_academic_evidence.csv"
+    if not path.exists():
+        return
+    works = pd.read_csv(path)
+    works = works[pd.to_numeric(works["publication_year"], errors="coerce").notna()].copy()
+    works["publication_year"] = works["publication_year"].astype(int)
+    works = works[works["publication_year"] >= 1990]
+    if works.empty:
+        return
+    counts = works.groupby(["publication_year", "theme"], as_index=False).size()
+    pivot = counts.pivot(index="publication_year", columns="theme", values="size").fillna(0)
+    rolling = pivot.rolling(3, min_periods=1).mean()
+    fig, ax = plt.subplots(figsize=(12, 6))
+    palette = ["#1B75BB", "#0F7B5F", "#C75D2C", "#87714D", "#6B48A8", "#B41E1E", "#64748B", "#0EA5E9"]
+    for idx, column in enumerate(rolling.columns):
+        ax.plot(rolling.index, rolling[column], lw=2, label=column, color=palette[idx % len(palette)])
+    ax.set_title("Literatura OpenAlex por eixo - media movel de 3 anos")
+    ax.set_xlabel("Ano de publicacao")
+    ax.set_ylabel("Trabalhos/ano")
+    ax.grid(True, axis="y", alpha=0.22)
+    ax.legend(ncol=2, fontsize=8, frameon=False, loc="upper left")
+    ax.text(0.0, -0.16, "Fonte: OpenAlex API /works; filtragem local por termos geograficos/hidricos.", transform=ax.transAxes, fontsize=9, color="#64748B")
+    save(fig, "fig9_openalex_timeline.svg")
+
+
+STATION_STYLE = {
+    63001500: ("Alto Sucuriu (63001500)", "#0F7B5F"),
+    63002000: ("Sao Jose do Sucuriu (63002000)", "#6B48A8"),
+    63005000: ("Jupia - Ponte (63005000)", "#87714D"),
+    63007080: ("UHE Jupia Barramento (63007080)", "#C75D2C"),
+    63010000: ("UHE Jupia Jusante (63010000)", "#1B75BB"),
+}
+
+
+def fig11_ana_station_series() -> None:
+    path = STAGING_DIR / "ana_jupia_station_monthly_series.csv"
+    if not path.exists():
+        return
+    series = pd.read_csv(path, parse_dates=["date"])
+
+    def monthly_smooth(sub: pd.DataFrame) -> pd.Series:
+        # Reindexa para frequencia mensal: meses sem medicao viram NaN e quebram
+        # a linha em vez de conectar decadas sem dado (ex.: 63007080, 1931 -> 1995).
+        values = sub.sort_values("date").set_index("date")["monthly_mean"].asfreq("MS")
+        return values.rolling(12, min_periods=3).mean()
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 9), sharex=True)
+    for code, sub in series[series["series_type"] == "vazoes"].groupby("station_code"):
+        label, color = STATION_STYLE.get(int(code), (str(code), "#64748B"))
+        smooth = monthly_smooth(sub)
+        ax1.plot(smooth.index, smooth.values, lw=1.8, color=color, label=label)
+    ax1.set_yscale("log")
+    ax1.set_ylabel("Vazao media mensal (m3/s, escala log)")
+    ax1.set_title("Estacoes convencionais ANA no eixo Sucuriu/Jupia - media movel de 12 meses")
+    ax1.grid(True, axis="y", alpha=0.25)
+    ax1.legend(frameon=False, fontsize=9, loc="upper left")
+
+    for code, sub in series[series["series_type"] == "cotas"].groupby("station_code"):
+        label, color = STATION_STYLE.get(int(code), (str(code), "#64748B"))
+        smooth = monthly_smooth(sub)
+        ax2.plot(smooth.index, smooth.values, lw=1.8, color=color, label=label)
+    ax2.set_ylabel("Cota media mensal (cm)")
+    ax2.set_xlabel("Ano")
+    ax2.grid(True, axis="y", alpha=0.25)
+    ax2.legend(frameon=False, fontsize=9, loc="upper left")
+
+    ax2.text(
+        0.0,
+        -0.22,
+        "Fonte: ANA GitHub hidro-dados-estacoes-convencionais (run operational-collect-jupia). Sucuriu em MS (verde/roxo); Rio Parana junto a Jupia (azul/dourado).\n"
+        "As series encerram entre 2005 e 2014; trechos sem linha indicam meses sem medicao. Escala log na vazao para acomodar Sucuriu (~10^2 m3/s) e Parana (~10^4 m3/s).",
+        transform=ax2.transAxes,
+        fontsize=9,
+        color="#64748B",
+    )
+    save(fig, "fig11_ana_station_series.svg")
+
+
+def fig12_queimadas_pressao() -> None:
+    path = ANALYTIC_DIR / "jupia_queimadas_bacia_estado_ano.csv"
+    if not path.exists():
+        return
+    focos = pd.read_csv(path)
+    style = {
+        "MATO GROSSO DO SUL": ("#B41E1E", 3.0, 1.0),
+        "SÃO PAULO": ("#C75D2C", 1.8, 0.9),
+        "MINAS GERAIS": ("#1B75BB", 1.8, 0.9),
+        "GOIÁS": ("#0F7B5F", 1.8, 0.9),
+        "DISTRITO FEDERAL": ("#6B48A8", 1.4, 0.8),
+        "PARANÁ": ("#64748B", 1.4, 0.7),
+    }
+    fig, ax = plt.subplots(figsize=(12, 5.5))
+    for estado, sub in focos.groupby("estado"):
+        color, lw, alpha = style.get(estado, ("#94A3B8", 1.2, 0.6))
+        sub = sub.sort_values("ano")
+        ax.plot(sub["ano"], sub["focos"], lw=lw, color=color, alpha=alpha, label=estado.title())
+    ax.set_yscale("log")
+    ax.set_ylabel("Focos de calor por ano (escala log)")
+    ax.set_xlabel("Ano")
+    ax.set_title("Focos de calor INPE dentro da bacia contribuinte, por estado")
+    ax.grid(True, axis="y", alpha=0.25)
+    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.14), frameon=False, fontsize=9)
+    ax.text(
+        0.0,
+        -0.34,
+        "Fonte: INPE/BDQueimadas via WFS TerraBrasilis, coleta com envelope da bacia e filtro point-in-polygon no contorno esquematico do recorte.\n"
+        "Mato Grosso do Sul em vermelho cobre o entorno Tres Lagoas/Jupia e o eixo Sucuriu; Goias/MG cobrem as cabeceiras do Paranaiba e do Grande.",
+        transform=ax.transAxes,
+        fontsize=9,
+        color="#64748B",
+    )
+    save(fig, "fig12_queimadas_pressao.svg")
+
+
+QUALITY_PANELS = [
+    ("od", "Oxigenio dissolvido (mg/L)", False),
+    ("dbo", "DBO (mg/L)", False),
+    ("fosforo_total", "Fosforo total (mg/L)", False),
+    ("turbidez", "Turbidez (NTU)", False),
+    ("ecoli", "E. coli (NMP/100mL)", True),
+    ("iqa", "IQA", False),
+]
+
+
+def fig13_qualidade_agua() -> None:
+    path = ANALYTIC_DIR / "jupia_quality_annual.csv"
+    if not path.exists():
+        return
+    quality = pd.read_csv(path)
+    if quality.empty:
+        return
+    quality["region"] = np.where(quality["uf"] == "MS", "MS / entorno Jupia", "Montante (SP, MG, GO, DF)")
+    grouped = quality.groupby(["parameter", "region", "year"], as_index=False).agg(
+        value=("mean", "mean"), stations=("station_code", "nunique")
+    )
+    colors = {"MS / entorno Jupia": "#B41E1E", "Montante (SP, MG, GO, DF)": "#1B75BB"}
+
+    fig, axes = plt.subplots(2, 3, figsize=(14, 8), sharex=True)
+    for ax, (param, label, log_scale) in zip(axes.flat, QUALITY_PANELS):
+        sub = grouped[grouped["parameter"] == param]
+        for region, lines in sub.groupby("region"):
+            lines = lines.sort_values("year")
+            ax.plot(lines["year"], lines["value"], lw=1.8, color=colors[region], label=region)
+        if log_scale and not sub.empty and (sub["value"] > 0).any():
+            ax.set_yscale("log")
+        ax.set_title(label, fontsize=10)
+        ax.grid(True, axis="y", alpha=0.25)
+    handles, labels = axes.flat[0].get_legend_handles_labels()
+    fig.legend(handles, labels, ncol=2, loc="lower center", bbox_to_anchor=(0.5, -0.04), frameon=False, fontsize=10)
+    fig.suptitle("Qualidade da agua na bacia contribuinte - media anual das estacoes ANA/RNQA", fontweight="bold")
+    fig.text(
+        0.01,
+        -0.10,
+        "Fonte: ANA SNIRH ArcGIS, Indicadores de Qualidade (series historicas ate 2021). Media simples das medias anuais por estacao dentro do contorno da bacia;\n"
+        "vermelho = estacoes em Mato Grosso do Sul (entorno Jupia/Sucuriu), azul = contribuintes a montante. Numero de estacoes varia por ano e parametro.",
+        fontsize=9,
+        color="#64748B",
+    )
+    fig.tight_layout()
+    save(fig, "fig13_qualidade_agua.svg")
+
+
+INFOAGUAS_PANELS = [
+    ("Oxigênio Dissolvido", "Oxigenio dissolvido (mg/L)", False),
+    ("DBO (5, 20)", "DBO (mg/L)", False),
+    ("Fósforo Total", "Fosforo total (mg/L)", False),
+    ("Turbidez", "Turbidez (NTU)", True),
+]
+INFOAGUAS_POINTS = {
+    "TIET02900": ("Rio Tiete - TIET02900", "#C75D2C"),
+    "TITR02100": ("Res. Tres Irmaos - TITR02100", "#1B75BB"),
+}
+
+
+def fig14_infoaguas_tiete() -> None:
+    path = ANALYTIC_DIR / "jupia_infoaguas_monthly.csv"
+    if not path.exists():
+        return
+    monthly = pd.read_csv(path, parse_dates=["year_month"])
+    monthly = monthly[monthly["point_code"].isin(INFOAGUAS_POINTS)]
+    if monthly.empty:
+        return
+
+    fig, axes = plt.subplots(2, 2, figsize=(13, 7.5), sharex=True)
+    for ax, (param, label, log_scale) in zip(axes.flat, INFOAGUAS_PANELS):
+        sub = monthly[monthly["parameter"] == param]
+        for code, lines in sub.groupby("point_code"):
+            name, color = INFOAGUAS_POINTS[code]
+            series = lines.sort_values("year_month").set_index("year_month")["value"].asfreq("MS")
+            ax.plot(series.index, series.rolling(12, min_periods=4).mean(), lw=1.8, color=color, label=name)
+        if log_scale and not sub.empty and (sub["value"] > 0).any():
+            ax.set_yscale("log")
+        ax.set_title(label, fontsize=10)
+        ax.grid(True, axis="y", alpha=0.25)
+    handles, labels = axes.flat[0].get_legend_handles_labels()
+    fig.legend(handles, labels, ncol=2, loc="lower center", bbox_to_anchor=(0.5, -0.05), frameon=False, fontsize=10)
+    fig.suptitle("CETESB InfoAguas - o Tiete que chega ao no de Jupia (media movel de 12 meses)", fontweight="bold")
+    fig.text(
+        0.01,
+        -0.11,
+        "Fonte: CETESB InfoAguas (sessao autenticada), amostras por coleta agregadas em medias mensais. TIET02900 = Rio Tiete em Pereira Barreto;\n"
+        "TITR02100 = Reservatorio de Tres Irmaos. Coleta parcial: 7 pontos da UGRHI 19 Baixo Tiete, 2000-2026.",
+        fontsize=9,
+        color="#64748B",
+    )
+    fig.tight_layout()
+    save(fig, "fig14_infoaguas_tiete_chegada.svg")
+
+
+def fig10_correlation_readiness() -> None:
+    rows = [
+        "Comportamento dos rios",
+        "Operacao de reservatorios",
+        "Poluicao / qualidade da agua",
+        "Sedimentos / turbidez",
+        "Uso do solo / agro",
+        "Clima / seca",
+        "Pontos Jupia-Sucuriu",
+    ]
+    cols = ["Serie temporal", "Localizacao", "Variavel comparavel", "Fonte academica", "Pronto p/ correlacao"]
+    data = np.array(
+        [
+            [3, 2, 3, 3, 3],
+            [3, 2, 3, 2, 3],
+            [3, 3, 3, 3, 2],
+            [2, 3, 2, 3, 2],
+            [3, 3, 2, 2, 2],
+            [2, 2, 2, 3, 2],
+            [2, 3, 2, 1, 2],
+        ]
+    )
+    fig, ax = plt.subplots(figsize=(11, 6.8))
+    im = ax.imshow(data, cmap="YlGnBu", vmin=0, vmax=3, aspect="auto")
+    ax.set_xticks(np.arange(len(cols)), labels=cols, rotation=25, ha="right")
+    ax.set_yticks(np.arange(len(rows)), labels=rows)
+    ax.set_title("Prontidao das camadas para correlacao poluentes-rios-Jupia")
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            ax.text(j, i, str(data[i, j]), ha="center", va="center", fontsize=10, color="#0F172A")
+    cbar = fig.colorbar(im, ax=ax, fraction=0.025, pad=0.02)
+    cbar.set_ticks([0, 1, 2, 3])
+    cbar.set_ticklabels(["ausente", "parcial", "boa", "pronta"])
+    ax.text(
+        0.0,
+        -0.18,
+        "Leitura: 3 = camada ja permite analise quantitativa; 1 = precisa extracao/normalizacao antes de correlacionar. Fonte: auditoria EDA ONS/ANA/OpenAlex.",
+        transform=ax.transAxes,
+        fontsize=9,
+        color="#64748B",
+    )
+    save(fig, "fig10_correlation_readiness_matrix.svg")
+
+
 def main() -> None:
     monthly, annual, coverage = load()
+    fig0_data_origin_map()
     fig1_system_overview(monthly)
     fig2_monthly_inflow(monthly)
     fig3_jupia_node(monthly)
@@ -247,6 +608,13 @@ def main() -> None:
     fig5_count_and_flow(monthly)
     fig6_coverage(coverage)
     fig7_station_collection_evidence()
+    fig8_openalex_theme_coverage()
+    fig9_openalex_timeline()
+    fig10_correlation_readiness()
+    fig11_ana_station_series()
+    fig12_queimadas_pressao()
+    fig13_qualidade_agua()
+    fig14_infoaguas_tiete()
 
 
 if __name__ == "__main__":

@@ -1,14 +1,37 @@
 {
   "report_title": "Bacia Hidrografica de Jupia",
   "report_subtitle": "Sistema contribuinte Paranaiba, Grande, Tiete e no Parana/Jupia",
-  "generated_at": "2026-06-07T23:15:26.103558+00:00",
+  "generated_at": "2026-06-10T04:25:30.421893+00:00",
   "scope": {
     "study_slug": "jupia_bacia",
     "primary_node": "UHE Jupia",
     "requested_station": "UHE JUPIA SUCURIU",
     "available_station_note": "A coleta ANA encontrou matches diretos para UHE JUPIA RIO SUCURIU e UHE JUPIA SUCURIU no inventario Hidro; nos dados ONS locais a serie operacional permanece como JUPIA na bacia PARANA.",
     "source": "ONS Dados Hidrologicos de Reservatorios, ANA Hidro/SOAP, ANA GitHub hidro-dados-estacoes-convencionais, IBGE BHB250 e documentos CETESB/ANA.",
+    "academic_source": "OpenAlex API /works, rodada academica Jupia sem Perplexity, com raw JSON preservado.",
     "geographic_scope": "UHE Jupia e entorno Tres Lagoas/Castilho; Rio Sucuriu; Rio Parana; contribuintes Rio Tiete, Rio Grande e Rio Paranaiba no Alto Parana."
+  },
+  "spatial_recorte": {
+    "title": "Recorte geografico analisado",
+    "short_name": "Bacia contribuinte do Alto Parana ate a UHE Jupia",
+    "outlet": "Outlet analitico no Rio Parana, proximo a UHE Jupia / Eng. Souza Dias, entre Tres Lagoas-MS e Castilho/Andradina-SP.",
+    "outlet_coordinates": "-20.868, -51.628",
+    "watershed_area_note": "Area delineada no site de bacias globais: aproximadamente 480.000 km2 a montante do outlet.",
+    "definition": "Este relatorio analisa a area que drena para Jupia antes do ponto de saida no Rio Parana. O recorte nao e a bacia do Tiete isolada e tambem nao e apenas o reservatorio de Jupia; e o sistema contribuinte do Alto Parana que combina Paranaiba, Grande, Tiete e Parana no no receptor de Jupia.",
+    "main_basin": "Alto Parana / Parana superior ate Jupia",
+    "structuring_rivers": [
+      "Rio Paranaiba",
+      "Rio Grande",
+      "Rio Tiete",
+      "Rio Parana"
+    ],
+    "local_focus": [
+      "UHE Jupia / Eng. Souza Dias",
+      "Rio Sucuriu",
+      "estacoes ANA/Hidro UHE JUPIA SUCURIU",
+      "entorno Tres Lagoas-Castilho-Andradina"
+    ],
+    "analysis_question": "Como os rios Paranaiba, Grande, Tiete e Parana, junto com operacao de reservatorios, poluicao, uso do solo, clima e sedimentos, condicionam o no receptor de Jupia?"
   },
   "metrics": [
     {
@@ -34,6 +57,18 @@
       "value": "2000-2025",
       "detail": "26 anos e 248.383 registros",
       "icon": "calendar_month"
+    },
+    {
+      "label": "Qualidade ANA",
+      "value": "906",
+      "detail": "estacoes na bacia · 1978-2021",
+      "icon": "science"
+    },
+    {
+      "label": "OpenAlex",
+      "value": "130",
+      "detail": "100 com PDF/arquivo",
+      "icon": "article"
     }
   ],
   "data_outputs": {
@@ -41,11 +76,55 @@
     "monthly": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_system_monthly.csv",
     "annual": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_system_annual.csv",
     "coverage": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_coverage_matrix.csv",
+    "station_monthly_series": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_monthly_series.csv",
+    "queimadas_estado_ano": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_queimadas_bacia_estado_ano.csv",
+    "quality_staging": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_quality_indicators_annual.csv",
+    "quality_annual": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_quality_annual.csv",
+    "quality_stations": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_quality_stations.csv",
+    "supplement_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-supplement-jupia-20260610-033211",
     "collection_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-collect-jupia-20260607-225450",
     "station_inventory": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_inventory_matches.csv",
     "station_series_coverage": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_series_coverage.csv",
     "requested_station_matches": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_requested_station_matches.csv",
-    "station_series_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_station_series_coverage_summary.csv"
+    "station_series_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_station_series_coverage_summary.csv",
+    "openalex_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\perplexity-intel-ce8f14e4",
+    "openalex_works": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\openalex_jupia_works.csv",
+    "academic_evidence": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_academic_evidence.csv",
+    "openalex_theme_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_openalex_theme_summary.csv",
+    "evidence_locations": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_evidence_locations.csv"
+  },
+  "station_series_summary_stats": {
+    "stations": 5,
+    "rows": 2868,
+    "start": "1924-02-01",
+    "end": "2015-06-01"
+  },
+  "queimadas_summary": {
+    "total_focos": 2305936,
+    "period": "2000-2025",
+    "states": [
+      "DISTRITO FEDERAL",
+      "GOIÁS",
+      "MATO GROSSO DO SUL",
+      "MINAS GERAIS",
+      "SÃO PAULO"
+    ],
+    "source": "wfs_bacia"
+  },
+  "quality_summary": {
+    "stations_bbox": 1358,
+    "stations_in_basin": 906,
+    "stations_ms": 12,
+    "parameters": [
+      "dbo",
+      "ecoli",
+      "fosforo_total",
+      "iqa",
+      "od",
+      "turbidez"
+    ],
+    "period": "1978-2021",
+    "rows_in_basin": 38343
   },
   "collection_summary": {
     "targets_total": 57,
@@ -56,6 +135,138 @@
     "station_series_collected": 8
   },
   "collection_run_id": "operational-collect-jupia-20260607-225450",
+  "openalex_run_id": "perplexity-intel-ce8f14e4",
+  "openalex_summary": {
+    "raw_works": 195,
+    "works": 130,
+    "open_access": 108,
+    "with_pdf": 100,
+    "theme_count": 8,
+    "period_start": "1973",
+    "period_end": "2025"
+  },
+  "top_academic_sources": [
+    {
+      "theme": "Comportamento dos rios",
+      "title": "Changes in Continental Freshwater Discharge from 1948 to 2004",
+      "publication_year": 2008,
+      "cited_by_count": 958,
+      "source_display_name": "Journal of Climate",
+      "source_url": "https://scholarworks.wm.edu/cgi/viewcontent.cgi?article=2966&context=vimsarticles",
+      "doi": "https://doi.org/10.1175/2008jcli2592.1",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu"
+    },
+    {
+      "theme": "Comportamento dos rios",
+      "title": "Dams and the fish fauna of the Neotropical region: impacts and management related to diversity and fisheries",
+      "publication_year": 2008,
+      "cited_by_count": 779,
+      "source_display_name": "Brazilian Journal of Biology",
+      "source_url": "https://www.scielo.br/j/bjb/a/5ycwcWLBLM6jN9gMQMcysdK/?lang=en&format=pdf",
+      "doi": "https://doi.org/10.1590/s1519-69842008000500019",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_operacao_reservatorios_ons_sar"
+    },
+    {
+      "theme": "Pressao territorial",
+      "title": "Freshwater Bivalve Extinctions (Mollusca: Unionoida): A Search for Causes",
+      "publication_year": 1993,
+      "cited_by_count": 550,
+      "source_display_name": "American Zoologist",
+      "source_url": "https://academic.oup.com/icb/article-pdf/33/6/599/6053784/33-6-599.pdf",
+      "doi": "https://doi.org/10.1093/icb/33.6.599",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge"
+    },
+    {
+      "theme": "Comportamento da bacia",
+      "title": "Evaluation of TRMM Multisatellite Precipitation Analysis (TMPA) and Its Utility in Hydrologic Prediction in the La Plata Basin",
+      "publication_year": 2008,
+      "cited_by_count": 495,
+      "source_display_name": "Journal of Hydrometeorology",
+      "source_url": "https://journals.ametsoc.org/downloadpdf/journals/hydr/9/4/2007jhm944_1.pdf",
+      "doi": "https://doi.org/10.1175/2007jhm944.1",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n1_geografia_bacia_jupia_ottobacias"
+    },
+    {
+      "theme": "Comportamento dos rios",
+      "title": "Fish and aquatic habitat conservation in South America: a continental overview with emphasis on neotropical systems",
+      "publication_year": 2010,
+      "cited_by_count": 421,
+      "source_display_name": "Journal of Fish Biology",
+      "source_url": "http://repositorio.furg.br/handle/1/1948",
+      "doi": "https://doi.org/10.1111/j.1095-8649.2010.02684.x",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_operacao_reservatorios_ons_sar"
+    },
+    {
+      "theme": "Comportamento dos rios",
+      "title": "Extreme Drought in the Brazilian Pantanal in 2019–2020: Characterization, Causes, and Impacts",
+      "publication_year": 2021,
+      "cited_by_count": 356,
+      "source_display_name": "Frontiers in Water",
+      "source_url": "https://www.frontiersin.org/articles/10.3389/frwa.2021.639204/pdf",
+      "doi": "https://doi.org/10.3389/frwa.2021.639204",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu"
+    },
+    {
+      "theme": "Comportamento da bacia",
+      "title": "The Hydrologic Cycle of the La Plata Basin in South America",
+      "publication_year": 2002,
+      "cited_by_count": 272,
+      "source_display_name": "Journal of Hydrometeorology",
+      "source_url": "https://journals.ametsoc.org/downloadpdf/journals/hydr/3/6/1525-7541_2002_003_0630_thcotl_2_0_co_2.pdf",
+      "doi": "https://doi.org/10.1175/1525-7541(2002)003<0630:thcotl>2.0.co;2",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n1_geografia_bacia_jupia_ottobacias"
+    },
+    {
+      "theme": "Sedimentos e turbidez",
+      "title": "The regional intraplate stress field in South America",
+      "publication_year": 1992,
+      "cited_by_count": 210,
+      "source_display_name": "Journal of Geophysical Research Atmospheres",
+      "source_url": "https://doi.org/10.1029/91jb01590",
+      "doi": "https://doi.org/10.1029/91jb01590",
+      "has_pdf": false,
+      "is_open_access": false,
+      "research_track": "n3_sedimentos_turbidez_assoreamento_jupia"
+    },
+    {
+      "theme": "Comportamento dos rios",
+      "title": "Limnology in the Upper Paraná River floodplain: large-scale spatial and temporal patterns, and the influence of reservoirs",
+      "publication_year": 2009,
+      "cited_by_count": 203,
+      "source_display_name": "Brazilian Journal of Biology",
+      "source_url": "https://www.scielo.br/j/bjb/a/tmspstsPphgrMVXsj9tSshn/?lang=en&format=pdf",
+      "doi": "https://doi.org/10.1590/s1519-69842009000300025",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_operacao_reservatorios_ons_sar"
+    },
+    {
+      "theme": "Clima e variabilidade",
+      "title": "Wetland loss due to land use change in the Lower Paraná River Delta, Argentina",
+      "publication_year": 2016,
+      "cited_by_count": 185,
+      "source_display_name": "The Science of The Total Environment",
+      "source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0048969716308993-fx1_lrg.jpg",
+      "doi": "https://doi.org/10.1016/j.scitotenv.2016.04.200",
+      "has_pdf": true,
+      "is_open_access": true,
+      "research_track": "n2_clima_chuva_seca_jupia"
+    }
+  ],
   "requested_station_matches": [
     {
       "BaciaCodigo": "6",
@@ -343,11 +554,26 @@
   },
   "known_gaps": [
     "A serie operacional ONS local continua identificada como JUPIA, nao como SUCURIU; a identidade SUCURIU foi confirmada no inventario ANA/Hidro.",
-    "O codigo ANA 63003300 (UHE JUPIA SUCURIU) foi encontrado no inventario, mas nao possui CSV historico no branch dev do repositorio ANA baixado nesta rodada.",
-    "Foram preservados PDFs/HTML de qualidade da agua e poluicao; a extracao parametrica desses documentos ainda deve virar uma camada propria para correlacao.",
-    "Dados do Tiete ja usados no relatorio anterior entram aqui como uma subcamada contribuinte, nao como narrativa principal."
+    "O codigo ANA 63003300 (UHE JUPIA SUCURIU) segue sem serie aberta: nao ha CSV no repositorio ANA/GitHub, o SOAP HidroSerieHistorica retorna vazio e o download Hidroweb agora exige autenticacao (HTTP 401).",
+    "A qualidade da agua entrou como camada tabular via indicadores anuais ANA/RNQA (OD, DBO, fosforo, turbidez, E.coli, IQA ate 2021); series mensais brutas por coleta (CETESB InfoAguas) continuam como aprofundamento futuro.",
+    "A OpenAlex melhorou a cobertura academica, mas nao substitui extracao tabular dos artigos; por enquanto ela entra como evidência bibliografica e caminho de arquivo/DOI.",
+    "Dados do Tiete ja usados no relatorio anterior entram aqui como uma subcamada contribuinte, nao como narrativa principal.",
+    "Porto Primavera esta a jusante do no de Jupia; permanece na base como contexto do trecho Parana, mas nao deve ser lido como contribuinte do recorte.",
+    "O inventario ANA retornou um falso positivo fora do recorte (40890000, Ribeirao Sucuriu em Tres Marias-MG, bacia do Sao Francisco); ele foi mantido no staging para auditoria, mas excluido do mapa.",
+    "O filtro espacial usa o contorno esquematico da bacia; um refinamento com ottobacias oficiais ANA/IBGE pode mover estacoes e focos proximos da borda."
   ],
   "figures": [
+    {
+      "id": "fig0",
+      "file": "fig0_data_origin_map.svg",
+      "title": "Recorte geografico: bacia contribuinte ate Jupia",
+      "tag": "Mapa",
+      "tag_color": "blue",
+      "icon": "map",
+      "summary": "Mapa esquematico do recorte: a bacia contribuinte do Alto Parana ate o outlet de Jupia, com os rios Paranaiba, Grande, Tiete e Parana como eixos estruturantes e Sucuriu/Jupia como foco local.",
+      "interpretation": "A area vermelha representa o sistema que pode enviar agua, sedimentos, nutrientes e poluentes para Jupia. Os pontos ANA/Hidro sao medicoes locais; as areas coloridas indicam as sub-bacias e regioes de evidencia usadas na analise.",
+      "highlight": "A unidade de analise e o sistema contribuinte ate Jupia: comportamento dos rios primeiro, poluicao e pressoes depois, correlacao no no receptor ao final."
+    },
     {
       "id": "fig1",
       "file": "fig1_basin_system_overview.svg",
@@ -380,6 +606,17 @@
       "summary": "Serie mensal da UHE Jupia no ONS, com vazoes afluente/defluente e volume util medio.",
       "interpretation": "A serie posiciona Jupia como receptor operacional do sistema. A coleta complementar ja identificou os codigos ANA ligados a UHE Jupia/Sucuriu, permitindo uma ponte posterior com series convencionais e qualidade da agua.",
       "highlight": "Nos dados ONS, o ponto auditavel e JUPIA; no inventario ANA, UHE JUPIA SUCURIU aparece com codigo 63003300."
+    },
+    {
+      "id": "fig11",
+      "file": "fig11_ana_station_series.svg",
+      "title": "Series historicas ANA no eixo Sucuriu/Jupia",
+      "tag": "Rios locais",
+      "tag_color": "green",
+      "icon": "monitoring",
+      "summary": "Series mensais de vazao e cota das estacoes convencionais ANA no eixo local: Alto Sucuriu (63001500) e Sao Jose do Sucuriu (63002000) no Rio Sucuriu em Mato Grosso do Sul, e Jupia-Ponte (63005000), UHE Jupia Barramento (63007080, via SOAP) e UHE Jupia Jusante (63010000) no Rio Parana.",
+      "interpretation": "Estas sao as medicoes fluviometricas locais que descem a analise da escala ONS para o rio em Mato Grosso do Sul. O Sucuriu fornece o sinal do contribuinte local; Barramento e Jusante registram o Parana no entorno da barragem. A serie SOAP do Barramento estende a cobertura local alem de 2014.",
+      "highlight": "As 2868 medicoes mensais de 5 estacoes cobrem 1924-02-01 a 2015-06-01 e agora entram como camada propria de comportamento dos rios."
     },
     {
       "id": "fig4",
@@ -424,6 +661,61 @@
       "summary": "Resumo dos matches ANA/Hidro para UHE Jupia/Sucuriu e das series historicas convencionais disponiveis no repositorio ANA/GitHub.",
       "interpretation": "A demanda UHE JUPIA SUCURIU foi localizada no inventario oficial, mas a disponibilidade de CSV historico varia por codigo. Isso separa identidade da estacao, disponibilidade de serie e lacuna operacional.",
       "highlight": "Foram encontrados 3 matches diretos para a estacao solicitada e 8 series CSV convencionais em codigos proximos."
+    },
+    {
+      "id": "fig12",
+      "file": "fig12_queimadas_pressao.svg",
+      "title": "Pressao territorial: focos de calor dentro da bacia contribuinte",
+      "tag": "Pressoes",
+      "tag_color": "red",
+      "icon": "local_fire_department",
+      "summary": "Focos de calor INPE/BDQueimadas por estado e ano, coletados via WFS com o envelope da bacia inteira e filtrados pelo contorno da bacia contribuinte (point-in-polygon). Cobre Mato Grosso do Sul, Sao Paulo, Minas Gerais, Goias/DF e bordas.",
+      "interpretation": "Esta e a camada de pressao quantitativa do relatorio: serie anual com localizacao, agora cobrindo tambem as cabeceiras do Grande e do Paranaiba que a coleta anterior (corredor do Tiete) nao alcancava. Mato Grosso do Sul concentra o entorno de Tres Lagoas/Jupia e do Sucuriu.",
+      "highlight": "2.305.936 focos dentro da bacia em 2000-2025; a camada de pressao agora cobre o recorte completo. nao apenas o corredor do Tiete."
+    },
+    {
+      "id": "fig13",
+      "file": "fig13_qualidade_agua.svg",
+      "title": "Qualidade da agua na bacia: OD, DBO, fosforo, turbidez e IQA",
+      "tag": "Poluentes",
+      "tag_color": "orange",
+      "icon": "science",
+      "summary": "Indicadores anuais de qualidade da agua da rede ANA/RNQA (medias por estacao, 1978-2021) para as estacoes dentro da bacia contribuinte, separando o eixo Mato Grosso do Sul/entorno de Jupia dos contribuintes a montante (SP/MG/GO/DF).",
+      "interpretation": "O eixo poluentes deixa de depender apenas de PDFs e literatura: OD, DBO, fosforo total, turbidez, E.coli e IQA agora existem como series anuais tabuladas com coordenadas, prontas para cruzar com vazao e volume util no no receptor.",
+      "highlight": "906 estacoes de qualidade dentro da bacia (12 em MS), periodo 1978-2021; fonte ANA SNIRH ArcGIS Indicadores de Qualidade."
+    },
+    {
+      "id": "fig8",
+      "file": "fig8_openalex_theme_coverage.svg",
+      "title": "Cobertura academica OpenAlex por tema",
+      "tag": "Fontes academicas",
+      "tag_color": "green",
+      "icon": "article",
+      "summary": "Quantidade de trabalhos, acesso aberto e PDFs/arquivos localizados por eixo: comportamento dos rios, poluicao, sedimentos, pressao territorial, clima e correlacao integrada.",
+      "interpretation": "A busca academica deixou de ser apenas bibliografia solta: ela agora aponta onde existem estudos aproveitaveis para explicar mecanismos, metodos e lacunas de dados para correlacao.",
+      "highlight": "A rodada OpenAlex retornou 130 trabalhos filtrados, com 100 caminhos de PDF/arquivo preservados."
+    },
+    {
+      "id": "fig9",
+      "file": "fig9_openalex_timeline.svg",
+      "title": "Evolucao temporal da literatura por eixo analitico",
+      "tag": "Literatura",
+      "tag_color": "purple",
+      "icon": "timeline",
+      "summary": "Serie anual de publicacoes OpenAlex agrupadas por tema, cobrindo estudos de hidrologia regional, qualidade/poluicao, sedimentos, clima e uso do solo.",
+      "interpretation": "A linha do tempo ajuda a diferenciar conhecimento historico consolidado de temas mais recentes. Isso e util para decidir o que entra como contexto forte e o que ainda precisa de coleta operacional.",
+      "highlight": "O relatorio passa a usar a literatura como camada de evidencias, nao como substituto dos dados oficiais de serie temporal."
+    },
+    {
+      "id": "fig10",
+      "file": "fig10_correlation_readiness_matrix.svg",
+      "title": "Matriz de prontidao para correlacao",
+      "tag": "Correlacao",
+      "tag_color": "orange",
+      "icon": "hub",
+      "summary": "Matriz qualitativa que cruza comportamento dos rios, poluicao, sedimentos, uso do solo, clima e pontos Jupia/Sucuriu com os tipos de fonte ja disponiveis.",
+      "interpretation": "A correlacao so deve ser feita quando as camadas tiverem chave temporal, chave espacial e variavel comparavel. Hoje a hidrologia/operacao esta pronta, enquanto poluicao e sedimentos ainda dependem de extracao tabular de portais e PDFs.",
+      "highlight": "O proximo ganho analitico vem de transformar fontes de qualidade da agua, poluicao e sedimentos em tabelas com data, local, parametro, unidade e fonte."
     }
   ]
 }

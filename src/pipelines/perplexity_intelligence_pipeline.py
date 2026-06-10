@@ -14,6 +14,7 @@ from src.agents.rank_access_agent import RankAccessAgent
 from src.agents.report_agent import ReportAgent
 from src.connectors.firecrawl_collector import FirecrawlCollector
 from src.connectors.llm import LLMConnector, LLMConnectorError, OpenAIResponsesConnector
+from src.connectors.openalex_api import OpenAlexAPICollector
 from src.connectors.perplexity_api import PerplexityAPICollector
 from src.schemas.records import (
     PerplexityResearchContextRecord,
@@ -98,8 +99,16 @@ class PerplexityIntelligencePipeline:
         limit: int = 20,
         max_searches: int = 5,
         perplexity_api_key: str = "",
+        perplexity_enabled: bool = True,
         perplexity_max_results: int = 20,
         perplexity_timeout_seconds: float = 60.0,
+        openalex_mode: str = "off",
+        openalex_max_results: int = 25,
+        openalex_timeout_seconds: float = 60.0,
+        openalex_api_key: str = "",
+        openalex_mailto: str = "",
+        openalex_from_publication_year: int | None = None,
+        openalex_to_publication_year: int | None = None,
         master_context_payload: dict[str, Any] | None = None,
         research_tracks_payload: list[dict[str, Any]] | None = None,
         llm_mode: str = "auto",
@@ -111,14 +120,23 @@ class PerplexityIntelligencePipeline:
         skip_collection_guides: bool = False,
         llm_connector: LLMConnector | None = None,
         collector_factory: Callable[[], Any] | None = None,
+        openalex_collector_factory: Callable[[], Any] | None = None,
         firecrawl_collector_factory: Callable[[], Any] | None = None,
     ) -> None:
         self.base_query = base_query
         self.limit = limit
         self.max_searches = max_searches
         self.perplexity_api_key = perplexity_api_key
+        self.perplexity_enabled = perplexity_enabled
         self.perplexity_max_results = perplexity_max_results
         self.perplexity_timeout_seconds = perplexity_timeout_seconds
+        self.openalex_mode = openalex_mode
+        self.openalex_max_results = openalex_max_results
+        self.openalex_timeout_seconds = openalex_timeout_seconds
+        self.openalex_api_key = openalex_api_key
+        self.openalex_mailto = openalex_mailto
+        self.openalex_from_publication_year = openalex_from_publication_year
+        self.openalex_to_publication_year = openalex_to_publication_year
         self.master_context_payload = master_context_payload
         self.research_tracks_payload = research_tracks_payload
         self.llm_mode = llm_mode
@@ -136,6 +154,7 @@ class PerplexityIntelligencePipeline:
                 timeout_seconds=self.perplexity_timeout_seconds,
             )
         )
+        self.openalex_collector_factory = openalex_collector_factory
         self.firecrawl_collector_factory = firecrawl_collector_factory
 
     _PROCESSING_FILENAMES = [
@@ -159,8 +178,23 @@ class PerplexityIntelligencePipeline:
         write_json(run_dir / "master-context.json", master_context.model_dump(mode="json"))
         write_json(run_dir / "search-plan.json", [item.model_dump(mode="json") for item in search_plan])
 
-        collector = self.collector_factory()
-        sessions = collector.collect(search_plan)
+        sessions = []
+        if self.perplexity_enabled:
+            collector = self.collector_factory()
+            sessions.extend(collector.collect(search_plan))
+
+        openalex_sessions = []
+        openalex_raw_works = []
+        if self.openalex_mode != "off":
+            openalex_plan = self._select_openalex_plan(search_plan)
+            openalex_collector = self._build_openalex_collector()
+            openalex_sessions = openalex_collector.collect(openalex_plan)
+            openalex_raw_works = [
+                item.model_dump(mode="json") if hasattr(item, "model_dump") else item
+                for item in getattr(openalex_collector, "raw_works", [])
+            ]
+            sessions.extend(openalex_sessions)
+            write_json(run_dir / "collection" / "raw-openalex-works.json", openalex_raw_works)
         write_json(run_dir / "collection" / "raw-sessions.json", [item.model_dump(mode="json") for item in sessions])
 
         settings = PipelineSettings(query=self.base_query, limit=self.limit)
@@ -307,6 +341,11 @@ class PerplexityIntelligencePipeline:
             "base_query": self.base_query,
             "master_context_path": str(run_dir / "master-context.json"),
             "perplexity_max_results": self.perplexity_max_results,
+            "perplexity_enabled": self.perplexity_enabled,
+            "openalex_mode": self.openalex_mode,
+            "openalex_max_results": self.openalex_max_results,
+            "openalex_session_count": len(openalex_sessions),
+            "openalex_work_count": len(openalex_raw_works),
             "llm_mode": self.llm_mode,
             "llm_provider": self.llm_connector.provider if self.llm_connector else None,
             "llm_model": self.llm_connector.model if self.llm_connector else None,
@@ -515,6 +554,41 @@ class PerplexityIntelligencePipeline:
             )
         except Exception:
             return None
+
+    def _build_openalex_collector(self) -> OpenAlexAPICollector:
+        if self.openalex_collector_factory is not None:
+            return self.openalex_collector_factory()
+        return OpenAlexAPICollector(
+            max_results=self.openalex_max_results,
+            timeout_seconds=self.openalex_timeout_seconds,
+            api_key=self.openalex_api_key,
+            mailto=self.openalex_mailto,
+            from_publication_year=self.openalex_from_publication_year,
+            to_publication_year=self.openalex_to_publication_year,
+        )
+
+    def _select_openalex_plan(
+        self,
+        search_plan: list[PerplexitySearchQueryRecord],
+    ) -> list[PerplexitySearchQueryRecord]:
+        if self.openalex_mode == "all":
+            return search_plan
+        if self.openalex_mode == "academic":
+            selected: list[PerplexitySearchQueryRecord] = []
+            for query in search_plan:
+                haystack = " ".join(
+                    [
+                        query.search_profile,
+                        query.target_intent,
+                        query.research_track,
+                        query.research_question,
+                        query.task_prompt,
+                    ]
+                ).lower()
+                if any(token in haystack for token in ("academic", "academica", "literatura", "artigo", "tese")):
+                    selected.append(query)
+            return selected
+        return []
 
     @staticmethod
     def _serialize_updates(updates: dict[str, Any]) -> dict[str, Any]:

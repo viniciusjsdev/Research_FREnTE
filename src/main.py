@@ -68,6 +68,12 @@ def _add_perplexity_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--limit", type=int, default=20, help="Limite de datasets/fontes normalizadas")
     parser.add_argument("--max-searches", type=int, default=5, help="Quantidade maxima de chats tematicos")
     parser.add_argument(
+        "--search-provider",
+        choices=["perplexity", "perplexity-openalex", "openalex"],
+        default="perplexity",
+        help="Fonte de busca: Perplexity, Perplexity + OpenAlex ou apenas OpenAlex.",
+    )
+    parser.add_argument(
         "--perplexity-max-results",
         type=int,
         default=20,
@@ -78,6 +84,34 @@ def _add_perplexity_args(parser: argparse.ArgumentParser) -> None:
         type=float,
         default=60.0,
         help="Timeout em segundos das chamadas a API do Perplexity.",
+    )
+    parser.add_argument(
+        "--openalex-mode",
+        choices=["academic", "all"],
+        default="academic",
+        help="Trilhas enviadas a OpenAlex quando o provedor inclui OpenAlex.",
+    )
+    parser.add_argument(
+        "--openalex-max-results",
+        type=int,
+        default=25,
+        help="Numero maximo de trabalhos por busca na OpenAlex (1-100).",
+    )
+    parser.add_argument(
+        "--openalex-timeout",
+        type=float,
+        default=60.0,
+        help="Timeout em segundos das chamadas a API OpenAlex.",
+    )
+    parser.add_argument(
+        "--openalex-from-year",
+        type=int,
+        help="Ano inicial de publicacao para filtrar trabalhos OpenAlex.",
+    )
+    parser.add_argument(
+        "--openalex-to-year",
+        type=int,
+        help="Ano final de publicacao para filtrar trabalhos OpenAlex.",
     )
     parser.add_argument(
         "--context-file",
@@ -180,7 +214,13 @@ def _run_perplexity_intel(args: argparse.Namespace) -> int:
 
     perplexity_api_key = os.getenv("PERPLEXITY_API_KEY", "").strip()
     firecrawl_api_key = os.getenv("FIRECRAWL_API_KEY", "").strip()
-    if not perplexity_api_key:
+    openalex_api_key = os.getenv("OPENALEX_API_KEY", "").strip()
+    openalex_mailto = os.getenv("OPENALEX_MAILTO", "").strip()
+
+    perplexity_enabled = args.search_provider in {"perplexity", "perplexity-openalex"}
+    openalex_mode = args.openalex_mode if args.search_provider in {"perplexity-openalex", "openalex"} else "off"
+
+    if perplexity_enabled and not perplexity_api_key:
         print("Erro: PERPLEXITY_API_KEY nao configurada no ambiente.")
         return 1
 
@@ -194,8 +234,16 @@ def _run_perplexity_intel(args: argparse.Namespace) -> int:
         limit=args.limit,
         max_searches=args.max_searches,
         perplexity_api_key=perplexity_api_key,
+        perplexity_enabled=perplexity_enabled,
         perplexity_max_results=args.perplexity_max_results,
         perplexity_timeout_seconds=args.perplexity_timeout,
+        openalex_mode=openalex_mode,
+        openalex_max_results=args.openalex_max_results,
+        openalex_timeout_seconds=args.openalex_timeout,
+        openalex_api_key=openalex_api_key,
+        openalex_mailto=openalex_mailto,
+        openalex_from_publication_year=args.openalex_from_year,
+        openalex_to_publication_year=args.openalex_to_year,
         master_context_payload=master_context_payload,
         research_tracks_payload=research_tracks_payload,
         llm_mode=args.llm_mode,
