@@ -34,10 +34,11 @@ BASE = "https://sistemainfoaguas.cetesb.sp.gov.br"
 REPORT = f"{BASE}/AguasSuperficiais/RelatorioQualidadeAguasSuperficiais"
 
 FILTERS = [
-    ("ugrhi_19_baixo_tiete", {"FiltroTipo": "1", "NUGRHI": "19"}),
-    ("ugrhi_18_sj_dourados", {"FiltroTipo": "1", "NUGRHI": "18"}),
-    ("ugrhi_15_turvo_grande", {"FiltroTipo": "1", "NUGRHI": "15"}),
-    ("ugrhi_12_baixo_pardo_grande", {"FiltroTipo": "1", "NUGRHI": "12"}),
+    # Ja coletados (parcial) ou opcionais — reativar conforme necessidade:
+    # ("ugrhi_19_baixo_tiete", {"FiltroTipo": "1", "NUGRHI": "19"}),
+    # ("ugrhi_18_sj_dourados", {"FiltroTipo": "1", "NUGRHI": "18"}),
+    # ("ugrhi_15_turvo_grande", {"FiltroTipo": "1", "NUGRHI": "15"}),
+    # ("ugrhi_12_baixo_pardo_grande", {"FiltroTipo": "1", "NUGRHI": "12"}),
     ("sistema_rio_parana", {"FiltroTipo": "2", "DSISTMHIDRC": "Rio Paraná"}),
 ]
 WINDOW_START_YEAR = 2000

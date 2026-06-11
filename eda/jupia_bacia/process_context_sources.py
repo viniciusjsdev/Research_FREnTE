@@ -97,14 +97,14 @@ DISPLAY_RESERVOIR = {
     "C. DOURADA": "Cachoeira Dourada",
     "EMBORCACAO": "Emborcacao",
     "I. SOLTEIRA": "Ilha Solteira",
-    "ILHA + T. IRMAOS": "Ilha Solteira + Tres Irmaos",
+    "ILHA + T. IRMAOS": "Ilha Solteira + Três Irmãos",
     "L. C. BARRETO": "Luis Carlos Barreto",
     "N. AVANHANDAVA": "Nova Avanhandava",
     "P. COLOMBIA": "Porto Colombia",
     "PORTO PRIMAVERA": "Porto Primavera",
     "PROMISSAO": "Promissao",
     "SAO SIMAO": "Sao Simao",
-    "TRES IRMAOS": "Tres Irmaos",
+    "TRES IRMAOS": "Três Irmãos",
 }
 
 TRACK_THEME = {
@@ -117,7 +117,7 @@ TRACK_THEME = {
     "n3_sedimentos_turbidez_assoreamento_jupia": "Sedimentos e turbidez",
     "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge": "Pressao territorial",
     "n2_clima_chuva_seca_jupia": "Clima e variabilidade",
-    "n4_literatura_contexto_integrado_jupia": "Correlacao integrada",
+    "n4_literatura_contexto_integrado_jupia": "Correlação integrada",
 }
 
 
@@ -370,7 +370,7 @@ def build_evidence_locations(collection_context: dict[str, object]) -> pd.DataFr
             "longitude": -51.63,
             "latitude": -20.78,
             "source_layer": "ONS operacao + literatura OpenAlex",
-            "notes": "No integrador usado para correlacionar sinais hidrologicos e pressoes.",
+            "notes": "Nó integrador usado para correlacionar sinais hidrológicos e pressões.",
         },
         {
             "name": "Corredor Rio Tiete",
@@ -386,7 +386,7 @@ def build_evidence_locations(collection_context: dict[str, object]) -> pd.DataFr
             "longitude": -48.3,
             "latitude": -20.0,
             "source_layer": "ONS + literatura",
-            "notes": "Grande contribuinte hidrologico a montante de Jupia.",
+            "notes": "Grande contribuinte hidrológico a montante de Jupiá.",
         },
         {
             "name": "Rio Paranaiba",
@@ -394,7 +394,7 @@ def build_evidence_locations(collection_context: dict[str, object]) -> pd.DataFr
             "longitude": -48.8,
             "latitude": -18.6,
             "source_layer": "ONS + literatura",
-            "notes": "Grande contribuinte hidrologico a montante de Jupia.",
+            "notes": "Grande contribuinte hidrológico a montante de Jupiá.",
         },
         {
             "name": "Alto Parana / La Plata",
@@ -402,7 +402,7 @@ def build_evidence_locations(collection_context: dict[str, object]) -> pd.DataFr
             "longitude": -55.0,
             "latitude": -24.0,
             "source_layer": "OpenAlex",
-            "notes": "Area ampla de estudos hidrologicos/climaticos usados como contexto regional.",
+            "notes": "Área ampla de estudos hidrológicos/climáticos usados como contexto regional.",
         },
     ]
     requested = collection_context.get("requested_station_matches", [])
@@ -472,6 +472,68 @@ def load_soap_series(supplement_run: Path | None) -> list[pd.DataFrame]:
     return frames
 
 
+HIDROWEB_RUN_PATTERN = "operational-hidroweb-jupia-*"
+# Nomes amigaveis para estacoes que so chegam via HidroWeb (sem inventario local).
+HIDROWEB_STATION_NAMES = {
+    63003300: ("UHE Jupia Sucuriu", "Rio Parana"),
+}
+
+
+def latest_hidroweb_run() -> Path | None:
+    runs = sorted((ROOT / "data" / "runs").glob(HIDROWEB_RUN_PATTERN))
+    return runs[-1] if runs else None
+
+
+def load_hidroweb_series(hidroweb_run: Path | None) -> list[pd.DataFrame]:
+    """Monthly series from ANA HidroWeb conventional CSV bundles.
+
+    The HidroWeb CSV is ``;``-delimited, latin-1, with a metadata preamble before
+    a header row starting at ``EstacaoCodigo``; decimals use comma. Columns match
+    the SOAP layout (Data dd/mm/yyyy, Media, Vazao01..31 / Cota01..31)."""
+    if hidroweb_run is None:
+        return []
+    folder = hidroweb_run / "collection" / "ana_hidroweb_csv"
+    frames: list[pd.DataFrame] = []
+    for path in sorted(folder.glob("*/*.csv")):
+        raw = path.read_text(encoding="latin-1", errors="ignore").splitlines()
+        header_idx = next((i for i, line in enumerate(raw) if line.lower().startswith("estacaocodigo")), None)
+        if header_idx is None:
+            continue
+        from io import StringIO
+
+        serie = pd.read_csv(
+            StringIO("\n".join(raw[header_idx:])), sep=";", dtype=str, engine="python", on_bad_lines="skip"
+        )
+        if serie.empty or "Data" not in serie.columns:
+            continue
+
+        def num(values: pd.Series) -> pd.Series:
+            return pd.to_numeric(values.astype(str).str.replace(",", ".", regex=False), errors="coerce")
+
+        series_type = "cotas" if "cota" in path.name.lower() else "vazoes"
+        monthly_mean = num(serie["Media"]) if "Media" in serie.columns else pd.Series(np.nan, index=serie.index)
+        daily_cols = [c for c in serie.columns if re_daily.match(c)]
+        if daily_cols:
+            monthly_mean = monthly_mean.fillna(serie[daily_cols].apply(num).mean(axis=1))
+        code = int(pd.to_numeric(serie["EstacaoCodigo"], errors="coerce").dropna().iloc[0])
+        name, river = HIDROWEB_STATION_NAMES.get(code, ("", ""))
+        tidy = pd.DataFrame(
+            {
+                "station_code": code,
+                "station_name": name,
+                "river_name": river,
+                "series_type": series_type,
+                "consistency_level": pd.to_numeric(serie.get("NivelConsistencia"), errors="coerce"),
+                "date": pd.to_datetime(serie["Data"], format="%d/%m/%Y", errors="coerce").dt.to_period("M").dt.to_timestamp(),
+                "monthly_mean": monthly_mean,
+            }
+        )
+        tidy = tidy[tidy["date"].notna() & tidy["monthly_mean"].notna()]
+        if not tidy.empty:
+            frames.append(tidy)
+    return frames
+
+
 def build_station_monthly_series(
     collection_context: dict[str, object], supplement_run: Path | None = None
 ) -> tuple[str, dict[str, object]]:
@@ -516,6 +578,7 @@ def build_station_monthly_series(
         tidy = tidy[tidy["date"].notna() & tidy["monthly_mean"].notna()]
         frames.append(tidy)
     frames.extend(load_soap_series(supplement_run))
+    frames.extend(load_hidroweb_series(latest_hidroweb_run()))
     if not frames:
         return "", {}
 
@@ -633,13 +696,14 @@ def build_quality_tables(supplement_run: Path | None) -> tuple[dict[str, str], d
     return outputs, summary
 
 
-def latest_infoaguas_run() -> Path | None:
-    runs = [
+def infoaguas_runs() -> list[Path]:
+    """Todos os runs InfoAguas com amostras consolidadas (UGRHIs e Rio Parana
+    podem vir de runs separados; o tidy concatena e deduplica)."""
+    return sorted(
         path
         for path in (ROOT / "data" / "runs").glob(INFOAGUAS_RUN_PATTERN)
         if (path / "processing" / "infoaguas_samples.csv").exists()
-    ]
-    return max(runs, key=lambda p: p.name) if runs else None
+    )
 
 
 def dms_to_decimal(value: str) -> float | None:
@@ -653,11 +717,18 @@ def dms_to_decimal(value: str) -> float | None:
     return -(degrees + minutes / 60 + seconds / 3600)
 
 
-def build_infoaguas_tables(infoaguas_run: Path | None) -> tuple[dict[str, str], dict[str, object]]:
-    """Tidy CETESB InfoAguas samples (per-collection measurements) into staging/analytic."""
-    if infoaguas_run is None:
+def build_infoaguas_tables(runs: list[Path]) -> tuple[dict[str, str], dict[str, object]]:
+    """Tidy CETESB InfoAguas samples (per-collection measurements) into staging/analytic.
+
+    Concatena as amostras de todos os runs (UGRHI 19 parcial + sistema Rio
+    Parana vieram de coletas separadas); a deduplicacao apos o tidy remove
+    janelas repetidas."""
+    if not runs:
         return {}, {}
-    samples = pd.read_csv(infoaguas_run / "processing" / "infoaguas_samples.csv", dtype=str)
+    samples = pd.concat(
+        [pd.read_csv(run / "processing" / "infoaguas_samples.csv", dtype=str) for run in runs],
+        ignore_index=True,
+    )
     if samples.empty:
         return {}, {}
 
@@ -696,14 +767,117 @@ def build_infoaguas_tables(infoaguas_run: Path | None) -> tuple[dict[str, str], 
         "parameters": int(tidy["parameter"].nunique()),
         "samples": int(len(tidy)),
         "period": f"{tidy['date'].min().date()} a {tidy['date'].max().date()}",
-        "run_id": infoaguas_run.name,
+        "run_id": ", ".join(run.name for run in runs),
     }
     outputs = {
         "infoaguas_staging": str(staging_path),
         "infoaguas_monthly": str(analytic_path),
-        "infoaguas_run": str(infoaguas_run),
+        "infoaguas_run": "; ".join(str(run) for run in runs),
     }
     return outputs, summary
+
+
+# Ponto CETESB sobre a barragem de Jupia (no receptor) e os poluentes/sedimentos
+# que serao cruzados com a hidrologia do no. Nome amigavel -> string exata na base.
+NODE_POINT = "PARN02100"
+NODE_POLLUTANTS = {
+    "Turbidez": "Turbidez",
+    "Solidos totais": "Sólido Total",
+    "OD": "Oxigênio Dissolvido",
+    "Fosforo total": "Fósforo Total",
+    "Nitrato": "Nitrogênio-Nitrato",
+    "Condutividade": "Condutividade",
+    "Ferro total": "Ferro Total",
+}
+
+
+def build_node_correlation(infoaguas_outputs: dict[str, str]) -> tuple[dict[str, str], dict[str, object]]:
+    """Cruza a hidrologia do no de Jupia (vazao afluente e volume util, ONS) com os
+    poluentes/sedimentos medidos no proprio no (CETESB PARN02100), em base mensal.
+    Produz a matriz de correlação de Spearman e a série alinhada para a fig10."""
+    monthly_path = ANALYTIC_DIR / "jupia_system_monthly.csv"
+    infoaguas_path = Path(infoaguas_outputs.get("infoaguas_monthly", "")) if infoaguas_outputs else None
+    if not monthly_path.exists() or infoaguas_path is None or not infoaguas_path.exists():
+        return {}, {}
+
+    monthly = pd.read_csv(monthly_path, parse_dates=["date"])
+    node_flow = (
+        monthly[monthly["reservoir_key"] == "JUPIA"][["date", "inflow_m3s", "useful_volume_pct"]]
+        .rename(columns={"date": "month", "inflow_m3s": "Vazao afluente", "useful_volume_pct": "Volume util"})
+        .dropna(subset=["Vazao afluente"])
+    )
+    node_flow["month"] = node_flow["month"].dt.to_period("M").dt.to_timestamp()
+
+    info = pd.read_csv(infoaguas_path, parse_dates=["year_month"])
+    info = info[info["point_code"] == NODE_POINT]
+    wide = node_flow.set_index("month")
+    for label, raw_name in NODE_POLLUTANTS.items():
+        serie = (
+            info[info["parameter"] == raw_name]
+            .groupby("year_month")["value"].mean()
+            .rename(label)
+        )
+        wide = wide.join(serie, how="left")
+
+    wide = wide.sort_index()
+    aligned_path = ANALYTIC_DIR / "jupia_node_aligned_monthly.csv"
+    wide.reset_index().rename(columns={"month": "date"}).to_csv(aligned_path, index=False)
+
+    order = ["Vazao afluente", "Volume util"] + list(NODE_POLLUTANTS.keys())
+    corr = wide[order].corr(method="spearman", min_periods=18)
+    corr_path = ANALYTIC_DIR / "jupia_node_correlation.csv"
+    corr.to_csv(corr_path)
+
+    # Pares hidrologia x poluente, ordenados por |r|, para a leitura analitica.
+    hydro = ["Vazao afluente", "Volume util"]
+    poll = list(NODE_POLLUTANTS.keys())
+    pairs: list[dict[str, object]] = []
+    for h in hydro:
+        for p in poll:
+            r = corr.loc[h, p]
+            n = int(wide[[h, p]].dropna().shape[0])
+            if pd.notna(r) and n >= 18:
+                pairs.append({"hydro": h, "pollutant": p, "r": round(float(r), 2), "n": n})
+    pairs.sort(key=lambda d: abs(d["r"]), reverse=True)
+
+    summary = {
+        "months": int(wide.dropna(subset=["Vazao afluente"]).shape[0]),
+        "period": f"{wide.index.min().date()} a {wide.index.max().date()}",
+        "node_point": NODE_POINT,
+        "top_pairs": pairs[:4],
+        "variables": order,
+    }
+    outputs = {"node_correlation": str(corr_path), "node_aligned": str(aligned_path)}
+    return outputs, summary
+
+
+def build_infoaguas_points() -> str:
+    """Tabela de pontos CETESB InfoAguas (com lat/lon) para a camada do mapa."""
+    staging = STAGING_DIR / "cetesb_infoaguas_samples.csv"
+    if not staging.exists():
+        return ""
+    samples = pd.read_csv(staging, parse_dates=["date"])
+    samples = samples[samples["latitude"].notna() & samples["longitude"].notna()]
+    if samples.empty:
+        return ""
+    points = (
+        samples.groupby("point_code")
+        .agg(
+            hydric_system=("hydric_system", "first"),
+            municipality=("municipality", "first"),
+            ugrhi=("ugrhi", "first"),
+            latitude=("latitude", "first"),
+            longitude=("longitude", "first"),
+            parameters=("parameter", "nunique"),
+            samples=("value", "size"),
+            first_year=("date", lambda s: int(s.dt.year.min())),
+            last_year=("date", lambda s: int(s.dt.year.max())),
+        )
+        .reset_index()
+    )
+    out = ANALYTIC_DIR / "jupia_infoaguas_points.csv"
+    points.to_csv(out, index=False)
+    return str(out)
 
 
 def build_queimadas_summary(supplement_run: Path | None) -> tuple[str, dict[str, object]]:
@@ -773,7 +947,9 @@ def build_tables() -> dict[str, object]:
     station_series_path, station_series_summary = build_station_monthly_series(collection_context, supplement_run)
     queimadas_path, queimadas_summary = build_queimadas_summary(supplement_run)
     quality_outputs, quality_summary = build_quality_tables(supplement_run)
-    infoaguas_outputs, infoaguas_summary = build_infoaguas_tables(latest_infoaguas_run())
+    infoaguas_outputs, infoaguas_summary = build_infoaguas_tables(infoaguas_runs())
+    correlation_outputs, correlation_summary = build_node_correlation(infoaguas_outputs)
+    infoaguas_points_path = build_infoaguas_points()
 
     raw = load_ons()
     raw["basin_key"] = raw["nom_bacia"].map(ascii_key)
@@ -904,37 +1080,37 @@ def build_tables() -> dict[str, object]:
         series_station_count = 0
 
     context = {
-        "report_title": "Bacia Hidrografica de Jupia",
-        "report_subtitle": "Sistema contribuinte Paranaiba, Grande, Tiete e no Parana/Jupia",
+        "report_title": "Bacia Hidrográfica de Jupiá",
+        "report_subtitle": "Sistema contribuinte Paranaíba, Grande, Tietê e Paraná/Jupiá",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "scope": {
             "study_slug": "jupia_bacia",
-            "primary_node": "UHE Jupia",
-            "requested_station": "UHE JUPIA SUCURIU",
-            "available_station_note": "A coleta ANA encontrou matches diretos para UHE JUPIA RIO SUCURIU e UHE JUPIA SUCURIU no inventario Hidro; nos dados ONS locais a serie operacional permanece como JUPIA na bacia PARANA.",
-            "source": "ONS Dados Hidrologicos de Reservatorios, ANA Hidro/SOAP, ANA GitHub hidro-dados-estacoes-convencionais, IBGE BHB250 e documentos CETESB/ANA.",
+            "primary_node": "UHE Jupiá",
+            "requested_station": "UHE JUPIÁ SUCURIÚ",
+            "available_station_note": "A coleta ANA encontrou matches diretos para UHE JUPIÁ RIO SUCURIÚ e UHE JUPIÁ SUCURIÚ no inventário Hidro; nos dados ONS locais a série operacional permanece como JUPIA na bacia PARANÁ.",
+            "source": "ONS Dados Hidrológicos de Reservatórios, ANA Hidro/SOAP, ANA GitHub hidro-dados-estacoes-convencionais, IBGE BHB250 e documentos CETESB/ANA.",
             "academic_source": "OpenAlex API /works, rodada academica Jupia sem Perplexity, com raw JSON preservado.",
-            "geographic_scope": "UHE Jupia e entorno Tres Lagoas/Castilho; Rio Sucuriu; Rio Parana; contribuintes Rio Tiete, Rio Grande e Rio Paranaiba no Alto Parana.",
+            "geographic_scope": "UHE Jupiá e entorno Três Lagoas/Castilho; Rio Sucuriú; Rio Paraná; contribuintes Rio Tietê, Rio Grande e Rio Paranaíba no Alto Paraná.",
         },
         "spatial_recorte": {
-            "title": "Recorte geografico analisado",
-            "short_name": "Bacia contribuinte do Alto Parana ate a UHE Jupia",
-            "outlet": "Outlet analitico no Rio Parana, proximo a UHE Jupia / Eng. Souza Dias, entre Tres Lagoas-MS e Castilho/Andradina-SP.",
+            "title": "Recorte geográfico analisado",
+            "short_name": "Bacia contribuinte do Alto Paraná até a UHE Jupiá",
+            "outlet": "Ponto de fechamento analítico no Rio Paraná, próximo à UHE Jupiá / Eng. Souza Dias, entre Três Lagoas-MS e Castilho/Andradina-SP.",
             "outlet_coordinates": "-20.868, -51.628",
-            "watershed_area_note": "Area delineada no site de bacias globais: aproximadamente 480.000 km2 a montante do outlet.",
-            "definition": "Este relatorio analisa a area que drena para Jupia antes do ponto de saida no Rio Parana. O recorte nao e a bacia do Tiete isolada e tambem nao e apenas o reservatorio de Jupia; e o sistema contribuinte do Alto Parana que combina Paranaiba, Grande, Tiete e Parana no no receptor de Jupia.",
-            "main_basin": "Alto Parana / Parana superior ate Jupia",
-            "structuring_rivers": ["Rio Paranaiba", "Rio Grande", "Rio Tiete", "Rio Parana"],
-            "local_focus": ["UHE Jupia / Eng. Souza Dias", "Rio Sucuriu", "estacoes ANA/Hidro UHE JUPIA SUCURIU", "entorno Tres Lagoas-Castilho-Andradina"],
-            "analysis_question": "Como os rios Paranaiba, Grande, Tiete e Parana, junto com operacao de reservatorios, poluicao, uso do solo, clima e sedimentos, condicionam o no receptor de Jupia?",
+            "watershed_area_note": "Área delineada no site de bacias globais: aproximadamente 480.000 km2 a montante do ponto de fechamento.",
+            "definition": "Este relatório analisa a área que drena para Jupiá antes do ponto de fechamento no Rio Paraná. O recorte não é a bacia do Tietê isolada e também não é apenas o reservatório de Jupiá; é o sistema contribuinte do Alto Paraná que combina Paranaíba, Grande, Tietê e Paraná no nó receptor de Jupiá.",
+            "main_basin": "Alto Paraná / Paraná superior até Jupiá",
+            "structuring_rivers": ["Rio Paranaíba", "Rio Grande", "Rio Tietê", "Rio Paraná"],
+            "local_focus": ["UHE Jupiá / Eng. Souza Dias", "Rio Sucuriú", "estações ANA/Hidro UHE JUPIÁ SUCURIÚ", "entorno Três Lagoas-Castilho-Andradina"],
+            "analysis_question": "Como os rios Paranaíba, Grande, Tietê e Paraná, junto com operação de reservatórios, poluição, uso do solo, clima e sedimentos, condicionam o nó receptor de Jupiá?",
         },
         "metrics": [
-            {"label": "Reservatorios ONS", "value": str(int(coverage["reservoir_key"].nunique())), "detail": "Grande, Paranaiba, Tiete e Parana/Jupia", "icon": "water"},
-            {"label": "Matches ANA", "value": str(collection_summary.get("requested_station_matches", 0)), "detail": "UHE JUPIA SUCURIU / Rio Sucuriu", "icon": "travel_explore"},
-            {"label": "Series ANA", "value": str(collection_summary.get("station_series_collected", 0)), "detail": f"{series_station_count} estacoes com CSV", "icon": "monitoring"},
-            {"label": "Janela ONS", "value": f"{staging['year'].min()}-{staging['year'].max()}", "detail": f"{staging['year'].nunique()} anos e {len(staging):,} registros".replace(",", "."), "icon": "calendar_month"},
-            {"label": "Qualidade ANA", "value": str(quality_summary.get("stations_in_basin", 0)), "detail": f"estacoes na bacia · {quality_summary.get('period', 'sem serie')}", "icon": "science"},
-            {"label": "OpenAlex", "value": str(openalex_context["summary"].get("works", 0)), "detail": f"{openalex_context['summary'].get('with_pdf', 0)} com PDF/arquivo", "icon": "article"},
+            {"label": "Vazao ONS", "value": f"{staging['year'].min()}-{staging['year'].max()}", "detail": f"{int(coverage['reservoir_key'].nunique())} reservatorios · {staging['year'].nunique()} anos", "icon": "water"},
+            {"label": "Estacoes fluviometricas", "value": str(series_station_count), "detail": f"series ANA {series_period_start}-{series_period_end}", "icon": "monitoring"},
+            {"label": "Qualidade ANA/RNQA", "value": str(quality_summary.get("stations_in_basin", 0)), "detail": f"estacoes na bacia · {quality_summary.get('period', 'sem serie')}", "icon": "science"},
+            {"label": "Amostras InfoAguas", "value": f"{infoaguas_summary.get('samples', 0):,}".replace(",", "."), "detail": f"{infoaguas_summary.get('parameters', 0)} parametros · {len(infoaguas_summary.get('points', []))} pontos", "icon": "water_ec"},
+            {"label": "Correlação no nó", "value": str(correlation_summary.get("months", 0)), "detail": "meses vazão x poluentes (PARN02100)", "icon": "hub"},
+            {"label": "Artigos (fontes)", "value": str(openalex_context["summary"].get("works", 0)), "detail": f"{openalex_context['summary'].get('with_pdf', 0)} com PDF/DOI", "icon": "article"},
         ],
         "data_outputs": {
             "staging_daily": str(staging_path),
@@ -945,6 +1121,8 @@ def build_tables() -> dict[str, object]:
             "queimadas_estado_ano": queimadas_path,
             **quality_outputs,
             **infoaguas_outputs,
+            **correlation_outputs,
+            "infoaguas_points": infoaguas_points_path,
             **collection_context["outputs"],
             **openalex_context["outputs"],
         },
@@ -952,6 +1130,7 @@ def build_tables() -> dict[str, object]:
         "queimadas_summary": queimadas_summary,
         "quality_summary": quality_summary,
         "infoaguas_summary": infoaguas_summary,
+        "correlation_summary": correlation_summary,
         "collection_summary": collection_summary,
         "collection_run_id": collection_context["run_id"],
         "openalex_run_id": openalex_context["run_id"],
@@ -966,14 +1145,10 @@ def build_tables() -> dict[str, object]:
         "basin_summary": basin_summary.to_dict(orient="records"),
         "jupia_summary": jupia_summary,
         "known_gaps": [
-            "A serie operacional ONS local continua identificada como JUPIA, nao como SUCURIU; a identidade SUCURIU foi confirmada no inventario ANA/Hidro.",
-            "O codigo ANA 63003300 (UHE JUPIA SUCURIU) segue sem serie aberta: nao ha CSV no repositorio ANA/GitHub, o SOAP HidroSerieHistorica retorna vazio e o download Hidroweb agora exige autenticacao (HTTP 401).",
-            "A qualidade da agua tem duas camadas tabulares: indicadores anuais ANA/RNQA (ate 2021) e amostras por coleta do CETESB InfoAguas (ate 2026). A coleta InfoAguas e parcial: cobre 7 pontos da UGRHI 19 (Baixo Tiete); faltam os demais pontos da UGRHI 19 e as UGRHIs 18, 15 e 12 e o eixo Rio Parana, interrompidos a pedido.",
-            "A OpenAlex melhorou a cobertura academica, mas nao substitui extracao tabular dos artigos; por enquanto ela entra como evidência bibliografica e caminho de arquivo/DOI.",
-            "Dados do Tiete ja usados no relatorio anterior entram aqui como uma subcamada contribuinte, nao como narrativa principal.",
-            "Porto Primavera esta a jusante do no de Jupia; permanece na base como contexto do trecho Parana, mas nao deve ser lido como contribuinte do recorte.",
-            "O inventario ANA retornou um falso positivo fora do recorte (40890000, Ribeirao Sucuriu em Tres Marias-MG, bacia do Sao Francisco); ele foi mantido no staging para auditoria, mas excluido do mapa.",
-            "O filtro espacial usa o contorno esquematico da bacia; um refinamento com ottobacias oficiais ANA/IBGE pode mover estacoes e focos proximos da borda.",
+            "Os indicadores de qualidade ANA/RNQA (fig13) vão até 2021; a série mensal CETESB InfoÁguas (fig14/fig15) cobre 2000-2026 nos pontos do Baixo Tietê e do eixo Rio Paraná, incluindo PARN02100 sobre a barragem de Jupiá. Pontos das UGRHIs 18, 15 e 12 ficam fora desta rodada.",
+            "A correlação do nó (fig10) usa o ponto CETESB PARN02100, sobre a barragem; ela mede a assinatura no próprio nó, não a contribuição isolada de cada afluente a montante.",
+            "Porto Primavera está a jusante do nó de Jupiá; entra como contexto do trecho Paraná, não como contribuinte do recorte.",
+            "O contorno da bacia é esquemático; um refinamento com ottobacias oficiais ANA/IBGE pode mover estações e focos próximos da borda.",
         ],
         "figures": [
             {
@@ -985,7 +1160,7 @@ def build_tables() -> dict[str, object]:
                 "icon": "map",
                 "summary": "Mapa esquematico do recorte: a bacia contribuinte do Alto Parana ate o outlet de Jupia, com os rios Paranaiba, Grande, Tiete e Parana como eixos estruturantes e Sucuriu/Jupia como foco local.",
                 "interpretation": "A area vermelha representa o sistema que pode enviar agua, sedimentos, nutrientes e poluentes para Jupia. Os pontos ANA/Hidro sao medicoes locais; as areas coloridas indicam as sub-bacias e regioes de evidencia usadas na analise.",
-                "highlight": "A unidade de analise e o sistema contribuinte ate Jupia: comportamento dos rios primeiro, poluicao e pressoes depois, correlacao no no receptor ao final.",
+                "highlight": "A unidade de análise é o sistema contribuinte até Jupiá: comportamento dos rios primeiro, poluição e pressões depois, correlação no nó receptor ao final.",
             },
             {
                 "id": "fig1",
@@ -1006,8 +1181,8 @@ def build_tables() -> dict[str, object]:
                 "tag_color": "green",
                 "icon": "waves",
                 "summary": "Serie mensal media de vazao afluente por bacia operacional ONS, agregando os reservatorios selecionados em cada contribuinte.",
-                "interpretation": "A comparacao mostra a escala relativa dos contribuintes que condicionam Jupia. Grande e Paranaiba ampliam fortemente o contexto hidrologico em relacao a uma leitura Tiete-only.",
-                "highlight": "O relatorio de Jupia precisa reunir os tres grandes rios em vez de reaproveitar apenas a narrativa do Tiete.",
+                "interpretation": "A comparação mostra a escala relativa dos contribuintes que condicionam Jupiá. Grande e Paranaíba ampliam fortemente o contexto hidrológico em relação a uma leitura Tietê-only.",
+                "highlight": "O relatório de Jupiá precisa reunir os três grandes rios em vez de reaproveitar apenas a narrativa do Tietê.",
             },
             {
                 "id": "fig3",
@@ -1048,39 +1223,6 @@ def build_tables() -> dict[str, object]:
                 "highlight": "Eventos secos devem ser avaliados como sinais sistêmicos, nao como anomalias isoladas de uma unica cascata.",
             },
             {
-                "id": "fig5",
-                "file": "fig5_reservoir_count_and_flow.svg",
-                "title": "Cobertura de estacoes e escala hidrologica",
-                "tag": "Cobertura",
-                "tag_color": "purple",
-                "icon": "bar_chart",
-                "summary": "Comparacao entre numero de reservatorios ONS selecionados e vazao media por bacia contribuinte.",
-                "interpretation": "O grafico explicita por que a demanda pede Jupia: a bacia ampliada agrega mais pontos operacionais e maior diversidade hidrologica do que a leitura Tiete isolada.",
-                "highlight": "Paranaiba e Grande acrescentam densidade operacional e contexto hidrologico ao no Jupia.",
-            },
-            {
-                "id": "fig6",
-                "file": "fig6_coverage_matrix.svg",
-                "title": "Cobertura temporal da base usada",
-                "tag": "Auditoria",
-                "tag_color": "stone",
-                "icon": "fact_check",
-                "summary": "Matriz de cobertura temporal por bacia e reservatorio, comparada ao alvo minimo de 20 anos.",
-                "interpretation": "A base ONS local atende ao alvo temporal para os principais reservatorios selecionados. A coleta operacional acrescenta inventario ANA e documentos brutos para qualidade/poluicao, mas a serie exata 63003300 ainda nao veio como CSV historico.",
-                "highlight": "A camada Jupia agora tem descoberta, inventario de estacoes e coleta bruta rastreavel; falta extrair os documentos de qualidade/poluicao para variaveis tabulares.",
-            },
-            {
-                "id": "fig7",
-                "file": "fig7_station_collection_evidence.svg",
-                "title": "Evidencia de coleta: estacoes Jupia/Sucuriu",
-                "tag": "Coleta",
-                "tag_color": "blue",
-                "icon": "dataset",
-                "summary": "Resumo dos matches ANA/Hidro para UHE Jupia/Sucuriu e das series historicas convencionais disponiveis no repositorio ANA/GitHub.",
-                "interpretation": "A demanda UHE JUPIA SUCURIU foi localizada no inventario oficial, mas a disponibilidade de CSV historico varia por codigo. Isso separa identidade da estacao, disponibilidade de serie e lacuna operacional.",
-                "highlight": f"Foram encontrados {collection_summary.get('requested_station_matches', 0)} matches diretos para a estacao solicitada e {collection_summary.get('station_series_collected', 0)} series CSV convencionais em codigos proximos.",
-            },
-            {
                 "id": "fig12",
                 "file": "fig12_queimadas_pressao.svg",
                 "title": "Pressao territorial: focos de calor dentro da bacia contribuinte",
@@ -1088,7 +1230,7 @@ def build_tables() -> dict[str, object]:
                 "tag_color": "red",
                 "icon": "local_fire_department",
                 "summary": "Focos de calor INPE/BDQueimadas por estado e ano, coletados via WFS com o envelope da bacia inteira e filtrados pelo contorno da bacia contribuinte (point-in-polygon). Cobre Mato Grosso do Sul, Sao Paulo, Minas Gerais, Goias/DF e bordas.",
-                "interpretation": "Esta e a camada de pressao quantitativa do relatorio: serie anual com localizacao, agora cobrindo tambem as cabeceiras do Grande e do Paranaiba que a coleta anterior (corredor do Tiete) nao alcancava. Mato Grosso do Sul concentra o entorno de Tres Lagoas/Jupia e do Sucuriu.",
+                "interpretation": "Esta é a camada de pressão quantitativa do relatório: série anual com localização, agora cobrindo também as cabeceiras do Grande e do Paranaíba que a coleta anterior (corredor do Tietê) não alcançava. Mato Grosso do Sul concentra o entorno de Três Lagoas/Jupiá e do Sucuriú.",
                 "highlight": (
                     f"{queimadas_summary.get('total_focos', 0):,} focos dentro da bacia em {queimadas_summary.get('period', '')}; a camada de pressao agora cobre o recorte completo, nao apenas o corredor do Tiete.".replace(",", ".")
                     if queimadas_summary
@@ -1113,50 +1255,47 @@ def build_tables() -> dict[str, object]:
             {
                 "id": "fig14",
                 "file": "fig14_infoaguas_tiete_chegada.svg",
-                "title": "CETESB InfoAguas: o Tiete que chega ao no de Jupia",
+                "title": "Poluentes e nutrientes no no de Jupia (CETESB InfoAguas, mensal)",
                 "tag": "Poluentes",
                 "tag_color": "orange",
                 "icon": "water_ec",
-                "summary": "Series mensais por coleta do CETESB InfoAguas (2000-2026) nos pontos do Baixo Tiete, com destaque para TIET02900 (Rio Tiete) e TITR02100 (Reservatorio de Tres Irmaos), as ultimas medicoes antes do Parana: OD, DBO, fosforo total e turbidez.",
-                "interpretation": "Esta camada autenticada desce a granularidade de anual para mensal e estende a serie ate 2026, alem dos 129 parametros disponiveis (incluindo metais como mercurio, ferro e manganes, relevantes para sedimentos). E a ponte direta entre a poluicao do Tiete e o no receptor de Jupia.",
+                "summary": "Séries mensais por coleta (2000-2026) em três pontos: TIET02900 (Rio Tietê, o afluente poluído que chega), TITR02100 (Res. Três Irmãos) e PARN02100 (sobre a barragem de Jupiá, o nó receptor). Seis variáveis: oxigênio dissolvido, DBO, fósforo total, nitrogênio-nitrato, condutividade e turbidez.",
+                "interpretation": "Aqui o eixo poluentes ganha resolucao mensal e a suite de nutrientes (fosforo e nitrato, ligados ao uso agricola do solo) e os proxies de carga dissolvida/sedimento (condutividade, turbidez). Comparar o Tiete que entra com o Parana no proprio barramento mostra quanto da assinatura do afluente persiste no no.",
                 "highlight": (
-                    f"{infoaguas_summary.get('samples', 0):,} amostras de {len(infoaguas_summary.get('points', []))} pontos do Baixo Tiete, {infoaguas_summary.get('parameters', 0)} parametros, periodo {infoaguas_summary.get('period', '')} (coleta parcial).".replace(",", ".")
+                    f"{infoaguas_summary.get('samples', 0):,} amostras, {infoaguas_summary.get('parameters', 0)} parametros, {len(infoaguas_summary.get('points', []))} pontos (Baixo Tiete + eixo Rio Parana), {infoaguas_summary.get('period', '')}.".replace(",", ".")
                     if infoaguas_summary
                     else "Coleta InfoAguas ainda nao disponivel."
                 ),
             },
             {
-                "id": "fig8",
-                "file": "fig8_openalex_theme_coverage.svg",
-                "title": "Cobertura academica OpenAlex por tema",
-                "tag": "Fontes academicas",
-                "tag_color": "green",
-                "icon": "article",
-                "summary": "Quantidade de trabalhos, acesso aberto e PDFs/arquivos localizados por eixo: comportamento dos rios, poluicao, sedimentos, pressao territorial, clima e correlacao integrada.",
-                "interpretation": "A busca academica deixou de ser apenas bibliografia solta: ela agora aponta onde existem estudos aproveitaveis para explicar mecanismos, metodos e lacunas de dados para correlacao.",
-                "highlight": f"A rodada OpenAlex retornou {openalex_context['summary'].get('works', 0)} trabalhos filtrados, com {openalex_context['summary'].get('with_pdf', 0)} caminhos de PDF/arquivo preservados.",
-            },
-            {
-                "id": "fig9",
-                "file": "fig9_openalex_timeline.svg",
-                "title": "Evolucao temporal da literatura por eixo analitico",
-                "tag": "Literatura",
-                "tag_color": "purple",
-                "icon": "timeline",
-                "summary": "Serie anual de publicacoes OpenAlex agrupadas por tema, cobrindo estudos de hidrologia regional, qualidade/poluicao, sedimentos, clima e uso do solo.",
-                "interpretation": "A linha do tempo ajuda a diferenciar conhecimento historico consolidado de temas mais recentes. Isso e util para decidir o que entra como contexto forte e o que ainda precisa de coleta operacional.",
-                "highlight": "O relatorio passa a usar a literatura como camada de evidencias, nao como substituto dos dados oficiais de serie temporal.",
+                "id": "fig15",
+                "file": "fig15_node_metals.svg",
+                "title": "Metais no no de Jupia: ferro, cobre, chumbo e zinco",
+                "tag": "Poluentes",
+                "tag_color": "orange",
+                "icon": "experiment",
+                "summary": "Series mensais de metais medidos pela CETESB no ponto PARN02100, sobre a barragem de Jupia: ferro total, cobre total, chumbo total e zinco total (mg/L), com a referencia da classe CONAMA quando aplicavel.",
+                "interpretation": "Metais associam-se a sedimentos e ao material em suspensao que chega ao reservatorio, sendo relevantes para a leitura geomorfologica do no. O ferro acompanha a fracao mineral; cobre, chumbo e zinco sinalizam contribuicao antropica e industrial do trecho a montante.",
+                "highlight": "A camada de metais conecta a carga de sedimentos (turbidez/solidos) ao aporte mineral e antropico medido diretamente no no receptor.",
             },
             {
                 "id": "fig10",
-                "file": "fig10_correlation_readiness_matrix.svg",
-                "title": "Matriz de prontidao para correlacao",
-                "tag": "Correlacao",
-                "tag_color": "orange",
+                "file": "fig10_node_correlation.svg",
+                "title": "Correlação no nó de Jupiá: vazão x poluentes e sedimentos",
+                "tag": "Correlação",
+                "tag_color": "red",
                 "icon": "hub",
-                "summary": "Matriz qualitativa que cruza comportamento dos rios, poluicao, sedimentos, uso do solo, clima e pontos Jupia/Sucuriu com os tipos de fonte ja disponiveis.",
-                "interpretation": "A correlacao so deve ser feita quando as camadas tiverem chave temporal, chave espacial e variavel comparavel. Hoje a hidrologia/operacao esta pronta, enquanto poluicao e sedimentos ainda dependem de extracao tabular de portais e PDFs.",
-                "highlight": "O proximo ganho analitico vem de transformar fontes de qualidade da agua, poluicao e sedimentos em tabelas com data, local, parametro, unidade e fonte.",
+                "summary": "Matriz de correlação de Spearman calculada mês a mês entre a hidrologia do nó (vazão afluente e volume útil, ONS) e os poluentes/sedimentos medidos no próprio nó (CETESB PARN02100): turbidez, sólidos totais, oxigênio dissolvido, fósforo, nitrato, condutividade e ferro. Ao lado, os pares vazão x poluente mais fortes em dispersão.",
+                "interpretation": "Este é o fechamento da premissa: rios -> poluentes -> correlação deixa de ser afirmação e vira coeficiente. Coeficientes positivos vazão-turbidez/sólidos indicam transporte de sedimento puxado pela vazão; correlações negativas vazão-condutividade/nutrientes indicam diluição em cheia. O volume útil adiciona a leitura do efeito do reservatório.",
+                "highlight": (
+                    "Correlação mais forte: vazão afluente x {p} (rho = {r}); calculada sobre {n} meses no nó PARN02100.".format(
+                        p=correlation_summary["top_pairs"][0]["pollutant"],
+                        r=f"{correlation_summary['top_pairs'][0]['r']:+.2f}",
+                        n=correlation_summary["top_pairs"][0]["n"],
+                    )
+                    if correlation_summary.get("top_pairs")
+                    else "Série alinhada vazão x poluentes ainda insuficiente para correlação."
+                ),
             },
         ],
     }

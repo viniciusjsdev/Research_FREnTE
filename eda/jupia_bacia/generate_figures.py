@@ -376,6 +376,9 @@ STATION_STYLE = {
     63005000: ("Jupia - Ponte (63005000)", "#87714D"),
     63007080: ("UHE Jupia Barramento (63007080)", "#C75D2C"),
     63010000: ("UHE Jupia Jusante (63010000)", "#1B75BB"),
+    # 63003300 (UHE Jupia Sucuriu) cadastrada no inventario mas SEM serie publicada
+    # na ANA (HidroWeb export vazio; SOAP responde "Sem dados para esta estacao").
+    # Sucuriu/no de Jupia ja cobertos por 63001500/63002000/63007080/63010000.
 }
 
 
@@ -510,13 +513,22 @@ def fig13_qualidade_agua() -> None:
 INFOAGUAS_PANELS = [
     ("Oxigênio Dissolvido", "Oxigenio dissolvido (mg/L)", False),
     ("DBO (5, 20)", "DBO (mg/L)", False),
-    ("Fósforo Total", "Fosforo total (mg/L)", False),
+    ("Fósforo Total", "Fosforo total (mg/L)", True),
+    ("Nitrogênio-Nitrato", "Nitrato (mg/L)", False),
+    ("Condutividade", "Condutividade (uS/cm)", False),
     ("Turbidez", "Turbidez (NTU)", True),
 ]
 INFOAGUAS_POINTS = {
     "TIET02900": ("Rio Tiete - TIET02900", "#C75D2C"),
     "TITR02100": ("Res. Tres Irmaos - TITR02100", "#1B75BB"),
+    "PARN02100": ("Barragem de Jupia - PARN02100", "#0F7B5F"),
 }
+NODE_METALS = [
+    ("Ferro Total", "Ferro total (mg/L)", True),
+    ("Cobre Total", "Cobre total (mg/L)", True),
+    ("Chumbo Total", "Chumbo total (mg/L)", True),
+    ("Zinco Total", "Zinco total (mg/L)", True),
+]
 
 
 def fig14_infoaguas_tiete() -> None:
@@ -528,7 +540,7 @@ def fig14_infoaguas_tiete() -> None:
     if monthly.empty:
         return
 
-    fig, axes = plt.subplots(2, 2, figsize=(13, 7.5), sharex=True)
+    fig, axes = plt.subplots(2, 3, figsize=(15, 8), sharex=True)
     for ax, (param, label, log_scale) in zip(axes.flat, INFOAGUAS_PANELS):
         sub = monthly[monthly["parameter"] == param]
         for code, lines in sub.groupby("point_code"):
@@ -540,13 +552,13 @@ def fig14_infoaguas_tiete() -> None:
         ax.set_title(label, fontsize=10)
         ax.grid(True, axis="y", alpha=0.25)
     handles, labels = axes.flat[0].get_legend_handles_labels()
-    fig.legend(handles, labels, ncol=2, loc="lower center", bbox_to_anchor=(0.5, -0.05), frameon=False, fontsize=10)
-    fig.suptitle("CETESB InfoAguas - o Tiete que chega ao no de Jupia (media movel de 12 meses)", fontweight="bold")
+    fig.legend(handles, labels, ncol=3, loc="lower center", bbox_to_anchor=(0.5, -0.03), frameon=False, fontsize=10)
+    fig.suptitle("Poluentes e nutrientes no no de Jupia - CETESB InfoAguas (media movel de 12 meses)", fontweight="bold")
     fig.text(
         0.01,
-        -0.11,
-        "Fonte: CETESB InfoAguas (sessao autenticada), amostras por coleta agregadas em medias mensais. TIET02900 = Rio Tiete em Pereira Barreto;\n"
-        "TITR02100 = Reservatorio de Tres Irmaos. Coleta parcial: 7 pontos da UGRHI 19 Baixo Tiete, 2000-2026.",
+        -0.06,
+        "Fonte: CETESB InfoAguas, amostras por coleta agregadas em medias mensais. TIET02900 = Rio Tiete (afluente que chega); TITR02100 = Res. Tres Irmaos;\n"
+        "PARN02100 = sobre a barragem de Jupia (no receptor). Fosforo e turbidez em escala log para acomodar picos.",
         fontsize=9,
         color="#64748B",
     )
@@ -554,48 +566,103 @@ def fig14_infoaguas_tiete() -> None:
     save(fig, "fig14_infoaguas_tiete_chegada.svg")
 
 
-def fig10_correlation_readiness() -> None:
-    rows = [
-        "Comportamento dos rios",
-        "Operacao de reservatorios",
-        "Poluicao / qualidade da agua",
-        "Sedimentos / turbidez",
-        "Uso do solo / agro",
-        "Clima / seca",
-        "Pontos Jupia-Sucuriu",
-    ]
-    cols = ["Serie temporal", "Localizacao", "Variavel comparavel", "Fonte academica", "Pronto p/ correlacao"]
-    data = np.array(
-        [
-            [3, 2, 3, 3, 3],
-            [3, 2, 3, 2, 3],
-            [3, 3, 3, 3, 2],
-            [2, 3, 2, 3, 2],
-            [3, 3, 2, 2, 2],
-            [2, 2, 2, 3, 2],
-            [2, 3, 2, 1, 2],
-        ]
-    )
-    fig, ax = plt.subplots(figsize=(11, 6.8))
-    im = ax.imshow(data, cmap="YlGnBu", vmin=0, vmax=3, aspect="auto")
-    ax.set_xticks(np.arange(len(cols)), labels=cols, rotation=25, ha="right")
-    ax.set_yticks(np.arange(len(rows)), labels=rows)
-    ax.set_title("Prontidao das camadas para correlacao poluentes-rios-Jupia")
-    for i in range(data.shape[0]):
-        for j in range(data.shape[1]):
-            ax.text(j, i, str(data[i, j]), ha="center", va="center", fontsize=10, color="#0F172A")
-    cbar = fig.colorbar(im, ax=ax, fraction=0.025, pad=0.02)
-    cbar.set_ticks([0, 1, 2, 3])
-    cbar.set_ticklabels(["ausente", "parcial", "boa", "pronta"])
-    ax.text(
-        0.0,
-        -0.18,
-        "Leitura: 3 = camada ja permite analise quantitativa; 1 = precisa extracao/normalizacao antes de correlacionar. Fonte: auditoria EDA ONS/ANA/OpenAlex.",
-        transform=ax.transAxes,
+def fig15_node_metals() -> None:
+    path = ANALYTIC_DIR / "jupia_infoaguas_monthly.csv"
+    if not path.exists():
+        return
+    monthly = pd.read_csv(path, parse_dates=["year_month"])
+    node = monthly[monthly["point_code"] == "PARN02100"]
+    if node.empty:
+        return
+
+    fig, axes = plt.subplots(2, 2, figsize=(13, 7.5), sharex=True)
+    for ax, (param, label, log_scale) in zip(axes.flat, NODE_METALS):
+        sub = node[node["parameter"] == param].sort_values("year_month")
+        if not sub.empty:
+            series = sub.set_index("year_month")["value"].asfreq("MS")
+            ax.plot(series.index, series.rolling(12, min_periods=3).mean(), lw=1.8, color="#87714D")
+            ax.scatter(sub["year_month"], sub["value"], s=8, color="#C4A86C", alpha=0.45, zorder=1)
+        if log_scale and not sub.empty and (sub["value"] > 0).any():
+            ax.set_yscale("log")
+        ax.set_title(label, fontsize=10)
+        ax.grid(True, axis="y", alpha=0.25)
+    fig.suptitle("Metais no no de Jupia - ponto CETESB PARN02100 (media movel de 12 meses sobre as coletas)", fontweight="bold")
+    fig.text(
+        0.01,
+        -0.05,
+        "Fonte: CETESB InfoAguas, ponto PARN02100 sobre a barragem de Jupia. Pontos claros = coletas individuais; linha = media movel de 12 meses.\n"
+        "Ferro acompanha a fracao mineral/sedimento; cobre, chumbo e zinco sinalizam aporte antropico do trecho a montante. Escala log para acomodar a variabilidade.",
         fontsize=9,
         color="#64748B",
     )
-    save(fig, "fig10_correlation_readiness_matrix.svg")
+    fig.tight_layout()
+    save(fig, "fig15_node_metals.svg")
+
+
+def fig10_node_correlation() -> None:
+    corr_path = ANALYTIC_DIR / "jupia_node_correlation.csv"
+    aligned_path = ANALYTIC_DIR / "jupia_node_aligned_monthly.csv"
+    if not corr_path.exists() or not aligned_path.exists():
+        return
+    corr = pd.read_csv(corr_path, index_col=0)
+    aligned = pd.read_csv(aligned_path, parse_dates=["date"])
+    if corr.empty:
+        return
+
+    labels = list(corr.columns)
+    data = corr.to_numpy(dtype=float)
+
+    fig = plt.figure(figsize=(16, 10))
+    gs = fig.add_gridspec(3, 2, width_ratios=[1.35, 1.0], height_ratios=[1, 1, 1], wspace=0.34, hspace=0.58)
+    ax_h = fig.add_subplot(gs[:, 0])
+
+    im = ax_h.imshow(data, cmap="RdBu_r", vmin=-1, vmax=1, aspect="auto")
+    ax_h.set_xticks(np.arange(len(labels)), labels=labels, rotation=38, ha="right", fontsize=9)
+    ax_h.set_yticks(np.arange(len(labels)), labels=labels, fontsize=9)
+    ax_h.set_title("Correlação de Spearman no nó de Jupiá (PARN02100)", fontsize=11)
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            val = data[i, j]
+            if np.isnan(val):
+                continue
+            ax_h.text(j, i, f"{val:+.2f}", ha="center", va="center", fontsize=8,
+                      color="#0F172A" if abs(val) < 0.6 else "#FFFFFF")
+    cbar = fig.colorbar(im, ax=ax_h, fraction=0.046, pad=0.02)
+    cbar.set_label("Coeficiente de Spearman (rho)")
+
+    # Três pares hidrologia x poluente com maior |rho| para leitura visual.
+    hydro = [c for c in ["Vazao afluente", "Volume util"] if c in labels]
+    poll = [c for c in labels if c not in hydro]
+    ranked = []
+    for h in hydro:
+        for p in poll:
+            r = corr.loc[h, p]
+            if pd.notna(r):
+                ranked.append((abs(r), h, p, r))
+    ranked.sort(reverse=True)
+    scatter_axes = [fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, 1]), fig.add_subplot(gs[2, 1])]
+    for ax, (_, h, p, r) in zip(scatter_axes, ranked[:3]):
+        pair = aligned[[h, p]].dropna()
+        ax.scatter(pair[h], pair[p], s=14, color="#1B75BB", alpha=0.55, edgecolor="none")
+        if len(pair) >= 3:
+            coef = np.polyfit(pair[h], pair[p], 1)
+            xs = np.linspace(pair[h].min(), pair[h].max(), 50)
+            ax.plot(xs, np.polyval(coef, xs), color="#B41E1E", lw=1.6)
+        ax.set_xlabel(f"{h} (m3/s)" if h == "Vazao afluente" else f"{h} (%)", fontsize=9)
+        ax.set_ylabel(p, fontsize=9)
+        ax.set_title(f"{h} x {p}  (rho = {r:+.2f}, n = {len(pair)})", fontsize=9.5)
+        ax.grid(True, alpha=0.22)
+
+    fig.suptitle("Correlação no nó de Jupiá: vazão x poluentes e sedimentos", fontweight="bold", fontsize=14)
+    fig.text(
+        0.01,
+        0.005,
+        "Fonte: vazão afluente e volume útil do nó (ONS) cruzados mês a mês com poluentes/sedimentos do ponto CETESB PARN02100 (sobre a barragem). "
+        "Spearman mede associação monotônica; vermelho = positiva, azul = negativa. Vazão x turbidez/sólidos positiva indica transporte de sedimento; vazão x condutividade negativa indica diluição.",
+        fontsize=8.5,
+        color="#64748B",
+    )
+    save(fig, "fig10_node_correlation.svg")
 
 
 def main() -> None:
@@ -605,16 +672,12 @@ def main() -> None:
     fig2_monthly_inflow(monthly)
     fig3_jupia_node(monthly)
     fig4_annual_min_volume(annual)
-    fig5_count_and_flow(monthly)
-    fig6_coverage(coverage)
-    fig7_station_collection_evidence()
-    fig8_openalex_theme_coverage()
-    fig9_openalex_timeline()
-    fig10_correlation_readiness()
     fig11_ana_station_series()
     fig12_queimadas_pressao()
     fig13_qualidade_agua()
     fig14_infoaguas_tiete()
+    fig15_node_metals()
+    fig10_node_correlation()
 
 
 if __name__ == "__main__":
