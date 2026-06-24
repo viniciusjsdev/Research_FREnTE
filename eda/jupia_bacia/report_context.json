@@ -1,22 +1,22 @@
 {
   "report_title": "Bacia Hidrográfica de Jupiá",
   "report_subtitle": "Sistema contribuinte Paranaíba, Grande, Tietê e Paraná/Jupiá",
-  "generatéd_at": "2026-06-11T06:06:32.465521+00:00",
+  "generated_at": "2026-06-24T18:41:31.537371+00:00",
   "scope": {
     "study_slug": "jupia_bacia",
     "primary_node": "UHE Jupiá",
     "requested_station": "UHE JUPIÁ SUCURIÚ",
     "available_station_note": "A coleta ANA encontrou matches diretos para UHE JUPIÁ RIO SUCURIÚ e UHE JUPIÁ SUCURIÚ no inventário Hidro; nos dados ONS locais a série operacional permanece como JUPIA na bacia PARANÁ.",
-    "source": "ONS Dados Hidrológicos de Reservatórios, ANA Hidro/SOAP, ANA GitHub hidro-dados-estações-convencionais, IBGE BHB250 e documentos CETESB/ANA.",
-    "academic_source": "OpenAlex API /works, rodada academica Jupiá sem Perplexity, com raw JSON preservado.",
+    "source": "ONS Dados Hidrológicos de Reservatórios, ANA Hidro/SOAP, ANA GitHub hidro-dados-estacoes-convencionais, IBGE BHB250 e documentos CETESB/ANA.",
+    "academic_source": "OpenAlex API /works, rodada academica Jupia sem Perplexity, com raw JSON preservado.",
     "geographic_scope": "UHE Jupiá e entorno Três Lagoas/Castilho; Rio Sucuriú; Rio Paraná; contribuintes Rio Tietê, Rio Grande e Rio Paranaíba no Alto Paraná."
   },
   "spatial_recorte": {
     "title": "Recorte geográfico analisado",
     "short_name": "Bacia contribuinte do Alto Paraná até a UHE Jupiá",
     "outlet": "Ponto de fechamento analítico no Rio Paraná, próximo à UHE Jupiá / Eng. Souza Dias, entre Três Lagoas-MS e Castilho/Andradina-SP.",
-    "outlet_coordinatés": "-20.868, -51.628",
-    "watershed_área_note": "Área delineada no site de bacias globais: aproximadamente 480.000 km2 a montante do ponto de fechamento.",
+    "outlet_coordinates": "-20.868, -51.628",
+    "watershed_area_note": "Área delineada no site de bacias globais: aproximadamente 480.000 km2 a montante do ponto de fechamento.",
     "definition": "Este relatório analisa a área que drena para Jupiá antes do ponto de fechamento no Rio Paraná. O recorte não é a bacia do Tietê isolada e também não é apenas o reservatório de Jupiá; é o sistema contribuinte do Alto Paraná que combina Paranaíba, Grande, Tietê e Paraná no nó receptor de Jupiá.",
     "main_basin": "Alto Paraná / Paraná superior até Jupiá",
     "structuring_rivers": [
@@ -35,27 +35,27 @@
   },
   "metrics": [
     {
-      "label": "Vazão ONS",
+      "label": "Vazao ONS",
       "value": "2000-2025",
-      "detail": "27 reservatórios · 26 anos",
+      "detail": "27 reservatorios · 26 anos",
       "icon": "water"
     },
     {
-      "label": "Estações fluviométricas",
+      "label": "Estacoes fluviometricas",
       "value": "4",
-      "detail": "séries ANA 1924-01-01-2014-12-01",
+      "detail": "series ANA 1924-01-01-2014-12-01",
       "icon": "monitoring"
     },
     {
       "label": "Qualidade ANA/RNQA",
       "value": "906",
-      "detail": "estações na bacia · 1978-2021",
+      "detail": "estacoes na bacia · 1978-2021",
       "icon": "science"
     },
     {
-      "label": "Amostras InfoÁguas",
+      "label": "Amostras InfoAguas",
       "value": "32.071",
-      "detail": "226 parâmetros · 14 pontos",
+      "detail": "226 parametros · 14 pontos",
       "icon": "water_ec"
     },
     {
@@ -65,7 +65,7 @@
       "icon": "hub"
     },
     {
-      "label": "Artigos de apoio",
+      "label": "Artigos (fontes)",
       "value": "130",
       "detail": "100 com PDF/DOI",
       "icon": "article"
@@ -76,30 +76,30 @@
     "monthly": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_system_monthly.csv",
     "annual": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_system_annual.csv",
     "coverage": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_coverage_matrix.csv",
-    "station_monthly_séries": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_monthly_séries.csv",
+    "station_monthly_series": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_monthly_series.csv",
     "queimadas_estado_ano": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_queimadas_bacia_estado_ano.csv",
     "quality_staging": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_quality_indicators_annual.csv",
     "quality_annual": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_quality_annual.csv",
     "quality_stations": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_quality_stations.csv",
     "supplement_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-supplement-jupia-20260610-033211",
-    "infoáguas_staging": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\cetesb_infoáguas_samples.csv",
-    "infoáguas_monthly": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_infoáguas_monthly.csv",
-    "infoáguas_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-infoáguas-jupia-20260610-045449; D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-infoáguas-jupia-20260611-043152",
+    "infoaguas_staging": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\cetesb_infoaguas_samples.csv",
+    "infoaguas_monthly": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_infoaguas_monthly.csv",
+    "infoaguas_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-infoaguas-jupia-20260610-045449; D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-infoaguas-jupia-20260611-043152",
     "node_correlation": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_node_correlation.csv",
     "node_aligned": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_node_aligned_monthly.csv",
-    "infoáguas_points": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_infoáguas_points.csv",
+    "infoaguas_points": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_infoaguas_points.csv",
     "collection_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\operational-collect-jupia-20260607-225450",
     "station_inventory": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_inventory_matches.csv",
-    "station_séries_coverage": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_séries_coverage.csv",
+    "station_series_coverage": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\ana_jupia_station_series_coverage.csv",
     "requested_station_matches": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_requested_station_matches.csv",
-    "station_séries_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_station_séries_coverage_summary.csv",
+    "station_series_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_station_series_coverage_summary.csv",
     "openalex_run": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\runs\\perplexity-intel-ce8f14e4",
     "openalex_works": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\staging\\jupia_bacia\\openalex_jupia_works.csv",
     "academic_evidence": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_academic_evidence.csv",
     "openalex_theme_summary": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_openalex_theme_summary.csv",
     "evidence_locations": "D:\\Projetos\\Github_ViniciusJ\\Research_FREnTE\\data\\analytic\\jupia_bacia\\jupia_evidence_locations.csv"
   },
-  "station_séries_summary_stats": {
+  "station_series_summary_stats": {
     "stations": 5,
     "rows": 2868,
     "start": "1924-02-01",
@@ -108,7 +108,7 @@
   "queimadas_summary": {
     "total_focos": 2305936,
     "period": "2000-2025",
-    "statés": [
+    "states": [
       "DISTRITO FEDERAL",
       "GOIÁS",
       "MATO GROSSO DO SUL",
@@ -124,7 +124,7 @@
     "parameters": [
       "dbo",
       "ecoli",
-      "fósforo_total",
+      "fosforo_total",
       "iqa",
       "od",
       "turbidez"
@@ -132,7 +132,7 @@
     "period": "1978-2021",
     "rows_in_basin": 38343
   },
-  "infoáguas_summary": {
+  "infoaguas_summary": {
     "points": [
       "BAGU02700",
       "BBRA02700",
@@ -152,7 +152,7 @@
     "parameters": 226,
     "samples": 32071,
     "period": "2000-02-09 a 2026-05-19",
-    "run_id": "operational-infoáguas-jupia-20260610-045449, operational-infoáguas-jupia-20260611-043152"
+    "run_id": "operational-infoaguas-jupia-20260610-045449, operational-infoaguas-jupia-20260611-043152"
   },
   "correlation_summary": {
     "months": 312,
@@ -160,33 +160,33 @@
     "node_point": "PARN02100",
     "top_pairs": [
       {
-        "hydro": "Vazão afluente",
+        "hydro": "Vazao afluente",
         "pollutant": "Turbidez",
         "r": 0.29,
         "n": 140
       },
       {
-        "hydro": "Vazão afluente",
+        "hydro": "Vazao afluente",
         "pollutant": "Fosforo total",
         "r": 0.26,
         "n": 140
       },
       {
-        "hydro": "Vazão afluente",
+        "hydro": "Vazao afluente",
         "pollutant": "OD",
         "r": -0.18,
         "n": 140
       },
       {
-        "hydro": "Vazão afluente",
+        "hydro": "Vazao afluente",
         "pollutant": "Nitrato",
         "r": 0.16,
         "n": 139
       }
     ],
     "variables": [
-      "Vazão afluente",
-      "Volume útil",
+      "Vazao afluente",
+      "Volume util",
       "Turbidez",
       "Solidos totais",
       "OD",
@@ -202,7 +202,7 @@
     "errors": 36,
     "station_inventory_rows": 23,
     "requested_station_matches": 3,
-    "station_séries_collected": 8
+    "station_series_collected": 8
   },
   "collection_run_id": "operational-collect-jupia-20260607-225450",
   "openalex_run_id": "perplexity-intel-ce8f14e4",
@@ -221,7 +221,7 @@
       "title": "Changes in Continental Freshwater Discharge from 1948 to 2004",
       "publication_year": 2008,
       "cited_by_count": 958,
-      "source_display_name": "Journal of Climaté",
+      "source_display_name": "Journal of Climate",
       "source_url": "https://scholarworks.wm.edu/cgi/viewcontent.cgi?article=2966&context=vimsarticles",
       "doi": "https://doi.org/10.1175/2008jcli2592.1",
       "has_pdf": true,
@@ -230,7 +230,7 @@
     },
     {
       "theme": "Comportamento dos rios",
-      "title": "Dams and the fish fauna of the Neotropical region: impacts and management relatéd to diversity and fisheries",
+      "title": "Dams and the fish fauna of the Neotropical region: impacts and management related to diversity and fisheries",
       "publication_year": 2008,
       "cited_by_count": 779,
       "source_display_name": "Brazilian Journal of Biology",
@@ -238,10 +238,10 @@
       "doi": "https://doi.org/10.1590/s1519-69842008000500019",
       "has_pdf": true,
       "is_open_access": true,
-      "research_track": "n2_operação_reservatórios_ons_sar"
+      "research_track": "n2_operacao_reservatorios_ons_sar"
     },
     {
-      "theme": "Pressão territorial",
+      "theme": "Pressao territorial",
       "title": "Freshwater Bivalve Extinctions (Mollusca: Unionoida): A Search for Causes",
       "publication_year": 1993,
       "cited_by_count": 550,
@@ -254,7 +254,7 @@
     },
     {
       "theme": "Comportamento da bacia",
-      "title": "Evaluation of TRMM Multisatéllite Precipitation Analysis (TMPA) and Its Utility in Hydrologic Prediction in the La Plata Basin",
+      "title": "Evaluation of TRMM Multisatellite Precipitation Analysis (TMPA) and Its Utility in Hydrologic Prediction in the La Plata Basin",
       "publication_year": 2008,
       "cited_by_count": 495,
       "source_display_name": "Journal of Hydrometeorology",
@@ -274,14 +274,14 @@
       "doi": "https://doi.org/10.1111/j.1095-8649.2010.02684.x",
       "has_pdf": true,
       "is_open_access": true,
-      "research_track": "n2_operação_reservatórios_ons_sar"
+      "research_track": "n2_operacao_reservatorios_ons_sar"
     },
     {
       "theme": "Comportamento dos rios",
       "title": "Extreme Drought in the Brazilian Pantanal in 2019–2020: Characterization, Causes, and Impacts",
       "publication_year": 2021,
       "cited_by_count": 356,
-      "source_display_name": "Frontiers in Watér",
+      "source_display_name": "Frontiers in Water",
       "source_url": "https://www.frontiersin.org/articles/10.3389/frwa.2021.639204/pdf",
       "doi": "https://doi.org/10.3389/frwa.2021.639204",
       "has_pdf": true,
@@ -302,7 +302,7 @@
     },
     {
       "theme": "Sedimentos e turbidez",
-      "title": "The regional intraplaté stress field in South America",
+      "title": "The regional intraplate stress field in South America",
       "publication_year": 1992,
       "cited_by_count": 210,
       "source_display_name": "Journal of Geophysical Research Atmospheres",
@@ -322,7 +322,7 @@
       "doi": "https://doi.org/10.1590/s1519-69842009000300025",
       "has_pdf": true,
       "is_open_access": true,
-      "research_track": "n2_operação_reservatórios_ons_sar"
+      "research_track": "n2_operacao_reservatorios_ons_sar"
     },
     {
       "theme": "Clima e variabilidade",
@@ -362,7 +362,7 @@
       "Latitude": "-19.8083",
       "Longitude": "-52.2753",
       "Altitude": "339",
-      "ÁreaDrenagem": "",
+      "AreaDrenagem": "",
       "TipoEstacaoEscala": "0",
       "TipoEstacaoRegistradorNivel": "0",
       "TipoEstacaoDescLiquida": "0",
@@ -399,12 +399,12 @@
       "TipoRedeBasica": "",
       "TipoRedeEnergetica": "1",
       "TipoRedeNavegacao": "",
-      "TipoRedeCursoDágua": "0",
-      "TipoRedeEstratégica": "",
+      "TipoRedeCursoDagua": "0",
+      "TipoRedeEstrategica": "",
       "TipoRedeCaptacao": "",
       "TipoRedeSedimentos": "0",
       "TipoRedeQualAgua": "0",
-      "TipoRedeClasseVazão": "0",
+      "TipoRedeClasseVazao": "0",
       "UltimaAtualizacao": "2022-09-27 00:00:00",
       "Operando": "1",
       "Descricao": "RES. ANA/ANEEL N. 0",
@@ -438,7 +438,7 @@
       "Latitude": "-19.8083",
       "Longitude": "-52.2753",
       "Altitude": "339",
-      "ÁreaDrenagem": "",
+      "AreaDrenagem": "",
       "TipoEstacaoEscala": "1",
       "TipoEstacaoRegistradorNivel": "0",
       "TipoEstacaoDescLiquida": "1",
@@ -475,12 +475,12 @@
       "TipoRedeBasica": "",
       "TipoRedeEnergetica": "1",
       "TipoRedeNavegacao": "",
-      "TipoRedeCursoDágua": "0",
-      "TipoRedeEstratégica": "",
+      "TipoRedeCursoDagua": "0",
+      "TipoRedeEstrategica": "",
       "TipoRedeCaptacao": "",
       "TipoRedeSedimentos": "0",
       "TipoRedeQualAgua": "0",
-      "TipoRedeClasseVazão": "0",
+      "TipoRedeClasseVazao": "0",
       "UltimaAtualizacao": "2022-09-27 00:00:00",
       "Operando": "1",
       "Descricao": "RES. ANA/ANEEL N. 0",
@@ -514,7 +514,7 @@
       "Latitude": "-20.6003",
       "Longitude": "-51.8525",
       "Altitude": "",
-      "ÁreaDrenagem": "",
+      "AreaDrenagem": "",
       "TipoEstacaoEscala": "0",
       "TipoEstacaoRegistradorNivel": "0",
       "TipoEstacaoDescLiquida": "0",
@@ -551,12 +551,12 @@
       "TipoRedeBasica": "0",
       "TipoRedeEnergetica": "1",
       "TipoRedeNavegacao": "0",
-      "TipoRedeCursoDágua": "3",
-      "TipoRedeEstratégica": "0",
+      "TipoRedeCursoDagua": "3",
+      "TipoRedeEstrategica": "0",
       "TipoRedeCaptacao": "6",
       "TipoRedeSedimentos": "0",
       "TipoRedeQualAgua": "3",
-      "TipoRedeClasseVazão": "0",
+      "TipoRedeClasseVazao": "0",
       "UltimaAtualizacao": "2016-09-22 00:00:00",
       "Operando": "1",
       "Descricao": "RES. ANA/ANEEL N. 0",
@@ -567,7 +567,7 @@
       "requested_filter": "{\"nmEst\": \"JUPIÁ\"}"
     }
   ],
-  "station_séries_period": {
+  "station_series_period": {
     "start": "1924-01-01",
     "end": "2014-12-01",
     "stations": 4
@@ -575,7 +575,7 @@
   "basin_summary": [
     {
       "basin_key": "PARANA",
-      "basin_label": "Rio Paraná / Jupiá",
+      "basin_label": "Rio Parana / Jupia",
       "reservoirs": 4,
       "mean_inflow_m3s": 5462.215538097843,
       "mean_outflow_m3s": 5474.754626300039,
@@ -595,7 +595,7 @@
     },
     {
       "basin_key": "PARANAIBA",
-      "basin_label": "Rio Paranaíba",
+      "basin_label": "Rio Paranaiba",
       "reservoirs": 10,
       "mean_inflow_m3s": 643.9025355430846,
       "mean_outflow_m3s": 643.7450893430207,
@@ -605,7 +605,7 @@
     },
     {
       "basin_key": "TIETE",
-      "basin_label": "Rio Tietê",
+      "basin_label": "Rio Tiete",
       "reservoirs": 6,
       "mean_inflow_m3s": 546.138735471691,
       "mean_outflow_m3s": 534.3442889822711,
@@ -632,112 +632,112 @@
     {
       "id": "fig0",
       "file": "fig0_data_origin_map.svg",
-      "title": "Recorte geográfico: bacia contribuinte até Jupiá",
+      "title": "Recorte geografico: bacia contribuinte ate Jupia",
       "tag": "Mapa",
       "tag_color": "blue",
       "icon": "map",
-      "summary": "Mapa esquemático do recorte: a bacia contribuinte do Alto Paraná até o outlet de Jupiá, com os rios Paranaíba, Grande, Tietê e Paraná como eixos estruturantes e Sucuriú/Jupiá como foco local.",
-      "interpretation": "A área vermelha representa o sistema que pode enviar água, sedimentos, nutrientes e poluentes para Jupiá. Os pontos ANA/Hidro são medições locais; as áreas coloridas indicam as sub-bacias e regiões de evidência usadas na análise.",
+      "summary": "Mapa esquematico do recorte: a bacia contribuinte do Alto Parana ate o outlet de Jupia, com os rios Paranaiba, Grande, Tiete e Parana como eixos estruturantes e Sucuriu/Jupia como foco local.",
+      "interpretation": "A area vermelha representa o sistema que pode enviar agua, sedimentos, nutrientes e poluentes para Jupia. Os pontos ANA/Hidro sao medicoes locais; as areas coloridas indicam as sub-bacias e regioes de evidencia usadas na analise.",
       "highlight": "A unidade de análise é o sistema contribuinte até Jupiá: comportamento dos rios primeiro, poluição e pressões depois, correlação no nó receptor ao final."
     },
     {
       "id": "fig1",
       "file": "fig1_basin_system_overview.svg",
-      "title": "Sistema contribuinte de Jupiá",
+      "title": "Sistema contribuinte de Jupia",
       "tag": "Estrutura",
       "tag_color": "blue",
       "icon": "account_tree",
-      "summary": "Diagrama dos quatro blocos operacionais usados nesta primeira leitura: Grande, Paranaíba, Tietê e Paraná/Jupiá.",
-      "interpretation": "Jupiá deve ser lido como nó integrador do Alto Paraná. O Tietê continua relevante, mas agora aparece junto com Grande, Paranaíba e o eixo Sucuriú/Jupiá confirmado no inventário ANA.",
-      "highlight": "A unidade analítica deixa de ser apenas a cascata do Tietê e passa a ser a bacia contribuinte integrada de Jupiá."
+      "summary": "Diagrama dos quatro blocos operacionais usados nesta primeira leitura: Grande, Paranaiba, Tiete e Parana/Jupia.",
+      "interpretation": "Jupia deve ser lido como no integrador do Alto Parana. O Tiete continua relevante, mas agora aparece junto com Grande, Paranaiba e o eixo Sucuriu/Jupia confirmado no inventario ANA.",
+      "highlight": "A unidade analitica deixa de ser apenas a cascata do Tiete e passa a ser a bacia contribuinte integrada de Jupia."
     },
     {
       "id": "fig2",
       "file": "fig2_monthly_inflow_by_basin.svg",
-      "title": "Vazão afluente mensal por grande contribuinte",
+      "title": "Vazao afluente mensal por grande contribuinte",
       "tag": "Hidrologia",
       "tag_color": "green",
       "icon": "waves",
-      "summary": "Série mensal média de vazão afluente por bacia operacional ONS, agregando os reservatórios selecionados em cada contribuinte.",
+      "summary": "Serie mensal media de vazao afluente por bacia operacional ONS, agregando os reservatorios selecionados em cada contribuinte.",
       "interpretation": "A comparação mostra a escala relativa dos contribuintes que condicionam Jupiá. Grande e Paranaíba ampliam fortemente o contexto hidrológico em relação a uma leitura Tietê-only.",
       "highlight": "O relatório de Jupiá precisa reunir os três grandes rios em vez de reaproveitar apenas a narrativa do Tietê."
     },
     {
       "id": "fig3",
       "file": "fig3_jupia_node_series.svg",
-      "title": "Nó Jupiá: afluência, defluência e volume útil",
-      "tag": "Jupiá",
+      "title": "No Jupia: afluencia, defluencia e volume util",
+      "tag": "Jupia",
       "tag_color": "orange",
       "icon": "water_drop",
-      "summary": "Série mensal da UHE Jupiá no ONS, com vazões afluente/defluente e volume útil médio.",
-      "interpretation": "A série posiciona Jupiá como receptor operacional do sistema. A coleta complementar já identificou os códigos ANA ligados a UHE Jupiá/Sucuriú, permitindo uma ponte posterior com séries convencionais e qualidade da água.",
-      "highlight": "Nos dados ONS, o ponto auditável é JUPIA; no inventário ANA, UHE JUPIA SUCURIU aparece com código 63003300."
+      "summary": "Serie mensal da UHE Jupia no ONS, com vazoes afluente/defluente e volume util medio.",
+      "interpretation": "A serie posiciona Jupia como receptor operacional do sistema. A coleta complementar ja identificou os codigos ANA ligados a UHE Jupia/Sucuriu, permitindo uma ponte posterior com series convencionais e qualidade da agua.",
+      "highlight": "Nos dados ONS, o ponto auditavel e JUPIA; no inventario ANA, UHE JUPIA SUCURIU aparece com codigo 63003300."
     },
     {
       "id": "fig11",
       "file": "fig11_ana_station_series.svg",
-      "title": "Séries históricas ANA no eixo Sucuriú/Jupiá",
+      "title": "Cotas locais ANA no eixo Sucuriu/Jupia",
       "tag": "Rios locais",
       "tag_color": "green",
       "icon": "monitoring",
-      "summary": "Séries mensais de vazão e cota das estações convencionais ANA no eixo local: Alto Sucuriú (63001500) e São José do Sucuriú (63002000) no Rio Sucuriú em Mato Grosso do Sul, e Jupiá-Ponte (63005000), UHE Jupiá Barramento (63007080, via SOAP) e UHE Jupiá Jusante (63010000) no Rio Paraná.",
-      "interpretation": "Estas são as medições fluviométricas locais que descem a análise da escala ONS para o rio em Mato Grosso do Sul. O Sucuriú fornece o sinal do contribuinte local; Barramento e Jusante registram o Paraná no entorno da barragem. A série SOAP do Barramento estende a cobertura local além de 2014.",
-      "highlight": "As 2868 medições mensais de 5 estações cobrem 1924-02-01 a 2015-06-01 e agora entram como camada própria de comportamento dos rios."
+      "summary": "Cota media mensal das quatro reguas convencionais ANA solicitadas, em paineis verticais independentes e organizados de montante para jusante: Alto Sucuriu, Sao Jose do Sucuriu, Jupia-Ponte e UHE Jupia Jusante.",
+      "interpretation": "As cotas de regua sao leituras locais, sem amarracao altialtimetrica comum entre estacoes. Portanto, a figura nao compara altura absoluta entre reguas; ela permite comparar a variacao temporal dentro de cada regua e a sequencia espacial do sistema.",
+      "highlight": "Figura revisada: cada regua usa sua propria escala vertical para evitar a inferencia incorreta de que uma estacao esta metros acima de outra."
     },
     {
       "id": "fig4",
       "file": "fig4_annual_min_volume_heatmap.svg",
-      "title": "Anos críticos por reservatório",
+      "title": "Anos criticos por reservatorio",
       "tag": "Estresse hidrico",
       "tag_color": "red",
       "icon": "grid_view",
-      "summary": "Mapa de calor do volume útil mínimo anual para os reservatórios selecionados.",
-      "interpretation": "O painel permite identificar anos de estresse sincronizado e diferenciar respostas de cabeceira, contribuintes e nó receptor.",
-      "highlight": "Eventos secos devem ser avaliados como sinais sistêmicos, não como anomalias isoladas de uma única cascata."
+      "summary": "Mapa de calor do volume util minimo anual para os reservatorios selecionados.",
+      "interpretation": "O painel permite identificar anos de estresse sincronizado e diferenciar respostas de cabeceira, contribuintes e no receptor.",
+      "highlight": "Eventos secos devem ser avaliados como sinais sistêmicos, nao como anomalias isoladas de uma unica cascata."
     },
     {
       "id": "fig12",
       "file": "fig12_queimadas_pressao.svg",
-      "title": "Pressão territorial: focos de calor dentro da bacia contribuinte",
+      "title": "Pressao territorial: focos de calor dentro da bacia contribuinte",
       "tag": "Pressoes",
       "tag_color": "red",
       "icon": "local_fire_department",
-      "summary": "Focos de calor INPE/BDQueimadas por estado e ano, coletados via WFS com o envelope da bacia inteira e filtrados pelo contorno da bacia contribuinte (point-in-polygon). Cobre Mato Grosso do Sul, São Paulo, Minas Gerais, Goiás/DF e bordas.",
+      "summary": "Focos de calor INPE/BDQueimadas por estado e ano, coletados via WFS com o envelope da bacia inteira e filtrados pelo contorno da bacia contribuinte (point-in-polygon). Cobre Mato Grosso do Sul, Sao Paulo, Minas Gerais, Goias/DF e bordas.",
       "interpretation": "Esta é a camada de pressão quantitativa do relatório: série anual com localização, agora cobrindo também as cabeceiras do Grande e do Paranaíba que a coleta anterior (corredor do Tietê) não alcançava. Mato Grosso do Sul concentra o entorno de Três Lagoas/Jupiá e do Sucuriú.",
-      "highlight": "2.305.936 focos dentro da bacia em 2000-2025; a camada de pressão agora cobre o recorte completo. não apenas o corredor do Tietê."
+      "highlight": "2.305.936 focos dentro da bacia em 2000-2025; a camada de pressao agora cobre o recorte completo. nao apenas o corredor do Tiete."
     },
     {
       "id": "fig13",
       "file": "fig13_qualidade_agua.svg",
-      "title": "Qualidade da água na bacia: OD, DBO, fósforo, turbidez e IQA",
+      "title": "Qualidade da agua na bacia: OD, DBO, fosforo, turbidez e IQA",
       "tag": "Poluentes",
       "tag_color": "orange",
       "icon": "science",
-      "summary": "Indicadores anuais de qualidade da água da rede ANA/RNQA (médias por estação, 1978-2021) para as estações dentro da bacia contribuinte, separando o eixo Mato Grosso do Sul/entorno de Jupiá dos contribuintes a montante (SP/MG/GO/DF).",
-      "interpretation": "O eixo poluentes deixa de depender apenas de PDFs e literatura: OD, DBO, fósforo total, turbidez, E.coli e IQA agora existem como séries anuais tabuladas com coordenadas, prontas para cruzar com vazão e volume útil no nó receptor.",
-      "highlight": "906 estações de qualidade dentro da bacia (12 em MS), período 1978-2021; fonte ANA SNIRH ArcGIS Indicadores de Qualidade."
+      "summary": "Indicadores anuais de qualidade da agua da rede ANA/RNQA (medias por estacao, 1978-2021) para as estacoes dentro da bacia contribuinte, separando o eixo Mato Grosso do Sul/entorno de Jupia dos contribuintes a montante (SP/MG/GO/DF).",
+      "interpretation": "O eixo poluentes deixa de depender apenas de PDFs e literatura: OD, DBO, fosforo total, turbidez, E.coli e IQA agora existem como series anuais tabuladas com coordenadas, prontas para cruzar com vazao e volume util no no receptor.",
+      "highlight": "906 estacoes de qualidade dentro da bacia (12 em MS), periodo 1978-2021; fonte ANA SNIRH ArcGIS Indicadores de Qualidade."
     },
     {
       "id": "fig14",
       "file": "fig14_infoaguas_tiete_chegada.svg",
-      "title": "Poluentes e nutrientes no nó de Jupiá (CETESB InfoÁguas, mensal)",
+      "title": "Poluentes e nutrientes no no de Jupia (CETESB InfoAguas, mensal)",
       "tag": "Poluentes",
       "tag_color": "orange",
       "icon": "water_ec",
       "summary": "Séries mensais por coleta (2000-2026) em três pontos: TIET02900 (Rio Tietê, o afluente poluído que chega), TITR02100 (Res. Três Irmãos) e PARN02100 (sobre a barragem de Jupiá, o nó receptor). Seis variáveis: oxigênio dissolvido, DBO, fósforo total, nitrogênio-nitrato, condutividade e turbidez.",
-      "interpretation": "Aqui o eixo poluentes ganha resolução mensal e o conjunto de nutrientes (fósforo e nitrato, ligados ao uso agrícola do solo) e os proxies de carga dissolvida/sedimento (condutividade, turbidez). Comparar o Tietê que entra com o Paraná no próprio barramento mostra quanto da assinatura do afluente persiste no nó.",
-      "highlight": "32.071 amostras. 226 parâmetros. 14 pontos (Baixo Tietê + eixo Rio Paraná). 2000-02-09 a 2026-05-19."
+      "interpretation": "Aqui o eixo poluentes ganha resolucao mensal e a suite de nutrientes (fosforo e nitrato, ligados ao uso agricola do solo) e os proxies de carga dissolvida/sedimento (condutividade, turbidez). Comparar o Tiete que entra com o Parana no proprio barramento mostra quanto da assinatura do afluente persiste no no.",
+      "highlight": "32.071 amostras. 226 parametros. 14 pontos (Baixo Tiete + eixo Rio Parana). 2000-02-09 a 2026-05-19."
     },
     {
       "id": "fig15",
       "file": "fig15_node_metals.svg",
-      "title": "Metais no nó de Jupiá: ferro, cobre, chumbo e zinco",
+      "title": "Metais no no de Jupia: ferro, cobre, chumbo e zinco",
       "tag": "Poluentes",
       "tag_color": "orange",
       "icon": "experiment",
-      "summary": "Séries mensais de metais medidos pela CETESB no ponto PARN02100, sobre a barragem de Jupiá: ferro total, cobre total, chumbo total e zinco total (mg/L), com a referência da classe CONAMA quando aplicável.",
-      "interpretation": "Metais associam-se a sedimentos e ao material em suspensão que chega ao reservatório, sendo relevantes para a leitura geomorfológica do nó. O ferro acompanha a fração mineral; cobre, chumbo e zinco sinalizam contribuição antrópica e industrial do trecho a montante.",
-      "highlight": "A camada de metais conecta a carga de sedimentos (turbidez/sólidos) ao aporte mineral e antrópico medido diretamente no nó receptor."
+      "summary": "Series mensais de metais medidos pela CETESB no ponto PARN02100, sobre a barragem de Jupia: ferro total, cobre total, chumbo total e zinco total (mg/L), com a referencia da classe CONAMA quando aplicavel.",
+      "interpretation": "Metais associam-se a sedimentos e ao material em suspensao que chega ao reservatorio, sendo relevantes para a leitura geomorfologica do no. O ferro acompanha a fracao mineral; cobre, chumbo e zinco sinalizam contribuicao antropica e industrial do trecho a montante.",
+      "highlight": "A camada de metais conecta a carga de sedimentos (turbidez/solidos) ao aporte mineral e antropico medido diretamente no no receptor."
     },
     {
       "id": "fig10",

@@ -1198,18 +1198,13 @@ def build_tables() -> dict[str, object]:
             {
                 "id": "fig11",
                 "file": "fig11_ana_station_series.svg",
-                "title": "Series historicas ANA no eixo Sucuriu/Jupia",
+                "title": "Cotas locais ANA no eixo Sucuriu/Jupia",
                 "tag": "Rios locais",
                 "tag_color": "green",
                 "icon": "monitoring",
-                "summary": "Series mensais de vazao e cota das estacoes convencionais ANA no eixo local: Alto Sucuriu (63001500) e Sao Jose do Sucuriu (63002000) no Rio Sucuriu em Mato Grosso do Sul, e Jupia-Ponte (63005000), UHE Jupia Barramento (63007080, via SOAP) e UHE Jupia Jusante (63010000) no Rio Parana.",
-                "interpretation": "Estas sao as medicoes fluviometricas locais que descem a analise da escala ONS para o rio em Mato Grosso do Sul. O Sucuriu fornece o sinal do contribuinte local; Barramento e Jusante registram o Parana no entorno da barragem. A serie SOAP do Barramento estende a cobertura local alem de 2014.",
-                "highlight": (
-                    f"As {station_series_summary.get('rows', 0)} medicoes mensais de {station_series_summary.get('stations', 0)} estacoes "
-                    f"cobrem {station_series_summary.get('start', '')} a {station_series_summary.get('end', '')} e agora entram como camada propria de comportamento dos rios."
-                    if station_series_summary
-                    else "Series ANA coletadas ainda nao processadas nesta rodada."
-                ),
+                "summary": "Cota media mensal das quatro reguas convencionais ANA solicitadas, em paineis verticais independentes e organizados de montante para jusante: Alto Sucuriu, Sao Jose do Sucuriu, Jupia-Ponte e UHE Jupia Jusante.",
+                "interpretation": "As cotas de regua sao leituras locais, sem amarracao altialtimetrica comum entre estacoes. Portanto, a figura nao compara altura absoluta entre reguas; ela permite comparar a variacao temporal dentro de cada regua e a sequencia espacial do sistema.",
+                "highlight": "Figura revisada: cada regua usa sua propria escala vertical para evitar a inferencia incorreta de que uma estacao esta metros acima de outra.",
             },
             {
                 "id": "fig4",

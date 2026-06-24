@@ -387,44 +387,62 @@ def fig11_ana_station_series() -> None:
     if not path.exists():
         return
     series = pd.read_csv(path, parse_dates=["date"])
+    cotas = series[series["series_type"] == "cotas"].copy()
+    if cotas.empty:
+        return
 
-    def monthly_smooth(sub: pd.DataFrame) -> pd.Series:
-        # Reindexa para frequencia mensal: meses sem medicao viram NaN e quebram
-        # a linha em vez de conectar decadas sem dado (ex.: 63007080, 1931 -> 1995).
-        values = sub.sort_values("date").set_index("date")["monthly_mean"].asfreq("MS")
-        return values.rolling(12, min_periods=3).mean()
+    station_order = [
+        (63001500, "Alto Sucuriu (63001500)", "#0F7B5F"),
+        (63002000, "Sao Jose do Sucuriu (63002000)", "#6B48A8"),
+        (63005000, "Jupia - Ponte (63005000)", "#87714D"),
+        (63010000, "UHE Jupia Jusante (63010000)", "#1B75BB"),
+    ]
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 9), sharex=True)
-    for code, sub in series[series["series_type"] == "vazoes"].groupby("station_code"):
-        label, color = STATION_STYLE.get(int(code), (str(code), "#64748B"))
-        smooth = monthly_smooth(sub)
-        ax1.plot(smooth.index, smooth.values, lw=1.8, color=color, label=label)
-    ax1.set_yscale("log")
-    ax1.set_ylabel("Vazao media mensal (m3/s, escala log)")
-    ax1.set_title("Estacoes convencionais ANA no eixo Sucuriu/Jupia - media movel de 12 meses")
-    ax1.grid(True, axis="y", alpha=0.25)
-    ax1.legend(frameon=False, fontsize=9, loc="upper left")
+    fig, axes = plt.subplots(len(station_order), 1, figsize=(12, 11.5), sharex=True)
+    for ax, (code, label, color) in zip(axes, station_order):
+        sub = cotas[cotas["station_code"].astype(int) == code].sort_values("date")
+        ax.set_title(label, loc="left", fontsize=11, color="#011E42")
+        ax.set_ylabel("Cota local (cm)")
+        ax.grid(True, axis="y", alpha=0.24)
+        if sub.empty:
+            ax.text(0.02, 0.55, "Sem serie de cota coletada", transform=ax.transAxes, color="#B41E1E", fontsize=10)
+            continue
 
-    for code, sub in series[series["series_type"] == "cotas"].groupby("station_code"):
-        label, color = STATION_STYLE.get(int(code), (str(code), "#64748B"))
-        smooth = monthly_smooth(sub)
-        ax2.plot(smooth.index, smooth.values, lw=1.8, color=color, label=label)
-    ax2.set_ylabel("Cota media mensal (cm)")
-    ax2.set_xlabel("Ano")
-    ax2.grid(True, axis="y", alpha=0.25)
-    ax2.legend(frameon=False, fontsize=9, loc="upper left")
+        monthly = sub.set_index("date")["monthly_mean"].asfreq("MS")
+        smooth = monthly.rolling(12, min_periods=3).mean()
+        ax.plot(smooth.index, smooth.values, lw=1.9, color=color)
+        ax.scatter(sub["date"], sub["monthly_mean"], s=8, color=color, alpha=0.25)
+        min_v = float(sub["monthly_mean"].min())
+        max_v = float(sub["monthly_mean"].max())
+        ax.text(
+            0.99,
+            0.78,
+            f"escala propria\n{min_v:.0f}-{max_v:.0f} cm",
+            transform=ax.transAxes,
+            ha="right",
+            va="top",
+            fontsize=8.5,
+            color="#64748B",
+            bbox=dict(boxstyle="round,pad=0.25,rounding_size=0.06", fc="white", ec="#CBD5E1", lw=0.8),
+        )
 
-    ax2.text(
-        0.0,
-        -0.22,
-        "Fonte: ANA GitHub hidro-dados-estacoes-convencionais (run operational-collect-jupia). Sucuriu em MS (verde/roxo); Rio Parana junto a Jupia (azul/dourado).\n"
-        "As series encerram entre 2005 e 2014; trechos sem linha indicam meses sem medicao. Escala log na vazao para acomodar Sucuriu (~10^2 m3/s) e Parana (~10^4 m3/s).",
-        transform=ax2.transAxes,
+    axes[-1].set_xlabel("Ano")
+    fig.suptitle(
+        "Cota media mensal por regua ANA - paineis independentes em ordem montante-jusante",
+        fontweight="bold",
+        y=0.995,
+    )
+    fig.text(
+        0.01,
+        -0.02,
+        "Fonte: ANA GitHub hidro-dados-estacoes-convencionais (run operational-collect-jupia). Cada painel usa escala vertical propria. "
+        "As cotas sao leituras locais de regua e nao sao amarradas altialtimetricamente; portanto, nao comparar valores absolutos entre estacoes. "
+        "A leitura correta e comparar a variacao temporal dentro de cada regua e a sequencia espacial montante -> jusante.",
         fontsize=9,
         color="#64748B",
     )
+    fig.tight_layout(rect=[0, 0.03, 1, 0.97])
     save(fig, "fig11_ana_station_series.svg")
-
 
 def fig12_queimadas_pressao() -> None:
     path = ANALYTIC_DIR / "jupia_queimadas_bacia_estado_ano.csv"
