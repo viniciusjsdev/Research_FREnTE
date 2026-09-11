@@ -1,0 +1,437 @@
+{
+  "ons": {
+    "columns": [
+      "id_subsistema",
+      "nom_subsistema",
+      "tip_reservatorio",
+      "nom_bacia",
+      "nom_ree",
+      "nom_reservatorio",
+      "num_ordemcs",
+      "cod_usina",
+      "din_instante",
+      "val_nivelmontante",
+      "val_niveljusante",
+      "val_volumeutilcon",
+      "val_vazaoafluente",
+      "val_vazaoturbinada",
+      "val_vazaovertida",
+      "val_vazaooutrasestruturas",
+      "val_vazaodefluente",
+      "val_vazaotransferida",
+      "val_vazaonatural",
+      "val_vazaoartificial",
+      "val_vazaoincremental",
+      "val_vazaoevaporacaoliquida",
+      "val_vazaousoconsuntivo",
+      "id_reservatorio",
+      "val_vazaoincrementalbruta",
+      "data",
+      "ano",
+      "mes",
+      "ano_mes",
+      "vol_util_pct",
+      "cap_max_hm3",
+      "vol_armazenado_hm3",
+      "def_m3s",
+      "tempo_residencia_dias"
+    ],
+    "rows": 56982,
+    "date_min": "2000-01-01T00:00:00",
+    "date_max": "2025-12-31T00:00:00",
+    "reservoir_count": 6,
+    "per_reservoir": [
+      {
+        "reservatorio": "B. BONITA",
+        "meses": 312,
+        "volume_medio_pct": 75.95970875259795,
+        "volume_mediana_pct": 77.95193548387097,
+        "volume_min_pct": 35.923870967741934,
+        "volume_min_mes": "2000-01-01T00:00:00",
+        "volume_primeiro_mes_valido": "2000-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 312,
+        "volume_crise_2014_2015_medio_pct": 77.13670017281106,
+        "vazao_media_m3s": 361.9815981697371,
+        "vazao_mediana_m3s": 295.36159139784945,
+        "vazao_cv": 0.6412714069672028,
+        "tr_mediana_dias": 98.69475302968408,
+        "tr_p90_dias": 193.3284926419745,
+        "tr_max_dias": 506.7446296296296,
+        "correlacao_pearson_vol_tr": 0.34371706349696746,
+        "correlacao_pearson_diaria_vol_tr": 0.2675124450410749
+      },
+      {
+        "reservatorio": "BARIRI",
+        "meses": 312,
+        "volume_medio_pct": 66.47646092848555,
+        "volume_mediana_pct": 66.68263430851762,
+        "volume_min_pct": 47.83225828601468,
+        "volume_min_mes": "2023-08-01T00:00:00",
+        "volume_primeiro_mes_valido": "2022-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 48,
+        "volume_crise_2014_2015_medio_pct": null,
+        "vazao_media_m3s": 423.4066503570083,
+        "vazao_mediana_m3s": 370.46887096774196,
+        "vazao_cv": 0.5462743171523295,
+        "tr_mediana_dias": 15.321642495649684,
+        "tr_p90_dias": 34.81632206395331,
+        "tr_max_dias": 38.36027694278293,
+        "correlacao_pearson_vol_tr": -0.015277463833169988,
+        "correlacao_pearson_diaria_vol_tr": 0.1607305660608992
+      },
+      {
+        "reservatorio": "IBITINGA",
+        "meses": 312,
+        "volume_medio_pct": 57.64368967030298,
+        "volume_mediana_pct": 57.522570027587236,
+        "volume_min_pct": 27.936773946208337,
+        "volume_min_mes": "2022-01-01T00:00:00",
+        "volume_primeiro_mes_valido": "2022-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 48,
+        "volume_crise_2014_2015_medio_pct": null,
+        "vazao_media_m3s": 504.9934362041503,
+        "vazao_mediana_m3s": 445.9530752688172,
+        "vazao_cv": 0.5357872074827995,
+        "tr_mediana_dias": 18.597117070470947,
+        "tr_p90_dias": 47.3568565291624,
+        "tr_max_dias": 62.15179828870777,
+        "correlacao_pearson_vol_tr": 0.6505731893215919,
+        "correlacao_pearson_diaria_vol_tr": 0.6086857271286781
+      },
+      {
+        "reservatorio": "N. AVANHANDAVA",
+        "meses": 312,
+        "volume_medio_pct": 78.7112161677537,
+        "volume_mediana_pct": 80.45215994092177,
+        "volume_min_pct": 53.62032256587859,
+        "volume_min_mes": "2022-01-01T00:00:00",
+        "volume_primeiro_mes_valido": "2022-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 48,
+        "volume_crise_2014_2015_medio_pct": null,
+        "vazao_media_m3s": 632.8667912285626,
+        "vazao_mediana_m3s": 569.5666182795699,
+        "vazao_cv": 0.5053449205114515,
+        "tr_mediana_dias": 108.37347004500685,
+        "tr_p90_dias": 193.05447079268853,
+        "tr_max_dias": 236.22855251910642,
+        "correlacao_pearson_vol_tr": 0.06639013898518797,
+        "correlacao_pearson_diaria_vol_tr": 0.20617296434706334
+      },
+      {
+        "reservatorio": "PROMISSÃO",
+        "meses": 312,
+        "volume_medio_pct": 66.25339512907259,
+        "volume_mediana_pct": 67.23209677419354,
+        "volume_min_pct": 17.565333235666667,
+        "volume_min_mes": "2021-11-01T00:00:00",
+        "volume_primeiro_mes_valido": "2000-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 312,
+        "volume_crise_2014_2015_medio_pct": 51.79118263568869,
+        "vazao_media_m3s": 599.12895817394,
+        "vazao_mediana_m3s": 517.908247311828,
+        "vazao_cv": 0.5624341653933562,
+        "tr_mediana_dias": 98.70447473511152,
+        "tr_p90_dias": 182.3474261166801,
+        "tr_max_dias": 501.63625971650663,
+        "correlacao_pearson_vol_tr": 0.4099635611706776,
+        "correlacao_pearson_diaria_vol_tr": 0.3420950158062805
+      },
+      {
+        "reservatorio": "TRÊS IRMÃOS",
+        "meses": 312,
+        "volume_medio_pct": 62.95580548098305,
+        "volume_mediana_pct": 64.97548387096774,
+        "volume_min_pct": 0.0,
+        "volume_min_mes": "2014-07-01T00:00:00",
+        "volume_primeiro_mes_valido": "2000-01-01T00:00:00",
+        "volume_ultimo_mes_valido": "2025-12-01T00:00:00",
+        "volume_meses_validos": 312,
+        "volume_crise_2014_2015_medio_pct": 8.223015040962622,
+        "vazao_media_m3s": 754.4549786967473,
+        "vazao_mediana_m3s": 693.7029892473118,
+        "vazao_cv": 0.4768353120708489,
+        "tr_mediana_dias": 204.13723348863897,
+        "tr_p90_dias": 475.2176663254353,
+        "tr_max_dias": 851.4078277955082,
+        "correlacao_pearson_vol_tr": 0.29184680383388,
+        "correlacao_pearson_diaria_vol_tr": 0.3178713208144672
+      }
+    ]
+  },
+  "fire": {
+    "rows": 1116805,
+    "date_min": "2000-01-05T21:00:00",
+    "date_max": "2024-12-31T17:49:00",
+    "year_min": 2000,
+    "year_max": 2024,
+    "peak_year": 2024,
+    "peak_count": 182974,
+    "latitude_min": -24.0,
+    "latitude_max": -20.5,
+    "longitude_min": -52.2,
+    "longitude_max": -45.8,
+    "states": [
+      "MATO GROSSO DO SUL",
+      "MINAS GERAIS",
+      "PARANÃ",
+      "SÃO PAULO"
+    ],
+    "municipality_count": 754,
+    "annual": [
+      {
+        "ano": 2000,
+        "n_focos": 4812
+      },
+      {
+        "ano": 2001,
+        "n_focos": 8112
+      },
+      {
+        "ano": 2002,
+        "n_focos": 14683
+      },
+      {
+        "ano": 2003,
+        "n_focos": 18903
+      },
+      {
+        "ano": 2004,
+        "n_focos": 16981
+      },
+      {
+        "ano": 2005,
+        "n_focos": 19404
+      },
+      {
+        "ano": 2006,
+        "n_focos": 29723
+      },
+      {
+        "ano": 2007,
+        "n_focos": 30974
+      },
+      {
+        "ano": 2008,
+        "n_focos": 24068
+      },
+      {
+        "ano": 2009,
+        "n_focos": 19179
+      },
+      {
+        "ano": 2010,
+        "n_focos": 44055
+      },
+      {
+        "ano": 2011,
+        "n_focos": 33906
+      },
+      {
+        "ano": 2012,
+        "n_focos": 51056
+      },
+      {
+        "ano": 2013,
+        "n_focos": 43013
+      },
+      {
+        "ano": 2014,
+        "n_focos": 50818
+      },
+      {
+        "ano": 2015,
+        "n_focos": 24362
+      },
+      {
+        "ano": 2016,
+        "n_focos": 38548
+      },
+      {
+        "ano": 2017,
+        "n_focos": 50483
+      },
+      {
+        "ano": 2018,
+        "n_focos": 37890
+      },
+      {
+        "ano": 2019,
+        "n_focos": 59628
+      },
+      {
+        "ano": 2020,
+        "n_focos": 107209
+      },
+      {
+        "ano": 2021,
+        "n_focos": 129133
+      },
+      {
+        "ano": 2022,
+        "n_focos": 38888
+      },
+      {
+        "ano": 2023,
+        "n_focos": 38003
+      },
+      {
+        "ano": 2024,
+        "n_focos": 182974
+      }
+    ],
+    "by_biome": [
+      {
+        "bioma": "Mata AtlÃ¢ntica",
+        "n_focos": 639287
+      },
+      {
+        "bioma": "Cerrado",
+        "n_focos": 477517
+      }
+    ]
+  },
+  "snis": {
+    "rows": 2429,
+    "year_min": 2010,
+    "year_max": 2020,
+    "annual": [
+      {
+        "ano": 2010,
+        "municipios": 209,
+        "in015_mediana": 80.0,
+        "in046_mediana": 73.76,
+        "gap_pp": 6.239999999999995
+      },
+      {
+        "ano": 2011,
+        "municipios": 208,
+        "in015_mediana": 80.47,
+        "in046_mediana": 69.715,
+        "gap_pp": 10.754999999999995
+      },
+      {
+        "ano": 2012,
+        "municipios": 216,
+        "in015_mediana": 81.19999999999999,
+        "in046_mediana": 73.93,
+        "gap_pp": 7.269999999999982
+      },
+      {
+        "ano": 2013,
+        "municipios": 217,
+        "in015_mediana": 82.99,
+        "in046_mediana": 75.76,
+        "gap_pp": 7.22999999999999
+      },
+      {
+        "ano": 2014,
+        "municipios": 225,
+        "in015_mediana": 84.86,
+        "in046_mediana": 77.8,
+        "gap_pp": 7.060000000000002
+      },
+      {
+        "ano": 2015,
+        "municipios": 220,
+        "in015_mediana": 84.88499999999999,
+        "in046_mediana": 79.205,
+        "gap_pp": 5.679999999999993
+      },
+      {
+        "ano": 2016,
+        "municipios": 230,
+        "in015_mediana": 84.88,
+        "in046_mediana": 79.73,
+        "gap_pp": 5.1499999999999915
+      },
+      {
+        "ano": 2017,
+        "municipios": 222,
+        "in015_mediana": 85.18,
+        "in046_mediana": 79.17,
+        "gap_pp": 6.010000000000005
+      },
+      {
+        "ano": 2018,
+        "municipios": 222,
+        "in015_mediana": 85.0,
+        "in046_mediana": 79.62,
+        "gap_pp": 5.3799999999999955
+      },
+      {
+        "ano": 2019,
+        "municipios": 228,
+        "in015_mediana": 85.96,
+        "in046_mediana": 80.0,
+        "gap_pp": 5.959999999999994
+      },
+      {
+        "ano": 2020,
+        "municipios": 232,
+        "in015_mediana": 83.85,
+        "in046_mediana": 80.0,
+        "gap_pp": 3.8499999999999943
+      }
+    ]
+  },
+  "waste": {
+    "rows": 7032,
+    "year_min": 2017,
+    "year_max": 2021,
+    "annual": [
+      {
+        "ano": 2017,
+        "tiete": false,
+        "municipios": 597,
+        "iqr_mediana": 8.5
+      },
+      {
+        "ano": 2018,
+        "tiete": false,
+        "municipios": 605,
+        "iqr_mediana": 8.5
+      },
+      {
+        "ano": 2019,
+        "tiete": false,
+        "municipios": 515,
+        "iqr_mediana": 9.0
+      },
+      {
+        "ano": 2019,
+        "tiete": true,
+        "municipios": 201,
+        "iqr_mediana": 9.2
+      },
+      {
+        "ano": 2020,
+        "tiete": false,
+        "municipios": 525,
+        "iqr_mediana": 9.0
+      },
+      {
+        "ano": 2020,
+        "tiete": true,
+        "municipios": 200,
+        "iqr_mediana": 9.2
+      },
+      {
+        "ano": 2021,
+        "tiete": false,
+        "municipios": 527,
+        "iqr_mediana": 9.0
+      },
+      {
+        "ano": 2021,
+        "tiete": true,
+        "municipios": 199,
+        "iqr_mediana": 8.9
+      }
+    ]
+  }
+}

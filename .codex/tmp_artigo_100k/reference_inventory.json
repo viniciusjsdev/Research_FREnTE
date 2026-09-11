@@ -1,0 +1,2932 @@
+{
+  "reference": "C:\\Users\\vinic\\Downloads\\Do ambiente virtual à imersão internacional.docx",
+  "sha256": "3cd380db38fcd3954752e52d7fe4b6bc4b092820240d6d414ccd772d0f7927da",
+  "paragraph_count": 78,
+  "table_count": 4,
+  "inline_shapes": 5,
+  "sections": [
+    {
+      "page_width_in": 8.2708,
+      "page_height_in": 11.6944,
+      "top_margin_in": 1.1812,
+      "bottom_margin_in": 0.7875,
+      "left_margin_in": 1.1812,
+      "right_margin_in": 0.7875,
+      "header_distance_in": 0.5,
+      "footer_distance_in": 0.6292,
+      "different_first_page": false
+    }
+  ],
+  "paragraphs": [
+    {
+      "index": 0,
+      "style": "Normal",
+      "text": "DO AMBIENTE VIRTUAL À IMERSÃO INTERNACIONAL: CONFIANÇA PERCEBIDA NA COMUNICAÇÃO EM LÍNGUA INGLESA NO PROJETO FRENTE",
+      "alignment": "CENTER (1)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "DO AMBIENTE VIRTUAL À IMERSÃO INTERNACIONAL: CONFIANÇA PERCEBIDA NA COMUNICAÇÃO EM LÍNGUA INGLESA NO PROJETO FRENTE",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 2,
+      "style": "Normal",
+      "text": "FROM VIRTUAL PREPARATION TO INTERNATIONAL IMMERSION: PERCEIVED CONFIDENCE IN ENGLISH COMMUNICATION IN THE FRENTE PROJECT",
+      "alignment": "CENTER (1)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "FROM VIRTUAL PREPARATION TO INTERNATIONAL IMMERSION: PERCEIVED CONFIDENCE IN ENGLISH COMMUNICATION IN THE FRENTE PROJECT",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "style": "Normal",
+      "text": "",
+      "alignment": "CENTER (1)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 4,
+      "style": "Normal",
+      "text": "Jéssica Franzon Cruz do Espírito Santo, i",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Jéssica Franzon Cruz do Espírito Santo",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "style": "Normal",
+      "text": "Juan Viana Lorenzo, ii",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Juan Viana Lorenzo",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", ii",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "style": "Normal",
+      "text": "Marcos Vinicius Oliveira dos Santos, iii",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Marcos Vinicius Oliveira dos Santos",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", ii",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "style": "Normal",
+      "text": "Vinicius de Jesus Silva, iv",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Vinicius de Jesus Silva",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "v",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 9,
+      "style": "Heading 1",
+      "text": "RESUMO",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": 8.0,
+      "space_after_pt": 4.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "RESUMO",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "style": "Normal",
+      "text": "Este estudo analisou as contribuições percebidas da preparação linguística e da mobilidade internacional para a comunicação em inglês de cinco estudantes de Ciência de Dados do SENAI-SP participantes do projeto FREnTE, vinculado ao programa 100K Strong in the Americas. Trata-se de estudo de caso qualitativo, fundamentado no relatório institucional e nos registros do Padlet. Antes da mobilidade, reuniões virtuais semanais proporcionaram oportunidades de prática do idioma, integração e aproximação cultural. Posteriormente, o inglês foi utilizado em atividades acadêmicas, científicas e cotidianas no Brasil e nos Estados Unidos. Os registros revelaram inseguranças iniciais, especialmente na comunicação oral e no uso de terminologias técnicas, mas também maior confiança e disposição percebida para utilizar o idioma.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 5.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Este estudo analisou as contribuições percebidas da preparação linguística e da mobilidade internacional para a comunicação em inglês de cinco estudantes de Ciência de Dados do SENAI-SP participantes do projeto FREnTE, vinculado ao programa ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "100K Strong in ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "the",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "Americas",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ". Trata-se de estudo de caso qualitativo, fundamentado no relatório institucional e nos registros do Padlet. Antes da mobilidade, reuniões virtuais semanais proporcionaram oportunidades de prática do idioma, integração e aproximação cultural. Posteriormente, o inglês foi utilizado em atividades acadêmicas, científicas e cotidianas no Brasil e nos Estados Unidos. Os registros revelaram inseguranças iniciais, especialmente na comunicação oral e no uso de terminologias técnicas, mas também maior confiança e disposição percebida para utilizar o idioma.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "style": "Normal",
+      "text": "Palavras-chave: internacionalização; língua inglesa; confiança linguística; mobilidade acadêmica; educação profissional.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 5.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Palavras-chave:",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " internacionalização; língua inglesa; confiança linguística; mobilidade acadêmica; educação profissional.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "style": "Default",
+      "text": "",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 13,
+      "style": "Normal",
+      "text": "ABSTRACT",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "ABSTRACT",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "style": "Normal",
+      "text": "This study analyzed the perceived contributions of language preparation and international mobility to the English communication of five Data Science students from SENAI-SP who participated in the FREnTE project, affiliated with the 100K Strong in the Americas program. This qualitative case study was based on the institutional report and records produced on Padlet. Before mobility, weekly virtual meetings provided opportunities for language practice, participant integration, and cultural exchange. English was subsequently used in academic, scientific, and everyday activities in Brazil and the United States. The records revealed initial insecurities, particularly regarding oral communication and technical terminology, but also greater perceived confidence and willingness to use English.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 5.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "This study analyzed the perceived contributions of language preparation and international mobility to the English communication of five Data Science students from SENAI-SP who participated in the FREnTE project, affiliated with the 100K Strong in the Americas program. This qualitative case study was based on the institutional report and records produced on Padlet. Before mobility, weekly virtual meetings provided opportunities for language practice, participant integration, and cultural exchange. English was subsequently used in academic, scientific, and everyday activities in Brazil and the United States. The records revealed initial insecurities, particularly regarding oral communication and technical terminology, but also greater perceived confidence and willingness to use English.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "style": "Normal",
+      "text": "Keywords: internationalization; English language; language confidence; academic mobility; vocational education.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 5.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Keywords: ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "internationalization; English language; language confidence; academic mobility; vocational education",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "style": "Heading 1",
+      "text": "INTRODUÇÃO",
+      "alignment": "None",
+      "left_in": 0.2958,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "INTRODUÇÃO",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "style": "Normal",
+      "text": "A internacionalização consolidou-se como uma dimensão estratégica do ensino superior, acompanhando a ampliação dos fluxos globais de conhecimento e da cooperação científica. Inicialmente associada à mobilidade acadêmica, passou a compreender a integração das dimensões internacional, intercultural e global às funções das instituições de ensino superior (KNIGHT, 2004). De Wit et al. (2015) a definem como um processo intencional voltado à melhoria da qualidade do ensino e da pesquisa e à geração de contribuições para a sociedade.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "A internacionalização consolidou-se como uma dimensão estratégica do ensino superior, acompanhando a ampliação dos fluxos globais de conhecimento e da cooperação científica. Inicialmente associada à mobilidade acadêmica, passou a ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "compreender a integração das dimensões internacional, intercultural e global às funções das instituições de ensino superior (KNIGHT, 2004). De ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Wit",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " et al. (2015) a definem como um processo intencional voltado à melhoria da qualidade do ensino e da pesquisa e à geração de contribuições para a sociedade.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "style": "Normal",
+      "text": "Nesse contexto, o projeto Focused River, Environmental, and Terrestrial Explorations (FREnTE) foi desenvolvido no âmbito do programa 100K Strong in the Americas, por meio da cooperação entre Georgia Southern University (GSU), o Instituto SENAI de Inovação em Biomassa, o SENAI-SP e a Universidade Federal de Mato Grosso do Sul (UFMS). O projeto integrou geociências, Ciência de Dados e sustentabilidade em atividades realizadas no Brasil e nos Estados Unidos. A equipe discente reuniu cinco estudantes de Ciência de Dados do SENAI-SP, dois estudantes de Geografia da UFMS e um estudante da GSU. Embora o grupo tenha envolvido oito participantes, a análise concentrou-se nos cinco estudantes do SENAI.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Nesse contexto, o projeto ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Focused",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " River, Environmental, ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "and",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "Terrestrial",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "Explorations",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " (FREnTE) foi desenvolvido no âmbito do programa ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "100K Strong in ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "the",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "Americas",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", por meio da cooperação entre Georgia Southern University",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " (GSU)",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", o Instituto SENAI de Inovação em Biomassa, o SENAI-SP e a Universidade Federal de Mato Grosso do Sul",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " (UFMS)",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". O projeto integrou geociências, Ciência de Dados e sustentabilidade em atividades realizadas no Brasil e nos Estados Unidos. A equipe discente reuniu cinco estudantes de Ciência de Dados do SENAI-SP, dois estudantes de Geografia da UFMS e um estudante da ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "GSU",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". Embora o grupo tenha envolvido oito participantes, a análise concentrou-se nos cinco estudantes do SENAI.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "style": "Normal",
+      "text": "O objetivo foi analisar as contribuições percebidas das reuniões semanais de preparação linguística e das situações de interação internacional para a confiança, a disposição para se comunicar e o uso funcional da língua inglesa pelos estudantes. Ao sistematizar as estratégias empregadas e as percepções registradas, o estudo busca oferecer subsídios para futuras iniciativas de internacionalização na educação profissional e tecnológica.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "O objetivo foi analisar as contribuições percebidas das reuniões semanais de preparação linguística e das situações de interação internacional para a confiança, a disposição para se comunicar e o uso funcional da língua inglesa pelos estudantes. Ao sistematizar as estratégias empregadas e as percepções registradas, o estudo busca oferecer subsídios para futuras iniciativas de internacionalização na educação profissional e tecnológica.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 21,
+      "style": "Heading 1",
+      "text": "REVISÃO DE LITERATURA ",
+      "alignment": "None",
+      "left_in": 0.2958,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "REVISÃO DE LITERATURA ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "style": "Normal",
+      "text": "Os efeitos formativos da internacionalização não decorrem exclusivamente da mobilidade acadêmica, mas da qualidade das oportunidades de interação e aprendizagem proporcionadas aos estudantes. Para produzir resultados educacionais significativos, as atividades internacionais devem estar articuladas a objetivos pedagógicos e acompanhadas por ações de preparação, mediação e apoio institucional (DEARDORFF, 2006; DE WIT et al., 2015).",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os efeitos formativos da internacionalização não decorrem exclusivamente da mobilidade acadêmica, mas da qualidade das oportunidades de interação e aprendizagem proporcionadas aos estudantes. Para produzir resultados educacionais significativos, as atividades internacionais devem estar articuladas a objetivos pedagógicos e acompanhadas por ações de preparação, mediação e apoio institucional (DEARDORFF, 2006; DE WIT et al., 2015).",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "style": "Normal",
+      "text": "Nesse contexto, a língua estrangeira deixa de representar apenas um conteúdo curricular e passa a funcionar como instrumento para estabelecer relações, compartilhar conhecimentos e participar de atividades acadêmicas e científicas. A comunicação não depende somente do domínio gramatical, mas da capacidade de mobilizar os recursos linguísticos disponíveis e da disposição para iniciar e sustentar interações em diferentes situações (MACINTYRE et al., 1998). Fatores afetivos também influenciam esse processo. A confiança linguística envolve a percepção de competência, a segurança e o sentimento de legitimidade para utilizar o idioma (LIU, 2025), enquanto a apreensão comunicativa e o medo da avaliação negativa podem dificultar a participação (HORWITZ; HORWITZ; COPE, 1986). As atividades virtuais anteriores à mobilidade podem constituir espaços de socialização e prática comunicativa, permitindo a aproximação entre os participantes antes das interações presenciais. ",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Nesse contexto, a língua estrangeira deixa de representar apenas um conteúdo curricular e passa a funcionar como instrumento para estabelecer relações, compartilhar conhecimentos e participar de atividades acadêmicas e científicas. A comunicação não depende somente do domínio gramatical, mas da capacidade de mobilizar os recursos linguísticos disponíveis e da disposição para iniciar e sustentar interações em diferentes situações (MACINTYRE et al., 1998). Fatores afetivos também influenciam esse processo. A confiança linguística envolve a percepção de competência, a segurança e o sentimento de legitimidade para utilizar o idioma (LIU, 2025), enquanto a apreensão comunicativa e o medo da avaliação negativa podem dificultar a participação (HORWITZ; HORWITZ; COPE, 1986).",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "As atividades virtuais anteriores à mobilidade podem constituir espaços de socialização e prática comunicativa, permitindo a aproximação entre os participantes antes das interações presenciais. ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "style": "Normal",
+      "text": "",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 25,
+      "style": "Heading 1",
+      "text": "MeTODOLOGIA ",
+      "alignment": "None",
+      "left_in": 0.2958,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "MeTODOLOGIA ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 27,
+      "style": "Normal",
+      "text": "Trata-se de um estudo de caso descritivo, de abordagem qualitativa, fundamentado na análise documental do projeto FREnTE e dos registros pedagógicos produzidos no Padlet. A unidade principal de análise correspondeu à trajetória de cinco estudantes de Ciência de Dados do SENAI-SP. Para contextualizar as interações, também foi considerada sua participação no grupo ampliado, composto por dois estudantes de Geografia da UFMS e um estudante da GSU.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Trata-se de um estudo de caso descritivo, de abordagem qualitativa, fundamentado na análise documental do projeto FREnTE e dos registros pedagógicos produzidos no Padlet. A unidade principal de análise correspondeu à trajetória de cinco estudantes de Ciência de Dados do SENAI",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "-SP",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". Para contextualizar as interações, também foi considerada sua participação no grupo ampliado, composto por dois estudantes de Geografia da UFMS e um estudante da ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "GSU",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "style": "Normal",
+      "text": "A experiência foi organizada em duas etapas. A primeira envolveu reuniões virtuais semanais conduzidas pela professora responsável pela Georgia Southern University. Os encontros promoveram a integração dos participantes, a apresentação de aspectos das culturas brasileira e norte-americana e a prática da língua inglesa por meio de atividades de apresentação pessoal, conversação e compartilhamento de interesses acadêmicos e culturais. Como recurso de apoio, utilizou-se o Padlet para centralizar informações e registrar atividades relacionadas à compreensão oral, fala, leitura e escrita (Figura 1). A plataforma também incluiu uma autoavaliação inicial das habilidades linguísticas em escala de zero a cinco. Como essa atividade não foi reaplicada após a mobilidade, seus registros foram analisados qualitativamente, sem comparação quantitativa da proficiência.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "A experiência foi organizada em duas etapas. A primeira envolveu reuniões virtuais semanais conduzidas pela professora responsável pela Georgia Southern University. Os encontros promoveram a integração dos participantes, a apresentação de aspectos das culturas brasileira e norte-americana e a prática da língua inglesa por meio de atividades de apresentação pessoal, conversação e compartilhamento de interesses acadêmicos e culturais. Como recurso de apoio, utilizou-se o Padlet para centralizar informações e registrar atividades relacionadas à compreensão oral, fala, leitura e escrita",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " (Figura 1)",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". A plataforma também incluiu uma autoavaliação inicial das habilidades linguísticas em escala de zero a cinco. Como essa atividade não foi reaplicada após a mobilidade, seus registros foram analisados qualitativamente, sem comparação quantitativa da proficiência.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "style": "Normal",
+      "text": "",
+      "alignment": "CENTER (1)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": 12.0,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": true,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "",
+          "font": null,
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "style": "Caption",
+      "text": "Figura 1. Ambiente virtual Language & Culture utilizado nas atividades de preparação linguística e integração cultural dos participantes. Fonte: Registros do Projeto FREnTE (2025).",
+      "alignment": "CENTER (1)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Figura ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "1",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": ". Ambiente virtual ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "Language",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": " & Culture utilizado nas atividades de preparação linguística e integração cultural dos participantes.",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "Fonte: ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "R",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "egistros",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": " do ",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "P",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": "rojeto",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        },
+        {
+          "text": " FREnTE (2025).",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": false,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "style": "Normal",
+      "text": "A segunda etapa compreendeu atividades presenciais realizadas no Brasil e a mobilidade acadêmica nos Estados Unidos. O percurso incluiu eventos científicos, aulas, reuniões, visitas técnicas, atividades de campo, workshops e interações cotidianas, nas quais o inglês foi utilizado em contextos acadêmicos, científicos e sociais.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "A segunda etapa compreendeu atividades presenciais realizadas no Brasil e a mobilidade acadêmica nos Estados Unidos. O percurso incluiu eventos científicos, aulas, reuniões, visitas técnicas, atividades de campo, ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "workshops",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " e interações cotidianas, nas quais o inglês foi utilizado em contextos acadêmicos, científicos e sociais.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "style": "Normal",
+      "text": "O material analisado reuniu descrições das atividades, dos desafios, das avaliações e dos depoimentos presentes no relatório institucional, além das autoavaliações e produções textuais registradas no Padlet. A análise temática de conteúdo foi fundamentada em Bardin (2016) e envolveu leitura integral dos documentos, identificação de unidades de sentido e agrupamento por proximidade temática. Foram definidas quatro categorias: (a) preparação, integração e aproximação cultural; (b) barreiras e insegurança comunicativa; (c) utilização autêntica da língua inglesa; e (d) confiança e disposição para se comunicar.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "O material analisado reuniu descrições das atividades, dos desafios, das avaliações e dos depoimentos presentes no relatório institucional, além das autoavaliações e produções textuais registradas no Padlet.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "A análise temática de conteúdo foi fundamentada em Bardin (2016) e envolveu leitura integral dos documentos, identificação de unidades de sentido e agrupamento por proximidade temática. Foram definidas quatro categorias: (a) preparação, integração e aproximação cultural; (b) barreiras e insegurança comunicativa; (c) utilização autêntica da língua inglesa; e (d) ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "confiança e disposição para se comunicar",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "style": "Normal",
+      "text": "Os registros foram examinados coletivamente, com omissão dos nomes e de informações que possibilitassem a identificação individual dos estudantes. Como não foram aplicados testes padronizados antes e depois da mobilidade, o estudo não mensura evolução objetiva da proficiência nem estabelece relações causais. Os resultados são apresentados como mudanças percebidas ou observadas na confiança e no uso funcional do idioma.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os registros foram examinados coletivamente, com omissão dos nomes e de informações que possibilitassem a identificação individual dos estudantes. Como não foram aplicados testes padronizados antes e depois da mobilidade, o estudo não mensura evolução objetiva da proficiência nem estabelece relações causais. Os resultados são apresentados como mudanças percebidas ou observadas na confiança",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "e no uso funcional do idioma.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 35,
+      "style": "Heading 1",
+      "text": "RESULTADOS E DISCUSSÃO",
+      "alignment": "None",
+      "left_in": 0.2958,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "RESULTADOS E DISCUSS",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "ÃO",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "style": "Normal",
+      "text": "4.1 Preparação, integração e aproximação cultural",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "4.1 Preparação, integração e aproximação cultural",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "style": "Normal",
+      "text": "Os registros analisados indicam que a preparação para a mobilidade não se restringiu à organização logística. Nas reuniões virtuais semanais, foram realizadas práticas contextualizadas de comunicação em língua inglesa, atividades de integração e apresentações sobre aspectos das culturas brasileira e norte-americana. Os participantes exercitaram situações como apresentar-se, compartilhar interesses, formular perguntas e compreender interlocutores estrangeiros.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.5,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os registros analisados indicam que a preparação para a mobilidade não se restringiu à organização logística. Nas reuniões virtuais semanais, foram realizadas práticas contextualizadas de comunicação em língua inglesa, atividades de integração e apresentações sobre aspectos das culturas brasileira e norte-americana. Os ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "participantes exercitaram situações como apresentar-se, compartilhar interesses, formular perguntas e compreender interlocutores estrangeiros.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "style": "Normal",
+      "text": "A interação virtual também possibilitou aos estudantes brasileiros conhecer previamente o participante da GSU. Desse modo, o encontro presencial deu continuidade às trocas iniciadas on-line, permitindo interações acadêmicas e culturais desde o primeiro dia. Essa experiência aproxima-se das considerações de Anzai e Shimizu (2022) sobre o potencial das práticas colaborativas internacionais on-line para criar oportunidades de uso da língua estrangeira e aproximar estudantes de diferentes contextos.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.5,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "A interação virtual também possibilitou aos estudantes brasileiros conhecer previamente o participante da ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "GSU",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". Desse modo, o encontro presencial deu continuidade às trocas iniciadas on-line, permitindo interações acadêmicas e culturais desde o primeiro dia. Essa experiência aproxima-se das considerações de Anzai e Shimizu (2022) sobre o potencial das práticas colaborativas internacionais on-line para criar oportunidades de uso da língua estrangeira e aproximar estudantes de diferentes contextos.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "style": "Normal",
+      "text": "4.2 Barreiras e utilização autêntica da língua inglesa",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "4.2 Barreiras e utilização autêntica da língua inglesa",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "style": "Normal",
+      "text": "Apesar da preparação, a barreira linguística foi apontada no relatório institucional como um dos principais desafios da experiência. Os estudantes precisaram acompanhar apresentações, compreender orientações e participar de discussões que envolviam tanto o inglês cotidiano quanto terminologias técnicas. As autoavaliações registradas no Padlet revelaram diferentes percepções de segurança entre as habilidades linguísticas. Em alguns registros, a leitura foi considerada mais desenvolvida, enquanto a fala e a escrita foram associadas a maiores dificuldades. Essas percepções podem ser interpretadas à luz de Horwitz, Horwitz e Cope (1986), que relacionam a ansiedade em língua estrangeira à apreensão comunicativa e ao medo da avaliação negativa.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.5,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Apesar da preparação, a barreira linguística foi apontada no relatório institucional como um dos principais desafios da experiência. Os estudantes precisaram acompanhar apresentações, compreender orientações e participar de discussões que envolviam tanto o inglês cotidiano quanto terminologias técnicas. As autoavaliações registradas no Padlet revelaram diferentes percepções de segurança entre as habilidades linguísticas. Em alguns registros, a leitura foi considerada mais desenvolvida, enquanto a fala e a escrita foram associadas a maiores dificuldades. Essas percepções podem ser interpretadas à luz de ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Horwitz",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ", ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Horwitz",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " e Cope (1986), que relacionam a ansiedade em língua estrangeira à apreensão comunicativa e ao medo da avaliação negativa.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "style": "Normal",
+      "text": "Durante as atividades realizadas no Brasil e nos Estados Unidos, o inglês foi utilizado em contextos acadêmicos, científicos e cotidianos, incluindo congresso, aulas, reuniões, visitas técnicas, atividades de campo e interações com estudantes e pesquisadores estrangeiros. Alguns participantes também integraram o podcast Voices From the Field, no qual compartilharam percepções sobre diferenças culturais, sustentabilidade e possibilidades de cooperação. Essas situações demandaram a compreensão de instruções, a formulação de perguntas, a solicitação de esclarecimentos e a comunicação de conhecimentos técnicos. Os registros sugerem, portanto, que a diversidade de interlocutores e situações criou oportunidades concretas de uso funcional do idioma, em consonância com MacIntyre et al. (1998), para quem a disposição para se comunicar em uma segunda língua também é influenciada pelas condições do contexto.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.5,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Durante as atividades realizadas no Brasil e nos Estados Unidos, o inglês foi utilizado em contextos acadêmicos, científicos e cotidianos, incluindo congresso, aulas, reuniões, visitas técnicas, atividades de campo e interações com estudantes e pesquisadores estrangeiros. Alguns participantes também integraram o podcast ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Voices ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "From",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": "the",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " Field",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", no qual compartilharam percepções sobre diferenças culturais, sustentabilidade e possibilidades de cooperação. Essas situações demandaram a compreensão de instruções, a formulação de perguntas, a solicitação de esclarecimentos e a comunicação de conhecimentos técnicos. Os registros sugerem, portanto, que a diversidade de interlocutores e situações criou oportunidades concretas de uso funcional do idioma, em consonância com MacIntyre et al. (1998), para quem a disposição para se comunicar em uma segunda língua também é influenciada pelas condições do contexto.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "style": "Normal",
+      "text": "4.3 Confiança e disposição para se comunicar",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "4.3 Confiança e disposição para se comunicar",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "style": "Normal",
+      "text": "Os depoimentos retrospectivos presentes no relatório sugerem uma mudança percebida na relação dos estudantes com a língua inglesa ao longo da experiência. Embora tenham sido registradas inseguranças iniciais, os participantes relataram maior confiança e disposição para utilizar o idioma em interações acadêmicas e cotidianas. O inglês passou a ser mobilizado não apenas como objeto de aprendizagem, mas como recurso para colaborar, acessar informações e compartilhar conhecimentos. Essa interpretação converge com Liu (2025), que associa a confiança linguística à percepção de competência, à segurança e ao sentimento de legitimidade para utilizar o idioma.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.5,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os depoimentos retrospectivos presentes no relatório sugerem uma mudança percebida na relação dos estudantes com a língua inglesa ao longo da experiência. Embora tenham sido registradas inseguranças iniciais, os participantes relataram maior confiança e disposição para utilizar o idioma em interações acadêmicas e cotidianas. O inglês passou a ser mobilizado não apenas como objeto de aprendizagem, mas como recurso para colaborar, acessar informações e compartilhar conhecimentos. Essa interpretação converge com Liu (2025), que associa a confiança linguística à percepção de competência, à segurança e ao sentimento de legitimidade para utilizar o idioma.",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "style": "Normal",
+      "text": "Os registros também apontam para uma relação complementar entre a preparação virtual e a experiência presencial. As reuniões semanais ofereceram oportunidades de familiarização com os interlocutores e com o uso do inglês, enquanto a imersão ampliou a diversidade e a complexidade das situações comunicativas. A articulação dessas etapas foi percebida como relevante para a confiança, a disposição para interagir e o uso funcional da língua inglesa. Esses resultados, entretanto, expressam percepções documentadas e não permitem afirmar que tenha ocorrido evolução objetiva da proficiência.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.2958,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os registros também apontam para uma relação complementar entre a preparação virtual e a experiência presencial. As reuniões semanais ofereceram oportunidades de familiarização com os interlocutores e com o uso do inglês, enquanto a imersão ampliou a diversidade e a complexidade das situações comunicativas. A articulação dessas etapas foi percebida como relevante para a confiança, a disposição ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "para interagir e o uso funcional da língua inglesa. Esses resultados, entretanto, expressam percepções documentadas e não permitem afirmar que tenha ocorrido evolução objetiva da proficiência",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "style": "Heading 1",
+      "text": "Conclusão",
+      "alignment": "None",
+      "left_in": 0.2958,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Conclusão",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 47,
+      "style": "Default",
+      "text": "Os registros analisados sugerem que as reuniões virtuais semanais, apoiadas pelo Padlet, foram percebidas como relevantes para a preparação linguística, a aproximação cultural e a construção de vínculos entre os participantes do projeto FREnTE. Nas atividades presenciais, o uso do inglês em situações acadêmicas, científicas e cotidianas proporcionou oportunidades de comunicação autêntica e foi associado à maior confiança e disposição dos estudantes de Ciência de Dados do SENAI-SP para utilizar o idioma.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.4917,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Os registros analisados sugerem que as reuniões virtuais semanais, apoiadas pelo Padlet, foram percebidas como relevantes para a preparação linguística, a aproximação cultural e a construção de vínculos entre os participantes do projeto FREnTE. Nas atividades presenciais, o uso do inglês em situações acadêmicas, científicas e cotidianas proporcionou oportunidades de comunicação autêntica e foi associado à maior confiança e disposição dos estudantes de Ciência de Dados do SENAI-SP para utilizar o idioma.",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "style": "Default",
+      "text": "Como não foram realizadas avaliações padronizadas antes e depois da mobilidade, não é possível afirmar que houve aumento objetivo da proficiência linguística nem estabelecer relações causais entre as atividades preparatórias e as mudanças percebidas. Ainda assim, os resultados apontam que a articulação entre preparação continuada e situações autênticas de comunicação pode ampliar o potencial formativo da internacionalização. Estudos futuros poderão incorporar entrevistas, escalas de confiança e avaliações linguísticas pré e pós-mobilidade, permitindo examinar essas contribuições de maneira mais abrangente.",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.4917,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Como não foram realizadas avaliações padronizadas antes e depois da mobilidade, não é possível afirmar que houve aumento objetivo da proficiência linguística nem estabelecer relações causais entre as atividades preparatórias e as mudanças percebidas. Ainda assim, os resultados apontam que a articulação entre preparação continuada e situações autênticas de comunicação pode ampliar o potencial formativo da internacionalização. Estudos futuros poderão incorporar entrevistas, escalas de confiança e avaliações linguísticas pré e pós-mobilidade, permitindo examinar essas contribuições de maneira mais abrangente.",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "style": "Default",
+      "text": "",
+      "alignment": "JUSTIFY (3)",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": 0.4917,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 50,
+      "style": "Heading 1",
+      "text": "Referências",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Referências",
+          "font": "Arial",
+          "size_pt": null,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "style": "Normal",
+      "text": "ANZAI, Yayoi; SHIMIZU, Hideko. Challenges and opportunities of COIL for foreign language education. International Journal for Educational Media and Technology, v. 16, n. 2, p. 46–54, 2022.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "ANZAI, ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Yayoi",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "; SHIMIZU, ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Hideko",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ". ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Challenges and opportunities of COIL for foreign language education. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "International Journal for Educational Media and Technology",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 16, n. 2, p. 46–54, 2022.",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "style": "Normal",
+      "text": "BARDIN, Laurence. Análise de conteúdo. São Paulo: Edições 70, 2016.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "BARDIN, Laurence. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Análise de conteúdo",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ". ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "São Paulo: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Edições",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " 70, 2016.",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "style": "Normal",
+      "text": "DEARDORFF, Darla K. Identification and assessment of intercultural competence as a student outcome of internationalization. Journal of Studies in International Education, v. 10, n. 3, p. 241–266, 2006. DOI: 10.1177/1028315306287002.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "DEARDORFF, Darla K. Identification and assessment of intercultural competence as a student outcome of internationalization. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Journal of Studies in International Education",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 10, n. 3, p. 241–266, 2006. DOI: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "style": "Normal",
+      "text": "DE WIT, Hans; HUNTER, Fiona; HOWARD, Laura; EGRON-POLAK, Eva. Internationalisation of higher education. Brussels: European Parliament, 2015. DOI: 10.2861/444393.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "DE WIT, Hans; HUNTER, Fiona; HOWARD, Laura; EGRON-POLAK, Eva. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Internationalisation",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": " of higher education",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ". Brussels: European Parliament, 2015. DOI: 10.2861/444393.",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "style": "Normal",
+      "text": "HORWITZ, Elaine K.; HORWITZ, Michael B.; COPE, Joann. Foreign language classroom anxiety. The Modern Language Journal, v. 70, n. 2, p. 125–132, 1986. DOI: 10.1111/j.1540-4781.1986.tb05256.x.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "HORWITZ, Elaine K.; HORWITZ, Michael B.; COPE, Joann. Foreign language classroom anxiety. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "The Modern Language Journal",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 70, n. 2, p. 125–132, 1986. DOI: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "style": "Normal",
+      "text": "KNIGHT, Jane. Internationalization remodeled: definition, approaches, and rationales. Journal of Studies in International Education, v. 8, n. 1, p. 5–31, 2004. DOI: 10.1177/1028315303260832.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "KNIGHT, Jane. Internationalization remodeled: definition, approaches, and rationales. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Journal of Studies in International Education",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 8, n. 1, p. 5–31, 2004. DOI: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "style": "Normal",
+      "text": "LIU, Guangxiang Leon. Revisiting and measuring foreign language confidence from a World Englishes perspective: scale development and validation. International Journal of Applied Linguistics, v. 35, n. 1, p. 291–307, 2025. DOI: 10.1111/ijal.12618.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "LIU, ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "Guangxiang",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " Leon. Revisiting and measuring foreign language confidence from a World Englishes perspective: scale development and validation. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "International Journal of Applied Linguistics",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 35, n. 1, p. 291–307, 2025. DOI: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "style": "Normal",
+      "text": "MACINTYRE, Peter D.; CLÉMENT, Richard; DÖRNYEI, Zoltán; NOELS, Kimberly A. Conceptualizing willingness to communicate in a L2: a situational model of L2 confidence and affiliation. The Modern Language Journal, v. 82, n. 4, p. 545–562, 1998. DOI: 10.1111/j.1540-4781.1998.tb05543.x.",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 12.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "MACINTYRE, Peter D.; CLÉMENT, Richard; DÖRNYEI, Zoltán; NOELS, Kimberly A. Conceptualizing willingness to communicate in a L2: a situational model of L2 confidence and affiliation. ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "The Modern Language Journal",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": true,
+          "superscript": null
+        },
+        {
+          "text": ", v. 82, n. 4, p. 545–562, 1998. DOI: ",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": ".",
+          "font": "Arial",
+          "size_pt": 10.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": 4.0,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "style": "Normal",
+      "text": "SOBRE O(S)AUTOR(ES)",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "SOBRE O(S)AUTOR(ES)",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 62,
+      "style": "Normal",
+      "text": "Sobre os autores:",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "Sobre os autores:",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "style": "Normal",
+      "text": "_________________",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "_________________",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 65,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 66,
+      "style": "endnote text",
+      "text": "i JÉSSICA FRANZON CRUZ DO ESPÍRITO SANTO",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "JÉSSICA FRANZON CRUZ DO ESPÍRITO SANTO",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "style": "endnote text",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 68,
+      "style": "endnote text",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 69,
+      "style": "Normal",
+      "text": "ii JUAN VIANA LORENZO",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": true
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "JUAN VIANA LORENZO",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 71,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 72,
+      "style": "Normal",
+      "text": "iii MARCOS VINICIUS OLIVEIRA DOS SANTOS",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": true
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "MARCOS VINICIUS OLIVEIRA DOS SANTOS",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 74,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 75,
+      "style": "Normal",
+      "text": "iv VINICIUS DE JESUS SILVA",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": [
+        {
+          "text": "i",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "v",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " ",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": null,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": "VINICIUS",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        },
+        {
+          "text": " DE JESUS SILVA",
+          "font": "Arial",
+          "size_pt": 12.0,
+          "bold": true,
+          "italic": null,
+          "superscript": null
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    },
+    {
+      "index": 77,
+      "style": "Normal",
+      "text": "",
+      "alignment": "None",
+      "left_in": null,
+      "right_in": null,
+      "first_line_in": null,
+      "space_before_pt": null,
+      "space_after_pt": null,
+      "line_spacing": "None",
+      "keep_with_next": null,
+      "page_break_before": null,
+      "runs": []
+    }
+  ],
+  "parts": [
+    {
+      "path": "[Content_Types].xml",
+      "size": 2295,
+      "sha256": "5e9a8efa1ff80305a9751d0001aa18d668fec0e7d04da2b9df8570365fb980c3"
+    },
+    {
+      "path": "_rels/.rels",
+      "size": 737,
+      "sha256": "c30fe099dbcfed4ecc4ae544ccf82f432c8d3bb665e2a301df283738b196d803"
+    },
+    {
+      "path": "word/document.xml",
+      "size": 100304,
+      "sha256": "e76dfe609d02e0a71301ce62639115ed5e8ce0fec737adea33fb4f4775df1de3"
+    },
+    {
+      "path": "word/_rels/document.xml.rels",
+      "size": 3250,
+      "sha256": "a659eeab3067c616f528d5d7e0b0efc922da3cc11011ad014b0a53e21454ac19"
+    },
+    {
+      "path": "word/footnotes.xml",
+      "size": 7511,
+      "sha256": "96c7c4a8ef34718429ff1eb3dff46d006d775381a616b111be932273aec4a3ba"
+    },
+    {
+      "path": "word/endnotes.xml",
+      "size": 3050,
+      "sha256": "d01602fc296449f56c56065b97e97114746ab69b00dc2d4140801d618af4db49"
+    },
+    {
+      "path": "word/header1.xml",
+      "size": 11051,
+      "sha256": "4d2c3ac915037996ac45b286df07758f3e3cd5b7b52a14ff20d3049d2e17f5c0"
+    },
+    {
+      "path": "word/footer1.xml",
+      "size": 12041,
+      "sha256": "d124e740d467c37a83225f25d18461f38de081d02460cabc6ee58f392980fdcc"
+    },
+    {
+      "path": "word/_rels/footer1.xml.rels",
+      "size": 289,
+      "sha256": "3341db2f7307fcd1302726a95be506cd09afd1355f7e76a6341400c39120fcaa"
+    },
+    {
+      "path": "word/media/image1.jpeg",
+      "size": 179906,
+      "sha256": "38af827cd23fdf24e95616e705dba77624cb70d9128c63aed8b32892bfd0faa2"
+    },
+    {
+      "path": "word/media/image2.jpeg",
+      "size": 94373,
+      "sha256": "f719111909210f6248bff07e6374a4f0bab397bb1889b2e3c19bbc86ad8defb5"
+    },
+    {
+      "path": "word/media/image3.jpeg",
+      "size": 58165,
+      "sha256": "36106b8dcb6545c05f97b13a909c44c8f7ec804b7a61759993c6a5d89a57563f"
+    },
+    {
+      "path": "word/media/image4.jpeg",
+      "size": 31184,
+      "sha256": "a808e3607889400686b3f513ccfaef25c6c9c448b66bddb58050c3d1937983bd"
+    },
+    {
+      "path": "word/media/image5.jpeg",
+      "size": 38417,
+      "sha256": "b530d2df92981c7e547ff1e22ffa5ad6775b0daac9efde1142368774d5ecd779"
+    },
+    {
+      "path": "word/media/image6.png",
+      "size": 9443,
+      "sha256": "b059c23fd693c7459719eb5f2fffc75ddc5201539add1e1935b88e82f5c6f520"
+    },
+    {
+      "path": "word/fonts/font1.odttf",
+      "size": 1650632,
+      "sha256": "26a008bea14574f0e9e1af478cd4df43d8a72822cf83f32c392e2339de25e1b4"
+    },
+    {
+      "path": "word/fonts/font2.odttf",
+      "size": 1615616,
+      "sha256": "86e4b159b80daff7e6feac11cfd152743fb87fe081fbd7e7559a718866eef909"
+    },
+    {
+      "path": "word/fonts/font3.odttf",
+      "size": 1542676,
+      "sha256": "37a2b07a6cdb87fed44380804c7139d64a891d809e0ccec204789a7b57d8c282"
+    },
+    {
+      "path": "word/fonts/font4.odttf",
+      "size": 892620,
+      "sha256": "cf8ad5ba52d3abadef39cc5e2e20d8b384ab4cb15c1f5bb36522906a04352f53"
+    },
+    {
+      "path": "word/theme/theme1.xml",
+      "size": 6992,
+      "sha256": "bf4992e3fa7832e5c68fdbc4ec5189c8e5d347fef03c5ba2522ad704bde5078f"
+    },
+    {
+      "path": "word/settings.xml",
+      "size": 5492,
+      "sha256": "6bd8ee690dff2da055b350c7e133de49317f278298caca86442470d83d624b7e"
+    },
+    {
+      "path": "word/numbering.xml",
+      "size": 9979,
+      "sha256": "98e1038ba32c507bac5d61b498d394a24089e128d36acb2c3b681f242cffdbe7"
+    },
+    {
+      "path": "word/styles.xml",
+      "size": 40365,
+      "sha256": "0781850146d70665fa2c32931830d1740c3218d4c48d5272f948e91b5d2a25d1"
+    },
+    {
+      "path": "word/webSettings.xml",
+      "size": 3049,
+      "sha256": "8f9f7cb94ee86fc9faaaae457cb5f14b5c25fcac9585f9a4140f4393b081b8be"
+    },
+    {
+      "path": "word/fontTable.xml",
+      "size": 2861,
+      "sha256": "a9e392c663f195ce1baefcf942bac70b670c455ef0943184f291c798fbb67315"
+    },
+    {
+      "path": "docProps/core.xml",
+      "size": 736,
+      "sha256": "d1849616e1d3ef273a15c87f561cbc30136649613279653b1066befd666852a9"
+    },
+    {
+      "path": "docProps/app.xml",
+      "size": 1016,
+      "sha256": "16d364222de28de6a659f7d303a09e8b0720c4aa2592cb651d8f2f1ea2444388"
+    },
+    {
+      "path": "docProps/custom.xml",
+      "size": 668,
+      "sha256": "c2b5a4f0e2e813aa7929413f9e656ca0287c2d85275dc9bf203b80febfdee6e0"
+    },
+    {
+      "path": "word/_rels/fontTable.xml.rels",
+      "size": 685,
+      "sha256": "8bd08b96746ef7fb7eac62cd47aafed5e82c3bc8cb532235de6730d701711430"
+    }
+  ]
+}
