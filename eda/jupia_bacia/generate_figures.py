@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+from matplotlib.text import Text
+from matplotlib.ticker import FixedFormatter
 import numpy as np
 import pandas as pd
 
@@ -13,6 +16,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 EDA_DIR = Path(__file__).resolve().parent
 FIG_DIR = EDA_DIR / "figures"
+LANGUAGE = "pt"
 ANALYTIC_DIR = ROOT / "data" / "analytic" / "jupia_bacia"
 STAGING_DIR = ROOT / "data" / "staging" / "jupia_bacia"
 CONTEXT_PATH = EDA_DIR / "report_context.json"
@@ -46,8 +50,24 @@ def load() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
 
 
 def save(fig: plt.Figure, filename: str) -> None:
+    if LANGUAGE == "en":
+        from localization_en import translate_figure_text
+
+        fig.canvas.draw()
+        for axis_owner in fig.axes:
+            for axis in (axis_owner.xaxis, axis_owner.yaxis):
+                labels = [label.get_text() for label in axis.get_ticklabels()]
+                translated = [translate_figure_text(label) for label in labels]
+                if labels and translated != labels:
+                    axis.set_major_formatter(FixedFormatter(translated))
+        for artist in fig.findobj(match=Text):
+            artist.set_text(translate_figure_text(artist.get_text()))
     path = FIG_DIR / filename
+    path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, format="svg", bbox_inches="tight")
+    if LANGUAGE == "en":
+        normalized = "\n".join(line.rstrip() for line in path.read_text(encoding="utf-8").splitlines())
+        path.write_text(normalized + "\n", encoding="utf-8")
     plt.close(fig)
     print(f"saved {path}")
 
@@ -699,4 +719,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--language", choices=("pt", "en"), default="pt")
+    parser.add_argument("--output-dir", type=Path, default=FIG_DIR)
+    args = parser.parse_args()
+    LANGUAGE = args.language
+    FIG_DIR = args.output_dir.resolve()
     main()

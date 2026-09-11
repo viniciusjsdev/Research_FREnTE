@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import os
@@ -14,6 +15,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 EDA_DIR = Path(__file__).resolve().parent
 FIG_DIR = EDA_DIR / "figures"
+LANGUAGE = "pt"
 CONTEXT_PATH = EDA_DIR / "report_context.json"
 OUTPUT = ROOT / "docs" / "jupia" / "index.html"
 DOC_FIG_DIR = OUTPUT.parent / "figures"
@@ -96,7 +98,12 @@ def rel(path: Path) -> str:
 
 
 def load_context() -> dict[str, Any]:
-    return json.loads(CONTEXT_PATH.read_text(encoding="utf-8"))
+    context = json.loads(CONTEXT_PATH.read_text(encoding="utf-8"))
+    if LANGUAGE == "en":
+        from localization_en import english_context
+
+        return english_context(context)
+    return context
 
 
 def metric_card(metric: dict[str, Any]) -> str:
@@ -116,7 +123,8 @@ def figure_card(fig: dict[str, Any]) -> str:
     if img_path.exists():
         DOC_FIG_DIR.mkdir(parents=True, exist_ok=True)
         published = DOC_FIG_DIR / img_path.name
-        shutil.copy2(img_path, published)
+        if img_path.resolve() != published.resolve():
+            shutil.copy2(img_path, published)
         img_src = rel(published)
     img_html = (
         f'<img src="{esc(img_src)}" alt="{esc(fig["title"])}" class="w-full rounded-lg border border-slate-200 shadow-sm bg-white">'
@@ -260,17 +268,20 @@ def map_block(context: dict[str, Any]) -> str:
     rivers = [{"name": name, "color": color, "coords": coords} for name, color, coords in RIVER_LINES]
     recorte = context.get("spatial_recorte", {})
     outlet_label = esc(recorte.get("outlet", "Ponto de fechamento de Jupiá"))
-    payload = json.dumps(
-        {
-            "stations": stations,
-            "quality": quality_stations,
-            "infoaguas": infoaguas_points,
-            "reservoirs": reservoirs,
-            "rivers": rivers,
-            "outline": BASIN_OUTLINE,
-            "outlet": {"lat": -20.868, "lon": -51.628},
-        }
-    )
+    payload_data = {
+        "stations": stations,
+        "quality": quality_stations,
+        "infoaguas": infoaguas_points,
+        "reservoirs": reservoirs,
+        "rivers": rivers,
+        "outline": BASIN_OUTLINE,
+        "outlet": {"lat": -20.868, "lon": -51.628},
+    }
+    if LANGUAGE == "en":
+        from localization_en import translate_payload
+
+        payload_data = translate_payload(payload_data)
+    payload = json.dumps(payload_data)
     return f"""
 <section class="max-w-6xl mx-auto px-6 pb-6">
   <div class="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
@@ -549,7 +560,7 @@ def render() -> str:
     subtitle = context["report_subtitle"]
     note = context["scope"]["available_station_note"]
 
-    return f"""<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -619,13 +630,30 @@ h1,h2,h3 {{ font-family:'Bitter',serif; }}
 </body>
 </html>
 """
+    if LANGUAGE == "en":
+        from localization_en import translate_report_html
+
+        return translate_report_html(html)
+    return html
 
 
 def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(render(), encoding="utf-8")
+    html = render()
+    if LANGUAGE == "en":
+        html = "\n".join(line.rstrip() for line in html.splitlines()) + "\n"
+    OUTPUT.write_text(html, encoding="utf-8")
     print(f"HTML salvo: {OUTPUT}")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--language", choices=("pt", "en"), default="pt")
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    parser.add_argument("--figure-dir", type=Path, default=FIG_DIR)
+    args = parser.parse_args()
+    LANGUAGE = args.language
+    OUTPUT = args.output.resolve()
+    DOC_FIG_DIR = OUTPUT.parent / "figures"
+    FIG_DIR = args.figure_dir.resolve()
     main()
