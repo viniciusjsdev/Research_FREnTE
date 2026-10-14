@@ -1,0 +1,666 @@
+{
+  "research_id": "perplexity-intel-8b5a5553",
+  "generated_at": "2026-03-22T23:25:59.184569+00:00",
+  "base_query": "impactos antropicos no Rio Tiete",
+  "master_context_path": "data\\runs\\perplexity-intel-8b5a5553\\master-context.json",
+  "perplexity_max_results": 20,
+  "llm_mode": "auto",
+  "llm_provider": "openai",
+  "llm_model": "gpt-4.1-nano",
+  "collection_guides_enabled": true,
+  "search_plan_count": 12,
+  "session_count": 12,
+  "filtered_source_count": 227,
+  "enriched_dataset_count": 227,
+  "ranked_dataset_count": 20,
+  "collection_guide_count": 20,
+  "report_path": "data\\runs\\perplexity-intel-8b5a5553\\reports\\perplexity-intel-8b5a5553.md",
+  "html_report_path": "data\\runs\\perplexity-intel-8b5a5553\\reports\\relatorio_100k.html",
+  "sources_csv_path": "data\\runs\\perplexity-intel-8b5a5553\\reports\\sources.csv",
+  "datasets_csv_path": "data\\runs\\perplexity-intel-8b5a5553\\reports\\datasets.csv",
+  "filter_meta": {
+    "total_sessions": 12,
+    "ok_sessions": 12,
+    "error_sessions": 0,
+    "total_links_seen": 240,
+    "filtered_source_count": 227,
+    "skipped_malformed": 0,
+    "skipped_short_snippet": 18,
+    "skipped_duplicate": 13,
+    "needs_review_count": 18
+  },
+  "enrich_meta": {
+    "enriched_count": 227,
+    "llm_count": 226,
+    "heuristic_count": 1,
+    "error_count": 1,
+    "execution_mode": "hybrid",
+    "provider": "openai",
+    "model": "gpt-4.1-nano",
+    "collection_guides_enabled": true,
+    "collection_guide_requested_count": 227,
+    "collection_guide_extracted_count": 64,
+    "collection_guide_fallback_count": 163,
+    "collection_guide_skipped_count": 0,
+    "collection_guide_error": null
+  },
+  "rank_meta": {
+    "ranked_count": 20,
+    "format_summary": {
+      "structured": 11,
+      "semi_structured": 9
+    },
+    "access_summary": {
+      "direct_download": 16,
+      "pdf_extraction": 1,
+      "web_portal": 2,
+      "geospatial_platform": 1
+    },
+    "level_summary": {
+      "macro": 16,
+      "meso": 4
+    }
+  },
+  "intelligence": {
+    "base_query": "impactos antropicos no Rio Tiete",
+    "search_plan_count": 12,
+    "session_count": 12,
+    "filtered_source_count": 227,
+    "enriched_dataset_count": 227,
+    "ranked_dataset_count": 20,
+    "filter_meta": {
+      "total_sessions": 12,
+      "ok_sessions": 12,
+      "error_sessions": 0,
+      "total_links_seen": 240,
+      "filtered_source_count": 227,
+      "skipped_malformed": 0,
+      "skipped_short_snippet": 18,
+      "skipped_duplicate": 13,
+      "needs_review_count": 18
+    },
+    "enrich_meta": {
+      "enriched_count": 227,
+      "llm_count": 226,
+      "heuristic_count": 1,
+      "error_count": 1,
+      "execution_mode": "hybrid",
+      "provider": "openai",
+      "model": "gpt-4.1-nano",
+      "collection_guides_enabled": true,
+      "collection_guide_requested_count": 227,
+      "collection_guide_extracted_count": 64,
+      "collection_guide_fallback_count": 163,
+      "collection_guide_skipped_count": 0,
+      "collection_guide_error": null
+    },
+    "rank_meta": {
+      "ranked_count": 20,
+      "format_summary": {
+        "structured": 11,
+        "semi_structured": 9
+      },
+      "access_summary": {
+        "direct_download": 16,
+        "pdf_extraction": 1,
+        "web_portal": 2,
+        "geospatial_platform": 1
+      },
+      "level_summary": {
+        "macro": 16,
+        "meso": 4
+      }
+    },
+    "track_coverage": [
+      {
+        "research_track": "n1_bacia_geomorfologia",
+        "chat_label": "chat-bacia-relevo",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 2,
+        "direct_download_count": 1
+      },
+      {
+        "research_track": "n1_uso_cobertura_solo",
+        "chat_label": "chat-uso-solo",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 14,
+        "direct_download_count": 13
+      },
+      {
+        "research_track": "n1_clima_hidrologia",
+        "chat_label": "chat-clima-vazao",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n2_saneamento_esgoto",
+        "chat_label": "chat-esgoto-snis",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 4,
+        "direct_download_count": 2
+      },
+      {
+        "research_track": "n2_desmatamento_queimadas",
+        "chat_label": "chat-desmat-fogo",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n2_agro_residuos_ocupacao",
+        "chat_label": "chat-agro-lixo-app",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n3_qualidade_agua_reservatorios",
+        "chat_label": "chat-qualidade-reserv",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n3_operacao_reservatorios",
+        "chat_label": "chat-operacao-reserv",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n3_batimetria_morfometria",
+        "chat_label": "chat-batimetria",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n4_materia_organica_cdom",
+        "chat_label": "chat-mod-cdom",
+        "target_intent": "academic_knowledge",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n4_sensoriamento_remoto_agua",
+        "chat_label": "chat-sr-agua",
+        "target_intent": "dataset_discovery",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      },
+      {
+        "research_track": "n4_series_temporais_tendencias",
+        "chat_label": "chat-tendencias",
+        "target_intent": "contextual_intelligence",
+        "session_status": "ok",
+        "dataset_count": 0,
+        "direct_download_count": 0
+      }
+    ],
+    "top_datasets": [
+      {
+        "rank": 1,
+        "title": "Banco de Dados",
+        "url": "https://dronamazon.com.br/banco-de-dados",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Coleção 9 - Uso, Cobertura, Solo e Desmatamento do Brasil",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2023",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso e cobertura da terra",
+          "teor de argila (%)",
+          "estoque de carbono no solo (t/ha)",
+          "desmatamento"
+        ]
+      },
+      {
+        "rank": 2,
+        "title": "Mapbiomas - Áreas naturais e uso antrópico, Coleção 9 (1985 à 2023)",
+        "url": "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "Mapbiomas - Áreas naturais e uso antrópico, Coleção 9",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2023",
+        "spatial_coverage": "Minas Gerais, Brasil",
+        "key_parameters": [
+          "classes de cobertura natural",
+          "classes de uso antrópico",
+          "pixels de imagem de satélite Landsat",
+          "métricas de análise pixel a pixel",
+          "mapas de transição de classes"
+        ]
+      },
+      {
+        "rank": 3,
+        "title": "MapBiomas mapeia três décadas de mudanças na ocupação territorial do país - IPAM Amazônia",
+        "url": "https://ipam.org.br/projeto-mapbiomas-mapeia-tres-decadas-de-mudancas-na-ocupacao-territorial-do-brasil",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas ocupação territorial do Brasil",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "",
+        "temporal_coverage": "1985 a 2017",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso da terra",
+          "categoria de cobertura (floresta, campo, pastagem, plantação, água, cidade)"
+        ]
+      },
+      {
+        "rank": 4,
+        "title": "Projeto MapBiomas mapeia três décadas de mudanças na ocupação territorial do Brasil - OC | Observatório do Clima",
+        "url": "https://www.oc.eco.br/projeto-mapbiomas-mapeia-tres-decadas-de-mudancas-na-ocupacao-territorial-brasil",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Brasil Land Use Change (1985-2017)",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "",
+        "temporal_coverage": "1985 a 2017",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso da terra",
+          "mudanças na ocupação territorial",
+          "classificação de pixels (floresta, campo, pastagem, plantação, água, cidade)"
+        ]
+      },
+      {
+        "rank": 5,
+        "title": "MapBiomas Land Use and Land Cover - Brazil V1.0",
+        "url": "https://developers.google.com/earth-engine/datasets/catalog/projects_mapbiomas-public_assets_brazil_lulc_v1",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Land Use and Land Cover - Brazil V1.0",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "",
+        "temporal_coverage": "1985-01-01 a 2024-12-31",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "classificação de uso e cobertura da terra",
+          "classes categóricas como floresta, agricultura, pastagem, corpos d'água, áreas urbanas",
+          "valor de pixel representando classes específicas"
+        ]
+      },
+      {
+        "rank": 6,
+        "title": "Mapeamento Anual da Cobertura e Uso da Terra no Brasil",
+        "url": "https://boaspraticas.observatorioflorestal.org.br/mapeamento-anual-da-cobertura-e-uso-da-terra-no-brasil",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "Mapeamento Anual da Cobertura e Uso da Terra no Brasil",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2023",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "classes de cobertura e uso da terra",
+          "anos de referência"
+        ]
+      },
+      {
+        "rank": 7,
+        "title": "REVISTA OBSERVATORIO DE LA ECONOMIA LATINOAMERICANA",
+        "url": "https://ojs.observatoriolatinoamericano.com/ojs/index.php/olel/article/download/584/379/876",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Uso e Cobertura das Terras no Brasil",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2021",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso da terra",
+          "cobertura da terra",
+          "biomas brasileiros",
+          "expansão da área de agropecuária"
+        ]
+      },
+      {
+        "rank": 8,
+        "title": "MapBiomas - Infosanbas",
+        "url": "https://infosanbas.org.br/fontededados/mapbiomas",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas - Coleção 6.0 de Mapas de Uso e Cobertura do Solo do Brasil",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "",
+        "temporal_coverage": "desde 1985 até o presente (com relatórios de desmatamento desde janeiro de 2019)",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "cobertura do solo",
+          "uso do solo",
+          "desmatamento",
+          "superfície de água",
+          "cicatrizes de fogo"
+        ]
+      },
+      {
+        "rank": 9,
+        "title": "plc0502_extra_MinCidades_DiagnosticoSaneamento_AE2010.pdf",
+        "url": "https://midia.atp.usp.br/plc/plc0502/impressos/plc0502_extra_MinCidades_DiagnosticoSaneamento_AE2010.pdf",
+        "track_origin": "n2_saneamento_esgoto",
+        "track_priority": "high",
+        "hierarchy_level": "meso",
+        "thematic_axis": "saneamento e esgoto",
+        "source_category": "dataset",
+        "dataset_name": "Diagnóstico dos Serviços de Água e Esgotos - SNIS 2010",
+        "data_format": "structured",
+        "access_type": "pdf_extraction",
+        "access_notes": "",
+        "temporal_coverage": "2010",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "indicadores de água",
+          "indicadores de esgotos",
+          "dados operacionais",
+          "dados financeiros",
+          "qualidade dos serviços",
+          "dados de balanço"
+        ]
+      },
+      {
+        "rank": 10,
+        "title": "Baixar",
+        "url": "https://dados.es.gov.br/dataset/60edff95-a4fb-496f-94a5-1708071ac2a6/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8/download/snis.csv",
+        "track_origin": "n2_saneamento_esgoto",
+        "track_priority": "high",
+        "hierarchy_level": "meso",
+        "thematic_axis": "saneamento e esgoto",
+        "source_category": "dataset",
+        "dataset_name": "Investimentos e índices de saneamento",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "",
+        "temporal_coverage": null,
+        "spatial_coverage": null,
+        "key_parameters": [
+          "InvestimentosTotaisRealizadosEstado",
+          "IndiceAtendimentoUrbanoAgua",
+          "IndiceAtendimentoUrbanoEsgotoMunicipiosAtendidosComAgua",
+          "IndiceEsgotoTratadoReferidoAguaConsumida",
+          "IndicePerdasDistribuicao",
+          "IndicePerdasPorLigacao",
+          "IndiceAtendimentoTotalAgua",
+          "IndiceAtendimentoTotalEsgotoReferidoMunicipiosAtendidosComAgua",
+          "VolumeServico",
+          "QuantidadeLigacoesAtivasAgua",
+          "InvestimentoAnualPerCapita"
+        ]
+      },
+      {
+        "rank": 11,
+        "title": "Controle Externo Informações e Indicadores do SNIS",
+        "url": "https://dados.es.gov.br/dataset/tcees-saneamento-basico/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8",
+        "track_origin": "n2_saneamento_esgoto",
+        "track_priority": "high",
+        "hierarchy_level": "meso",
+        "thematic_axis": "saneamento e esgoto",
+        "source_category": "dataset",
+        "dataset_name": "Controle Externo Informações e Indicadores do SNIS",
+        "data_format": "structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto",
+        "temporal_coverage": null,
+        "spatial_coverage": null,
+        "key_parameters": []
+      },
+      {
+        "rank": 12,
+        "title": "Dados Geoespaciais - UFRGS",
+        "url": "https://www.ufrgs.br/labgeo/index.php/downloads/dados-geoespaciais",
+        "track_origin": "n1_bacia_geomorfologia",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "delimitação e geomorfologia",
+        "source_category": "dataset",
+        "dataset_name": "Dados Geoespaciais do Brasil - UFRGS",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "anos variados, incluindo 2002, 2009, 2015",
+        "spatial_coverage": "Brasil, Rio Grande do Sul, regiões específicas como Porto Alegre, Vale dos Vinhedos, Serra Gaúcha, Bioma Pampa, e países vizinhos como Uruguai e América do Sul",
+        "key_parameters": [
+          "dados geológicos",
+          "mapas geomorfológicos",
+          "uso e cobertura vegetal",
+          "vegetação",
+          "solos",
+          "suscetibilidade a escorregamentos",
+          "sistemas ecológicos",
+          "altimetria",
+          "modelos digitais de elevação",
+          "parâmetros de referência geodésica"
+        ]
+      },
+      {
+        "rank": 13,
+        "title": "Catálogo de Geosserviços - Portal INDE",
+        "url": "https://inde.gov.br/CatalogoGeoservicos",
+        "track_origin": "n1_bacia_geomorfologia",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "delimitação e geomorfologia",
+        "source_category": "dataset",
+        "dataset_name": "Catálogo de Geosserviços - Portal INDE",
+        "data_format": "semi_structured",
+        "access_type": "web_portal",
+        "access_notes": "",
+        "temporal_coverage": null,
+        "spatial_coverage": null,
+        "key_parameters": []
+      },
+      {
+        "rank": 14,
+        "title": "MapBiomas Brasil",
+        "url": "https://brasil.mapbiomas.org/",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "official_portal",
+        "dataset_name": "MapBiomas Brasil",
+        "data_format": "semi_structured",
+        "access_type": "geospatial_platform",
+        "access_notes": "",
+        "temporal_coverage": "1985 a 2023",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "supressão de florestas e vegetação natural",
+          "idade da vegetação secundária",
+          "culturas agrícolas e agricultura irrigada",
+          "cicatrizes de fogo",
+          "dinâmica de corpos hídricos e água superficial",
+          "carbono orgânico do solo",
+          "textura do solo",
+          "cobertura e uso da terra",
+          "degradação da vegetação nativa"
+        ]
+      },
+      {
+        "rank": 15,
+        "title": "Downloads",
+        "url": "https://brasil.mapbiomas.org/downloads",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "official_portal",
+        "dataset_name": "MapBiomas Land Use and Cover Data",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2024",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso da terra",
+          "cobertura da terra",
+          "cicatrizes de fogo",
+          "áreas queimadas"
+        ]
+      },
+      {
+        "rank": 16,
+        "title": "Mapbiomas - Cobertura e Uso da Terra (Coleção 8 - 1985 a 2022)",
+        "url": "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "Mapbiomas - Cobertura e Uso da Terra (Coleção 8 - 1985 a 2022)",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2022",
+        "spatial_coverage": "Brasil, com recorte para Minas Gerais",
+        "key_parameters": [
+          "classes de cobertura e uso do solo (floresta, campo, agricultura, pastagem, área urbana, água, etc.)",
+          "métricas ou camadas de informação por ano",
+          "mapas de transição de classes entre anos"
+        ]
+      },
+      {
+        "rank": 17,
+        "title": "MapBiomas Solo",
+        "url": "https://www.pedometria.org/mapbiomas",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Solo",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985-2021",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "cobertura e uso da terra",
+          "superfície de água",
+          "cicatrizes de fogo",
+          "estoque de carbono orgânico do solo (COS)"
+        ]
+      },
+      {
+        "rank": 18,
+        "title": "Uso e cobertura da terra no Brasil (MapBiomas)",
+        "url": "https://www.geoaplicada.com/dados/uso-e-cobertura-da-terra-no-brasil-mapbiomas",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "Uso e cobertura da terra no Brasil (MapBiomas)",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "desde 1985",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "uso da terra",
+          "cobertura da terra",
+          "superfície de água",
+          "cicatrizes de fogo",
+          "dados de queimadas",
+          "dados do solo",
+          "dados de degradação"
+        ]
+      },
+      {
+        "rank": 19,
+        "title": "Projeto de mapeamento do uso do solo (MapBiomas) auxilia ...",
+        "url": "https://pmma.etc.br/projeto-de-mapeamento-do-uso-do-solo-mapbiomas-auxilia-o-planejamento-municipal",
+        "track_origin": "n1_uso_cobertura_solo",
+        "track_priority": "high",
+        "hierarchy_level": "macro",
+        "thematic_axis": "uso e cobertura do solo",
+        "source_category": "dataset",
+        "dataset_name": "MapBiomas Uso do Solo Brasil",
+        "data_format": "semi_structured",
+        "access_type": "direct_download",
+        "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto",
+        "temporal_coverage": "1985 a 2017",
+        "spatial_coverage": "Brasil",
+        "key_parameters": [
+          "cobertura do solo",
+          "uso do solo"
+        ]
+      },
+      {
+        "rank": 20,
+        "title": "Fontes e Notas Técnicas | Municípios e Saneamento",
+        "url": "https://www.aguaesaneamento.org.br/municipios-e-saneamento/fontes-notas-tecnicas",
+        "track_origin": "n2_saneamento_esgoto",
+        "track_priority": "high",
+        "hierarchy_level": "meso",
+        "thematic_axis": "saneamento e esgoto",
+        "source_category": "dataset",
+        "dataset_name": "Fontes e Notas Técnicas - Municípios e Saneamento",
+        "data_format": "semi_structured",
+        "access_type": "web_portal",
+        "access_notes": "",
+        "temporal_coverage": "Desde 1995 (Água e Esgoto), desde 2002 (Resíduos Sólidos), diagnósticos anteriores de 2015 e a partir de 2017",
+        "spatial_coverage": "Municípios do Brasil (5.570 municípios)",
+        "key_parameters": [
+          "estimativa populacional",
+          "densidade demográfica",
+          "biomas",
+          "abastecimento de água",
+          "esgotamento sanitário",
+          "limpeza urbana",
+          "manejo de resíduos sólidos",
+          "drenagem e manejo das águas pluviais",
+          "gestão do saneamento municipal"
+        ]
+      }
+    ]
+  }
+}

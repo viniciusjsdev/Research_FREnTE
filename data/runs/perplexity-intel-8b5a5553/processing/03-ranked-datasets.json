@@ -1,0 +1,1061 @@
+{
+  "ranked_datasets": [
+    {
+      "url": "https://dronamazon.com.br/banco-de-dados",
+      "title": "Banco de Dados",
+      "snippet": "O MapBiomas disponibiliza dados de Uso e Cobertura da Terra do Brasil em formato raster (GeoTIFF), organizados por coleções anuais.\nO arquivo fornecido refere-se à coleção 9, cobrindo o período de 1985 a 2023.\nO esquema de acesso é simples: basta clicar na logomarca, sem necessidade de cadastro ou autenticação, e salvar o arquivo do download automático em uma pasta qualquer.\nO arquivo pode ser utilizado em softwares de geoprocessamento como QGIS ou ArcGIS, permitindo análises espaciais e temporais sobre as classes de uso e cobertura da terra.\nO dado referente à coleção 9 apresenta valores para o ano de 2023, considerando a camada superficial do solo, de 0 a 30 cm de profundidade.\nPara acessar o arquivo, basta clicar na logomarca correspondente, sem a necessidade de realizar cadastro ou autenticação, e salvar o arquivo em uma pasta de sua preferência.\nEste material pode ser facilmente incorporado em plataformas de geoprocessamento, como QGIS ou ArcGIS, possibilitando a realização de análises espaciais detalhadas sobre a distribuição dos estoques de carbono no solo, expressos em toneladas por hectare (t/ha).\n...\nO MapBiomas disponibiliza, em sua coleção 9, mapas de teor de argila (%) para o solo brasileiro, considerando a camada de 0 a 20 cm de profundidade.\nO acesso ao dado é prático e rápido: basta clicar na logomarca correspondente para iniciar o download automático, sem necessidade de cadastro ou autenticação.\n…\nO monitoramento do desmatamento é fundamental para compreender as dinâmicas ambientais e subsidiar políticas públicas de conservação.\nO MapBiomas disponibiliza, em sua coleção 9, mapas anuais de desmatamento para o Brasil, abrangendo o período de 1986 a 2023.\nOs dados são fornecidos em formato raster (GeoTIFF), o que permite a visualização e análise espacial detalhada das áreas convertidas ao longo do tempo.",
+      "source_domain": "dronamazon.com.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Coleção 9 - Uso, Cobertura, Solo e Desmatamento do Brasil",
+      "dataset_description": "Conjunto de dados em formato raster (GeoTIFF) que inclui informações sobre uso e cobertura da terra, teor de argila, estoque de carbono no solo e desmatamento no Brasil, cobrindo diferentes períodos e profundidades.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2023",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso e cobertura da terra",
+        "teor de argila (%)",
+        "estoque de carbono no solo (t/ha)",
+        "desmatamento"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal https://dronamazon.com.br/",
+          "Clique na aba 'Banco de Dados' no menu principal.",
+          "Na página de Banco de Dados, busque pela seção referente ao MapBiomas.",
+          "Clique no link ou logomarca correspondente ao 'Uso e Cobertura do Solo'.",
+          "Após a página carregar, clique na logomarca para iniciar o download automático do arquivo em formato GeoTIFF.",
+          "Para acessar os dados de 'Estoque de Carbono', 'Argila dos Solos', e 'Desmatamento', repita o processo clicando nas respectivas logomarcas."
+        ],
+        "filters_available": {},
+        "download_format": "GeoTIFF",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "Direto ao download sem necessidade de cadastro ou autenticação.",
+          "Os dados estão disponíveis em formato raster e podem ser utilizados em softwares de geoprocessamento.",
+          "Pode haver variações de resolução e qualidade dependendo do arquivo."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://storage.googleapis.com/mapbiomas-public/initiatives/brasil/collection_9/lclu/coverage/brasil_coverage_2023.tif",
+          "https://storage.googleapis.com/mapbiomas-public/initiatives/brasil/collection_9/soil_2/mbsoil_c02_soc_t_ha_000_030cm/mbsoil_c02_soc_t_ha_000_030cm_prediction_2023.tif",
+          "https://storage.googleapis.com/mapbiomas-public/initiatives/brasil/collection_9/soil_2/mbsoil_c02_granulometry_clay_percent/mbsoil_c02_granulometry_clay_percent_clay_000_020cm.tif",
+          "https://storage.googleapis.com/mapbiomas-public/initiatives/brasil/collection_9/lulc-1/deforestation-1/mapbiomas_collection90_deforestation_secondary_vegetation_v1/mapbiomas_collection90_deforestation_secondary_vegetation_v1-classification_2023.tif"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 1,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2",
+      "title": "Mapbiomas - Áreas naturais e uso antrópico, Coleção 9 (1985 à 2023)",
+      "snippet": "SIRGAS 2000 (EPSG: 4674)\nMapbiomas - Áreas naturais e uso antrópico, Coleção 9 (1985 à 2023)\n2023-10-23\n2024-10-04T17:30:00\nÁreas naturais e uso antrópico em Minas Gerais, baseada na série histórica do projeto Mapbiomas, em sua coleção 9, contemplando o período entre 1985 e 2023. Categorizado com base em agregações das classes por tipologia natural e antropizada.\nO projeto MapBiomas advém da atuação intersetorial entre especialistas em sensoriamento remoto, com o objetivo de produzir uma série histórica contínua com a evolução da cobertura e uso da terra do território brasileiro, com a utilização de inteligência artificial, que realiza processos de análise, pixel a pixel, de imagens provenientes da constelação de sensores Landsat, da Agência Espacial Norte-Americana (NASA), com resolução espacial de 30 metros.\n\n…\n\nO produto da coleção disponibilizada, de cobertura e uso da terra, contempla 39 camadas, uma para cada ano da extensão temporal, entre 1985 e 2023. Todos os dados encontram-se em formato matricial (raster), obtidos para o recorte territorial de Minas Gerais por meio do toolkit de processamento disponível em ambiente Google Earth Engine (GEE).\nProjeto MapBiomas – Coleção 9 da Série Anual de Mapas de Cobertura e Uso da Terra do Brasil, acessado em 04/10/2024 através do link: https://plataforma.brasil.mapbiomas.org/cobertura\nSecretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (Semad)\n\n…\n\nLegenda das classes de cobertura e uso da terra agrupadas por naturais e antrópicas\nUso e cobertura da terra\nCobertura e uso da terra\nUso e cobertura do solo\nCobertura e uso do solo\nUso e ocupação do solo\nUso e ocupação da terra\nMapbiomas\nColeção 9\n\n…\n\nEste produto é resultante de um mapeamento de cobertura e uso da terra, elaborados por meio da interpretação de imagens de satélite com o uso de metodologias de classificação do uso e manejo da superfície. Não deve ser confundido e/ou utilizado, portanto, para identificação de fitofisionomias florestais, que somente podem ser delimitados por meio de mapeamentos florestais, como o \"Inventário da Flora Nativa e de Reflorestamentos\", produzido pela Universidade Federal de Lavras (UFLA) e Sisema, entre 2003 e 2008.\n\n…\n\nWWW:LINK\nDownload das 39 camadas da série histórica (1985-2023) em formato matricial\nPara baixar todas de uma vez, basta selecionar todas no diretório e realizar o download como anexo\nhttps://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2/attachments/ide_1403_mg_nat_ant_mapbiomas_col9_estilo.qml\nWWW:DOWNLOAD-1.0-http--download\nDownload do arquivo de simbologia (estilo) da camada\nPara uso em Sistema de Informação Geográfica - SIG (QGIS)\nhttps://plataforma.brasil.mapbiomas.org/cobertura\nWWW:LINK\nAcesso a plataforma de Uso e cobertura da terra do Mapbiomas para consulta dos dados referentes a série histórica\nhttps://brasil.mapbiomas.org/atbd-entenda-cada-etapa/\nWWW:LINK\nAcesso a metodologia ATDB empregada no tratamento processamento e obtenção dos dados de cobertura e uso da terra do projeto\nhttps://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2/attachments/ide_1403_mg_nat_ant_mapbiomas_col9_rco.pdf\nWWW:DOWNLOAD-1.0-http--download\nDicionário de dados da camada com a descrição dos valores de pixel\nOs agrupamentos de cobertura natural e uso antrópico são feitos a partir das classes de cobertura e uso da terra para todo o país da seguinte forma:\n\nNatural - Formação Florestal, Formação Savânica, Campo Alagado e Área Pantanosa, Formação Campestre, Afloramento Rochoso, Praia, Duna e Areal, Rio, Lago e Oceano\n\n…\n\nO mapeamento anual de cobertura e uso da terra do Brasil desenvolvido através do projeto MapBiomas é desenvolvido a partir da obtenção de imagens do satélite Landsat, com resolução de 30 metros, disponíveis gratuitamente na plataforma Google Earth Engine e com uma série temporal de 39 anos. São necessárias 380 imagens Landsat para cobrir o Brasil, cada uma delas com dezenas de milhões de pixels: no total, são mais de 9 bilhões de pixels de 30 x 30 metros para perfazer todo o país.\n\n…\n\nPara cada ano é montado um mosaico que cobre o Brasil representando o comportamento de cada pixel através de 105 métricas ou camadas de informação. Este conjunto de mosaicos é salvo como uma coleção de dados (Asset) dentro da plataforma do Google Earth Engine. Estes mosaicos serão utilizados em duas formas principais.\n\n…\n\nA partir dos mosaicos de imagens, as equipes de cada bioma e de cada tema transversal produzem um mapa de cada classe de cobertura e uso do solo (floresta, campo, agricultura, pastagem, área urbana, água, etc). Para isso, os analistas do MapBiomas utilizam um classificador automático chamado de “random forest”, que roda na nuvem de processadores da Google.\n\n…\n\nPara reduzir inconsistências temporais, em especial as mudanças de cobertura e uso impossíveis ou não permitidas (ex. Florestal Natural &gt; Não Floresta &gt; Floresta Natural) e corrigir falhas por excesso de nuvem ou falta de dados, são aplicadas regras de filtro temporal. Para cada bioma, tema ou região podem ter regras específicas de filtro temporal. No total na Coleção 3 foram aplicadas mais de uma centena de regras. O filtro temporal é aplicado em cada pixel analisando todos os anos da Coleção (ex. Coleção 9 foram 39 anos).\nNesta etapa, os mapas de cada classe são integrados em um único mapa, que representa a cobertura e o uso da terra de todo território para cada ano. São aplicadas regras de prevalência: assim, caso um mesmo pixel seja classificado em dois mapas de classes distintas, é possível definir a qual pertence no mapa final.\n\n…\n\nPara entender as mudanças na cobertura e uso do solo são produzidos mapas com as transições das classes entre diferentes pares de anos selecionados. Assim é possível visualizar o dinamismo do território, e responder a perguntas como quanto de floresta virou pastagem de um ano para outro, por exemplo, entre outras alterações na paisagem. mapas de transição são produzidos pixel a pixel e após finalizados também passam por um filtro espacial para eliminar pixels de transição isolados ou de borda.\nA partir destes mapas são construídas as matrizes de transição para cada bioma, estado, município e os demais cortes territoriais disponíveis na plataforma MapBiomas.",
+      "source_domain": "idesisema.meioambiente.mg.gov.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "Mapbiomas - Áreas naturais e uso antrópico, Coleção 9",
+      "dataset_description": "Conjunto de mapas anuais de cobertura e uso da terra em Minas Gerais, cobrindo o período de 1985 a 2023, baseado em imagens de satélite Landsat processadas com inteligência artificial.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2023",
+      "spatial_coverage": "Minas Gerais, Brasil",
+      "key_parameters": [
+        "classes de cobertura natural",
+        "classes de uso antrópico",
+        "pixels de imagem de satélite Landsat",
+        "métricas de análise pixel a pixel",
+        "mapas de transição de classes"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal [aqui](https://plataforma.brasil.mapbiomas.org/cobertura).",
+          "Navegue pela seção de datasets disponíveis.",
+          "Procure por \"Mapbiomas - Áreas naturais e uso antrópico, Coleção 9 (1985 à 2023)\".",
+          "Clique no link correspondente para acessar os dados.",
+          "Selecione a opção de download apropriada, como \"Download das 39 camadas da série histórica\"."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "Não deve ser confundido com mapeamentos florestais como o \"Inventário da Flora Nativa e de Reflorestamentos\".",
+          "Os dados não devem ser utilizados para identificação de fitofisionomias florestais."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2/attachments/ide_1403_mg_nat_ant_mapbiomas_col9_2023.tif",
+          "https://geoserver.meioambiente.mg.gov.br/IDE/wms/kml?layers=IDE%3Aide_1403_mg_nat_ant_mapbiomas_col9_2023",
+          "https://meioambientemg-my.sharepoint.com/:f:/g/personal/dgeo_semad_meioambiente_mg_gov_br/Eh-LbFoGBEpMmE1oq89BBggBWAEX-INWg9G0ZjQHNWEj4Q?e=9K0Wm3",
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2/attachments/ide_1403_mg_nat_ant_mapbiomas_col9_estilo.qml",
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/19c2cb87-9680-485c-824f-534807d64cb2/attachments/ide_1403_mg_nat_ant_mapbiomas_col9_rco.pdf"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 2,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://ipam.org.br/projeto-mapbiomas-mapeia-tres-decadas-de-mudancas-na-ocupacao-territorial-do-brasil",
+      "title": "MapBiomas mapeia três décadas de mudanças na ocupação territorial do país - IPAM Amazônia",
+      "snippet": "O projeto MapBiomas lança nesta sexta-feira um conjunto de dados de mapeamento que permite investigar a ocupação territorial de qualquer parte do Brasil, ano a ano, desde 1985.\nA ferramenta, que possibilita descobrir o que ocorreu no país desde então com uma resolução de 30 metros, é pública, inédita, gratuita e de acesso livre.\n“Essa é a mais longa série de dados sobre cobertura e uso da terra já levantada para o Brasil, algo jamais feito em qualquer outro país”, diz Tasso Azevedo, do Observatório do Clima, coordenador do projeto, que envolve parceiros de 34 instituições diferentes.\n“O que estamos colocando à disposição de todos é a possibilidade de fazer uma viagem no tempo e enxergar a história do Brasil nas últimas três décadas, mostrando o que aconteceu em pixels de 30 por 30 metros.”\nOs dados estão disponíveis no site www.mapbiomas.org.\nAs ferramentas de navegação do site permitem explorar o mapa do Brasil e criar visualizações temporais de dados para estados, municípios, unidades de conservação, terras indígenas e outros recortes territoriais.\n“Agora, pela primeira vez, permitimos o cruzamento de dados com o Cadastro Ambiental Rural, possibilitando visualizar mudanças de uso da terra em propriedades rurais”, afirma Azevedo.\n“Também é possível ver dados por bacia hidrográfica e enxergar a infraestrutura de energia e transportes para entender como ela impacta o uso do solo.”\n…\n...\nO projeto já lançou ferramentas para explorar duas coleções de dados desde então.\nA segunda, publicada em 2017, já permitia investigar a mudança de uso da terra no país de 2000 a 2016.\nCom a terceira coleção, lançada agora, o MapBiomas dobra a extensão do período que pode ser investigado, cobrindo todos os anos de 1985 a 2017.\n…\nAs imagens usadas pelo projeto são séries históricas produzidas pelos satélites Landsat, dos EUA.\nPara cada área de 30m por 30m do Brasil, o projeto atribui uma classificação de uso da terra (floresta, campo, pastagem, plantação, água, cidade etc.).\nPara cobrir o país inteiro, é preciso analisar mais de 9 bilhões de pixels, montados a partir de milhares de imagens de satélite para a série histórica.",
+      "source_domain": "ipam.org.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas ocupação territorial do Brasil",
+      "dataset_description": "Conjunto de dados de mapeamento que permite investigar a ocupação territorial do Brasil, ano a ano, desde 1985, com resolução de 30 metros, incluindo categorias como floresta, campo, pastagem, plantação, água e cidade.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2017",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso da terra",
+        "categoria de cobertura (floresta, campo, pastagem, plantação, água, cidade)"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o site www.mapbiomas.org",
+          "Navegue pelo mapa do Brasil disponível na plataforma.",
+          "Selecione o ano desejado entre 1985 e 2017 na ferramenta de visualização temporal.",
+          "Escolha o tipo de uso da terra de seu interesse: floresta, campo, pastagem, plantação, água, cidade.",
+          "Utilize os parâmetros de filtro disponíveis para focar na área de estudo (bacia do Tietê).",
+          "Clique na opção de exportação dos dados quando disponível."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "A página apresenta informações e acessar dados pode envolver múltiplas consultas.",
+          "Os dados disponibilizados dependem da navegação pelas ferramentas interativas.",
+          "A plataforma é pública e gratuita, mas algumas funcionalidades podem requerer aprendizado."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 3,
+      "access_type": "direct_download",
+      "access_notes": ""
+    },
+    {
+      "url": "https://www.oc.eco.br/projeto-mapbiomas-mapeia-tres-decadas-de-mudancas-na-ocupacao-territorial-brasil",
+      "title": "Projeto MapBiomas mapeia três décadas de mudanças na ocupação territorial do Brasil - OC | Observatório do Clima",
+      "snippet": "**Do OC – **O projeto MapBiomas lança nesta sexta-feira (17) um conjunto de dados de mapeamento que permite investigar a ocupação territorial de qualquer parte do Brasil, ano a ano, desde 1985.\nA ferramenta, que possibilita descobrir o que ocorreu no país desde então com uma resolução de 30 metros, é pública, inédita, gratuita e de acesso livre.\n“Essa é a mais longa série de dados sobre cobertura e uso da terra já levantada para o Brasil, algo jamais feito em qualquer outro país”, diz Tasso Azevedo, do Observatório do Clima, coordenador do projeto, que envolve parceiros de 34 instituições diferentes.\n“O que estamos colocando à disposição de todos é a possibilidade de fazer uma viagem no tempo e enxergar a história do Brasil nas últimas três décadas, mostrando o que aconteceu em pixels de 30 x 30 metros.”\nOs dados estão disponíveis no site www.mapbiomas.org.\nAs ferramentas de navegação do site permitem explorar o mapa do Brasil e criar visualizações temporais de dados para estados, municípios, unidades de conservação, terras indígenas e outros recortes territoriais.\n“Agora, pela primeira vez, permitimos o cruzamento de dados com o Cadastro Ambiental Rural, possibilitando visualizar mudanças de uso da terra em propriedades rurais”, afirma Azevedo.\n“Também é possível ver dados por bacia hidrográfica e enxergar a infraestrutura de energia e transportes para entender como ela impacta o uso do solo.”\n...\nO projeto já lançou ferramentas para explorar duas coleções de dados desde então.\nA segunda, publicada em 2017, já permitia investigar a mudança de uso da terra no país de 2000 a 2016.\nCom a terceira coleção, lançada agora, o MapBiomas dobra a extensão do período que pode ser investigado, cobrindo todos os anos de 1985 a 2017.\n…\n**Máquina do tempo**\nAs imagens usadas pelo projeto são séries históricas produzidas pelos satélites Landsat, dos EUA.\nPara cada área de 30m por 30m do Brasil, o projeto atribui uma classificação de uso da terra (floresta, campo, pastagem, plantação, água, cidade etc.).\nPara cobrir o país inteiro, é preciso analisar mais de 9 bilhões de pixels, montados a partir de milhares de imagens de satélite para a série histórica.",
+      "source_domain": "oc.eco.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Brasil Land Use Change (1985-2017)",
+      "dataset_description": "Conjunto de dados de mapeamento que permite investigar a ocupação territorial do Brasil ano a ano, desde 1985, com resolução de 30 metros, incluindo classificação de uso da terra e mudanças ao longo de três décadas.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2017",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso da terra",
+        "mudanças na ocupação territorial",
+        "classificação de pixels (floresta, campo, pastagem, plantação, água, cidade)"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o site www.mapbiomas.org.",
+          "Navegue pela ferramenta de navegação do site.",
+          "Selecione a opção de dados do período 1985-2017.",
+          "Ajuste os filtros para o uso da terra e mudanças na ocupação territorial, se disponíveis.",
+          "Clique em download para obter os dados."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Os dados são públicos e de acesso livre, porém a navegação pode ser complexa.",
+          "Não há filtros visíveis na página analisada."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 4,
+      "access_type": "direct_download",
+      "access_notes": ""
+    },
+    {
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/projects_mapbiomas-public_assets_brazil_lulc_v1",
+      "title": "MapBiomas Land Use and Land Cover - Brazil V1.0",
+      "snippet": "- Proprietário do catálogo\n- MapBiomas\n- Disponibilidade do conjunto de dados\n- 1985-01-01T00:00:00Z–2024-12-31T00:00:00Z\n- Produtor de conjunto de dados\n- MapBiomas Google Earth Engine\n…\n...\nO conjunto de dados de uso e cobertura da terra (LULC) do MapBiomas para o Brasil é produzido anualmente pelo Projeto MapBiomas usando imagens de satélite Landsat e técnicas de classificação de aprendizado de máquina.\nO conjunto de dados fornece mapas consistentes e detalhados por tema com resolução de 30 metros, abrangendo várias décadas e atualizados a cada ano.\nCada imagem na coleção contém classificações anuais de cobertura da terra com valores de pixel que representam classes categóricas de cobertura da terra, como floresta, agricultura, pastagem, corpos d'água e áreas urbanas.\nA legenda de classificação é padronizada e mantida em todos os anos, permitindo análises multitemporais de mudanças no uso da terra, desmatamento, reflorestamento e outras dinâmicas da paisagem.\nA classificação é baseada em dados de refletância da superfície do Landsat 5 (TM), Landsat 7 (ETM+), Landsat 8 e 9 (OLI/TIRS), pré-processados e combinados para gerar composições sem nuvens para cada ano.\n...\nCada imagem contém uma banda chamada \"classification\", que representa a classificação de cobertura da terra para aquele ano, versão e ID da coleção específicos.\n...\n30 metros\n**Bandas**\n...\n|`classification`|metros|Classificação de uso e cobertura da terra, com valores inteiros correspondentes às classes de legenda do MapBiomas.|\n...\n|14|#ffefc3|Agricultura|\n|15|#edde8e|Pasto|\n|18|#e974ed|Agricultura|\n|19|#c27ba0|Corte temporário|\n|20|#db7093|Cana-de-açúcar|\n|21|#ffefc3|Mosaico de usos|\n|22|#d4271e|Área sem vegetação|\n|23|#ffa07a|Praia, duna e ponto de areia|\n|24|#d4271e|Área urbana|\n|25|#db4d4f|Outras áreas não vegetadas|\n|26|#2532e4|Água|\n|29|#ffaa5f|Afloramento rochoso|\n|30|#9c0027|Mineração|\n|31|#091077|Aquicultura|\n...\n|35|#9065d0|Óleo de palma|\n|36|#d082de|Cultura perene|\n|39|#f5b3c8|Soja|\n...\n|47|#9932cc|Citrus|\n|48|#e6ccff|Outras culturas perenes|\n|49|#02d659|Vegetação de banco de areia arborizado|\n|50|#ad5100|Vegetação herbácea de bancos de areia|",
+      "source_domain": "developers.google.com",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Land Use and Land Cover - Brazil V1.0",
+      "dataset_description": "Conjunto de dados de uso e cobertura da terra do Brasil, produzido anualmente com mapas detalhados de classes categóricas de cobertura da terra, usando imagens de satélite Landsat e técnicas de classificação de aprendizado de máquina.",
+      "data_format": "structured",
+      "temporal_coverage": "1985-01-01 a 2024-12-31",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "classificação de uso e cobertura da terra",
+        "classes categóricas como floresta, agricultura, pastagem, corpos d'água, áreas urbanas",
+        "valor de pixel representando classes específicas"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Vá para o site do catalogo do Earth Engine em https://developers.google.com/earth-engine/datasets/catalog/projects_mapbiomas-public_assets_brazil_lulc_v1",
+          "Na página inicial, localize a seção do dataset MapBiomas Land Use and Land Cover - Brazil V1.0.",
+          "Clique na opção de visualização ou acessar o código para abrir o editor do Earth Engine.",
+          "Utilize as opções disponíveis no editor para filtrar os dados desejados entre 1985 e 2024.",
+          "Ajuste os parâmetros no código de visualização se necessário e execute.",
+          "Faça o download do código para os dados classificados ou visualize-os no mapa."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Os dados requerem conhecimento de uso do Google Earth Engine para análise e download.",
+          "A instituição pode ser contatada para mais informações, mas não há garantias de resposta imediata."
+        ],
+        "requires_login": true,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 5,
+      "access_type": "direct_download",
+      "access_notes": ""
+    },
+    {
+      "url": "https://boaspraticas.observatorioflorestal.org.br/mapeamento-anual-da-cobertura-e-uso-da-terra-no-brasil",
+      "title": "Mapeamento Anual da Cobertura e Uso da Terra no Brasil",
+      "snippet": "- MapBiomas está presente em 14 países e disponibiliza plataforma com dados de cobertura e uso da terra, com acesso público e gratuito.\nNo Brasil, dados são disponibilizados em duas plataformas:\n- MapBiomas Brasil Cobertura e Uso da Terra: disponibiliza mapas anuais de 1985 a 2023 (Coleção 9) a partir de imagens Landsat, contendo 29 classes e diversos módulos temáticos;\n…\n**Produtos e mais informações:**\n- Mapas, estatísticas, plataformas, relatórios, notas técnicas, artigos científicos, infográficos, além de diversos materiais de comunicação, todos disponíveis no site.\n**Mapeamento Anual de Cobertura e Uso da Terra no Brasil entre 1985 a 2022** **Site** **Alerta MapBiomas**",
+      "source_domain": "boaspraticas.observatorioflorestal.org.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "Mapeamento Anual da Cobertura e Uso da Terra no Brasil",
+      "dataset_description": "Conjunto de mapas anuais de cobertura e uso da terra no Brasil, cobrindo o período de 1985 a 2023, com informações sobre 29 classes temáticas, baseados em imagens Landsat.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2023",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "classes de cobertura e uso da terra",
+        "anos de referência"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o site do Mapeamento Anual da Cobertura e Uso da Terra no Brasil.",
+          "Clique no link para a plataforma que disponibiliza os dados: [MapBiomas Brasil Cobertura e Uso da Terra](https://plataforma.brasil.mapbiomas.org/).",
+          "Selecione os dados de interesse para o período de 1985 a 2023.",
+          "Escolha as classes de cobertura e uso da terra disponíveis.",
+          "Clique no botão para download dos dados desejados."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "A página requer navegação na plataforma interativa para consulta aos dados.",
+          "Não há filtros visíveis para restringir a pesquisa especificamente aos reservatórios do Tietê."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2023/08/FACT_MapBiomas_Mapeamento-Anual-Cobertura_Colecao8_31.pdf",
+          "https://plataforma.brasil.mapbiomas.org/"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 6,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://ojs.observatoriolatinoamericano.com/ojs/index.php/olel/article/download/584/379/876",
+      "title": "REVISTA OBSERVATORIO DE LA ECONOMIA LATINOAMERICANA",
+      "snippet": "plataforma MapBiomas possui o Mapeamentos de Uso e Cobertura das Terras no Brasil \ncom destaque para usos da terra e sensoriamento remoto dos biomas brasileiros de 1985 \na 2020.\nAs geotecnologias possibilitam o aprendizado dos conteúdos de forma interativa, \ndinâmica e sistêmica, visando facilitar a aprendizagem dos discentes nos componentes\n…\nDesenvolvida a partir de uma enorme gama de dados espaciais de alta resolução \n(pixels de 30 m x 30 m), a plataforma MapBiomas se destaca, também, pela \ndisponibilidade de informações históricas anuais de LULC nacional entre 1985 e 2021.\nAssim, a plataforma MapBiomas permite a exploração de dados relacionados a\n…\ne quais atividades/usos de solo podem ser encontradas em cada uma destas classes.\nApós a análise dos dados referentes a 2020, buscou-se uma análise histórica a \npartir do ano de 1985, observando a evolução dos usos do solo nos diferentes Biomas.\nOs \nestudantes puderam observar a expansão da área de Agropecuária, que representava cerca",
+      "source_domain": "ojs.observatoriolatinoamericano.com",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Uso e Cobertura das Terras no Brasil",
+      "dataset_description": "Conjunto de dados históricos anuais de uso e cobertura das terras (LULC) no Brasil, com alta resolução e informações sobre atividades e usos do solo em diferentes biomas, de 1985 a 2021.",
+      "data_format": "structured",
+      "temporal_coverage": "1985 a 2021",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso da terra",
+        "cobertura da terra",
+        "biomas brasileiros",
+        "expansão da área de agropecuária"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o site da plataforma MapBiomas: https://plataforma.brasil.mapbiomas.org/",
+          "Clique na opção 'Mapas' no menu principal.",
+          "Selecione 'Biomas' para filtrar as informações desejadas.",
+          "Utilize a barra de tempo para ajustar o período entre 1985 e 2021.",
+          "Na caixa de seleção, escolha 'Cerrado', 'Mata Atlântica' ou 'Pantanal' para focar nos biomas de interesse.",
+          "Aplique o filtro para 'Uso da Terra' e 'Cobertura da Terra' conforme suas necessidades de pesquisa.",
+          "Clique em 'Download' para obter os dados no formato chave."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Os dados disponíveis estão limitados ao período de 1985 a 2021 e podem não cobrir todos os aspectos desejados.",
+          "A análise pode ser influenciada pela qualidade das imagens e dados disponíveis na plataforma."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://plataforma.brasil.mapbiomas.org/download"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 7,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://infosanbas.org.br/fontededados/mapbiomas",
+      "title": "MapBiomas - Infosanbas",
+      "snippet": "Projeto MapBiomas – Coleção 6.0 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, acessado em 5 de junho 2022, por meio do link https://mapbiomas.org/.\nProjeto MapBiomas é uma iniciativa multi-institucional para gerar mapas anuais de cobertura e uso do solo a partir de processos de classificação automática aplicada a imagens de satélite.\nA descrição completa do projeto encontra-se em: http://mapbiomas.org.\nO MapBiomas é uma rede colaborativa, formada por Organizações não Governamentais (ONGs), universidades e startups de tecnologia, que revela as transformações do território brasileiro, por meio da ciência, tornando acessível o conhecimento sobre o uso da terra, a fim de buscar a conservação e combater as mudanças climáticas.\nProduz mapeamento anual da cobertura e uso da terra desde 1985, valida e elabora relatórios para cada evento de desmatamento detectado no Brasil desde janeiro de 2019 e monitora a superfície de água e cicatrizes de fogo mensalmente desde 1985.",
+      "source_domain": "infosanbas.org.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas - Coleção 6.0 de Mapas de Uso e Cobertura do Solo do Brasil",
+      "dataset_description": "Conjunto de mapas anuais de cobertura e uso do solo do Brasil, produzidos a partir de classificação automática de imagens de satélite, incluindo informações sobre desmatamento, água e fogo desde 1985.",
+      "data_format": "structured",
+      "temporal_coverage": "desde 1985 até o presente (com relatórios de desmatamento desde janeiro de 2019)",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "cobertura do solo",
+        "uso do solo",
+        "desmatamento",
+        "superfície de água",
+        "cicatrizes de fogo"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse a página principal do MapBiomas no link https://mapbiomas.org/.",
+          "Na página, localize a seção de Estatísticas e clique para acessar informações sobre os dados disponíveis.",
+          "Navegue pelo menu para a seção de Download ou Coleção 6.0, conforme a página permitir.",
+          "Selecione as opções correspondentes ao seu interesse em uso e cobertura do solo, especificando o período desejado a partir de 1985 e relatórios de desmatamento desde janeiro de 2019.",
+          "Procure o botão para baixar os dados e clique nele, confirmando o formato de download como estruturado."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "A página é uma agregadora e pode não conter links diretos para download.",
+          "Verifique se há limitações para o acesso aos dados na página de estatísticas."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 8,
+      "access_type": "direct_download",
+      "access_notes": ""
+    },
+    {
+      "url": "https://midia.atp.usp.br/plc/plc0502/impressos/plc0502_extra_MinCidades_DiagnosticoSaneamento_AE2010.pdf",
+      "title": "plc0502_extra_MinCidades_DiagnosticoSaneamento_AE2010.pdf",
+      "snippet": "Ministério das Cidades \nSecretaria Nacional de Saneamento Ambiental \nSistema Nacional de Informações sobre Saneamento - SNIS \nDiagnóstico dos Serviços de \nÁgua e Esgotos – 2010 \nBrasília, junho de 2012\n…\n- Programa de Coleta de Dados; \n- Planilhas em Excel com a Base de Dados; e \n- Aplicativo da Série Histórica de Dados.\n1.1.\nAs bases de dados do SNIS \nO banco de dados do SNIS, em seu componente água e \nesgotos, compõe-se de três bases de dados estruturadas de acordo com\n…\npara água (SAMAE) e outro para esgotos (Foz do Brasil).\nTambém neste \ncaso, na base municipal os dados dos dois prestadores também são \nsomados.\nOs indicadores são calculados pelo SNIS para as três bases \nseparadamente.\n1.2.\nAs tabelas de informações e indicadores\n…\ndo SNIS.\nCabe ainda esclarecer que no sítio eletrônico do SNIS pode ser \nbaixado o Aplicativo da Série Histórica de Dados 2010, importante \nferramenta de acesso aos dados do SNIS, na qual pode também ser \nacessada a chamada \"base municipal\".\n2.\n…\nsolicitação feita diretamente às prefeituras municipais.\nDesde o ano de referência 2009, o SNIS utiliza dois grupos de \nformulários de coleta dos dados: completos1 e simplificados2.\nAlém \ndisso, o Sistema coleta também, em caráter experimental, informações \nsobre planos e consórcios públicos de saneamento (desde 2009) e\n…\n1 Formulários completos correspondem aos questionários históricos do SNIS \ncom informações descritivas, gerais, financeiras, operacionais de água, operacionais de \nesgotos, qualidade dos serviços e dados de balanço.\n2 Formulários simplificados são específicos para coleta de informações nos \ncasos em que o prestador de serviços informa não possuir sistema público.",
+      "source_domain": "midia.atp.usp.br",
+      "track_origin": "n2_saneamento_esgoto",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "meso",
+      "thematic_axis": "saneamento e esgoto",
+      "source_category": "dataset",
+      "dataset_name": "Diagnóstico dos Serviços de Água e Esgotos - SNIS 2010",
+      "dataset_description": "Conjunto de dados estruturados sobre os serviços de água e esgotos no Brasil em 2010, incluindo indicadores, informações operacionais e financeiras, coletados por prefeituras e prestadores de serviços.",
+      "data_format": "structured",
+      "temporal_coverage": "2010",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "indicadores de água",
+        "indicadores de esgotos",
+        "dados operacionais",
+        "dados financeiros",
+        "qualidade dos serviços",
+        "dados de balanço"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acessar https://midia.atp.usp.br/plc/plc0502/impressos/plc0502_extra_MinCidades_DiagnosticoSaneamento_AE2010.pdf",
+          "Navegar pela interface do portal",
+          "Identificar a secao de download ou consulta",
+          "Filtrar por bacia do Tiete, estado de SP e periodo 2000-2024",
+          "Baixar no formato disponivel"
+        ],
+        "filters_available": {},
+        "download_format": "unknown",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Extracao automatica falhou - instrucoes genericas.",
+          "Navegacao manual ainda necessaria para identificar filtros e formatos."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 9,
+      "access_type": "pdf_extraction",
+      "access_notes": ""
+    },
+    {
+      "url": "https://dados.es.gov.br/dataset/60edff95-a4fb-496f-94a5-1708071ac2a6/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8/download/snis.csv",
+      "title": "Baixar",
+      "snippet": ";InvestimentosTotaisRealizadosEstado;IndiceAtendimentoUrbanoAgua;IndiceAtendimentoUrbanoEsgotoMunicipiosAtendidosComAgua;IndiceEsgotoTratadoReferidoAguaConsumida;IndicePerdasDistribuicao;IndicePerdasPorLigacao;IndiceAtendimentoTotalAgua;IndiceAtendimentoTotalEsgotoReferidoMunicipiosAtendidosComAgua;VolumeServico;QuantidadeLigacoesAtivasAgua;InvestimentoAnualPerCapita",
+      "source_domain": "dados.es.gov.br",
+      "track_origin": "n2_saneamento_esgoto",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "meso",
+      "thematic_axis": "saneamento e esgoto",
+      "source_category": "dataset",
+      "dataset_name": "Investimentos e índices de saneamento",
+      "dataset_description": "Conjunto de dados contendo informações sobre investimentos realizados, índices de atendimento e perdas no setor de saneamento em diferentes municípios.",
+      "data_format": "structured",
+      "temporal_coverage": null,
+      "spatial_coverage": null,
+      "key_parameters": [
+        "InvestimentosTotaisRealizadosEstado",
+        "IndiceAtendimentoUrbanoAgua",
+        "IndiceAtendimentoUrbanoEsgotoMunicipiosAtendidosComAgua",
+        "IndiceEsgotoTratadoReferidoAguaConsumida",
+        "IndicePerdasDistribuicao",
+        "IndicePerdasPorLigacao",
+        "IndiceAtendimentoTotalAgua",
+        "IndiceAtendimentoTotalEsgotoReferidoMunicipiosAtendidosComAgua",
+        "VolumeServico",
+        "QuantidadeLigacoesAtivasAgua",
+        "InvestimentoAnualPerCapita"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal dados.es.gov.br.",
+          "Navegue até a seção de Saneamento e Esgoto.",
+          "Procure pelo dataset 'Investimentos e índices de saneamento'.",
+          "Clique no botão 'Baixar' para iniciar o download."
+        ],
+        "filters_available": {},
+        "download_format": "structured",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "Dados referentes apenas a 2000-2024 após confirmação dos anos disponíveis.",
+          "Verifique a atualidade dos dados."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 10,
+      "access_type": "direct_download",
+      "access_notes": ""
+    },
+    {
+      "url": "https://dados.es.gov.br/dataset/tcees-saneamento-basico/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8",
+      "title": "Controle Externo Informações e Indicadores do SNIS",
+      "snippet": "# Informações e Indicadores do SNIS\n\nURL: https://dados.es.gov.br/dataset/60edff95-a4fb-496f-94a5-1708071ac2a6/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8/download/snis.csv\n\nInformações e indicadores de saneamento básico, por município e por ano.\n\nEsta visão de recurso não está disponível no momento. Clique aqui para saber mais ...\n\n## Dicionário de Dados\n\n|Coluna|Tipo|Rótulo|Descrição|\n|--|--|--|--|\n|Municipio|text|Nome do município.|\n|Estado|text|Nome do estado.|\n|AnoReferencia|numeric|Ano ao qual se refere o dado.|\n|Microrregiao|text|Subdivisão de um estado, composta por vários municípios próximos, criada para fins estatísticos e administrativos.|\n|PrestadoresRevisao|text|Entidade responsável por fornecer serviços relacionados ao abastecimento de água potável e ao tratamento e disposição adequada de esgoto.|\n|ServicosRevisao|text|Atividades exercidas pelo prestador de serviços relacionados ao abastecimento de água potável e ao tratamento e disposição adequada de esgoto.|\n|NaturezaJuridica|text|Regime jurídico que identifica como o negócio será reconhecido perante a lei e se relaciona com aspectos como responsabilidade legal, carga tributária e funcionamento operacional.|\n|PopulacaoUrbanaResidenteMunicipioComAbastecimentoAgua|text|População urbana residente do(s) município(s) com abastecimento de água.|\n|PopulacaoUrbanaResidenteMunicipioComEsgotamentoSanitario|text|População urbana residente do(s) município(s) com esgotamento sanitário|\n|PopulacaoTotalResidenteMunicipioComAbastecimentoAgua|text|População total residente do(s) município(s) com abastecimento de água, segundo o IBGE.|\n|PopulacaoTotalMunicipioAnoReferencia|text|População total do município do ano de referência (Fonte: IBGE).|\n|PopulacaoUrbanaMunicipioAnoReferencia|text|População urbana do município do ano de referência (Fonte: IBGE).|\n|PopulacaoTotalAtendidaComAbastecimentoAgua|text|População total atendida com abastecimento de água.|\n|VolumeAguaProduzido|text|Volume de água produzido.|\n|VolumeAguaConsumido|text|Volume de água consumido.|\n|VolumeAguaFaturado|text|Volume de água faturado.|\n|VolumeAguaTratadaImportado|text|Volume de água tratada importado.|\n|VolumeAguaTratadaExportado|text|Volume de água tratada exportado.|\n|QuantidadeLigacoesTotaisAgua|text|Quantidade de ligações totais de água.|\n|PopulacaoUrbanaAtendidaComAbastecimentoAgua|text|População urbana atendida com abastecimento de água.|\n|PopulacaoTotalAtendidaComEsgotamentoSanitario|text|População total atendida com esgotamento sanitário.|\n|VolumeEsgotosTratado|text|Volume de esgotos tratado.|\n|QuantidadeLigacoesTotaisEsgotos|text|Quantidade de ligações totais de esgotos.|\n|VolumeEsgotoBrutoExportadoTratadoNasInstalacoesImportador|text|Volume de esgoto bruto exportado tratado nas instalações do importador.|\n|PopulacaoUrbanaAtendidaComEsgotamentoSanitario|text|População urbana atendida com esgotamento sanitário.|\n|ArrecadacaoTotal|text|Arrecadação total.|\n|InvestimentosTotaisRealizadosPrestadorServicos|text|Investimentos totais realizados pelo prestador de serviços.|\n|FN048_InvestimentosTotaisRealizadosPelosMunicipios|text|Investimentos totais realizados pelo(s) município(s).|\n|InvestimentosTotaisRealizadosEstado|text|Investimentos totais realizados pelo estado.|\n|IndiceAtendimentoUrbanoAgua|text|Índice de atendimento urbano de água.|\n|IndiceAtendimentoUrbanoEsgotoMunicipiosAtendidosComAgua|text|Índice de atendimento urbano de esgoto referido aos municípios atendidos com água.|\n|IndiceEsgotoTratadoReferidoAguaConsumida|text|Índice de esgoto tratado referido à água consumida.|\n|IndicePerdasDistribuicao|text|Índice de perdas na distribuição.|\n|IndicePerdasPorLigacao|text|Índice de perdas por ligação.|\n|IndiceAtendimentoTotalAgua|text|Índice de atendimento total de água.|\n|IndiceAtendimentoTotalEsgotoReferidoMunicipiosAtendidosComAgua|text|Índice de atendimento total de esgoto referido aos municípios atendidos com água.|\n|VolumeServico|text|Volume de serviço.|\n|QuantidadeLigacoesAtivasAgua|text|Quantidade de ligações ativas de água.|\n|InvestimentoAnualPerCapita|text|Investimento anual per capita.|\n## Informações Adicionais\n\n|Campo|Valor|\n|--|--|\n|Dados atualizados pela última vez|12/Abril/2024|\n|Metadados atualizados pela última vez|7/Novembro/2023|\n|Criado|7/Novembro/2023|\n|Formato|text/csv|\n|Licença|Creative Commons Atribuição|\n|created|há mais de 1 ano|\n|datastore active|True|\n|format|CSV|\n|has views|True|\n|id|a4d7c7b0-1244-4ae9-a93c-4e9b68995be8|\n|last modified|há mais de 1 ano|\n|mimetype|text/csv|\n|on same domain|True|\n|package id|60edff95-a4fb-496f-94a5-1708071ac2a6|\n|position|3|\n|revision id|cb98f7d8-7690-4a9a-ac10-14c04312455c|\n|size|222,8 KiB|\n|state|active|\n|url type|upload|",
+      "source_domain": "dados.es.gov.br",
+      "track_origin": "n2_saneamento_esgoto",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "meso",
+      "thematic_axis": "saneamento e esgoto",
+      "source_category": "dataset",
+      "dataset_name": "Controle Externo Informações e Indicadores do SNIS",
+      "dataset_description": "# Informações e Indicadores do SNIS\n\nURL: https://dados.es.gov.br/dataset/60edff95-a4fb-496f-94a5-1708071ac2a6/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8/download/snis.csv\n\nInformações e indicadore",
+      "data_format": "structured",
+      "temporal_coverage": null,
+      "spatial_coverage": null,
+      "key_parameters": [],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal de dados abertos do Estado do Espírito Santo [aqui](https://dados.es.gov.br/)",
+          "Na página inicial, clique em 'Dados' no menu superior.",
+          "Procure o dataset 'Controle Externo Informações e Indicadores do SNIS' na lista de datasets.",
+          "Clique no link para o dataset mencionado.",
+          "Na página do dataset, role para baixo até a seção de 'Recursos até encontrar','Clique no botão 'Baixar' próximo ao formato de arquivo desejado (CSV) para baixar os dados."
+        ],
+        "filters_available": {},
+        "download_format": "CSV",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "Os dados são atualizados periodicamente e os últimos dados disponibilizados são até 2026.",
+          "Não foi especificada nenhuma restrição de login ou autenticação."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://dados.es.gov.br/dataset/60edff95-a4fb-496f-94a5-1708071ac2a6/resource/a4d7c7b0-1244-4ae9-a93c-4e9b68995be8/download/snis.csv"
+        ]
+      },
+      "enrichment_method": "heuristic",
+      "llm_model": null,
+      "rank": 11,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://www.ufrgs.br/labgeo/index.php/downloads/dados-geoespaciais",
+      "title": "Dados Geoespaciais - UFRGS",
+      "snippet": "*DOWNLOAD*\nDados geoespaciais do Brasil:\n**Base cartográfica vetorial de dados geológicos da Província Costeira do estado do Rio Grande do Sul, Brasil ** – camadas vetoriais em formato *shapefile*.\n**Mapa Geomorfológico do Planalto Uruguaio Sul-Riograndense** – mapa para impressão em formato pdf e arquivo vetorial no formato *shapefile*.\n**Mapa Geomorfológico da Planície e Terras Baixas Costeiras do Rio Grande do Sul** – mapa para impressão em formato pdf e arquivo vetorial no formato *shapefile*.\n**Mapa de uso e cobertura vegetal do Rio Grande do Sul – situação em 2015** – arquivos vetoriais em formato *shapefile*, mosaicos de imagens em formato GEOTIFF e relatório em formato pdf.\n**Mapa de uso e cobertura vegetal do Rio Grande do Sul – situação em 2009** – arquivos vetoriais em formato *shapefile*, mosaicos de imagens em formato GEOTIFF e relatório em formato pdf.\n**Mapa de uso e cobertura vegetal do Rio Grande do Sul – situação em 2002** – arquivos vetoriais em formato *shapefile*, mosaicos de imagens em formato GEOTIFF e relatório em formato pdf.\n– Mapas anuais de cobertura vegetal e uso do solo do Brasil (\n**Projeto MapBiomas**) – arquivos *raster* no formato GEOTIFF\n**Mapa de vegetação da América do Sul de Hueck e Seibert (1981)** – arquivo vetorial no formato *shapefile* e kmz ( *Google Earth*)\n**Mapas de suscetibilidade a escorregamentos de Porto Alegre** – mapas de susceptilidade natural e induzida a escorregamentos no formato GEOTIFF; metadados e mapas para impressão em formato pdf.\n**Levantamento detalhado de solos do Vale dos Vinhedos** – livro, mapas de solos para impressão e texto com a descrição dos perfis de solo (incluindo resultados de análises físicas e químicas) em formato .pdf; camadas vetoriais em formato *shapefile*; MNT e ortofotomosaico no formato GEOTIFF\n**Mapa de sistemas ecológicos das savanas uruguaias** – escala 1:500.000 – camada vetorial em formato *shapefile*.\n**Base cartográfica vetorial contínua do Rio Grande do Sul – escala 1:50.000** – camadas vetoriais em formato *shapefile*.\n**Dados espaciais digitais da Serra Gaúcha – escala 1:50.000** – camadas vetoriais em formato *shapefile*; MNT e imagem Landsat em formato GEOTIFF.\n**Base cartográfica 1:250.000 do Rio Grande do Sul** – camadas vetoriais em formato *shapefile*.\n**Mapa Geomorfológico dos municípios de Porto Alegre, Viamão e Alvorada – RS** – camadas vetoriais em formato *shapefile*; artigos de referência e mapas para impressão em formato .pdf.\n**Dados digitais geoambientais da bacia do Rio Gravataí** – camadas vetoriais de diversos temas em formato *shapefile*; metadados e documentos originais em formato pdf.\n…\n**Base altimétrica vetorial contínua de Porto Alegre na escala 1:1.000** – camadas vetoriais de pontos cotados e curvas de nível em formato *shapefile*, metadados em formato .pdf.\n**Diagnóstico Ambiental do Município de Porto Alegre** – camadas vetoriais em formato *shapefile*; livro e mapas para impressão em formato .pdf.\n**Mapeamento da Cobertura Vegetal do Bioma Pampa – ano base 2002** – camadas vetoriais em formato *shapefile*; relatório final e mapas para impressão em formato .pdf.\n**Modelos Digitais de Elevação dos estados brasileiros** – mosaicos de cada estado elaborados a partir de dados do SRTM ( *Shuttle Radar Topography Mission*), no datum SAD69.\n**Para uso no Idrisi e no Cartalinx, baixe também**:\n**Arquivos de sistemas de referência do Idrisi para o Brasil** – parâmetros de coordenadas geodésicas e UTM para datum Córrego Alegre, SAD 69 e SIRGAS, conforme o especificações do IBGE para o Brasil, para uso no Idrisi e no Cartalinx.",
+      "source_domain": "ufrgs.br",
+      "track_origin": "n1_bacia_geomorfologia",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "delimitação e geomorfologia",
+      "source_category": "dataset",
+      "dataset_name": "Dados Geoespaciais do Brasil - UFRGS",
+      "dataset_description": "Conjunto de mapas e camadas vetoriais e raster de diversas áreas e temas ambientais do Brasil, incluindo geologia, geomorfologia, uso do solo, vegetação, solos, sistemas ecológicos, altimetria e mapas específicos de regiões e municípios.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "anos variados, incluindo 2002, 2009, 2015",
+      "spatial_coverage": "Brasil, Rio Grande do Sul, regiões específicas como Porto Alegre, Vale dos Vinhedos, Serra Gaúcha, Bioma Pampa, e países vizinhos como Uruguai e América do Sul",
+      "key_parameters": [
+        "dados geológicos",
+        "mapas geomorfológicos",
+        "uso e cobertura vegetal",
+        "vegetação",
+        "solos",
+        "suscetibilidade a escorregamentos",
+        "sistemas ecológicos",
+        "altimetria",
+        "modelos digitais de elevação",
+        "parâmetros de referência geodésica"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse a página de Dados Geoespaciais no portal da UFRGS.",
+          "Leia as instruções disponíveis na página para entender o processo de download.",
+          "Clique nos links correspondentes aos dados desejados.",
+          "Para dados específicos sobre geosciences ou geospatial information, escolha entre os diversos mapas e bases de dados listados, como os mapas de uso e cobertura vegetal.",
+          "Siga as instruções para baixar, que podem incluir clicar em links para arquivos raster, vetoriais, ou PDF."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Dados nunca devem ser tomados como verdade absoluta; é essencial reunir tudo que é conhecido sobre sua qualidade.",
+          "A página contém apenas referências a bases de dados e seus downloads.",
+          "Pode ser necessário seguir links externos para obter informações adicionais nos outros portais."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://www.ufrgs.br/labgeo/index.php/base-cartografica-vetorial-de-dados-geologicos-da-provincia-costeira-do-estado-do-rio-grande-do-sul-brasil/",
+          "https://www.ufrgs.br/labgeo/index.php/mapa-geomorfologico-do-planalto-uruguaio-sul-riograndense/",
+          "https://www.ufrgs.br/labgeo/index.php/mapa-geomorfologico-da-planicie-e-terras-baixas-costeiras-do-rio-grande-do-sul/",
+          "https://www.ufrgs.br/labgeo/index.php/downloads/dados-geoespaciais/uso-e-cobertura-vegetal-do-rio-grande-do-sul-situacao-em-2015/",
+          "https://www.ufrgs.br/labgeo/index.php/uso-e-cobertura-vegetal-do-rio-grande-do-sul-situacao-em-2009/",
+          "https://www.ufrgs.br/labgeo/index.php/uso-e-cobertura-vegetal-do-rio-grande-do-sul-situacao-em-2002/",
+          "https://www.ufrgs.br/labgeo/index.php/downloads/dados-geoespaciais/mapeamento-da-cobertura-vegetal-do-bioma-pampa-ano-base-2002/"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 12,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://inde.gov.br/CatalogoGeoservicos",
+      "title": "Catálogo de Geosserviços - Portal INDE",
+      "snippet": "",
+      "source_domain": "inde.gov.br",
+      "track_origin": "n1_bacia_geomorfologia",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ],
+      "hierarchy_level": "macro",
+      "thematic_axis": "delimitação e geomorfologia",
+      "source_category": "dataset",
+      "dataset_name": "Catálogo de Geosserviços - Portal INDE",
+      "dataset_description": "Lista de geosserviços disponíveis no Portal INDE relacionados a dados ambientais e geoespaciais.",
+      "data_format": "semi_structured",
+      "temporal_coverage": null,
+      "spatial_coverage": null,
+      "key_parameters": [],
+      "collection_guide": {
+        "steps": [
+          "Acesse o site do Portal INDE em https://inde.gov.br/",
+          "Clique em 'Catálogo de Geosserviços' na página inicial.",
+          "Procure pelo tema 'delimitação e geomorfologia' na listagem.",
+          "Selecione a opção que melhor se adequa ao cartão de dados dos reservatórios do Tietê.",
+          "Utilize a barra de busca, se disponível, para filtrar informações específicas para a região de São Paulo.",
+          "Selecione o intervalo de tempo desejado, de 2000 a 2024, se houver essa opção visível.",
+          "Verifique na página se há alguma opção de download explícita e clique nela."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "A página não possui filtros visíveis para a consulta específica.",
+          "Pode haver limitações na disponibilidade dos dados geoespaciais."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 13,
+      "access_type": "web_portal",
+      "access_notes": ""
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/",
+      "title": "MapBiomas Brasil",
+      "snippet": "Mapas produzidos a partir da classificação pixel a pixel de imagens Landsat, com recortes por bioma, estado e município.\n- ### Desmatamento\nDados anuais de supressão de florestas e vegetação natural não florestal, gerados a partir da análise do histórico de pixels, com resolução espacial de 30 m.\n- ### Vegetação Secundária\nMapas anuais e da idade da vegetação secundária em áreas de floresta e de vegetação herbácea e arbustiva no Brasil desde 1985 até 2023\n- ### Agricultura\nMapas anuais das principais culturas agrícolas e da agricultura irrigada do país desde 1985, além da frequência de plantio da agricultura temporária (2017-2023)\n- ### Fogo\nMapeamento de cicatrizes de fogo no Brasil com base em mosaicos de imagens dos satélites Landsat com resolução espacial de 30 metros, durante o período de 1985 a 2023, com dados mensais e anuais de cicatrizes de queimada no território brasileiro.\n…\n...\nDados mensais e anuais da dinâmica de corpos hídricos e água superficial no território nacional, mapeados de 1985 a 2023, a partir das cenas do satélite Landsat com até 70% de cobertura de nuvens, com resolução espacial de 30 metros.\n- ### Solo\nMapas anuais de carbono orgânico do solo (COS) no Brasil entre 1985 a 2023, além de mapas de textura do solo (areia, silte e argila).\n- ### 10 metros\nMapas anuais de Cobertura e Uso da Terra, no período de 2016-2023, com imagens do satélite Sentinel-2, com resolução espacial de 10 metros.\n- ### Degradação\nAnálise dos vetores de degradação da vegetação nativa, desde 1986 até 2021, incluindo dados como tamanho e isolamento de fragmentos da vegetação nativa, área de borda, frequência do fogo e tempo desde a última queimada.\n...\n## Acesso rápido\n- #### Mapas das Coleções\nconjunto completo de mapas das coleções do MapBiomas no Brasil desde 1985.\n- #### Estatísticas\nanálises e dados estatísticos das coleções de mapas do MapBiomas.\n- #### Infográficos\nvisualização de dados das coleções do MapBiomas.\n- #### Destaques\nprincipais dados e insights das coleções e temas do MapBiomas.\n-",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "official_portal",
+      "dataset_name": "MapBiomas Brasil",
+      "dataset_description": "Conjunto de mapas e dados ambientais produzidos a partir de classificação pixel a pixel de imagens Landsat, abrangendo temas como desmatamento, vegetação secundária, agricultura, fogo, corpos hídricos, solo, uso da terra e degradação no Brasil, desde 1985 até 2023.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "1985 a 2023",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "supressão de florestas e vegetação natural",
+        "idade da vegetação secundária",
+        "culturas agrícolas e agricultura irrigada",
+        "cicatrizes de fogo",
+        "dinâmica de corpos hídricos e água superficial",
+        "carbono orgânico do solo",
+        "textura do solo",
+        "cobertura e uso da terra",
+        "degradação da vegetação nativa"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse a plataforma MapBiomas Brasil em https://plataforma.brasil.mapbiomas.org/",
+          "Na página inicial, clique em 'Mapas e Dados' no menu superior.",
+          "Selecione a opção 'Plataforma MapBiomas cobertura e uso'.",
+          "Na nova página, pesquise pelos dados de 'uso e cobertura do solo' e clique sobre o link correspondente.",
+          "Na seção de dados, selecione os parâmetros que você deseja (ex: supressão de florestas, idade da vegetação secundária, etc.).",
+          "Escolha o período desejado (1985 a 2023) e a região do Brasil.",
+          "Clique no botão para download dos dados disponíveis."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Os dados são atualizados frequentemente e podem não refletir informações em tempo real.",
+          "Algumas informações podem estar limitadas ou não disponíveis para anos específicos."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 14,
+      "access_type": "geospatial_platform",
+      "access_notes": ""
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/downloads",
+      "title": "Downloads",
+      "snippet": "Baixe aqui os mapas, dados estatísticos, mosaicos de imagens Landsat, códigos de legenda, entre outros dados e coleções do MapBiomas\nTodos os mapas das Coleções do MapBiomas no Brasil desde 1985.\nDados estatísticos dos mapas das Coleções do MapBiomas.\n...\nMapas murais de cobertura e uso da terra no Brasil em 2023.\nColeção 4 de mapeamento anual e mensal de cicatrizes de fogo no Brasil entre 1985 e 2024.\nDownload dos arquivos vetoriais organizados\n...\nBaixe os mapas das camadas disponíveis na plataforma.\nMapas anuais de cobertura e uso da terra no Brasil com 10m de resolução desde 2016 (coleção beta).\nDados e destaques do Monitor Mensal de Áreas Queimadas.",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "official_portal",
+      "dataset_name": "MapBiomas Land Use and Cover Data",
+      "dataset_description": "Conjunto de mapas, dados estatísticos, mosaicos de imagens Landsat, e coleções relacionadas ao uso e cobertura da terra no Brasil desde 1985, incluindo mapas de cicatrizes de fogo e áreas queimadas.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "1985 a 2024",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso da terra",
+        "cobertura da terra",
+        "cicatrizes de fogo",
+        "áreas queimadas"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal MapBiomas: [brasil.mapbiomas.org](https://brasil.mapbiomas.org/)",
+          "Navegue até o menu 'Downloads'.",
+          "Clique em 'MapBiomas Alerta' na seção de Monitores para acessar dados relevantes.",
+          "Considere as coleções desde 1985 até 2024.",
+          "Se necessário, selecione o tipo de dado de interesse na lista disponível."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "minutes",
+        "caveats": [],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://brasil.mapbiomas.org/colecoes-mapbiomas/",
+          "https://brasil.mapbiomas.org/estatisticas/",
+          "https://brasil.mapbiomas.org/codigos-de-legenda/",
+          "https://brasil.mapbiomas.org/destaques/",
+          "https://brasil.mapbiomas.org/infograficos/",
+          "https://brasil.mapbiomas.org/mapa-mural/",
+          "https://brasil.mapbiomas.org/mapbiomas-fogo/",
+          "https://brasil.mapbiomas.org/monitor-do-credito-rural/",
+          "https://brasil.mapbiomas.org/monitor-da-recuperacao-dados-para-baixar/",
+          "https://brasil.mapbiomas.org/modulo-urbano",
+          "https://brasil.mapbiomas.org/mosaicos-landsat/",
+          "https://brasil.mapbiomas.org/mapas-de-referencia/",
+          "https://brasil.mapbiomas.org/dados-de-infraestrutura/",
+          "https://brasil.mapbiomas.org/pontos-de-validacao/",
+          "https://brasil.mapbiomas.org/tabela-de-camadas/",
+          "https://brasil.mapbiomas.org/mapbiomas-cobertura-10m/",
+          "https://brasil.mapbiomas.org/dados-monitor-mensal-do-fogo/",
+          "https://brasil.mapbiomas.org/dados-do-modulo-mapbiomas-degradacao",
+          "https://brasil.mapbiomas.org/dados-mapbiomas-solo/",
+          "https://brasil.mapbiomas.org/mapbiomas-cacau/"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 15,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca",
+      "title": "Mapbiomas - Cobertura e Uso da Terra (Coleção 8 - 1985 a 2022)",
+      "snippet": "# Simple\n\n## Identification info\n\n- Date (Publication)\n\n- 2023-10-23\n\n- Credit\n\n- Souza at. al. (2020) - Reconstructing Three Decades of Land Use and Land Cover Changes in Brazilian Biomes with Landsat Archive and Earth Engine - Remote Sensing, Volume 12, Issue 17, 10.3390/rs12172735.\"\n- Status\n\n- Contínuo\n\n####\n\n* *\n\nAuthor\n\n- Spatial representation type\n\n- Matricial\n\n## Spatial resolution\n\n## Equivalent scale\n\n- Denominator\n\n- 100000\n\n## Spatial resolution\n\n- Spatial resolution\n\n- 30\n\n- Topic category\n\n- Uso e Cobertura da Terra\n\nN\n\nS\n\nE\n\nW\n- Maintenance and update frequency\n\n- Annually\n\n- Keywords (Theme)\n\n- Uso e cobertura da terra\n\n- Cobertura e uso da terra\n\n- Uso e cobertura do solo\n\n- Cobertura e uso do solo\n\n- Uso e ocupação do solo\n\n- Mapbiomas\n\n- Série histórica\n\n- Coleção 8\n- Mapeamentos\n\n- 1985 a 2022\n\n- ide_1404_mg_uso_cob_terra_mapbiomas_colecao8\n\n- Keywords (Place)\n\n- Minas Gerais\n\n## Resource constraints\n\n- Other constraints\n\n- O acesso ao dado é livre\n\n- Other constraints\n\n- Este produto é resultante de um mapeamento de cobertura e uso da terra, elaborados por meio da interpretação de imagens de satélite com o uso de metodologias de classificação do uso e manejo da superfície. Não deve ser confundido e/ou utilizado, portanto, para identificação de fitofisionomias florestais, que somente podem ser delimitados por meio de mapeamentos florestais, como o próprio inventário produzido pela Universidade Federal de Lavras em parceria com o IEF (2009).\n\n…\n\n## Distribution Information\n\n- OnLine resource\n\n- Acesso a página institucional do projeto Mapbiomas\n\n- OnLine resource\n\n- Download da série histórica (1985 a 2022) em formato matricial (raster) para todo o Brasil (cada link abaixo conduz ao download de um ano específico do mapeamento)\n\n- OnLine resource\n- Download da série histórica (1985-2022) em formato matricial (raster), recortada para o Estado de Minas Gerais e compactada em formato zip\n\n- OnLine resource\n\n- Toolkits para obtenção e análise dos dados do MapBiomas via Google Earth Engine (para total acesso é necessário realizar cadastro na plataforma, possível por meio conta no Gmail)\n- OnLine resource\n\n- Códigos da legenda para os valores de pixel na Coleção 8\n\n…\n\nO mapeamento anual de cobertura e uso da terra do Brasil desenvolvido através do projeto MapBiomas é desenvolvido a partir da obtenção de imagens do satélite Landsat, com resolução de 30 metros, disponíveis gratuitamente na plataforma Google Earth Engine e com uma série temporal de mais de 30 anos. São necessárias 380 imagens Landsat para cobrir o Brasil, cada uma delas com dezenas de milhões de pixels: no total, são mais de 9 bilhões de pixels de 30 x 30 metros para perfazer todo o país.\n\n…\n\nPara cada ano é montado um mosaico que cobre o Brasil representando o comportamento de cada pixel através de 105 métricas ou camadas de informação. Este conjunto de mosaicos é salvo como uma coleção de dados (Asset) dentro da plataforma do Google Earth Engine. Estes mosaicos serão utilizados em duas formas principais.\n\n…\n\nA partir dos mosaicos de imagens, as equipes de cada bioma e de cada tema transversal produzem um mapa de cada classe de cobertura e uso do solo (floresta, campo, agricultura, pastagem, área urbana, água, etc). Para isso, os analistas do MapBiomas utilizam um classificador automático chamado de “random forest”, que roda na nuvem de processadores da Google.\n\n…\n\nA classificação é feita para cada um dos anos da série, podendo ser salvas como um único mapa por classe onde cada pixel tem número de camadas correspondente ao número de anos da série histórica analisada. O filtro espacial visa ampliar a consistência espacial dos dados, eliminando pixels isolados ou de borda. São definidas regras de vizinhança que podem levar a alteração da classificação do pixel.\nPor exemplo, um pixel que tenha menos de dois dos nove pixels vizinhos na mesma classe será reclassificado para a classe predominante na vizinhança. Cada pixel em cada ano e para cada classe de uso passa por este processo de filtragem espacial. Para reduzir inconsistências temporais, em especial as mudanças de cobertura e uso impossíveis ou não permitidas (ex.\nFlorestal Natural > Não Floresta > Floresta Natural) e corrigir falhas por excesso de nuvem ou falta de dados, são aplicadas regras de filtro temporal. Para cada bioma, tema ou região podem ter regras específicas de filtro temporal. No total na Coleção 3 foram aplicadas mais de uma centena de regras.\nO filtro temporal é aplicado em cada pixel analisando todos os anos da Coleção (ex. Coleção 3 foram 33 anos). Nesta etapa, os mapas de cada classe são integrados em um único mapa, que representa a cobertura e o uso da terra de todo território para cada ano. São aplicadas regras de prevalência: assim, caso um mesmo pixel seja classificado em dois mapas de classes distintas, é possível definir a qual pertence no mapa final.\n\n…\n\nPara entender as mudanças na cobertura e uso do solo são produzidos mapas com as transições das classes entre diferentes pares de anos selecionados. Assim é possível visualizar o dinamismo do território, e responder a perguntas como quanto de floresta virou pastagem de um ano para outro, por exemplo, entre outras alterações na paisagem. mapas de transição são produzidos pixel a pixel e após finalizados também passam por um filtro espacial para eliminar pixels de transição isolados ou de borda.\nA partir destes mapas são construídas as matrizes de transição para cada bioma, estado, município e os demais cortes territoriais disponíveis na plataforma MapBiomas.\n\n## Spatial representation info\n\n- Number of dimensions\n\n- 2\n\n- Dimension name\n\n- Column\n\n- Dimension size\n\n- 41521\n\n- Resolution\n\n- 30\n\n- Dimension name\n\n- Line\n\n- Dimension size\n\n- 32245\n\n- Resolution\n\n- 30\n\n- Cell geometry\n\n- Area\n\n…\n\n## mdb:MD_Metadata\n\n- Metadata identifier\n\n- urn:uuid / bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca\n\n- Language\n\n- Portuguese\n\n- Character encoding\n\n- UTF8\n\n…\n\nMinas Gerais\n\n31630-900\n\nBrasil\n\n- Metadata linkage\n\n- https://idesisema.meioambiente.mg.gov.br:8080/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca\n\n- Date info (Revision)\n\n- 2023-11-10T15:15:00\n\n- Date info (Creation)\n\n- 2023-11-10T14:53:32",
+      "source_domain": "idesisema.meioambiente.mg.gov.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "Mapbiomas - Cobertura e Uso da Terra (Coleção 8 - 1985 a 2022)",
+      "dataset_description": "Conjunto de mapas de cobertura e uso da terra do Brasil, produzidos a partir de imagens de satélite Landsat, com resolução de 30 metros, cobrindo o período de 1985 a 2022, incluindo análises de transições de uso e mapas temáticos por bioma e região.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "1985 a 2022",
+      "spatial_coverage": "Brasil, com recorte para Minas Gerais",
+      "key_parameters": [
+        "classes de cobertura e uso do solo (floresta, campo, agricultura, pastagem, área urbana, água, etc.)",
+        "métricas ou camadas de informação por ano",
+        "mapas de transição de classes entre anos"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal do Mapbiomas em https://plataforma.brasil.mapbiomas.org/cobertura",
+          "Navegue até a seção de 'Cobertura e Uso da Terra' para a coleção de interesse",
+          "Escolha a opção correspondente à coleção 9 para o período desejado (1985-2023)",
+          "Selecione a classe de cobertura e uso do solo que desejar (floresta, campo, agricultura, pastagem, área urbana, água, etc.)",
+          "Realize o download dos dados desejados no formato matricial ou KML, conforme a necessidade."
+        ],
+        "filters_available": {},
+        "download_format": "matricial (raster) e KML",
+        "estimated_effort": "minutes",
+        "caveats": [
+          "Os dados estão em formato matricial, com 39 camadas para cada ano entre 1985 e 2023.",
+          "Os dados obtidos não devem ser usados para identificar fitofisionomias florestais, que exigem outros mapeamentos."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca/attachments/ide_1402_mg_uso_terra_mapbiomas_col9_2023.tif",
+          "https://geoserver.meioambiente.mg.gov.br/IDE/wms/kml?layers=IDE%3Aide_1402_mg_uso_terra_mapbiomas_col9_2023",
+          "https://meioambientemg-my.sharepoint.com/:f:/g/personal/dgeo_semad_meioambiente_mg_gov_br/Etw9LeziAvdOlEteC_kfYPsBwW6cVojt_Am43LZUJsUBsg?e=bghXgD",
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca/attachments/ide_1402_mg_uso_terra_mapbiomas_col9_estilo.qml",
+          "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/bb27f72b-2a30-45c0-9b04-2d3a8a32f0ca/attachments/ide_1402_mg_uso_terra_mapbiomas_col9_rco.pdf"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 16,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: minutes; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://www.pedometria.org/mapbiomas",
+      "title": "MapBiomas Solo",
+      "snippet": "O MapBiomas é uma rede colaborativa de ONGs, universidades e startups de tecnologia.\nProduzimos mapas anuais da cobertura e uso da terra e monitoramos a superfície de água e as cicatrizes de fogo mensalmente com dados a partir de 1985.\nDesde 2023, também mapeamos o estoque anual de carbono orgânico do solo (COS) em todo o Brasil com resolução espacial de 30 m.\nO objetivo do MapBiomas Solo é revelar a dinâmica espaço-temporal do COS e suas relações com as mudanças na cobertura e uso da terra, clima e práticas de manejo do solo.\nEmpregando dados de campo e satelitários, computação em nuvem e aprendizado de máquina, produzimos uma série inédita de mapas anuais do estoque de COS do período 1985-2021 (coleção beta).",
+      "source_domain": "pedometria.org",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Solo",
+      "dataset_description": "MapBiomas Solo fornece mapas anuais da cobertura e uso da terra, monitoramento de superfície de água, cicatrizes de fogo e, desde 2023, mapas do estoque anual de carbono orgânico do solo (COS) no Brasil, cobrindo o período de 1985 a 2021.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "1985-2021",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "cobertura e uso da terra",
+        "superfície de água",
+        "cicatrizes de fogo",
+        "estoque de carbono orgânico do solo (COS)"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse a plataforma do MapBiomas Solo [https://plataforma.brasil.mapbiomas.org/solo]",
+          "Navegue nas opções de dados disponíveis e selecione 'MapBiomas Solo'",
+          "Escolha o intervalo de anos de 1985 a 2021",
+          "Acesse a área de interesse e insira as coordenadas da bacia do Tietê",
+          "Selecione os parâmetros de interesse, como cobertura e uso da terra",
+          "Clique em 'Download' para recuperar os dados na plataforma."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Acesso aos dados requer navegação em uma plataforma interativa.",
+          "Os dados podem estar sujeitos a limitações de uso e precisão."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://plataforma.brasil.mapbiomas.org/solo"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 17,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://www.geoaplicada.com/dados/uso-e-cobertura-da-terra-no-brasil-mapbiomas",
+      "title": "Uso e cobertura da terra no Brasil (MapBiomas)",
+      "snippet": "O projeto MapBiomas realiza o mapeamento anual do uso e cobertura da terra no Brasil, além do monitoramento mensal da superfície de água e das cicatrizes de fogo com dados desde 1985.\nA partir disso, o MapBiomas gera informações sobre o uso da terra e permite o download de mapas, dados estatísticos, mosaicos de imagens Landsat, códigos de legenda, entre outros.\nEm\n**Mapas e Dados**, é possível acessar a plataforma do MapBiomas, além de visualizar e baixar dados e estatísticas das coleções do projeto.\nTodos os dados e estatísticas podem ser visualizados e baixados na plataforma de uso e cobertura do\n**MapBiomas**.\nVeja o vídeo abaixo para baixar dados de uso e cobertura na plataforma do MapBiomas:\nA plataforma teve algumas alterações ao longo dos anos e pretendemos fazer um vídeo mais atualizado sobre a plataforma do MapBiomas, mas é possível acompanhar o tutorial normalmente.\nTambém dá para baixar dados de uso e cobertura da terra no Brasil do MapBiomas pelo Google Earth Engine:\nNo portal do MapBiomas, na seção Downloads, é possível baixar: mapas das coleções, estatísticas das coleções, descrições, legendas, mapas murais, dados do monitor rural e do módulo urbano, mosaicos Landsat, dados de infraestrutura, dados de queimadas, dados do solo e de degradação, entre outros.",
+      "source_domain": "geoaplicada.com",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "Uso e cobertura da terra no Brasil (MapBiomas)",
+      "dataset_description": "Conjunto de dados que mapeia anualmente o uso e cobertura da terra no Brasil, incluindo monitoramento mensal de superfícies de água e cicatrizes de fogo desde 1985, com mapas, estatísticas e mosaicos de imagens Landsat.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "desde 1985",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "uso da terra",
+        "cobertura da terra",
+        "superfície de água",
+        "cicatrizes de fogo",
+        "dados de queimadas",
+        "dados do solo",
+        "dados de degradação"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal do MapBiomas através do link fornecido na seção de dados espaciais",
+          "Navegue até a seção 'Mapas e Dados' para visualizar as coleções disponíveis",
+          "Selecione a opção 'Downloads' para acessar os dados disponíveis",
+          "Escolha o tipo de dado que deseja baixar, como mapas, estatísticas, ou dados do solo",
+          "Siga as instruções na plataforma para completar o download"
+        ],
+        "filters_available": {},
+        "download_format": "GEOTIFF, XLSX",
+        "estimated_effort": "hours",
+        "caveats": [
+          "A plataforma do MapBiomas pode ter algumas mudanças ao longo do tempo, recomenda-se assistir ao vídeo tutorial disponível",
+          "Dados podem variar, consulte a página para informações atualizadas"
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "https://brasil.mapbiomas.org/downloads/"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 18,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://pmma.etc.br/projeto-de-mapeamento-do-uso-do-solo-mapbiomas-auxilia-o-planejamento-municipal",
+      "title": "Projeto de mapeamento do uso do solo (MapBiomas) auxilia ...",
+      "snippet": "O MapBiomas, plataforma de dados acerca da cobertura e uso do solo do Brasil, disponibiliza mapas e infográficos que contribuem para o planejamento municipal\n*Informações retiradas do site do MapBiomas ( clique aqui para acessar) e da SOS Mata Atlântica (clique aqui para acessar)*\n...\n- – Desenvolvimento e implementação de uma metodologia rápida, confiável e de baixo custo para gerar mapas anuais de cobertura e uso do solo do Brasil a partir de 1985 até os dias atuais (e posterior atualização anual).\n- – Criação de uma plataforma para facilitar a disseminação da metodologia para outros países e regiões interessadas utilizando a mesma base de algoritmos.\n…\n- – Fase 1 – gerou a coleção 1 (Beta) com legenda simplificada cobrindo o período de 2008-2015 (publicado em abril de 2016).\n- – Fase 2 – gerou a coleção 2 cobrindo o período de 2000-2016.\n- – Fase 3 – gerou a Coleção 3 cobrindo o período de 1985 – 2017.\nPara mais informações do histórico do projeto, instituições participantes, metodologia do mapeamento e acesso à plataforma acesse o site do MapBiomas\n__clicando aqui__.\nPara visualizar o vídeo explicativo que apresenta as novidades da segunda coleção de mapas, com dados relativos ao período entre 2000 e 2016, __clique aqui__.",
+      "source_domain": "pmma.etc.br",
+      "track_origin": "n1_uso_cobertura_solo",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "macro",
+      "thematic_axis": "uso e cobertura do solo",
+      "source_category": "dataset",
+      "dataset_name": "MapBiomas Uso do Solo Brasil",
+      "dataset_description": "Conjunto de mapas anuais de cobertura e uso do solo do Brasil, cobrindo diferentes períodos desde 1985 até 2017, disponibilizados em plataformas acessíveis ao público.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "1985 a 2017",
+      "spatial_coverage": "Brasil",
+      "key_parameters": [
+        "cobertura do solo",
+        "uso do solo"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal do MapBiomas.",
+          "Navegue até a seção 'Projetos'.",
+          "Selecione 'Projeto de mapeamento do uso do solo (MapBiomas) auxilia o planejamento municipal'.",
+          "Leia as informações sobre a coleta e uso do solo.",
+          "Acesse o site do MapBiomas clicando no link no texto.",
+          "Procure a opção para download do dataset referente ao uso do solo."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "A página pode exigir navegação cuidadosa e não contém filtros visíveis."
+        ],
+        "requires_login": false,
+        "direct_download_urls": [
+          "http://mapbiomas.org/"
+        ]
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 19,
+      "access_type": "direct_download",
+      "access_notes": "esforco estimado: hours; guia de coleta encontrou download direto"
+    },
+    {
+      "url": "https://www.aguaesaneamento.org.br/municipios-e-saneamento/fontes-notas-tecnicas",
+      "title": "Fontes e Notas Técnicas | Municípios e Saneamento",
+      "snippet": "Esta plataforma reúne fichas dos 5.570 municípios do Brasil, porém a disponibilidade de dados locais sobre cada diferente realidade é bastante variável.\nCom exceção dos dados de caracterização, como estimativa populacional, densidade demográfica e biomas, em grande parte levantados pelo IBGE, observa-se que 2.512 municípios, ou 45,1% dos 5.570, possuem dados de todos os componentes (SINISA 2023), e 81 municípios não possuem informações nas fontes pesquisadas.\nOs demais 2.977 municípios possuem parte dos dados disponíveis.\nTabela: Número de municípios com disponibilidade de dados por fontes utilizadas\nFONTE DE DADOS NÚMEROS DE MUNICÍPIOS RESPONDENTES\nMUNIC 2023 5.570\nSINISA 2023 Abastecimento de água 5.242*\nSINISA 2023 Esgotamento sanitário 2.754\n…\n...\nO SINISA Sistema Nacional de Informações em Saneamento Básico, instituído pela Lei nº 11.445/2007 e atualizado pela Lei nº 14.026/2020, sucedeu o SNIS (Sistema Nacional de Informações sobre Saneamento) a partir de 2024.\nEle coleta e divulga dados sobre os quatro componentes do saneamento básico: abastecimento de água, esgotamento sanitário, limpeza urbana e manejo de resíduos sólidos, e drenagem e manejo das águas pluviais urbanas, e o módulo de Gestão Municipal, que investiga a gestão do saneamento nos municípios.\n...\nA coleta dos dados é realizada por tipo de componente do setor de saneamento:\n• Abastecimento de água e Esgotamento sanitário: são realizadas via ofício e respondida pelo prestador de serviço (companhias estaduais de saneamento, empresas e autarquias municipais ou empresas privadas).\n• Resíduos sólidos: os municípios são comunicados por ofício eletrônico.\nO fornecimento da informação é de responsabilidade das prefeituras, titulares dos serviços, mesmo nos casos em que esses serviços sejam terceirizados ou concedidos.\n…\nO sistema anterior, SNIS, possui série histórica de informações e indicadores que está disponível em uma plataforma para consulta e extração de dados em formato CSV.\nNa plataforma, podem ser encontrados os registros de dados de Água e Esgoto desde 1995 e Resíduos Sólidos, desde 2002.\nOs dados de Drenagem e Águas Pluviais não estão integrados à plataforma, mas no site do SNIS é possível acessar os diagnósticos anteriores, feitos em 2015 e a partir de 2017 com periodicidade anual.\n…\nQuanto às fontes de dados, são utilizadas as formulações do Censo, do SINISA e do Sisagua.\nEm relação à gestão dos serviços, cujos indicadores abrangem de forma integrada todos os componentes do saneamento básico, tem-se cinco indicadores e suas respectivas metas, os quais não foram monitorados até a produção do suplemento Munic 2023.",
+      "source_domain": "aguaesaneamento.org.br",
+      "track_origin": "n2_saneamento_esgoto",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": [],
+      "hierarchy_level": "meso",
+      "thematic_axis": "saneamento e esgoto",
+      "source_category": "dataset",
+      "dataset_name": "Fontes e Notas Técnicas - Municípios e Saneamento",
+      "dataset_description": "Dados sobre a disponibilidade de informações de saneamento básico em municípios brasileiros, incluindo componentes como abastecimento de água, esgotamento sanitário, resíduos sólidos e drenagem urbana.",
+      "data_format": "semi_structured",
+      "temporal_coverage": "Desde 1995 (Água e Esgoto), desde 2002 (Resíduos Sólidos), diagnósticos anteriores de 2015 e a partir de 2017",
+      "spatial_coverage": "Municípios do Brasil (5.570 municípios)",
+      "key_parameters": [
+        "estimativa populacional",
+        "densidade demográfica",
+        "biomas",
+        "abastecimento de água",
+        "esgotamento sanitário",
+        "limpeza urbana",
+        "manejo de resíduos sólidos",
+        "drenagem e manejo das águas pluviais",
+        "gestão do saneamento municipal"
+      ],
+      "collection_guide": {
+        "steps": [
+          "Acesse o portal Água e Saneamento em https://www.aguaesaneamento.org.br/municipios-e-saneamento/",
+          "Clique em 'Fontes e Notas Técnicas' no menu principal.",
+          "Navegue pela lista de fontes disponíveis e localize o dataset intitulado 'Fontes e Notas Técnicas | Municípios e Saneamento'.",
+          "Clique no título do dataset para acessar detalhes específicos e opções de download."
+        ],
+        "filters_available": {},
+        "download_format": "semi_structured",
+        "estimated_effort": "hours",
+        "caveats": [
+          "Os dados disponíveis variam entre os 5.570 municípios, com alguns municípios apresentando dados limitados ou inexistentes.",
+          "A análise pode ser complexa devido à diversidade de metodologias utilizadas nas fontes de dados."
+        ],
+        "requires_login": false,
+        "direct_download_urls": []
+      },
+      "enrichment_method": "llm",
+      "llm_model": "gpt-4.1-nano",
+      "rank": 20,
+      "access_type": "web_portal",
+      "access_notes": ""
+    }
+  ],
+  "rank_meta": {
+    "ranked_count": 20,
+    "format_summary": {
+      "structured": 11,
+      "semi_structured": 9
+    },
+    "access_summary": {
+      "direct_download": 16,
+      "pdf_extraction": 1,
+      "web_portal": 2,
+      "geospatial_platform": 1
+    },
+    "level_summary": {
+      "macro": 16,
+      "meso": 4
+    }
+  }
+}

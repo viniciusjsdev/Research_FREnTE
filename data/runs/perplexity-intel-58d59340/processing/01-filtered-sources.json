@@ -1,0 +1,2078 @@
+{
+  "filtered_sources": [
+    {
+      "url": "https://www.snirh.gov.br/hidroweb",
+      "title": "HIDROWEB",
+      "snippet": "O Portal HidroWeb é uma ferramenta integrante do Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH) e oferece o acesso ao banco de dados que contém todas as informações coletadas pela Rede Hidrometeorológica Nacional (RHN), reunindo dados de níveis fluviais, vazões, chuvas, climatologia, qualidade da água e sedimentos.\n...\nDados em tempo real são disponibilizados no **Portal Hidrotelemetria** - http://www.snirh.gov.br/hidrotelemetria.\n...\nA Agência Nacional de Águas (ANA) é responsável por coordenar as atividades desenvolvidas no âmbito da Rede Hidrometeorológica Nacional - RHN, em articulação com órgãos e entidades públicas ou privadas que a integram, ou que dela sejam usuárias.\nAs estações de monitoramento da RHN estão cadastradas no banco de dados Hidro, que integra o Sistema Nacional de Informações sobre Recursos Hídricos – SNIRH, contando atualmente com mais de 23 mil estações pluviométricas e fluviométricas cadastradas, de entidades públicas e privadas que realizam o monitoramento hidrológico.",
+      "source_domain": "snirh.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/monitoramento-hidrologico/orientacoes-manuais/manuais/manual_srdh_publica.pdf",
+      "title": "MANUAL DO SERVIÇO DE RECEPÇÃO DE DADOS ...",
+      "snippet": "Para obter as credenciais de acesso ao sistema, o solicitante deverá encaminhar e-mail para  \nhidro@ana.gov.br, com o assunto “[NOME DA ENTIDADE/USUÁRIO] – Solicitação de \ncadastro para envio de dados via API SRDH”, com as seguintes informações:\nIdentificação da Entidade: \n• \nNome: \n• \nUF: \n• \nCNPJ ou CPF: (Será utilizado como login no sistema) \nInformações de Contato: \n• \nE-mail: (Será utilizado para envio automático da senha) \n...\nTelefone: \nEstações Hidrológicas:\n• \nCódigos SNIRH/ANA (8 dígitos): \nExemplo: 15400000, 10100000, 01547079, ...Para solicitar o cadastro de uma estação no SNIRH, o interessado deve enviar um e-mail para\nhidro@ana.gov.br com o seguinte assunto: “[NOME DA ENTIDADE/USUÁRIO] – Solicitação de \ncadastro de estações hidrometeorológicas”.\nO e-mail deve conter as informações necessárias \npara o registro.\n...\n2.1 - Acessar o link: \nhttps://www.snirh.gov.br/dadoshidrometereologicos/swaggerui/index.html#/\n6 \n2.2 –Clicar em: “WSoAuthController”, para mostrar o método de autenticação disponível.\n2.3 - Clique na rota:    GET       “/oAUth/v1/Autenticar”, para acessar e visualizar os campos a \nserem preenchidos \n2.4 – Será mostrado um formulário para preenchimento das credenciais de acesso\n(identificador e senha) do usuário (ver item 1.2 para informações de como obtê-los) \n2.5 - Clique em “Try it out” para permitir a inserção das credenciais.\n7 \n2.6 - Após inserir os parâmetros clicar em “Execute” para submeter.\n2.7 - O serviço deverá retornar as informações necessárias para autenticação (ver imagem \nabaixo) \nNesta tela deve ser observado o campo “tokenautenticação”, que terá uma validade de \n15 minutos.\nApós este tempo um novo tokenautenticação” deverá ser gerado.\n2.8 – O conteúdo do campo 'tokenautenticacao' deverá ser copiado, sem aspas, para \nutilização na próxima etapa.\n2.9 – Em seguida, navegar até o topo da página e clicar em “Authorize”.\nPreencha os dois campos obrigatórios \nTOKEN \nValidade\n8 \n2.10 – Colar o “tokenautenticacao” copiado e, em seguida, clique em “Authorize” para \nconcluir o processo de autenticação.\n2.11 – Após inserir o token, clicar em “Close” para finalizar o processo.\nA partir deste \nmomento o serviço estará pronto para a realização das consultas e interação com os dados\nconforme necessário.\n2.12 – Para gerar um novo token de autenticação clicar primeiro em “Clear”, reinserir as \ncredenciais e clicar em “Execute”.\nRepetir os passos 2.5 a 2.11 para completar o processo.\n...\n3.2 - Clicar em: “WSDadosHidroMetereologicosController”, para mostrar os métodos de \nrequisição disponível.\n3.3 - Para realizar a consulta primeiro deve ser selecionado uma rota, como por exemplo a \nrota “Busca os dados Série Vazão”:                  /hihidro/v1/SerieVazão\n10 \n3.4 - Clicar em “Try it out” para habilitar a opção de preenchimento dos campos e iniciar o \nteste da funcionalidade.\n3.5 - Preencher os campos “acesstoken”, “Código Estação”, “ID Série Dados” e “Data da \nBusca” para realizar a consulta.\n3.6 - Após preencher os campos obrigatórios, clicar em “Execute” para realizar a busca e \nvisualizar os dados da estação \n...\n3.7 – O resultado da busca será exibido na seção “Response body”, onde poderá visualizar \ntodos os detalhes e informações da estação consultada.",
+      "source_domain": "gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/agencia-disponibiliza-series-historicas-de-dados-de-niveis-e-vazoes-de-estacoes-em-todo-o-pais",
+      "title": "Agência disponibiliza séries históricas de dados de níveis e ...",
+      "snippet": "Desde 24 de outubro, esses dados de níveis de 7,3 mil estações e de vazões de 4,1 mil pontos monitorados podem ser acessados temporariamente em página da RHN acessível pelo link https://app.powerbi.com/view?\n...\nPara acessar diretamente a pasta de uma estação específica em https://github.com/anagovbr/hidro-dados-estacoes-convencionais para obter os arquivos de níveis médios diários e/ou de vazão médias diárias, é necessário utilizar o seguinte padrão: https://github.com/anagovbr/hidro-dados-estacoes-convencionais/tree/main/fluviometricas/codigo_da_estacao.\nPor exemplo, a estação de código 15400000 deve ser consultada com o seguinte endereço: https://github.com/anagovbr/hidro-dados-estacoes-convencionais/tree/main/fluviometricas/15400000.\nDevido ao ataque cibernético à ANA verificado em 27 de setembro, os dados de cotas médias diárias e de vazões médias diárias de estações convencionais da RHN estão sendo disponibilizados de forma temporária na página https://github.com/anagovbr/hidro-dados-estacoes-convencionais.\nEm caso de dúvidas sobre os dados disponibilizados, os(as) usuários(as) podem entrar em contato com a ANA pelo e-mail para hidro@ana.gov.br ou pelo telefone (61) 2109-5242.",
+      "source_domain": "gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/monitoramento-hidrologico/monitoramento-hidrologico-do-setor-eletrico/resolucao-conjunta-ana-aneel-127-2022/ManualparaEnvioDadosHidrologicosHorarios.pdf",
+      "title": "[PDF] MANUAL PARA ENVIO DOS DADOS HIDROLÓGICOS HORÁRIOS ...",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156",
+      "title": "Rede Hidrometeorológica Nacional",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/telemetria1ws/Telemetria1ws.pdf",
+      "title": "[PDF] DESCRIÇÃO PARA DISPONIBILIZAR DADOS ...",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://github.com/taleswsouza/ANA-hidroweb",
+      "title": "GitHub - taleswsouza/ANA-hidroweb: Projeto de demonstração para testar a API do HIDROWEB da Agência Nacional de Águas (ANA). https://www.snirh.gov.br/hidroweb",
+      "snippet": "Projeto de demonstração para testar a API do HIDROWEB da Agência Nacional de Águas (ANA).\nhttps://www.snirh.gov.br/hidroweb.\nO projeto é baseado nas requisições HTTP GET do site https://www.snirh.gov.br/hidroweb/serieshistoricas.\nAs mesmas informaçoes podem ser verificadas através de outro módulo do sistema que apresenta as informações em outro formato de visualização (no link http://www.snirh.gov.br/hidrotelemetria).\nAs principais informações de medição, também podem ser baixadas através do site HIDROWEB ou [HIDROTELEMETRIA]http://www.snirh.gov.br/hidrotelemetria).\n...\nA sequência de passos para trazer as informações através de uma requisição REST são:\n1. Realizar uma requisição em `https://www.snirh.gov.br/hidroweb/rest/api/estacaotelemetrica?id={id}` passando como parâmetro o número da estação de qual irá requisitar os dados, tal como o seguinte exemplo:\n- `https://www.snirh.gov.br/hidroweb/rest/api/estacaotelemetrica?id=5669600`\n2. Recuperar o novo `id` da estação a partir do json retornado na requisição, para será usado na próxima requisição\n-\n3. Realizar uma nova requisição em `https://www.snirh.gov.br/hidroweb/rest/api/documento/gerarTelemetricas?codigosEstacoes={codigosEstacoes}&tipoArquivo={tipoArquivo}&periodoInicial={periodoInicial}&periodoFinal={periodoFinal}`, abaixo um exemplo de uma requisição, usando os dados da requisição anterior (novo id da estação).",
+      "source_domain": "github.com",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/aplicativos-sistemas",
+      "title": "Aplicativos e Sistemas da ANA - Portal Gov.br",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/hidrowebservice/swagger-ui/index.html",
+      "title": "Swagger UI",
+      "snippet": "Send email to ANA - Agência Nacional de Águas\n...\nServers\nhttps://www.ana.gov.br/hidrowebservice\nAuthorize",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://files.abrhidro.org.br/Eventos/Trabalhos/66/SBRH2013__PAP013535.pdf",
+      "title": "HIDROWEB 2",
+      "snippet": "Atualmente os dados hidrológicos sob responsabilidade da ANA são publicados e\ndisponibilizados de duas maneiras: por meio do portal do SNIRH (www.snirh.gov.br) e do \naplicativo HidroWeb (http://hidroweb.ana.gov.br).",
+      "source_domain": "files.abrhidro.org.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.snirh.gov.br/portal/snirh-1/sistemas",
+      "title": "Sistemas - Gestão e Análise de Dados Hidrológicos",
+      "snippet": "",
+      "source_domain": "snirh.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch",
+      "title": "Como pesquisar e baixar dados de chuva e vazão de rios no Hidroweb da ANA",
+      "snippet": "{ts:34} cara do do site né então ele é gerido pelo governo brasileiro ele é da Ana da Agência Nacional de águas onde ela\n{ts:41} disponibiliza pra gente ali cada pontinho desse é um ponto de monitoramento ou de chuva um ponto\n...\n{ts:66} ele vai demorar bastante para dar essas atualizações né dos que a gente vai dar Você pode pesquisar clicando em cima da\n{ts:75} bolinha né que você quer então aqui ó agora deu uma carregada mas é muito muito ponto\n...\n{ts:91} pluviométrico seria esse aqui que tem uma nuvenzinha Você pode pesquisar por ele clicando em cima dele ele vai te dar\n{ts:100} al os dados sobre essa Estação mas para baixar os dados você precisa fazer a pesquisa e mais\n...\n{ts:154} gente procura Qual que é o tipo de estação vou fazer um uma pesquisa aqui da\n{ts:160} fluviométrica se você já tiver o código da estação se você já tiver informação né o número identifique ess Estação no\n{ts:169} sistema da Ana você já pode jogar aqui diretamente se você não tiver aí você precisa fazer a pesquisa\n{ts:177} normalmente você escolhe que é a bacia hidrográfica que você quer então eu vou colocar aqui do Rio Paraná a subba você\n{ts:186} escolhe qual que é a sub bacia do Rio né ele vai liberando esses itens passo a passo então eu vou pegar aqui do Rio\n{ts:195} Grande e você vai liberar aqui e você vai colocar o nome do rio então você pode ver tem vários Rios né onde ele tem\n{ts:205} algum monitoramento Vamos colocar como o rio par feito isso você já pode até fazer a",
+      "source_domain": "youtube.com",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://telemetriaws1.ana.gov.br/",
+      "title": "Consulta as estações telemétricas",
+      "snippet": "Mas, devido\nà solicitação de vários usuários, a ANA decidiu por prorrogar este período até 30/06/2026.\n...\nOs usuários que desejam migrar para o novo serviço, mais moderno e completo, devem encaminhar\num email para hidro@ana.gov.br, com o assunto \"Solicitação de acesso à API\".\nNo corpo do e-mail,\ninclua uma breve explicação (em poucas linhas) sobre a motivação da solicitação e forneça as\nseguintes informações para o cadastro:",
+      "source_domain": "telemetriaws1.ana.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/politica-nacional-de-recursos-hidricos/sistema-de-informacoes-sobre-recursos-hidricos",
+      "title": "Sistema Nacional de Informações sobre Recursos Hídricos",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://brazilvisible.org/docs/apis/meio-ambiente/recursos-hidricos",
+      "title": "Recursos Hídricos — ANA (Agência Nacional de Águas) - Brazil Visible",
+      "snippet": "> **Portal de dados abertos:** https://dadosabertos.ana.gov.br/ — portal com APIs REST documentadas e downloads de dados.\n...\n### Fontes de dados\n|Fonte|URL|Formato|Descrição|\n|--|--|--|--|\n|**Dados Abertos ANA**|`https://dadosabertos.ana.gov.br/`|JSON, CSV|Portal principal com APIs REST|\n|**HidroWeb**|`https://www.snirh.gov.br/hidroweb/`|CSV|Dados de estações hidrológicas|\n|**SAR**|`https://www.snirh.gov.br/sar/`|JSON/CSV|Sistema de Acompanhamento de Reservatórios|\n|**SNIRH**|`https://www.snirh.gov.br/`|Variados|Sistema Nacional de Informações sobre Recursos Hídricos|\n|**GeoNetwork ANA**|`https://metadados.snirh.gov.br/geonetwork/`|Shapefile, WFS|Dados geoespaciais (bacias, estações, outorgas)|\n...\nO acesso às APIs e downloads é **público e gratuito**, sem necessidade de cadastro ou token.\n...\n### HidroWeb — Dados hidrológicos\n|Recurso|URL|Descrição|\n|--|--|--|\n|**Inventário de estações**|`https://www.snirh.gov.br/hidroweb/rest/api/estacao/`|Lista de estações de monitoramento|\n|**Dados de vazão**|`https://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais`|Séries históricas de vazão|\n|**Dados de chuva**|`https://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais`|Séries históricas de precipitação|",
+      "source_domain": "brazilvisible.org",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.snirh.gov.br/hidrotelemetria/Default.html",
+      "title": "Hidro-Telemetria / Sobre o Sistema",
+      "snippet": "Apesar do sistema permitir o download das séries históricas, por questão de desempenho, recomenda-se que o usuário utilize o portal Hidroweb (\nhttp://www.snirh.gov.br › hidroweb\n) para esta finalidade.\n...\n2. Na nova aba aberta, clique em \"Segurança e Privacidade\" no menu do lado esquerdo;\n...\nSetor Policial, Área 5, Quadra 3, Blocos \"B\",\"L\",\"M\" e \"T\".\nBrasília-DF CEP: 70610-200 PABX: (61) 2109-5400 / (61) 2109-5252",
+      "source_domain": "snirh.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/geonetwork/api/records/56ac7cb5-aa22-4081-a135-c7fc0938a449",
+      "title": "Hidroeletricidade - Catálogo de Metadados da ANA",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_jupia_sucuriu_station_known_sources",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/fe192ba0-45a9-4215-90a5-3fba6abea174",
+      "title": "Divisão de Bacias - Catálogo de Metadados da ANA",
+      "snippet": "2) As Unidades de Planejamento Hídrico - UPH são subdivisões das bacias hidrográficas estudadas, caracterizadas por uma homogeneidade de fatores geomorfológicos, hidrográficos e hidrológicos que permitem a organização do planejamento e do aproveitamento dos recursos hídricos ali existentes.\nAs UPHs são formadas por bacias ou sub-bacias hidrográficas de rios afluentes ou segmentos das bacias dos rios principais, com continuidade espacial.\n...\n3) A Base Hidrográfica Ottocodificada - BHO utilizada pela ANA na gestão de recursos hídricos é obtida a partir do Mapeamento Sistemático Brasileiro.\nA BHO é gerada a partir da cartografia digital da hidrografia do país e organizada de modo a gerar informações hidrologicamente consistentes.\nPara tanto, a BHO representa a rede hidrográfica em trechos entre os pontos de confluência dos cursos d'água de forma unifilar.\nCada trecho é associado a uma superfície de drenagem denominada ottobacia, à qual é atribuída a codificação de bacias de Otto Pfafstetter.\n...\nNeste mapa as bacias hidrográficas correspondem à agregação das áreas de contribuição hidrográfica, conhecidas como ottobacias, no nível 1 e nível 2.",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://files.abrhidro.org.br/Sumarios/255/2cc6f9732c48be4cc48e3ecabcb66e5e_ab0f84a57b2ddc44dd5b8ba76339f72b.pdf",
+      "title": "[PDF] Subsídios para delimitação de bacias hidrográficas",
+      "snippet": "disponibilizam informações sobre suas bacias estudadas, incluindo bancos de dados e arquivos no \nformato shapefiles com grande quantidade de informações relacionadas a recursos hídricos, como: \nlimites de bacias, vazões de referência, outorgas, uso do solo, dados de monitoramento \n...\nO primeiro passo é localizar e identificar a ottobacia do ponto selecionado e, a seguir,\ntrabalhando com as propriedades da ottocodificação e dos campos cobacia e cocursodag dos shapefiles \ndisponibilizados pela ANA, são identificados as ottobacias a montante e os ottotrechos dos rios a \njusante.",
+      "source_domain": "files.abrhidro.org.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/09436656-f4cf-4793-b169-33700b2d40ee",
+      "title": "Base Hidrográfica Ottocodificada da Bacia do Rio Paranaíba",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/b228d007-6d68-46e5-b30d-a1e191b2b21f",
+      "title": "Bacias Hidrográficas Ottocodificadas (Níveis Otto 1-7)metadados.snirh.gov.br › geonetwork › srv › api › records",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.geoaplicada.com/dados/bacias-hidrograficas",
+      "title": "Bacias hidrográficas do Brasil - Dados espaciais - Geoaplicada",
+      "snippet": "Os dados de bacias hidrográficas incluem as bases hidrográficas e unidades de planejamento hídrico produzidos pela Agência Nacional de Águas e Saneamento Básico (ANA).\nVocê encontrará um catálogo de vários dados do sistema de metadados da ANA contendo:\n- **Unidades de Planejamento Hídrico;**\n- **Regiões hidrográficas;**\n- **Bacias e Aquíferos Transfronteiriços do Brasil;**\n- **Bacias e outras bases hidrográficas do Brasil;**\n- **Grandes bacias hidrográficas da América do Sul.**\nVocê pode acessar e baixar todos esses dados no Catálogo de Metadados da ANA.\n...\nAs UPHs são formadas por bacias ou sub-bacias hidrográficas de rios afluentes ou segmentos das bacias dos rios principais, com continuidade espacial.\n...\nAs camadas vetoriais de **UPH ** estão no formato shapefile, são do ano de **2016**, estão na escala de **1 para 1.000.000** e usam o **EPSG 4674, datum SIRGAS 2000 (Sistema de Coordenadas Geográficas)**.\n...\nAqui você encontra um catálogo de **Bases Hidrográficas Ottocodificadas ** em variadas escalas.\nAlém de camadas vetoriais no formato Geopackage de **dados hidrográficos do Brasil**.\nOs dados abaixo estão no formato Geopackage, são do ano de **2017**, possui múltiplas escalas e estão com o **EPSG 4674, datum SIRGAS 2000 (Sistema de Coordenadas Geográficas)**.\n...\nOu você pode baixar as bases hidrográficas Ottocodificadas em diferentes níveis diretamente no catálogo de Metadados da ANA.\nVocê também pode baixar dados espaciais hidrográficos no formato Geopackage no catálogo como:\n- Trechos de Drenagem;\n- Áreas de Contribuição Hidrográfica;\n- Pontos de Drenagem;\n- Cursos d’Água;\n- Linha de Costa\n...\nVocê também pode baixar **Bacias Hidrográficas** e **Sistema Aquíferos** para além do território brasileiro, ou seja, camadas com os limites hidrográficos transfronteiriços do Brasil, abrangendo outros países da América do Sul.\n...\nVocê pode baixar os limites das grandes bacias hidrográficas da América do Sul também desenvolvidos pela ANA.\nEssa delimitação se refere ao primeiro nível da codificação de Ottobacias, que são áreas de contribuição dos trechos da rede hidrográfica codificadas segundo o método de Otto Pfafstetter para classificação de bacias.",
+      "source_domain": "geoaplicada.com",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/7659a732-8d1a-4485-bb6b-44a689c5ff9d",
+      "title": "Bacias Hidrográficas",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/arquivos/institucional/sge/CEDOC/Catalogo/2015/PRHDaBaciaHidrograficaDoRioParanaiba.pdf",
+      "title": "PRH",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.iat.pr.gov.br/sites/agua-terra/arquivos_restritos/files/documento/2020-07/instrucoes_acesso_ftp_v2018.pdf",
+      "title": "Instrucoes_Acesso_FTP_v2018",
+      "snippet": "É necessário instalar um software de FTP no computador que fará acesso aos dados.\nProcure \nna internet um de sua preferência e faça a instalação.\nDentre as diversas opções disponíveis \ncitamos os seguintes: WinSCP, SmartFTP e Filezilla.\nApós a instalação configure o servidor, porta, usuário e senha, utilizando os seguintes dados: \n- Protocolo: FTP \n- Endereço IP do servidor: 200.189.114.112 \n- Porta: 21  \n- Usuário:  aguasparana \n- Senha:  aguasparana \n...\nA Base Hidrográfica Unificada é a representação cartográfica digital dos elementos \nhidrográficos apresentados em um produto contínuo para toda a área do Estado.\nSão 6  \narquivos temáticos: Massas d’água, drenagem, ilha, queda d’água, sumidouros e \nvertedouros e terrenos sujeitos a inundação.\nDisponível para download para toda a \nárea do Estado.\nAs Ottobacias são a hierarquização das áreas de contribuição hídrica, definidas a partir da \nmetodologia de Otto Pfafstetter (ANA, 2008).\nOttobacia é uma bacia relacionada à rede hídrica \natravés de um código hierárquico sendo que para cada trecho da rede existe uma ottobacia\nhidrográfica associada.\nEstão disponíveis para download por bacia nível 4 ou para toda a área \ndo projeto agrupadas por nível 4, nível 5, nível 6, nível 7 ou todos os níveis.\nA Rede Hídrica consiste de arquivo digital composto dos eixos dos rios, segmentados em\ntrechos, conectados por nós e identificados por meio de código único e hierárquico obtido \natravés da metodologia adotada pela Agência Nacional de Águas, segundo o método de Otto \nPfafstetter (ANA, 2008).\nEstá disponível para download por bacia nivel4 ou para todo o estado.\n...\nPara reportar eventuais inconsistências identificados nos dados deve-se entrar em contato \ncom o Departamento de Sistemas de Informações e Geoprocessamento do AGUASPARANÁ, no \ntelefone (41) 3213-4791 ou por e-mail basehidrografica@aguasparana.pr.gov.br.",
+      "source_domain": "iat.pr.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://portal1.snirh.gov.br/atlasrh2013",
+      "title": "Conselho Nacional de Recursos Hídricos",
+      "snippet": "A delimitação de Bacias Hidrográficas para a Agência Nacional de Águas se refere ao primeiro nível da codificação de Ottobacias.\nOttobacias são áreas de contribuição dos trechos da rede hidrográfica codificadas\nsegundo o método de Otto Pfafstetter para classificação de bacias.\nNo\nfim da década de 1980, o engenheiro brasileiro Otto Pfafstetter, funcionário do extinto Departamento Nacional de Obras de Saneamento -\nDNOS desenvolveu um método de codificação numérica de bacias\nhidrográficas, considerando como insumo principal as áreas de\ncontribuição direta de cada trecho da rede hidrográfica.\nAs bacias hidrográficas correspondem à agregação das áreas de contribuição\nhidrográfica, conhecidas como ottobacias, no nível 1 (Fonte:\nANA).\n...\nAs unidades hidrográficas propostas pelo Plano Nacional de Recursos\nHídricos - PNRH, aprovado pela Resolução 58, de 30 de janeiro de 2006, são subdivisões das regiões hidrográficas cuja delimitação foi aprovada\npelo Conselho Nacional de Recursos Hídricos - CNRH através da Resolução\n32, de 15 de outubro de 2003, que instituiu a Divisão Hidrográfica Nacional.",
+      "source_domain": "portal1.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.snirh.gov.br/portal/snirh-1/acesso-tematico/divisao-hidrografica",
+      "title": "Divisão hidrográfica - Sistemas",
+      "snippet": "|Região Hidrográfica é o espaço territorial brasileiro compreendido por uma bacia, grupo de bacias ou sub-bacias hidrográficas contíguas, com características naturais, sociais e econômicas homogêneas ou similares, com vistas a orientar o planejamento e gerenciamento dos recursos hídricos.|\n...\n|As Unidades de Gestão de Recursos Hídricos em território nacional tem 64 UGRHs, correspondendo a 47 Unidades de Gestão de bacias de domínio da União e 17 Unidades de Gestão de bacias exclusivamente de domínio dos Estados.\nA versão mais atual de 2024 foi definida a partir da agregação das áreas de contribuição hidrográfica, comumente denominadas ottobacias, da Base Hidrográfica Ottocodificada (BHO) versão 6.|<table><tr><td></td><td>Mapa interativo</td></tr><tr><td></td><td>Dados Abertos</td></tr><tr><td></td><td>Metadados</td></tr><tr><td></td><td>Publicação</td></tr></table>|\n...\n|As Unidades de Gestão Estadual dos Recursos Hídricos são estabelecidas com foco na gestão dos recursos hídricos em cada estado, o que leva à delimitação considerar aspectos geopolíticos (limite da unidade da federação) combinados com os limites hidrográficos dentro de cada estado em consideração\n...\n### Clique aqui e acesse os dados em formato aberto de divisão hidrográfica.\n| |Divisão Hidrográfica Nacional, Regiões Hidrográficas e Unidades de Planejamento|<table><tr><td></td><td>Mapa interativo</td></tr><tr><td></td><td>Metadados</td></tr><tr><td></td><td>Publicação</td></tr></table>|",
+      "source_domain": "snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/2fb4464c-fc83-41d0-b63a-d020395a4a99",
+      "title": "Corpos Hídricos Superficiais - Catálogo de Metadados da ANA",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://mapasabertos.com/dados/nacional",
+      "title": "Dados de abrangência nacional - Mapas Abertos",
+      "snippet": "**URL: ** http://dadosabertos.ana.gov.br/\n...\nPara tanto, a BHO representa a rede hidrográfica em trechos entre os pontos de confluência dos cursos d’água de forma unifilar.\nCada trecho é associado a uma superfície de drenagem denominada ottobacia, à qual é atribuída a codificação de bacias de Otto Pfafstetter.\n...\n**Comentário:** Disponível para download no conjunto de dados “Divisão hidrográfica e corpos hídricos superficiais e dominialidades”.",
+      "source_domain": "mapasabertos.com",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/base-de-dados-geoespaciais-da-ana-permite-gestao-mais-eficiente-das-bacias-hidrograficas",
+      "title": "Base de dados geoespaciais da ANA permite gestão mais eficiente ...",
+      "snippet": "Para acessá-la, basta clicar no Portal de Metadados Geoespaciais da ANA.",
+      "source_domain": "gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/ana-e-ibge-lancam-ineditas-bases-de-dados-hidrograficos-do-brasil",
+      "title": "ANA e IBGE lançam inéditas bases de dados hidrográficos do Brasil",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://sigaaguas.org.br/server/rest/services/02_AGEDOCE/rdc_bacia_otto_n5_ana_2017/MapServer",
+      "title": "02_AGEDOCE/rdc_bacia_otto_n5_ana_2017 (MapServer)",
+      "snippet": "",
+      "source_domain": "sigaaguas.org.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://dadosabertos.sp.gov.br/dataset",
+      "title": "Conjunto de dados",
+      "snippet": "Os dados apresentam a divisão das bacias hidrográficas do Estado de São Paulo com base na metodologia hierárquica de Otto Pfafstetter, conforme adotada pela Agência Nacional de Águas e Saneamento Básico (ANA).\nEssa estrutura organiza o território em unidades hidrográficas padronizadas, permitindo uma visão integrada da rede de drenagem e apoiando a gestão descentralizada dos recursos hídricos.\n...\nVocê também pode ter acesso a esses registros usando a API (veja Documentação da API).",
+      "source_domain": "dadosabertos.sp.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://geoftp.ibge.gov.br/informacoes_ambientais/estudos_ambientais/bacias_e_divisoes_hidrograficas_do_brasil/2021/Bacias_Hidrograficas_do_Brasil_BHB250/tabelas/bacias_nivel_3.xlsx",
+      "title": "Bacias_03",
+      "snippet": "",
+      "source_domain": "geoftp.ibge.gov.br",
+      "track_origin": "n1_geografia_bacia_jupia_ottobacias",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ons.org.br/%2FProcedimentosDeRede%2FM%C3%B3dulo%209%2FSubm%C3%B3dulo%209.2%2FSubmodulo%209.2_Rev_0.0.pdf",
+      "title": "[PDF] Submódulo 9.2 Acompanhamento da Situação Hidroenergética - ONS",
+      "snippet": "Banco de Dados de Aproveitamentos Hidrelétricos, são processadas a reconstituição de vazões \nnaturais e a consistência de vazões, por reservatório, e os cálculos da energia natural afluente \n(ENA) e da energia armazenada (EAR), por reservatório, por bacia hidrográfica de interesse e\n\n…\n\n(a)   Séries de vazões naturais médias diárias, semanais e mensais atualizadas, \ndisponibilizadas a todos os Agentes; \n(b)   Energias natural afluente (ENA) e armazenada (EAR) por reservatório, por bacia e por \nsubsistema, verificadas semanais e mensais e disponibilizadas a todos os Agentes;\n\n…\n\n(j)   Calcular as Energias Natural Afluente (ENA) e Armazenada (EAR) \npara o \nAcompanhamento da Situação Hidroenergética; \n(k)   Obter, internamente, as previsões de vazões diárias realizadas pelos Agentes de Geração \n(submódulo 9.5);\n\n…\n\n(l)   Definição e revisão da metodologia para reconstituição das séries de vazões naturais. \n4.1  Atualização da base de dados temporais \n4.1.1  Nesta etapa do procedimento, será realizada a obtenção dos dados temporais relativos à \noperação dos aproveitamentos hidrelétricos e a incorporação destes ao Banco de Dados do \nSistema. Para esta atualização, será utilizado o Sistema de Informações Hidroenergéticas – SIH.\n\n…\n\nAcompanhamento\nda Situação\nHidroenergética\nAgentes de \nGeração \nDados da \nOperação Hidráulica \nem Base Diária \nVazão \nTurbinada \nBanco de \nDados do\nSistema \nSéries Históricas \nde Vazões Naturais \nMédias Diárias\n\n…\n\nAgentes de \nTransmissão \nConsumidores \nLivres \nSéries Históricas de \nVazões Naturais \n Médias dárias \n e /ou Mensais \nPrevisão de \nVazões Naturais \nMédias Diárias \nDados Operativos\nde Reserv.e Captações",
+      "source_domain": "ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/ana-orienta-ons-sobre-operacao-de-reservatorios-para-atendimento-de-necessidades-energeticas",
+      "title": "ANA orienta ONS sobre operação de reservatórios para ... - GOV",
+      "snippet": "Por meio do Ofício nº 36/2022/VS/ANA, a Agência Nacional de Águas e Saneamento Básico (ANA) se manifestou sobre as condições a serem observadas pelo Operador Nacional do Sistema Elétrico (ONS) para o aumento das vazões defluentes (liberadas) nos reservatórios das hidrelétricas Porto Primavera e Jupiá, ambas na calha do rio Paraná e na divisa entre Mato Grosso do Sul e São Paulo, durante o mês de março.\nSegundo informação do ONS, a medida busca possibilitar o aumento da geração hidrelétrica da usina de Itaipu (PR) e, assim, ampliar o intercâmbio energético do Subsistema Sudeste/Centro-Oeste para o Subsistema Sul, que teve chuvas e afluências (água que chega aos reservatórios) abaixo do esperado.\n\n…\n\n- As vazões médias mensais mínimas defluentes das usinas Porto Primavera e Jupiá continuam definidas em 2500 m³/s e 3100 m³/s, para o mês de março, e em 2300 m³/s e 2900 m³/s, para os meses de abril a maio de 2022, respectivamente, conforme indicado no Protocolo de Compromisso, e devem estar refletidas nas restrições operativas dos operadores dessas usinas;\n- Enquanto as vazões defluentes das usinas Porto Primavera e Jupiá estiverem acima dos valores mínimos definidos no item “a”, e enquanto o nível d’água do reservatório de Ilha Solteira estiver abaixo de 325,4m, não deverá haver elevação dos níveis d’água dos reservatórios intermediários, das usinas de Marimbondo, Água Vermelha e São Simão, exceto quando as vazões afluentes forem superiores à capacidade de geração dessas usinas ou quando estiver sendo praticada operação para controle de cheias;\n\n…\n\nAs condições determinadas pela ANA visam a atender às necessidades de segurança do sistema elétrico sem, entretanto, prejudicar o reenchimento dos reservatórios e os usos múltiplos da água nas regiões de cabeceira das bacias dos rios Grande e Paranaíba, que formam o rio Paraná e estão incluídos no Plano de Contingência da ANA para a Recuperação dos Reservatórios do Sistema Interligado Nacional (SIN) com vigência entre dezembro de 2021 e abril de 2022.\n\n…\n\n**Plano de Contingência**\n\nO Plano de Contingência produzido pela ANA indica medidas adicionais de operação dos principais reservatórios de regularização do SIN a serem adotadas no período úmido 2021-2022, que vai de dezembro de 2021 a abril de 2022, para promover seu reenchimento. O objetivo do documento da Agência é aumentar a segurança hídrica e garantir os usos múltiplos da água em 2022 e nos anos seguintes.",
+      "source_domain": "gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ons.org.br/%2FMPO%2FDocumento%20Normativo%2F3.%20Instru%C3%A7%C3%B5es%20de%20Opera%C3%A7%C3%A3o%20-%20SM%205.12%2F3.6.%20Opera%C3%A7%C3%A3o%20de%20Reservat%C3%B3rios%2FIO-OR.SF.SFR_Rev.27.pdf",
+      "title": "Manual de Procedimentos da Operação",
+      "snippet": "Operação - PDO, contém os valores de defluências, cotas e diretrizes que devem ser observadas pelas \nequipes de tempo real do COSR e dos Agentes de Geração, conforme item 3.1 desta Instrução de \nOperação.\n2.5.6.\nOs sistemas extravasores dos reservatórios das usinas despachadas centralizadamente pelo ONS\n\n…\n\n2.5.8.\nOs Agentes de Geração devem informar ao ONS os dados operativos dos reservatórios de acordo com \na Rotina Operacional RO-AO.BR.02 - Apuração de Dados Hidrológicos e Hidráulicos. Informações \ncomplementares podem ser incluídas no sub - “Procedimentos Específicos” deste Documento.\n\n…\n\numa bacia hidrográfica deve considerar:\n\nos estados de armazenamento dos reservatórios, \n\nas afluências, naturais e regularizadas, observadas e previstas a estes reservatórios; e \n\nas vazões incrementais, observadas e previstas, entre os reservatórios e os pontos de controle, caso\n\n…\n\nreservatório, pois a restrição de defluência em Três Marias é variável para que, ao se combinar com \na vazão incremental no trecho Três Marias / Pirapora, não seja ultrapassada a vazão de 4.000 m³/s \nem Pirapora.\n4.5.1.2.\nA seguir são apresentadas as variáveis para o estabelecimento dos critérios de operação do \nreservatório de Três Marias, nas situações Normal, de Atenção, de Alerta e de Emergência:\n\nQAFL\n=\nVazão afluente a Três Marias para 3 dias à frente;\n\n…\n\nObservação: Caso a confiabilidade das previsões de vazões seja aumentada, poderão ser fornecidas \nprevisões de vazões para um horizonte maior.\n4.5.1.3.\nA condicionante para definição da situação de Normal para Atenção pode ser uma vazão defluente \nmédia de Três Marias programada para 1 dia à frente inferior ou igual a 2000 m³/s, com vazões\n\n…\n\ninferiores a 4000 m³/s.\n4.5.1.5.\nOs quadros abaixo apresentam os critérios de classificação da operação da UHE de Três Marias, no \nperíodo de controle de cheias, ou seja, caracterizam as situações Normal, Atenção, Alerta e \nEmergência com indicação do responsável pela operação:\nSituação de operação do reservatório de Três Marias",
+      "source_domain": "ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/acesso-a-informacao/governanca-regulatoria/analise-de-impacto-regulatorio-air/NTDispensaAIRRes.111.2021.pdf",
+      "title": "NOTA TÉCNICA Nº 8/2021/SOE",
+      "snippet": "2017 \n. Por se tratar de reservatório de operação conjunta com Sobradinho e local de controle \ndas suas defluências, a UHE Xingó também foi incluída, com as mesmas condições daquele.\n6.\nPara os reservatórios das UHE  \nJupiá e Porto Primavera, o Plano de Contingência\n\n…\n\nArt. 7º A operação dos reservatórios das UHE Jupiá e Porto Primavera deverá ser \nrealizada de forma limitar as vazões defluentes médias mensais a valores próximos ao requisito \nmínimo ambiental em cada mês, em ambos os reservatórios. \nArt. 8º Os agentes responsáveis pela operação dos reservatórios objeto desta",
+      "source_domain": "gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ons.org.br/sites/multimidia/Documentos%20Compartilhados/vazoes_naturais/2011/12-1.html",
+      "title": "ONS",
+      "snippet": "A revisão das séries de vazões naturais propiciou uma maior segurança aos estudos de planejamento da operação e da expansão do Sistema Interligado Nacional - SIN efetuados pelo ONS, devido à maior confiabilidade de seus valores, à incorporação das vazões de usos consuntivos nas séries históricas, à utilização da evolução desses usos nos próximos anos e à compatibilização entre as séries diárias e mensais.\n\n…\n\nA ANEEL, por meio da Resolução Autorizativa ANEEL nº 1.953 de 16/06/2009, autorizou o ONS a utilizar as séries de vazões naturais dos aproveitamentos localizados nas bacias dos rios Parnaíba, Jequitinhonha, Doce, Uruguai - Trecho nacional, Jacuí, Ijuí, Antas nos processos de planejamento e operação do SIN, as quais já incorporam as séries de vazões de usos consuntivos aprovadas pela ANA.\n\n…\n\nAlém disso, o processo de reconstituição das séries naturais incluiu a correção dos efeitos da operação dos reservatórios implantados na bacia e da evaporação líquida das áreas alagadas, como nas metodologias empregadas anteriormente, e uma correção adicional para levar, em consideração, a evolução dos usos consuntivos das águas ao longo do tempo. Esse aprimoramento propicia uma série natural homogênea, a partir da qual é possível considerar, de forma direta, em estudos futuros de planejamento, os prognósticos de evolução dos usos consuntivos nas análises de disponibilidade hídrica e/ou energética.\n\n…\n\nA base de dados operativos foi submetida, por sua vez, a uma severa análise de consistência, detalhada em nível diário, tornando-a o mais consistente possível e compatível com os dados da rede fluviométrica existente nas vizinhanças do aproveitamento. Durante essa análise, criou-se uma sistemática de trabalho implantada em ferramentas computacionais que poderão ser empregadas futuramente na atualização das séries.\n\n…\n\nNo presente estudo, foi utilizada a metodologia julgada mais adequada para a reconstituição das séries de vazões naturais diárias e mensais, considerando a quantidade de usinas já implantadas, a extensão dos estirões fluviais naturais remanescentes, a base de dados disponível, os prazos para realização dos trabalhos e a necessidade de se concluir a reconstituição de séries naturais em todas as bacias hidrográficas da área do SIN.",
+      "source_domain": "ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://dados.ons.org.br/organization/ons",
+      "title": "Organizações - ONS DADOS ABERTOS",
+      "snippet": "## Dados Hidráulicos por Reservatório – Base horáriaDados hidráulicos de reservatórios em periodicidade horária, não consistidos pelo ONS. Os dados disponibilizados são de responsabilidade dos agentes de geração e refletem uma...\n\n\n\n## Dados Hidráulicos por Reservatório – Base diáriaDados hidráulicos verificados de reservatórios consolidados pelo ONS na periodicidade diária. A atualização desses dados no Portal ocorrem as 9:15h, 14:15 e 17h. Os dados...\n\n## Energia Vertida TurbinávelDados de energia vertida turbinável consolidados pelo ONS por reservatório em periodicidade horária. Para este conjunto de dados, a Hora Início (00:00) está representada pelo...\n\n\n\n## Dados Hidrológicos - Volume de Espera RecomendadoValores do volume de espera utilizados na programação hidráulica de um reservatório. Representa o nível máximo a ser atingido, em % do volume útil, de forma que o reservatório...\n\n…\n\n## ENA Diário por ReservatórioDados das grandezas de energia natural afluente (ENA) com periodicidade diária por Reservatório. A Energia Natural Afluente (ENA) Bruta representa a energia produzível pela...\n\n\n\n## EAR Diário por ReservatórioDados das grandezas de energia armazenada (EAR) em periodicidade diária por Reservatórios. A Energia Armazenada (EAR) representa a energia associada ao volume de água disponível...\n\n…\n\n## ENA Diário por BaciaDados das grandezas de energia natural afluente (ENA) dos reservatórios com periodicidade diária por Bacias Hidro Energéticas. A Energia Natural Afluente (ENA) Bruta representa...\n\n\n\n## EAR Diário por SubsistemaDados das grandezas de energia armazenada (EAR) em periodicidade diária por Subsistemas. A Energia Armazenada (EAR) representa a energia associada ao volume de água disponível...\n\n## EAR Diário por REE - Reservatório Equivalente de EnergiaDados das grandezas de energia armazenada (EAR) em periodicidade diária por Reservatórios Equivalentes. A Energia Armazenada (EAR) representa a energia associada ao volume de...\n\n\n\n## EAR Diário por BaciaDados das grandezas de energia armazenada (EAR) em periodicidade diária por Bacias Hidro Energéticas. A Energia Armazenada (EAR) representa a energia associada ao volume de água...",
+      "source_domain": "dados.ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ana.gov.br/sar/sobre-o-sar",
+      "title": "Sobre o SAR",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://participacao-social.ana.gov.br/api/files/250731__AIR_Parana_com_minuta_resolucao-1758653420938.pdf",
+      "title": "[PDF] RELATÓRIO DE ANÁLISE DE IMPACTO REGULATÓRIO (AIR)",
+      "snippet": "mínimos de defluências dos reservatórios das usinas hidrelétricas de Jupiá e Porto Primavera \n2. Objetivos  \n- \nReduzir o risco de deplecionamento acentuado dos reservatórios de regularização da RH do \nrio Paraná a montante das UHEs Jupiá e Porto Primavera\n\n…\n\nNa outorga da UHE Jupiá, não estão estabelecidos valores de defluências mínimas a serem mantidas pelo \nempreendimento; por outro lado, para a UHE Porto Primavera foi estabelecido em sua outorga que, durante \no período da piracema (de novembro a fevereiro10), o reservatório deverá ser operado considerando uma\n\n…\n\nFSAR-H dos reservatórios pertencentes ao SIN, as UHEs Jupiá e Porto Primavera têm como restrições \npermanentes defluências mínimas de 3.300 m³/s11 e 4.600 m³/s12, respectivamente13. Adicionalmente, entre \n01/11/2024 e 31/10/2025 está vigente para a UHE Porto Primavera uma restrição de caráter temporário14,\n\n…\n\noperação de reservatórios e estimativas do histórico de usos consuntivos a montante. \nAnualmente, o ONS disponibiliza as séries de vazões naturais nas seções de rios onde estão instalados os \naproveitamentos hidrelétricos integrantes do SIN. Tendo por base as séries de vazões naturais médias",
+      "source_domain": "participacao-social.ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://proxyportais.ons.org.br/ons.portalempregado.proxy/garapi/api/processo/retornarpdf",
+      "title": "[PDF] Critérios para estudos energéticos e hidrológicos - ONS",
+      "snippet": "",
+      "source_domain": "proxyportais.ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/arquivos/resolucoes/2019/Outorgas/0736-2019_Outorga_de_Direito_de_Uso.pdf",
+      "title": "outorga nº 736, de 15 de abril de 2019.",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cme/apresentacoes-em-eventos/apresentacoes-de-convidados-em-eventos-em-2022/06-12-2022-criterios-de-operacao-uso-multiplo-das-aguas-e-cota-762-em-furnas/ONS.pdf",
+      "title": "Escassez Hídrica Plano de Ação – Setor Elétrico",
+      "snippet": "",
+      "source_domain": "www2.camara.leg.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ons.org.br/%2FProcedimentosDeRede%2FM%C3%B3dulo%2010%2FSubm%C3%B3dulo%2010.8%2FSubm%C3%B3dulo%2010.8%202016.12.pdf",
+      "title": "Submódulo 10.13 - Controle Reservatórios",
+      "snippet": "ao ONS e das previsões hidrológica e meteorológica disponibilizadas pelos agentes, pelo ONS e \nórgãos afins. \n1.3  A operação hidráulica dos reservatórios leva em conta o sistema de reservatórios para o \ncontrole de cheias e as situações em que se encontra o reservatório – quais sejam, situação Normal,\n\n…\n\n6.6  A situação de operação para um reservatório é declarada pelo respectivo agente de geração \nresponsável ou pelo ONS, observando as condições estabelecidas neste submódulo e nos \nProcedimentos de Rede. O ONS pode declarar uma situação de operação para um reservatório, \ncom base nas informações hidrometeorológicas referentes à bacia hidrográfica na qual esse",
+      "source_domain": "ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://sdro.ons.org.br/SDRO/DIARIO/2026_02_03/HTML/24_SituacaoPrincipaisReservatorios_Regiao.html",
+      "title": "Subsistema Sudeste/Centro Oeste - ONS",
+      "snippet": "Dados Hidráulicos dos Reservatórios\n\nSubsistema Sudeste\n\nBacia\n\nReservatório\n\nNível - m\n\nVolume\n\nÚtil - %\n\nVazão - m³/s\n\nAfluência\n\nDefluência\n\nVertida\n\nTransferida\n\nAMAZONAS\n\nGUAPORE\n\n479,12",
+      "source_domain": "sdro.ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.monolitonimbus.com.br/definicoes-em-hidroeletricidade",
+      "title": "Definições em hidroeletricidade",
+      "snippet": "O ONS dispõe de séries de vazões naturais diárias e semanais para alimentar os modelos de previsão de vazões e controle de cheias. É utilizado um subconjunto de postos (ou aproveitamentos) de cada bacia, denominados de postos base, lançando-se mão do uso de relações de regressão entre estes postos base e os postos nos locais dos demais postos para complementar as previsões de vazões para todo o SIN.\n\n…\n\nCom a adoção da nova topologia D3, ocorreram algumas mudanças nos postos. Por exemplo, para obter a ENA do REE de ITAIPU, são utilizadas as vazões incrementais (verificadas, estimadas e previstas) dos reservatórios de Jupiá (45/245), Porto Primavera (46/246), Taquaruçu (62), Rosana (63) e Itaipu (66/266). De forma a facilitar a reprodutibilidade deste cálculo, o somatório destas vazões incrementais é disponibilizado no arquivo PREVS através do posto 166.",
+      "source_domain": "monolitonimbus.com.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ana.gov.br/sar/descricao-sar",
+      "title": "DESCRIÇÃO SAR",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www2.ons.org.br/%2FMPO%2FDocumento%20Normativo%2F2.%20Cadastros%20de%20Informa%C3%A7%C3%B5es%20Operacionais%20-%20SM%205.11%2F2.3.%20Cadastros%20de%20Informa%C3%A7%C3%B5es%20Operacionais%20Hidr%C3%A1ulicas%2FCD-OR.PR.IGU_Rev.41.pdf",
+      "title": "CD-OR.PR.IGU - Cadastro de Informações Operacionais ...",
+      "snippet": "os reservatórios dessa Bacia Hidrográfica, necessárias às ações de coordenação, supervisão e controle \ndos Centros de Operação do ONS para a operação hidráulica desse Sistema de Reservatórios.\n2.2.\nOs operadores dos Centros de Operação do ONS, nas ações de coordenação, supervisão e controle,\n\n…\n\n4.1.1.3.\nOutras Restrições\nNada consta.\n4.1.2.\nInformações Operativas Relevantes (IOR)\nIOR 1 – Taxa Máxima de Variação das Defluências\nRecomenda-se adotar as seguintes taxas referenciais de variação máxima de defluência:\n\n…\n\nNão há.\n4.2.2.\nInformações Operativas Relevantes (IOR)\nIOR 1 – Taxa Máxima de Variação das Defluências\nRecomenda-se adotar as seguintes taxas referenciais de variação máxima de defluência:\n•\nQD ≤ 2.000 m3/s → Taxa Máxima de Variação da Defluência = 600 m³/s/h;\n\n…\n\n41\n2.3.\n16/12/2025\nReferência: RT-CD.OR.01 – Rev. 02\n12 / 39\n4.6.2.\nInformações Operativas Relevantes (IOR)\nIOR 1 – Taxa Máxima de Variação das Defluências\n\n…\n\nIOR 2 – Taxa Máxima de Variação das Defluências\nRecomenda-se adotar as seguintes taxas referenciais de variação máxima de defluência:\n•\nQD ≤ 2.000 m3/s → Taxa Máxima de Variação da Defluência = 600 m³/s/h;",
+      "source_domain": "www2.ons.org.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://progestao.ana.gov.br/portal/progestao/progestao-1/acompanhamento-programa/aplicacao-dos-recursos/acompanhamento-das-metas-de-cooperacao-federativa/manuais-de-salas-de-situacao/manual-de-operacao-da-sala-de-situacao_rr-1.pdf",
+      "title": "+d A N A",
+      "snippet": "",
+      "source_domain": "progestao.ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://progestao.ana.gov.br/destaque-superior/eventos/webinarios/cotas-de-alerta/1-monitoramento.pdf",
+      "title": "Monitoramento de Rios e Reservatórios",
+      "snippet": "Uso dos Dados\n\nSérie de dados\n• Dados históricos (diários, bi-diários)\n• Dados telemétricos (horário, 15min.)\n• Dados de radar (não usamos na ANA)\n• Utilizados para nowcasting e flashflood (previsão de \nchuva de curto prazo e previsão de cheias \nrepentinas)\n• Dados de satélite\n• HidroSAT é para séries não contínuas, dados \nhistóricos, e somente para rios de grande porte",
+      "source_domain": "progestao.ana.gov.br",
+      "track_origin": "n2_operacao_reservatorios_ons_sar",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/ana-lanca-aplicativo-gratuito-com-dados-de-rios-e-chuvas-em-todo-o-brasil",
+      "title": "ANA lança aplicativo gratuito com dados de rios e chuvas em todo o ...",
+      "snippet": "Ao dar um zoom, aparecem as estações em suas localizações exatas e com ícones que indicam se elas são fluviométricas (monitoram nível e vazão de rios) e/ou pluviométricas (acompanham chuvas).\n...\nTambém há um filtro que permite ao usuário encontrar as estações que pretende consultar por tipo (fluviométrica ou pluviométrica), estado, município, bacia hidrográfica, rio, entidade responsável ou operadora de cada PCD.\n...\nOutra funcionalidade é a busca digitando o nome da estação, rio ou município onde está a PCD.\n...\nO Hidroweb também pode ser acessado por meio de computadores pelo link http://www.snirh.gov.br/hidroweb/publico/mapa_hidroweb.jsf.\n...\nPara visualizar dados telemétricos (em tempo real) da Rede, acesse: http://gestorpcd.ana.gov.br/Mapa.aspx.",
+      "source_domain": "gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ana.gov.br/telemetria1ws/EstacoesTelemetricas.aspx",
+      "title": "Consulta as estações telemétricas",
+      "snippet": "Para aqueles que desejam continuar a acessar de forma automatizada os dados hidrometeorológicos\ndisponíveis em nossa base de dados, solicitamos que entrem em contato através dos seguintes\nendereços de email: hidro@ana.gov.br ou telemetria@ana.gov.br.",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://progestao.ana.gov.br/progestao-1/informes-progestao/informes/informes-2024/anexos-informe-complementar-02-2024/progestao_3_meta_i-6_inventario_estacoes_orgaos_estaduais_atualizado_05_12_2024.xlsx",
+      "title": "Inventário de Estações",
+      "snippet": "",
+      "source_domain": "progestao.ana.gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/arquivos/infohidrologicas/cadastro/OrientacoesParaOperacaoDeEstacoesHidrometricas-VersaoJun12.pdf",
+      "title": "PDF Orientações para operação da rede hidrométrica",
+      "snippet": "",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://portal1.snirh.gov.br/server/rest/services/dados_abertos/Estacao_Fluviometrica/FeatureServer",
+      "title": "dados_abertos/Estacao_Fluviometrica (FeatureServer)",
+      "snippet": "",
+      "source_domain": "portal1.snirh.gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.scielo.br/j/sn/a/jQSnLRKrRypfvm5nZWmKtxr",
+      "title": "308",
+      "snippet": "Os dados foram obtidos do site da ANA \n(Agência Nacional de Águas) no Sistema de \nInformações Hidrológicas (HidroWeb).\nEsse \nendereço \neletrônico \né \numa \nferramenta \nintegrante do Sistema Nacional de Informações \nsobre Recursos Hídricos (SNIRH), em que é\ndisponibilizado o acesso ao banco de dados \nreferente às informações coletadas pela Rede \nHidrometeorológica Nacional (RHN).\nPara a \nverificação do conjunto de dados disponíveis \n(precipitação, cota, vazão e qualidade da água), \nfez-se uma pesquisa verificando as estações\npluviométricas, fluviométricas e de qualidade \nda água locadas na respectiva bacia, Figura 3.\n...\nquatro \napresentam dados disponíveis para download,\nconforme Tabela 1.",
+      "source_domain": "scielo.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/d5782d0b-bfe8-4a42-a0f5-f1d2c99d98b1/formatters/xml",
+      "title": "[XML] https://metadados.snirh.gov.br/geonetwork/srv/api/records ...",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://files.abrhidro.org.br/Eventos/Trabalhos/237/XVII-SRHNE0384-2-0-20240812-162918.pdf",
+      "title": "[PDF] xvii simpósio de recursos hídricos do nordeste",
+      "snippet": "",
+      "source_domain": "files.abrhidro.org.br",
+      "track_origin": "n2_hidrologia_ana_hidroweb_parana_grande_paranaiba_tiete_sucuriu",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.mpsp.mp.br/portal/page/portal/cao_urbanismo_e_meio_ambiente/biblioteca_virtual/bv_informativos_tecnicos/Relat%C3%B3rio%20Anual.pdf",
+      "title": "CETESB",
+      "snippet": "Na Bacia do Alto Tietê, o relatório apresenta uma análise do regime de chuvas e vazões de\noperação do sistema Tietê-Billings, possibilitando assim uma melhor compreensão da\ninfluência das chuvas na qualidade das águas da Região Metropolitana de São Paulo.\nA CETESB está cumprindo o seu papel institucional ao produzir tais informações, subsidiando",
+      "source_domain": "mpsp.mp.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://cetesbhomolog.sp.gov.br/infoaguas",
+      "title": "Infoáguas",
+      "snippet": "O Sistema INFOÁGUAS é uma ferramenta de acesso publico para consultas sobre diversas informações sobre qualidade das águas brutas e assuntos de interesse sobre a Gestão de Recursos Hídricos do Estado de São Paulo. A CETESB, ao longo dos anos vem consolidando suas bases de dados sobre a qualidade das águas superficiais (rios, lagos e reservatórios) e subterrâneas (sistemas aquíferos), condição de saneamento básico dos municípios e localização dos principais empreendimentos licenciados que lançam efluentes tratados em rios ou redes coletoras.\n\n…\n\n**QUALIDADE DAS ÁGUAS SUPERFICIAIS E SUBTERRÂNEAS**\n\nA CETESB monitora as águas de diversos rios, reservatórios e aquíferos subterrâneos para determinar suas características físicas e químicas e compara-las aos padrões de qualidade estabelecidos para cada tipo de uso dos recursos hídricos. Os dados obtidos pela CETESB ao longo dos anos podem ser consultados por meio do INFOÁGUAS de duas formas:",
+      "source_domain": "cetesbhomolog.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.comitetb.sp.gov.br/download/servico/deliberacao/RS%202023-2024%20TB%20vers%C3%A3o%20final%2006%20dez%202024.pdf",
+      "title": "RELATÓRIO DE SITUAÇÃO",
+      "snippet": "Tietê-Paraná) \nAquíferos livres CETESB,2016 \nBauru e Serra Geral \nPrincipais mananciais \nsuperficiais CBH-TB, 2015 \nRios Tietê, Dourado, São Lourenço; Nascentes do Rio Batalha e do\n\n…\n\nDados do IPAS da UGRHI-16 foram obtidos a partir dos Boletins 2021, 2022 e 2023 – Qualidade das \nÁguas Subterrâneas no Estado de São Paulo, divulgado pela CETESB.  \n \n              \n \n \n       \n \n \n \nIPAS (%)\n\n…\n\npontos da rede de monitoramento básico da CETESB. O monitoramento com avaliações das variáveis \nquímicas, físicas e biológicas dos corpos d’água indica condição “ótima” (IQA > 79) para 2 pontos na \ncalha do Rio Tietê; condição “boa” (51 < IQA ≤ 79) para 7 pontos (2 no Rio Batalha, 1 no Rio Dourado, 1\n\n…\n\nO único ponto de monitoramento da CETESB que determina o Índice de Qualidade da Água bruta para \nfins de abastecimento – IAP 2023, junto a captação superficial do DAE Bauru, no Rio Batalha, apresenta \níndice “bom” neste ponto.\nPara o Indicador de Potabilidade",
+      "source_domain": "comitetb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://sigrh.sp.gov.br/public/uploads/events/CBH-SMT/4568/prognstico-parteii-verso-2.pdf",
+      "title": "2.5 Qualidade das Águas",
+      "snippet": "Neste item são apresentadas inferências acerca da tendência de evolução da qualidade \ndas águas superficiais e subterrâneas. Para tanto, buscou-se informações constantes \nnos documentos produzidos pela Fundação Agência de Bacia Hidrográfica do Rio \nSorocaba e Médio Tietê e nas publicações da CETESB.\n\n…\n\nDiagnóstico.  \nForam utilizadas ainda as informações que constam do relatório de qualidade das águas \ninteriores no estado de São Paulo, publicado pela CETESB em 2017, onde constam os \nresultados do monitoramento realizado em 2016. \nDe forma a subsidiar a avaliação das tendências de evolução foram avaliados os índices\n\n…\n\nAnalisando esses dados foi possível identificar os pontos onde se concentra os maiores \nproblemas em relação a esse índice.  \nOs pontos situados no rio Tietê, inseridos nas sub-bacias do Médio Tietê Superior \n(TIT02350, TIRG02900), Médio Tietê Médio (TIT02400) e Médio Tietê Inferior (TIT0450)\nforam os que apresentaram maior número de valores de IQA enquadrados nas \ncategorias Ruim e Péssima. A qualidade das águas nesses pontos do rio Tietê é \nfortemente influenciada pela carga poluidora oriunda da Região Metropolitana de São \nPaulo, e seus afluentes na margem direita, rios Jundiaí e Capivari.",
+      "source_domain": "sigrh.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/entities/livros/c71fb96e-86c6-40be-8040-8d31ac0431ed",
+      "title": "Qualidade das �guas interiores no estado de S�o Paulo 2021",
+      "snippet": "Apêndice C – Significado ambiental e sanitário das variáveis de qualidade das águas e dos sedimentos metodologias analíticas e de amostragem Apêndice D – Relação das variáveis por ponto de amostragem – 2021 Apêndice E – Índice de Qualidade das Águas\n\n…\n\nAbrangência Espacial do Monitoramento – IAEM Apêndice J – Dados de saneamento por município – 2021 Apêndice K – Porcentagem de resultados não conformes para a Classe 2 e por classe atual de enquadramento por ponto de monitoramento - 2021 Apêndice\nL – Resultados do Monitoramento – 2021 Apêndice M – Média Anual dos Índices de Qualidade (2016 a 2021) Apêndice N – Dados Brutos das variáveis de Água e Sedimento – 2021 Apêndice O – Perfis de Oxigênio",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/qualidade-da-agua",
+      "title": "Rede Nacional de Monitoramento de Qualidade da Água",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/server/api/core/bitstreams/5380522b-44ba-41c6-b530-99147e5fe132/content",
+      "title": "[PDF] qualidade das águas interiores no estado de são paulo - Cetesb",
+      "snippet": "",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://intertox.com.br/relatorio-anual-de-qualidade-das-aguas-interiores-do-ano-de-2022-e-publicado-pela-cetesb",
+      "title": "RELATÓRIO ANUAL DE QUALIDADE DAS ÁGUAS INTERIORES ...",
+      "snippet": "Publicado em 22/09/2023 (dia do Rio Tietê) o relatório traz o panorama do monitoramento das ações contínuas e programas de saneamento das águas interiores do estado. O programa de monitoramento, gerenciado pela CETESB, foi criado no ano de 1974. São monitorados pontos nas vinte e duas unidades de gerenciamento de recursos hídricos – UGRHIs do estado e os dados servem para dar bases para o funcionamento da rede de monitoramento e avaliação dos corpos hídricos e obter diagnóstico dos usos múltiplos dos recursos hídricos.\n\n…\n\nAs maiores porcentagens de eutrofização foram encontradas nas UGRHIs 5 (Piracicaba/Capivari/Jundiaí), 6 (Alto Tietê), 10 (Sorocaba/Médio Tietê) e 16 (Tietê/Batalha), sendo as variáveis de Fósforo Total, Clorofila e Número de Células de Cianobactérias as mais expressivas, como foi o caso identificado nos reservatórios de Barra Bonita, Ibitinga e Promissão.",
+      "source_domain": "intertox.com.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/server/api/core/bitstreams/b097b859-fd38-444d-9be9-28abdab21a3a/content",
+      "title": "Apêndice L - Resultados do Monitoramento - 2021",
+      "snippet": "",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/handle/123456789/2107",
+      "title": "Relatório de qualidade das águas interiores do estado de ...",
+      "snippet": "##### DescriçãoA publicação disponível na internet conta com 1 anexo (legislações) + 7 apêndices: significado ambiental e sanitário das variáveis de qualidade das águas e dos sedimentos e metodologias analíticas e de amostragem; índices de qualidade das águas; tabela de pontos por município e tabela de pontos por sistema hídrico; resultados dos parâmetros e indicadores de qualidade das águas; discriminação dos dados de balneabilidade 2008; perfis de temperatura e oxigênio dissolvido; mortandade de peixes.",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/qualidade-da-agua/programa-qualiagua/sp/NOTATECNICACERTIFICAO4P_CETESB_SP.pdf",
+      "title": "Nota Técnica nº 73/2019/SGH",
+      "snippet": "Cubatão – LAB_12 e Taubaté – LAB_21. \n28. \nOs Certificados atestam a participação dos Laboratório da CETESB com um \nquantitativo de parâmetros de 9 a 26 parâmetros de qualidade, dependendo do laboratório. \n29. \nTodos os Laboratórios da CETESB obtiveram desempenho Satisfatório no quesito",
+      "source_domain": "gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://simqua.cetesb.sp.gov.br/webgis/inicio",
+      "title": "Situação atual",
+      "snippet": "",
+      "source_domain": "simqua.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.sigrh.sp.gov.br/public/uploads/ckfinder/files/Produto_2_Enquadramento(3).pdf",
+      "title": "[PDF] Relatório Preliminar - sigrh@sp",
+      "snippet": "",
+      "source_domain": "sigrh.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://teses.usp.br/teses/disponiveis/6/6143/tde-14062019-142523/publico/SammilaAndradeAbdala_ORIGINAL_MTR2388.pdf",
+      "title": "[PDF] UNIVERSIDADE DE SÃO PAULO FACULDADE DE SAÚDE PÚBLICA PROGRAMA DE MESTRADO EM SAÚDE PÚBLICA EVOLUÇÃO DA QUALIDADE DAS ÁGU",
+      "snippet": "",
+      "source_domain": "teses.usp.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://cetesbhomolog.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2020/09/Apendice-H-Aspectos-Quantitativos-das-redes-de-monitoramento.pdf",
+      "title": "[PDF] Apêndice H - CETESB",
+      "snippet": "26\n2\n5\n0\n33\nNa UGRHI 6 - Alto Tietê, os principais mananciais urbanos da RMSP apresentaram 43 pontos de todos \nos tipos de monitoramento da CETESB, destacando-se os Reservatórios de Guarapiranga, Rio Grande e Billings.\nNo Reservatório de Guarapiranga e seus afluentes amostrou-se 20 pontos, ao passo que, no conjunto do \nReservatório Billings, Braço do Taquacetuba e Ribeirão Pires, 12 pontos. Já o Sistema do Rio Grande, também \ncontou com os 4 tipos de monitoramento possíveis, abrangeu 11 pontos, sendo 5 da rede básica, 1 de sedi­\n\n…\n\n1\nReservatório Taiçupeba + Afluentes \n3\n0\n1\n0\n4\nNa região metropolitana de São Paulo (UGHRI 6–Alto Tiete) os Rios Pinheiros e Tamanduateí, atraves­\nsam áreas bastante urbanizadas e contam com 5 e com 4 pontos respectivamente. O detalhe do monitora­\nmento do Rio Pinheiros e seus afluentes podem ser visto na tabela 5.\n\n…\n\na vazão do Rio Paraíba, além de proporcionar atividades de lazer. A rede básica possui também pontos nos \nrios Jaguari, Paraitinga e Paraibuna, em áreas de classe especial, formadoras destes mananciais, mantidos em \ncolaboração com a CESP.\nA tabela 6 apresenta a distribuição dos 32 pontos distribuídos ao longo da calha principal do Rio \nParaíba do Sul, bem como nos reservatórios de suas cabeceiras e principais afluentes monitorados:",
+      "source_domain": "cetesbhomolog.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://cms.sosma.org.br/wp-content/uploads/2023/09/SOSMA-2023-Observando-o-Tiet%C3%AA.pdf",
+      "title": "[PDF] Observando o Tietê 2023 - SOS Mata Atlântica",
+      "snippet": "8\nVoltar para índice\nOBSERVANDO O TIETÊ 2023\nEste relatório apresenta a evolução dos indicadores de qualidade da \nágua na bacia hidrográfica do rio Tietê, o maior rio paulista, com base \nnos dados do monitoramento mensal realizado por grupos voluntários \nintegrantes do programa Observando os Rios, em 59 pontos de coleta,\n\n…\n\nlocalizados na capital, em afluentes na bacia do Alto Tietê: um no córrego \nSão José e um no córrego Jacu, e em três pontos no rio Pinheiros.\nO Índice de Qualidade de Água bom é fundamental para promover a \nsegurança hídrica no estado de São Paulo. A qualidade regular, embora\n\n…\n\n(SMT) e Piracicaba-Capivari-Jundiaí (PCJ), que correspondem à metade \nda Bacia Hidrográfica do Rio Tietê. \nOs dados obtidos da média do Índice de Qualidade da Água (IQA) neste \nciclo de análises mostram que, dos 59 pontos de coleta analisados por",
+      "source_domain": "cms.sosma.org.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://bdta.abcd.usp.br/directbitstream/876668af-e7a0-43fc-a818-f148ebdf969a/2018_MarciaTerezinhaBazzo_TGI.pdf",
+      "title": "UNIVERSIDADE DE SÃO PAULO",
+      "snippet": "8 \n \n           A Cetesb – Companhia Ambiental do Estado de São Paulo, monitora a \nqualidade das águas através de índices que medem vários parâmetros, descritos \nna sequência. \n           Os índices que vão ser utilizados neste trabalho são IQA, IAP, IET e IVA.  \n           O ponto a ser avaliado é o foco do nosso estudo:",
+      "source_domain": "bdta.abcd.usp.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/server/api/core/bitstreams/082c95e3-2e0b-424c-bbec-fab8c4aa8c00/content",
+      "title": "[PDF] qualidade das águas interiores no estado de são paulo - Cetesb",
+      "snippet": "CETESB   COMPANHIA DE TECNOLOGIA DE SANEAMENTO  AMBIENTA \n \n \nQUALIDADE DAS ÁGUAS INTERIORES \nNO ESTADO DE SÃO PAULO \n \nSÉRIE RELATÓRIOS  \n \n \n \n \nAPÊNDICE B \n \n \n \n \n \n \n \nÍNDICES DE QUALIDADE DAS ÁGUAS, \n \nCRITÉRIOS DE AVALIAÇÃO DA QUALIDADE DOS \nSEDIMENTOS \nE  \nINDICADOR DE CONTROLE DE FONTES \n \n \n \n \n \n2008\n1 \n \nÍNDICE \n \nPágina \n1. Índices de qualidade das águas ............................................................. 2 \n2. IQA - Índice de Qualidade das Águas .................................................... 3 \n3. IAP - Índice de Qualidade das Águas Brutas para Fins de \nAbastecimento Público........................................................................... 6\n\n…\n\nacompanhamento de seus efeitos. Esta dupla vertente, apresenta-se como um desafio \npermanente de gerar indicadores e índices que tratem um número cada vez maior de \ninformações, de forma sistemática e acessível, para os tomadores de decisão. \nNessa linha, a CETESB utiliza desde 1975, o Índice de Qualidade das Águas – IQA, com\nvistas a servir de informação básica de qualidade de água para o público em geral, bem \ncomo para o gerenciamento ambiental das 22 Unidades de Gerenciamento dos Recursos \nHídricos do Estado de São Paulo. \nAs principais vantagens do índice são a facilidade de comunicação com o público leigo, o \nstatus maior do que as variáveis isoladas e o fato de representar uma média de  diversas\n\n…\n\ndeterminada bacia hidrográfica. \nAs variáveis de qualidade, que fazem parte do cálculo do IQA, refletem, principalmente, a \ncontaminação dos corpos hídricos ocasionada pelo lançamento de esgotos domésticos. É \nimportante também salientar que este índice foi desenvolvido para avaliar a qualidade das\náguas, tendo como determinante principal a sua utilização para o abastecimento público, \nconsiderando aspectos relativos ao tratamento dessas águas. \nA crescente urbanização e industrialização de algumas regiões do Estado de São Paulo \ntem como conseqüência um maior comprometimento da qualidade das águas dos rios e \nreservatórios, devido, principalmente, à maior complexidade de poluentes que estão\n\n…\n\n3 \nDesde 2002, a CETESB utiliza índices específicos para cada uso do recurso hídrico: IAP - \nÍndice de Qualidade de Águas Brutas para Fins de Abastecimento Público e o IVA - Índice \nde Preservação da Vida Aquática. \nO IAP, comparado com o IQA, é um índice mais fidedigno da qualidade da água bruta a\n\n…\n\nque ambos os índices poderão ser aprimorados com o tempo, com a supressão ou \ninclusão de variáveis de interesse. \nPara refletir a qualidade das águas para seus múltiplos usos, tem-se, ainda o índice de \nBalneabilidade, que avalia as condições da água para fins de recreação de contato\nprimário. \nAssim, a avaliação da qualidade das águas é composta pelos Índices: \n- Qualidade de Águas Brutas para Fins de Abastecimento Público (IAP);  \n- Preservação da Vida Aquática (IVA); \n- Balneabilidade (IB). \n \n \n2. IQA – Índice de Qualidade das Águas\nA partir de um estudo realizado em 1970 pela “National Sanitation Foundation” dos \nEstados Unidos, a CETESB adaptou e desenvolveu o IQA – Índice de Qualidade das \nÁguas que incorpora nove variáveis consideradas relevantes para a avaliação da \nqualidade das águas, tendo como determinante principal a sua utilização para\nabastecimento público. \nA criação do IQA baseou-se numa pesquisa de opinião junto a especialistas em qualidade \nde águas, que indicaram as variáveis a serem avaliadas, o peso relativo e a condição com \nque se apresenta cada parâmetro, segundo uma escala de valores “rating”. Das 35\n\n…\n\ninviabilizado. \nA partir do cálculo efetuado, pode-se determinar a qualidade das águas brutas, que é \nindicada pelo IQA, variando numa escala de 0 a 100, representatado na tabela 1.\n\n…\n\nPÉSSIMA \nIQA  19 \n \n \n3. IAP - Índice de Qualidade das Águas Brutas para Fins de Abastecimento Público \nO IAP é o produto da ponderação dos resultados atuais do IQA (Índice de Qualidade de \nÁguas) e do ISTO (Índice de Substâncias Tóxicas e Organolépticas), que é composto pelo\ngrupo de substâncias que afetam a qualidade organoléptica da água, bem como de \nsubstâncias tóxicas. Assim, o índice será composto por três grupos principais de \nvariáveis: \nIQA – grupo de variáveis básicas (Temperatura da Água, pH, Oxigênio Dissolvido,\n\n…\n\npotencial de formação de trihalometanos, para os metais que compõem o ISTO, refletem \nas seguintes condições de qualidade da água bruta destinada ao abastecimento público: \n \nValor medido  LI: águas adequadas para o consumo humano. Atendem aos padrões de \npotabilidade da Portaria 518/04 do Ministério da Saúde em relação às variáveis avaliadas.\n\n…\n\ntrihalometanos na água tratada, para isso foram utilizados valores médios de 1997 a \n2002, de ambas as variáveis, considerando os mananciais do Guarapiranga, Rio Grande, \nCantareira, Baixo Cotia, Alto Cotia e Alto Tietê.\n\n…\n\n52 < P ≤ 120 11,03 < CL ≤ 30,55 \nSupereutrófico \n63 < IET ≤ 67 \n0,8 > S ≥ 0,6 \n120 < P ≤ 233 30,55 < CL ≤ 69,05 \nHipereutrófico \n       IET> 67 \n0,6 > S  \n233 < P \n69,05 < CL \n \nA classificação do IET é apresentada na Tabela 7.\n\n…\n\nsurfactantes e fenóis).  Neste grupo foram incluídas as variáveis que são atualmente \navaliadas pela Rede de Monitoramento de Qualidade das Águas Interiores do Estado de \nSão Paulo e que identificam o nível de contaminação por substâncias potencialmente \ndanosas às comunidades aquáticas. Poderão ser incluídas novas variáveis que venham a \nser consideradas importantes para a avaliação da qualidade das águas, mesmo em nível \nregional.",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.saaesp.sp.gov.br/wp-content/uploads/2025/01/RELAT%C3%93RIO-ANUAL-DE-QUALIDADE-DA-%C3%81GUA-_Oficial_-SITE.pdf",
+      "title": "[PDF] relatório anual de qualidade da água 2024 - Saaesp",
+      "snippet": "Córrego do Tucunz\nSamambaia. Estes Ribeirões com suas nascentes localizadas dentro do município de \nSão Pedro, são corpos d’água classe 2 (águas destinadas ao abastecimento público \napós tratamento convencional), \nCapivari e Jundiaí (exceto o Afluente do Córrego dos Coqueiros que pertence a Bacia\n\n…\n\nIdentificações dos mananciais de abastecimento \nCaptações Superficiais: Córrego Pinheiros, Ribeirão Samambaia, Ribeirão do Meio, \nCórrego do Tucunzinho, Afluente do Córrego dos Coqueiros e Afluente do Ribeirão \nSamambaia. Estes Ribeirões com suas nascentes localizadas dentro do município de\nSão Pedro, são corpos d’água classe 2 (águas destinadas ao abastecimento público \napós tratamento convencional), pertencentes à bacia hidrográfica dos Rios Piracicaba, \nCapivari e Jundiaí (exceto o Afluente do Córrego dos Coqueiros que pertence a Bacia\ndo Tietê-Jacaré). O órgão responsável pelo monitoramento da qualidade das águas \ninteriores é a Companhia de Tecnologia de Saneamento Ambiental – CETESB e os \ngestores dos recursos hídricos federais e estaduais são, respectivamente, a Agência \nNacional das Águas e Saneamento Básico – ANA e o Departamento Estadual de Águas",
+      "source_domain": "saaesp.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://datageo.ambiente.sp.gov.br/geoportal/catalog/search/resource/details.page",
+      "title": "IQA - Índice de Qualidade de Água 2010",
+      "snippet": "As informações utilizadas para o cálculo do IQA estão disponíveis no Relatório de Qualidade das Águas Superficiais (http://aguasinteriores.cetesb.sp.gov.br/wp-content/uploads/sites/32/2013/11/Ap%C3%AAndice-C-%C3%8Dndices-de-Qualidade-das-%C3%81guas-.pdf) e também no Sistema de Informações INFOÁGUAS (http://www.cetesb.sp.gov.br/agua/infoaguas/).",
+      "source_domain": "datageo.ambiente.sp.gov.br",
+      "track_origin": "n3_qualidade_agua_cetesb_ana_infoaguas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ana.gov.br/atlasesgotos/Release.Atlas.Esgotos.pdf",
+      "title": "Atlas Esgotos revela mais de 110 mil km de rios com ...",
+      "snippet": "O Atlas Esgotos: Despoluição de Bacias Hidrográficas revela que menos da metade (42,6%) \ndos esgotos do País é coletada e tratada.\n...\nNa terça-feira, dia 26/9 às 16 \nhoras, haverá uma solenidade de lançamento do Atlas na sede da ANA, em Brasília, \nquando as informações de cada um dos 5.570 municípios serão disponibilizadas no Sistema\nNacional de Informações de Recursos Hídricos (Snirh).\n...\nA partir de terça-feira, às 16 horas, também estarão disponíveis um hotsite, uma animação\nsobre o estudo e as fichas com as informações de cada um dos 5.570 municípios para \nconsulta.",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.sigrh.sp.gov.br/public/uploads/documents/6980/cap7pg161a206.pdf",
+      "title": "[PDF] 7.4 Fontes de Poluição 7.4.1 Fontes Pontuais ou Fixas - SigRH",
+      "snippet": "",
+      "source_domain": "sigrh.sp.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.ana.gov.br/atlasesgotos",
+      "title": "Atlas Esgotos",
+      "snippet": "A Agência Nacional de Águas (ANA) e a Secretaria Nacional de Saneamento Ambiental apresentam:\nAqui você encontrará os principais destaques da publicação, que poderá ser\nacessada por meio do Sistema Nacional de Informações\nsobre Recursos Hídricos (SNIRH).\n...\nO Atlas Esgotos traz a análise da situação do esgotamento sanitário nas 5.570 cidades brasileiras\ne dos impactos do\nlançamento dos esgotos nos rios, lagos e reservatórios do País.\n...\nA ANA, em parceria com a Secretaria Nacional de Saneamento Ambiental do Ministério das Cidades,\nelaborou a publicação\ncom embasamento técnico e estratégico, para que os setores de recursos hídricos e de saneamento\ntenham à disposição\num documento de referência para subsidiar a tomada de decisão na gestão de recursos hídricos e\n...\n**Caracterizar** a situação do esgotamento sanitário em todos os municípios brasileiros.",
+      "source_domain": "ana.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/mdr/pt-br/assuntos/saneamento/snis/diagnosticos-anteriores-do-snis/agua-e-esgotos-1/2019/2-Diagnstico_SNIS_AE_2019_Republicacao_31032021.pdf",
+      "title": "[PDF] 25º Diagnóstico dos Serviços de Água e Esgotos - Portal Gov.br",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.aguaesaneamento.org.br/municipios-e-saneamento/fontes-notas-tecnicas",
+      "title": "Fontes e Notas Técnicas | Municípios e Saneamento",
+      "snippet": "SINISA 2024 Abastecimento de água 5.144*\nSINISA 2024 Esgotamento sanitário 3.903\nSINISA 2024 Águas pluviais 4.845\nSINISA 2024 Resíduos sólidos 4.854\nCENSO 2022 5.570\n...\n### AS PRINCIPAIS FONTES DE DADOS UTILIZADASS PRINCIO SINISA Sistema Nacional de Informações em Saneamento Básico, instituído pela Lei nº 11.445/2007 e atualizado pela Lei nº 14.026/2020, sucedeu o SNIS (Sistema Nacional de Informações sobre Saneamento) a partir de 2024.\nEle coleta e divulga dados sobre os quatro componentes do saneamento básico: abastecimento de água, esgotamento sanitário, limpeza urbana e manejo de resíduos sólidos, e drenagem e manejo das águas pluviais urbanas, e o módulo de Gestão Municipal, que investiga a gestão do saneamento nos municípios.\n...\nAs informações referentes a cada um dos quatro componentes do saneamento variam significativamente em termos de qualidade dos dados, indicadores disponíveis, número de municípios contribuintes, extensão da série histórica (desde o início da coleta) e órgãos responsáveis pela resposta.\nO sistema anterior, SNIS, possui série histórica de informações e indicadores que está disponível em uma plataforma para consulta e extração de dados em formato CSV.\nNa plataforma, podem ser encontrados os registros de dados de Água e Esgoto desde 1995 e Resíduos Sólidos, desde 2002.\nOs dados de Drenagem e Águas Pluviais não estão integrados à plataforma, mas no site do SNIS é possível acessar os diagnósticos anteriores, feitos em 2015 e a partir de 2017 com periodicidade anual.\n...\n### OUTRAS FONTES DE DADOS IMPORTANTES SOBRE SANEAMENTOibidem).O relatório Atlas Esgotos foi elaborado pela ANA com a colaboração de entidades como Ministério das Cidades e FUNASA, e concluído em 2017.\nCom abrangência nacional, retrata a situação dos municípios brasileiros diante das condições de esgotamento sanitário nas sedes municipais.\nO estudo não abrange população rural.\nAs informações, levantadas em 2013, foram obtidas de duas formas: levantamento de dados primários junto a prestadores de serviço (envolvendo visitas de campo e reuniões) para municípios com prestadores de serviço institucionalizados e/ou população acima de 50.000 habitantes; e utilização de dados secundários (SINISA, Censo demográfico, PNSB, PNAD) para municípios com menos de 50.000 habitantes com serviços a cargo da prefeitura, que constituem 88% do total de municípios.\n...\nO Atlas foi elaborado em 2010 pela Agência Nacional de Águas (ANA) no âmbito do Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH).\nConsolida um amplo trabalho de diagnóstico e planejamento nas áreas de recursos hídricos e saneamento no Brasil, com foco na garantia da oferta de água para o abastecimento das sedes urbanas em todo o país.",
+      "source_domain": "aguaesaneamento.org.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://biblioteca.ana.gov.br/sophia_web/Acervo/Detalhe/72208",
+      "title": "Atlas esgotos : despoluição de bacias hidrográficas",
+      "snippet": "# Atlas esgotos : despoluição de bacias hidrográficas\nAgência Nacional de Águas, Secretaria Nacional de Saneamento Ambiental\nLivro\nPortuguês\n9788582100509\n628.2(084.4) A265a\nBrasília : ANA, 2017.\n88 p.\n: il.\n; 30 cm.\nÉ possível acessar a versão offline do hotsite do Atlas Esgotos clicando no arquivo \"index.html\" disponível neste registro em \"conteúdo digital\".",
+      "source_domain": "biblioteca.ana.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://aris.sc.gov.br/uploads/pagina/2869/FABkI1dt01tZBuKV0EKVu4n79MVDPFrU.pdf",
+      "title": "Jupiá/SC",
+      "snippet": "De acordo com SNIS (2022), o município de Jupiá não possui os serviços de coleta e de \ntratamento de esgoto, adotando como alternativa o sistema do tipo individual, que são sistemas\n...\nSegundo o ATLAS de Saneamento da Agência Nacional de Águas - ANA, Quadro 3, o\nmunicípio possuía em 2013 aproximadamente 97,7% das edificações sem coleta e sem \ntratamento, com apenas 2,1% com soluções individuais adequadas, resultando em significativa \ngeração de carga de DBO e lançamento no meio ambiente sem tratamento prévio.",
+      "source_domain": "aris.sc.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/saneamento-basico/saneamento-basico-no-brasil/panorama-do-saneamento-no-brasil-1",
+      "title": "Panorama do Saneamento no Brasil — Agência Nacional de Águas ...",
+      "snippet": "",
+      "source_domain": "gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://repositorio.cetesb.sp.gov.br/server/api/core/bitstreams/d7c9193b-7d01-4098-89e0-5f9b67a955cc/content",
+      "title": "[PDF] É :'gd - Cetesb",
+      "snippet": "",
+      "source_domain": "repositorio.cetesb.sp.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://bibliotecadigital.cnj.jus.br/xmlui/handle/123456789/500",
+      "title": "Atlas esgotos: despoluição de bacias hidrográficas",
+      "snippet": "Assim surgiu o presente estudo, denominado ATLAS Esgotos: Despoluição de Bacias Hidrográficas, que se soma ao ATLAS Brasil: Abastecimento Urbano de Água, consolidado para todo o território nacional em 2011.\nAmbas são publicações que tratam da interface saneamento e recursos hídricos, com o intuito de qualificar a tomada de decisão e orientar o desenvolvimento de ações e a aplicação dos recursos financeiros do setor de saneamento com a visão da bacia hidrográfica e do uso sustentável dos recursos hídricos.",
+      "source_domain": "bibliotecadigital.cnj.jus.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/mma/pt-br/acesso-a-informacao/acoes-e-programas/programa-projetos-acoes-obras-atividades/agendaambientalurbana/programa-rios-limpos/programa-rios-mais-limpos_sqa.pdf",
+      "title": "MINISTÉRIO DO MEIO AMBIENTE",
+      "snippet": "minerais, colônias de microrganismos, proliferação de algas, entre outros; e as fontes artificiais\nque incluem o esgoto doméstico, efluentes industriais e comerciais, agrotóxicos e resíduos \nsólidos.\n...\nhttps://www.saude.gov.br/\n...\nhttp://www.snis.gov.br/\nhttps://dadosabertos.\nibama.gov.br/dataset/\nefluentes-liquidos\nhttp://atlasesgotos.ana.\ngov.br/\nhttp://www.tratabrasil.\norg.br/",
+      "source_domain": "gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://repositorio.unesp.br/server/api/core/bitstreams/c4aa98a5-c60d-41e8-b791-25365531e6a0/content",
+      "title": "LUCIENE GOMES",
+      "snippet": "",
+      "source_domain": "repositorio.unesp.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://smastr16.blob.core.windows.net/pesbsp/sites/258/2022/12/ri08a-h0r-rd-001-3-vf.pdf",
+      "title": "Relatório de",
+      "snippet": "",
+      "source_domain": "smastr16.blob.core.windows.net",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://sigrh.sp.gov.br/pageitems/450/news/2917",
+      "title": "ANA lança 'Atlas Esgotos: Despoluição de Bacias Hidrográficas",
+      "snippet": "A Agência Nacional de Águas (ANA) lançou na terça-feira, dia 26, o ‘\n**’, em sua sede na cidade de Brasília-DF.\nO documento apresenta o índice de coleta de tratamento dos esgotos e o percentual de remoção de carga orgânica em cada um dos 5.570 municípios, além de classificá-los em categorias segundo com a capacidade de diluição da carga recebida pelos respectivos corpos receptores (ilimitada, ótima, boa, regular, ruim, péssima ou nula).\nAtlas Esgotos: Despoluição de Bacias Hidrográficas**\nO Atlas ainda destaca os níveis de eficiência de tratamento requeridos para cada município e os caminhos para a estruturação institucional das prestadoras de serviços de coleta e tratamento de esgotos em todo País.",
+      "source_domain": "sigrh.sp.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.e-publicacoes.uerj.br/sustinere/article/download/48890/34324/180661",
+      "title": "Uso do Atlas Esgotos: Despoluição de Bacias Hidrográficas",
+      "snippet": "Inicialmente observa-se (Gráfico 1) que a maioria dos trabalhos científicos publicados \n(72%) adotam os dados do Atlas Esgotos apenas como citação e somente 5 trabalhos discorrem \nsobre o assunto e adotam os dados como fonte efetiva de consulta para desenvolvimento das\nsuas pesquisas.",
+      "source_domain": "e-publicacoes.uerj.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.epsjv.fiocruz.br/upload/Diagnostico_AE2014.pdf",
+      "title": "[PDF] SNIS - Diagnóstico dos Serviços de Água e Esgotos – 2014",
+      "snippet": "",
+      "source_domain": "epsjv.fiocruz.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://portal1.snirh.gov.br/arquivos/Atlas_Esgoto/Par%C3%A1/Relatorio_Geral/Brasil_Novo.pdf",
+      "title": "[PDF] ATLAS ESGOTOS Despoluição de Bacias Hidrográficas",
+      "snippet": "Despoluição de Bacias Hidrográficas",
+      "source_domain": "portal1.snirh.gov.br",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://ipabhi.org/serhidro/anais/anais2009/doc/pdfs/p30.pdf",
+      "title": "Microsoft Word - serhidro2009v3.doc",
+      "snippet": "de esgotos e efluentes.\nDe acordo com a CETESB (2009) a poluição das águas é gerada por \ntrês fatores: \n• \nefluentes domésticos (poluentes orgânicos biodegradáveis, nutrientes e bactérias); \n• \nefluentes industriais (poluentes orgânicos e inorgânicos, dependendo da atividade\nindustrial);\n• \ncarga difusa agrícola e urbana (poluentes advindos da drenagem destas áreas: \nfertilizantes, defensivos agrícolas, fezes de animais e material em suspensão).\n215",
+      "source_domain": "ipabhi.org",
+      "track_origin": "n3_poluicao_saneamento_efluentes_outorgas",
+      "track_priority": "high",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/planos-e-estudos-sobre-rec-hidricos/plano-de-recursos-hidricos-rio-paraguai/relatorio-final-de-diagnostico_qualidade-de-agua-e-hidrossedimentologia_parte2.pdf",
+      "title": "72",
+      "snippet": "De acordo com as comparações entre estimativas de cargas a jusante e montante dos \nbarramentos, os resultados indicaram tendência de retenção de sedimentos em suspensão nos \nnos EHs em operação na RHP, como mostra a Figura 35.\n...\nEntre os EHs \nanalisados na RHP, oito apresentam visível processo de assoreamento que pode ser observado\nem imagens de satélite ao longo do tempo (discutido abaixo), com a formação de depósitos de \nsedimentos em forma de deltas arenosos no início da área de remanso do reservatório do rio \nprincipal ou em afluentes, quais sejam: São Lourenço, Itiquira, Cambará, Casca II, Pequi, Sete",
+      "source_domain": "gov.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/planos-e-estudos-sobre-rec-hidricos/plano-de-recursos-hidricos-rio-paraguai/relatorio-final-de-diagnostico_qualidade-de-agua-e-hidrossedimentologia_parte1.pdf",
+      "title": "Programa C.5: Elaboração de Estudos de Avaliação dos ...",
+      "snippet": "Outra questão fundamental ao estudo refere-se ao transporte de sedimentos em suspensão, \nelemento importante para a estruturação de algumas formas fluviais, como as planícies de inundação, onde \nseu acúmulo em áreas de várzea ocorre de forma vertical.\nPor sua vez, o transporte de sedimentos no leito \né fundamental para a estruturação do canal fluvial (KONDOLF, 1995).\nAssociados aos sedimentos encontram-\nse elementos adsorvidos importantes para o funcionamento dos ecossistemas aquáticos.",
+      "source_domain": "gov.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://repositorio.utfpr.edu.br/jspui/bitstream/1/6883/3/CM_COEAM_2014_1_01.pdf",
+      "title": "UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ",
+      "snippet": "Quantificar e avaliar a descarga de sedimentos correlacionando as \ncaracterísticas hidrométricas e as características físicas do sedimento para as três \nsub-bacias do Rio Mourão, PR.",
+      "source_domain": "repositorio.utfpr.edu.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://seisicite.com.br/storage/seisicite-trabalhos-finais/862-e4e797af9bdec504c1dbf11cde73449923aa2cbdf478262ee9ae79824b0a944d.pdf",
+      "title": "[PDF] Monitoramento hidrossedimentológico dos processos ... - sei-sicite",
+      "snippet": "de 133,71 L s-1 e concentração média de sedimentos em suspensão de 0,10 g L -1.\n...\nA quantidade de \nsedimento que entrou no rio foi de 5,97 Mg km-2, por esse motivo a proteção do solo é indispensável.\n...\nhidrográfica do Rio Piancó-Piranhas-Açu.",
+      "source_domain": "seisicite.com.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://repositorio.ufu.br/bitstream/123456789/24816/1/EstudoTransporteSedimentos.pdf",
+      "title": "[PDF] ESTUDO DO TRANSPORTE DE SEDIMENTOS NA BACIA ... - UFU",
+      "snippet": "",
+      "source_domain": "repositorio.ufu.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://publicacoes.amigosdanatureza.org.br/index.php/forum_ambiental/pt_BR/article/download/126/128/248",
+      "title": "377",
+      "snippet": "RESUMO: O trabalho caracteriza-se pela análise espacial e sazonal da concentração de sedimentos em \nsuspensão e da distribuição granulométrica no leito em dez seções transversais distribuídas nos canais \nsecundários da Planície Fluvial do Alto Rio Paraná, através de seis amostragens com periodicidade sazonal.\n...\nEste trabalho consiste na análise granulométrica e de sedimentos em suspensão nos \ncanais secundários da planície fluvial do alto Rio Paraná que possibilitou avaliar os principais \nprocessos atuantes no canal, importantes na avaliação de processos erosivos e identificar os\nprocessos hidrodinâmicos que ocorrem sobre os ambientes da planície fluvial. Foi utilizado \nos resultados de seis amostras de analise granulométrica e de sedimentos em suspensão, \ncoletados nos canais secundários durante o ano de 2007 e 2008. \n...\nOs valores de sedimentos em suspensão (SST), apresentam variação de 1,4 a 49,8 \nmg/L, é importante ressaltar que houveram várias seções com alta concentração de SST,\n...\nOs baixos valores de sedimentos em suspensão evidenciam que o rio Paraná deve \nestar sofrendo diminuição de sua carga devido aos represamentos a montante (Porto",
+      "source_domain": "publicacoes.amigosdanatureza.org.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://periodicos.ufmg.br/index.php/geografias/article/download/26180/version/23576/20324",
+      "title": "Dinâmica hidrossedimentológica em ambiente fluvial ...",
+      "snippet": "",
+      "source_domain": "periodicos.ufmg.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.revistageociencias.com.br/geociencias-arquivos/36/volume36_1_files/36-1-artigo-12.pdf",
+      "title": "[PDF] COMPORTAMENTO HIDROSSEDIMENTOLÓGICO DE BACIA ...",
+      "snippet": "",
+      "source_domain": "revistageociencias.com.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://rigeo.sgb.gov.br/server/api/core/bitstreams/3e1bb9c4-82f7-4918-8dc5-5c9d5f31703d/content",
+      "title": "[PDF] Relatorio 2001 e 2002_Capa.cdr - RIGeo",
+      "snippet": "A metodologia de análise de consistência empregada neste relatório é resultado do trabalho realizado com as \nséries históricas das mesmas estações até o ano de 2000, que consta no relatório Análise de Consistência de \nDados Sedimentométricos de Qualidade da Água das Sub-bacias 40, 41, 42, 43, 44, 45, 54, 55, 56, 60 e 61,\n...\nA amostragem de sedimentos em suspensão foi efetuada pelo método de igual incremento de largura e  \nintegração por vertical (CARVALHO, 1994).\nO método analítico de filtração utilizado para a determinação da\nconcentração total de sedimento em suspensão é o estabelecido pelo United States Geological Survey (GUY, \n1969).\n...\n• cálculo da descarga sólida em suspensão e plotagem na curva-chave de sedimentos em suspensão.\n...\nO cálculo da descarga sólida em suspensão é feito através da equação: \nQss = 0,0864.Q.C \nEquação 5 \nonde \nQss : descarga sólida em suspensão , em ton/dia \nQ : vazão líquida, em m3/s\nC : concentração de sedimento em suspensão, em mg/L \n...\nOs dados de descarga líquida e descarga sólida de 2001 e 2002 foram lançados nas curvas-chave \njuntamente com dados até 2000.\nA equação de ajuste utilizada foi do tipo Y = aXn, sendo Y igual a Qss,  X a",
+      "source_domain": "rigeo.sgb.gov.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://dialnet.unirioja.es/descarga/articulo/7403070.pdf",
+      "title": "[PDF] Transporte de Nutrientes e sólidos suspensos na bacia do Rio ...",
+      "snippet": "",
+      "source_domain": "dialnet.unirioja.es",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/569087/1/bolpd134.pdf",
+      "title": "Diagnóstico Hidrossedimentológico da Bacia do Rio Piquiri.",
+      "snippet": "Foram identificados três trechos onde ocorre deposição de sedimentos na\n...\nO Rio Piquiri\ndespeja, em média, cerca de 5.000 t/dia de sedimentos em suspensão no Rio\nParaná.\nA produção específica de sedimentos em suspensão ao longo da Bacia\ndo Rio Piquiri foi classificada no intervalo de baixa a moderada, com valores\nentre 43 e 135 t/km²/ano e as concentrações de sedimentos, entre muito baixa e\nmoderada, com valores de 46 a 140 mg/L.\n...\nPara a realização deste estudo foram utilizados os dados fluviométricos e\nhidrossedimentométricos do banco de dados Hidro (HIDROWEB, 2002)  que\ndispõe de dados provenientes da rede hidrométrica nacional, sob gestão da\nAgência Nacional de Águas – ANA.",
+      "source_domain": "infoteca.cnptia.embrapa.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://monografias.ufop.br/bitstream/35400000/4220/11/MONOGRAFIA_ProvenienciaSedimentarAspectos.pdf",
+      "title": "UNIVERSIDADE FEDERAL DE OURO PRETO",
+      "snippet": "",
+      "source_domain": "monografias.ufop.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://docs.ufpr.br/~bleninger/dissertacoes/151-Guadalupe_Eugenia_Garcia.pdf",
+      "title": "Guadalupe Eugenia Garcia - Universidade Federal do Paraná",
+      "snippet": "",
+      "source_domain": "docs.ufpr.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.teses.usp.br/teses/disponiveis/18/18139/tde-24022016-112533/publico/TeseRenatoBilliaDeMiranda.pdf",
+      "title": "!Tese_Versão_Final_EESC",
+      "snippet": "diretamente pelo transporte e deposição de sedimentos.\nNo entanto, a maioria dos \nreservatórios nacionais não apresenta atualmente estudos hidrossedimentológicos consistentes \npara auxiliar seus gestores no planejamento e gerenciamento dos mesmos.\nUma das principais \n...\nmetodologias consolidadas na literatura técnica e acadêmica.\nEla permite que o usuário estime \nparâmetros hidrossedimentólogicos, como a descarga sólida total, o peso específico aparente, \na eficiência de retenção, além do volume assoreado e do tempo de vida útil de reservatórios.",
+      "source_domain": "teses.usp.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://transparencia.fundacaorenova.org/wp-content/uploads/2024/02/RTEC_Integrador_Hidrossed_FR_R3.pdf",
+      "title": "ESTUDOS DE TRANSPORTE DE SEDIMENTOS NA BACIA DO",
+      "snippet": "",
+      "source_domain": "transparencia.fundacaorenova.org",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://repositorio.ufsc.br/bitstream/handle/123456789/124332/42.pdf",
+      "title": "transporte de sedimentos em suspensão nos rios",
+      "snippet": "",
+      "source_domain": "repositorio.ufsc.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.teses.usp.br/teses/disponiveis/18/18139/tde-02052013-083541/publico/DissertacaoPauloPonceArroioJunior.pdf",
+      "title": "UNIVERSIDADE DE SÃO PAULO",
+      "snippet": "",
+      "source_domain": "teses.usp.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://biblat.unam.mx/hevila/GeocienciasSaoPaulo/2010/vol29/no4/13.pdf",
+      "title": "São Paulo, UNESP, Geociências, v. 29,  n. 4, p. 603-612, 2010",
+      "snippet": "RESUMO – Este estudo analisou o processo de extração de areia no canal do alto curso do rio Paraná, na seção da cidade de Porto São José\nno Estado do Paraná, e as consequências dessa atividade na dinâmica hidrossedimentológica do canal.\n...\nCom a dragagem no canal do rio Paraná, parte\ndos sedimentos extraídos retorna ao sistema provo-\ncando uma pluma de turbidez (Foto 1B), com aproxima-\ndamente 10 m de comprimento por 2 m de largura.\n...\nAssim, pode-se concluir que a\nextração de areia no alto curso do rio Paraná não tem\nprovocado mudanças no perfil do sistema fluvial.\nEmbora exista modificação em áreas específicas onde\nocorre o maior volume dessa atividade mineral, essas\nalterações são mínimas em comparação com as do",
+      "source_domain": "biblat.unam.mx",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1022765/1/Pibic201530.pdf",
+      "title": "[PDF] Empresa Brasileira de Pesquisa Agropecuária Embrapa Amazônia ...",
+      "snippet": "2014. As amostras de fluxo de base apresentaram baixas concentrações de sólidos suspenso totais, \nfixos e voláteis.\nJá as amostras de pico de vazão mostraram maiores valores de concentração de sólidos \nsuspensos.\nAssim, os resultados indicam que a descarga sólida é maior nos eventos de picos de vazão.\n...\namostras coletadas em episódios de picos de vazão apresentaram maiores valores de sólidos suspensos \n(Tabela 1).",
+      "source_domain": "alice.cnptia.embrapa.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://bdtd.ibict.br/vufind/Record/UNICAMP-30_29665b2e1cb0553a3fbeb578df96a6ad",
+      "title": "Correlação entre turbidez e concentração de sedimentos em ...",
+      "snippet": "",
+      "source_domain": "bdtd.ibict.br",
+      "track_origin": "n3_sedimentos_turbidez_assoreamento_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/",
+      "title": "MapBiomas publica Coleção 10.1 de mapas anuais de cobertura e uso da terra no Brasil",
+      "snippet": "",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://data.inpe.br/big/web/biomasbr",
+      "title": "Notícias Recentes",
+      "snippet": "Monitora o uso e cobertura da terra, após a supressão da vegetação nativa, para os biomas Amazônia e Cerrado.\n...\nA versão 3.0.0 do painel Sala de Situação no portal TerraBrasilis do Instituto Nacional de Pesquisas Espaciais (INPE) já está disponível na internet.\nO TerraBrasilis publica os dados gerados pelo Programa de Monitoramento dos Biomas Brasileiros (BiomasBR) e o painel Sala de Situação apresenta indicadores de desmatamento, degradação, mineração e focos de fogo em vegetação …\n...\nA nova versão do painel Queimadas x Supressão da Vegetação – Queimadas x CAR (Cadastro Ambiental Rural) do portal TerraBrasilis, desenvolvido pelo Instituto Nacional de Pesquisas Espaciais (INPE), relaciona os focos de fogo com os dados de supressão da vegetação primária (desmatamento) e de estrutura fundiária nos biomas.",
+      "source_domain": "data.inpe.br",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/notas-tecnicas",
+      "title": "Publicações e Notas Técnicas - MapBiomas Brasil",
+      "snippet": "",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://alerta.mapbiomas.org/relatorio",
+      "title": "Relatório Anual do Desmatamento no Brasil - Mapbiomas Alerta",
+      "snippet": "",
+      "source_domain": "alerta.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/tutoriais",
+      "title": "Tutoriais - MapBiomas Brasil",
+      "snippet": "MapBiomas Água: dados da superfície de água no Brasil",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://alerta.mapbiomas.org/metodo-mapbiomas-alerta",
+      "title": "Método MapBiomas Alerta",
+      "snippet": "O MapBiomas Alerta consiste em um sistema de compilação de alertas provenientes de diferentes sistemas de detecção de desmatamento no Brasil, todos baseados em sensoriamento remoto.\nO processamento desse conjunto de alertas envolve a agregação, validação e refinamento dos limites espaciais com base no emprego de imagens de satélites de alta resolução (Planet Scope com 3,7 m de resolução espacial), geração de laudos e publicação dos resultados finais em uma plataforma única, de acesso aberto (https://plataforma.alerta.mapbiomas.org).\n...\nO processo do MapBiomas Alerta envolve as etapas de compilação, validação, refinamento, cruzamento com dados públicos, auditoria e publicação dos alertas e laudos de desmatamento (Figura 1).\n...\nO MapBiomas Alerta consulta, organiza e consolida informações produzidas pelos vários sistemas oficiais e independentes, que monitoram o desmatamento no Brasil e geram alertas de desmatamento com base em imagens de 10 m, 30 m ou até 60 m de resolução espacial (Quadro 1).\nPara o ano de 2023, o MapBiomas Alerta consultou mensalmente os alertas disponibilizados pelas seguintes fontes de informação e sistemas existentes:\n...\n|DETER (apenas alertas de desmatamento. Não são analisados alertas de degradação, incêndio ou exploração madeireira)|Instituto Nacional de Pesquisas Espaciais (INPE)|Amazônia, Cerrado e Pantanal|https://terrabrasilis.dpi.inpe.br/|\n...\n|PRODES**|Instituto Nacional de Pesquisas Espaciais (INPE)|Amazônia, Cerrado, Pampa e Pantanal|https://terrabrasilis.dpi.inpe.br/|",
+      "source_domain": "alerta.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://terrabrasilis.dpi.inpe.br/",
+      "title": "Terrabrasilis – Plataforma de dados geográficos",
+      "snippet": "**Mapa de supressão da vegetação nativa **\nPRODES\nMapa interativo com polígonos de supressão da vegetação nativa, nos recortes, biomas do Brasil e Amazônia Legal\n...\nDETER\nMapa interativo com polígonos de avisos de evidências de alteração da cobertura floresta na Amazônia Legal e Cerrado\n...\nMapa interativo com polígonos de vegetação no Cerrado\n...\n**Dashboard de Queimadas**\n**Queimadas|PRODES|DETER|CAR**\nAnálise de focos de queimadas em: vegetação nativa, supressão da vegetação nativa e CAR\n...\nVisualização sinótica de indicadores de áreas críticas de supressão da vegetação nativa e focos de queimadas\n...\nO portal TerraBrasilis é uma plataforma web desenvolvida pelo INPE para acesso, consulta, análise e disseminação de dados geográficos gerados pelos projetos de monitoramento da vegetação nativa do instituto como o PRODES e o DETER.\n...\nTerraBrasilis web portal is a platform developed by INPE to provide access, query, analysis and dissemination of spatial data generated by governement environement monitoring programs such as PRODES and DETER.",
+      "source_domain": "terrabrasilis.dpi.inpe.br",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/iniciativas-mapbiomas",
+      "title": "Iniciativas MapBiomas",
+      "snippet": "O MapBiomas Brasil apresenta dados de uso e cobertura do solo no território brasileiro, cobrindo o período de 1985 a 2023 com 29 classes mapeadas.\n...\nO MapBiomas Alerta é um sistema de validação e refinamento de alertas de desmatamento, degradação e regeneração da vegetação nativa com imagens de alta resolução.\nO MapBiomas Fogo apresenta mapas de cicatrizes de incêndios no Brasil com base em imagens de mosaicos de satélites Landsat com uma resolução espacial de 30 metros, cobrindo o período de 1985 a 2023.\nA iniciativa apresenta dados sobre a dinâmica da superfície da água no Brasil e na Bacia Amazônica, abrangendo o período de 1985 a 2023, com base em imagens do Landsat com resolução de 30 metros.\nO MapBiomas Solo apresenta dados sobre o estoque de carbono orgânico para os primeiros 30 cm do solo no Brasil, abrangendo o período de 1985 a 2021.",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://boaspraticas.observatorioflorestal.org.br/mapeamento-anual-da-cobertura-e-uso-da-terra-no-brasil",
+      "title": "Mapeamento Anual da Cobertura e Uso da Terra no Brasil",
+      "snippet": "Revelar as transformações do território brasileiro por meio da ciência, com precisão, agilidade e qualidade, e tornar acessível o conhecimento sobre a cobertura e o uso da terra, para buscar a conservação e o manejo sustentável dos recursos naturais, como forma de combate às mudanças climáticas.\n...\n- MapBiomas está presente em 14 países e disponibiliza plataforma com dados de cobertura e uso da terra, com acesso público e gratuito.\nNo Brasil, dados são disponibilizados em duas plataformas:\n- MapBiomas Brasil Cobertura e Uso da Terra: disponibiliza mapas anuais de 1985 a 2023 (Coleção 9) a partir de imagens Landsat, contendo 29 classes e diversos módulos temáticos;\n- MapBiomas Alerta: disponibiliza dados de desmatamento/perda de vegetação nativa, provenientes de diversos sistemas detectores (incluindo INPE-Prodes/Deter, SAD e outros) e que são validados e refinados a partir de imagens Planet de alta resolução desde 2019.",
+      "source_domain": "boaspraticas.observatorioflorestal.org.br",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/estatisticas",
+      "title": "Estatísticas - MapBiomas Brasil",
+      "snippet": "Aqui você pode baixar a base de dados das estatísticas dos mapas das Coleções\ndo MapBiomas no Brasil:\n...\n**BIOMAS, ESTADOS E MUNICÍPIOS** (COLEÇÃO 10.1) – COBERTURA – dados de área (hectares) por classe de cobertura e uso da terra para o cruzamento entre cada bioma, estado e município brasileiro para o período de 1985 a 2024.\n(atualizada em 19/02/2026) (DOI: https://doi.org/10.58053/MapBiomas/SJZOLT)\n...\n**COBERTURA E TRANSIÇÕES POR DIVISÃO HIDROGRÁFICA NACIONAL** (COLEÇÃO 10.1) – dados de áreas (ha) por classe de cobertura e uso da terra nos territórios da Divisão Hidrográfica Nacional (DHN250) até o nível 3 de sub-bacias para o período de 1985 a 2024 (atualizada em 19/02/2026) (DOI: https://doi.org/10.58053/MapBiomas/YDCONQ)\n...\nBIOMAS, ESTADOS, BACIAS HIDROGRÁFICAS, UNIDADES DE CONSERVAÇÃO E TERRITÓRIOS INDÍGENAS – (Coleção 10.1 – DESMATAMENTO): dados de área (hectares) por classe de desmatamento para o cruzamento entre diversos territórios para o período de 1987 a 2024.\n(atualizada em 08/05/2026)\n...\n**CICATRIZES DE FOGO** (COLEÇÃO 3 – MAPBIOMAS FOGO) – dados de área (ha) de cicatrizes de queimadas por bioma, estado para cada ano entre 1985 e 2023 (atualizada em 02/08/2024) (https://doi.org/10.58053/MapBiomas/W2KSHU)\n...\nSUPERFÍCIE DE ÁGUA (COLEÇÃO 4 – MAPBIOMAS ÁGUA) – dados de área (ha) da superfície de água por bioma, estado, município em sub-bacias hidrográficas em nível 1 e 2 para cada ano entre 1985 e 2024.\n(DOI: https://doi.org/10.58053/MapBiomas/DWCW7P)\n...\nCobertura e uso da terra – Coleção 3 MapBiomas 10m Beta – dados de área (ha) de cobertura e uso da terra por bioma e região brasileira para cada ano entre 2017 e 2024.",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://alerta.mapbiomas.org/wp-content/uploads/sites/17/2024/10/RAD2023_COMPLETO_15-10-24_PORTUGUES.pdf",
+      "title": "MAPBIOMAS",
+      "snippet": "",
+      "source_domain": "alerta.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://assets.lupa.news/425/4259953.pdf",
+      "title": "Relatório Anual do Desmatamento no Brasil",
+      "snippet": "",
+      "source_domain": "assets.lupa.news",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://dataserver-coids.inpe.br/queimadas/queimadas/Publicacoes-Impacto/material3os/2022_MAPBIOMAS_MetodoMonitorFogo_Colecao1_DE3os.pdf",
+      "title": "[PDF] Método Monitor Fogo - Instituto Nacional de Pesquisas Espaciais",
+      "snippet": "Os\ndados\npodem\nser\nacessados\nna\nplataforma\ndo\nMapBiomas\n(https://mapbiomas.org/)\ne\ndo\nasset\nno\nGoogle\nEarth\nEngine\n(projects/mapbiomas-workspace/FOGO/MONITORAMENTO/collection-fire-monthly-sentinel\n2-v2).",
+      "source_domain": "dataserver-coids.inpe.br",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/produtos",
+      "title": "Produtos - MapBiomas Brasil",
+      "snippet": "**ATENÇÃO:** Os mapas das coleções do MapBiomas são produtos em evolução.\nAo utilizar os dados, certifique-se que está utilizando sempre a última versão disponível.\nOs mapas do MapBiomas tem sua melhor aplicação em escala até 1:100 000.\n...\nMapas no formato matricial, pixel de 30x30m.\n...\n# Mapas de Superfície da Água\nMostram a dinâmica da superfície de água no Brasil, com dados anuais e mensais sobre frequência de ocorrência, transições (ganho e perda) e tipos de corpos d’água (naturais ou antrópicos).\n# Mapas de Cicatrizes de Fogo\nMapas que indicam a ocorrência e frequência de fogo, área queimada acumulada, tamanho das cicatrizes e ano do último fogo.\n...\nApresentam a quantidade de carbono orgânico nos primeiros 30 cm do solo, em toneladas por hectare, além de dados sobre granulometria e textura.\n...\nColeção beta de mapas com uso de imagens de satélite Sentinel-2 com resolução espacial de 10 m, permite maior detalhe no mapeamento, por exemplo, de floresta ripária em Áreas de Preservação Permanente (APP).\n# Mapas de Agricultura\nTrazem mapeamento de cultivos agrícolas (culturas perenes e temporárias), áreas de agricultura irrigada e intensidade agrícola (ciclos).\nTambém apontam áreas agrícolas nos biomas.\n...\nMostram idade e produtividade da pastagem do Brasil.\nTambém apresentam o vigor e transições de vigor.\n...\nEstimam as áreas de supressão de floresta e vegetação natural não florestal, com área mínima de 1 ha e filtro temporal para remoção de ruídos.\n...\nDisponibilizam, anualmente, dados sobre vetores de degradação e perda de qualidade e estrutura da vegetação nativa.\nIncluem informações sobre área de borda, fragmentos, frequência de queimada e idade da vegetação secundária.\n...\nPermitem recortes como áreas de risco, favelas, declividade, proximidade a drenagens, regiões metropolitanas, setores urbanos e rurais e análises temporais por período de urbanização.",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://dronamazon.com.br/banco-de-dados",
+      "title": "Banco de Dados",
+      "snippet": "O MapBiomas disponibiliza dados de Uso e Cobertura da Terra do Brasil em formato raster (GeoTIFF), organizados por coleções anuais.\nO arquivo fornecido refere-se à coleção 9, cobrindo o período de 1985 a 2023.\nO esquema de acesso é simples: basta clicar na logomarca, sem necessidade de cadastro ou autenticação, e salvar o arquivo do download automático em uma pasta qualquer.\nO arquivo pode ser utilizado em softwares de geoprocessamento como QGIS ou ArcGIS, permitindo análises espaciais e temporais sobre as classes de uso e cobertura da terra.\nO dado referente à coleção 9 apresenta valores para o ano de 2023, considerando a camada superficial do solo, de 0 a 30 cm de profundidade.\n...\nO MapBiomas disponibiliza, em sua coleção 9, mapas de teor de argila (%) para o solo brasileiro, considerando a camada de 0 a 20 cm de profundidade.\n...\nA plataforma MapBiomas oferece um dashboard interativo e dinâmico, acessível clicando na imagem, que reúne uma ampla variedade de informações ambientais sobre o território brasileiro.\nPor meio dessa ferramenta, é possível visualizar mapas, gráficos e séries históricas de uso e cobertura da terra, desmatamento, regeneração, pastagens, estoque de carbono, entre outros temas relevantes.\n...\nO MapBiomas disponibiliza, em sua coleção 9, mapas anuais de desmatamento para o Brasil, abrangendo o período de 1986 a 2023.\nOs dados são fornecidos em formato raster (GeoTIFF), o que permite a visualização e análise espacial detalhada das áreas convertidas ao longo do tempo.\nO acesso ao arquivo é facilitado: ao clicar na logomarca indicada, o download é iniciado automaticamente, sem exigência de cadastro ou autenticação.\n...\nO IBGE disponibiliza, anualmente, a malha digital dos municípios brasileiros, fundamental para estudos territoriais, planejamento urbano e análises espaciais.\nO arquivo referente ao ano de 2024 está disponível em formato shapefile compactado (.zip), facilitando sua utilização em softwares de geoprocessamento como QGIS ou ArcGIS.\n...\nMapas digitais de solos em escala 1:250.000 estão disponíveis para download, oferecendo informações detalhadas sobre a distribuição e as classes de solos em diferentes regiões do Brasil.\nOs arquivos podem ser obtidos em formato shapefile, o que facilita sua utilização em softwares de geoprocessamento como QGIS ou ArcGIS.\n...\nA Base Hidrográfica Ottocodificada Multiescalas 2017 5k disponibiliza, em formato GeoPackage (.gpkg), os polígonos que representam as superfícies de drenagem associadas a cada trecho da rede hidrográfica nacional.",
+      "source_domain": "dronamazon.com.br",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://brasil.mapbiomas.org/2019/09/23/mapbiomas-premia-estudos-sobre-infraestrutura-e-uso-do-solo",
+      "title": "Mapbiomas premia estudos sobre infraestrutura e uso do ...",
+      "snippet": "Os dados apresentados pelo Coleção 4.0 MapBiomas traz mapas anuais de cobertura e uso do solo do Brasil com resolução de 30 metros (cada pixel representa uma área de 30 metros x 30 metros); estatísticas de cobertura e uso do solo e recortes territoriais de biomas, estados\n, municípios, terras indígenas, unidades de conservação, infraestrutura de transporte e energia e bacias hidrográficas; módulos de mapas e estatísticas de desmatamento/supressão e recuperação de florestas e vegetação nativa em todos os biomas do País; além de infográficos e mapa mural do Brasil e de cada bioma.\nA ferramenta é pública e gratuita e pode ser acessada no http://mapbiomas.org/",
+      "source_domain": "brasil.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/projects_mapbiomas-public_assets_brazil_lulc_v1",
+      "title": "MapBiomas Land Use and Land Cover - Brazil V1.0",
+      "snippet": "Entre em contato com contato@mapbiomas.org para informar bugs ou ver mais conjuntos de dados do catálogo do MapBiomas.",
+      "source_domain": "developers.google.com",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://alerta.mapbiomas.org/wp-content/uploads/sites/17/2024/10/RAD2023_COMPLETO_04-10-24_ENGLISH.pdf",
+      "title": "MAPBIOMAS",
+      "snippet": "estation driver, accounting for \nmore than 97% of the loss of \nnative vegetation in the last five \nyears.",
+      "source_domain": "alerta.mapbiomas.org",
+      "track_origin": "n2_uso_solo_agro_queimadas_mapbiomas_inpe_ibge",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.famet.ufpa.br/index.php/dados",
+      "title": "BANCO DE DADOS METEOROLÓGICOS/AMBIENTAIS",
+      "snippet": "**VARIÁVEIS METEOROLÓGICAS**\nINMET (Estações) - (PRP, TEMP, VENTO, UMIDADE, PRESSÃO,...):https://bdmep.inmet.gov.br/#\nCPTEC (IMERG) - (PRP) ~25KM:https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/\nCHIRPS - (PRP) ~ 5KM:https://data.chc.ucsb.edu/products/CHIRPS-2.0/\nCMORPH - (prp) ~8KM-30min:https://www.ncei.noaa.gov/data/cmorph-high-resolution-global-precipitation-estimates/access/\nCRU (PRP, TEMP): https://www.worldclim.org/data/cmip6/cmip6climate.html\nERA5 - (PRP, TEMP, VENTO, UMIDADE, PRESSÃO,...): https://cds.climate.copernicus.eu/cdsapp#!/search?type=dataset",
+      "source_domain": "famet.ufpa.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://lcb.fflch.usp.br/sites/lcb.fflch.usp.br/files/upload/paginas/PARTE1-DADOS-HIDROLOGIA.pdf",
+      "title": "[PDF] FONTES E OBTENÇÃO DE DADOS METEOROLÓGICOS E ...",
+      "snippet": "Principais fontes de dados utilizadas pelo grupo de pesquisa do \nLaboratório de Climatologia e Biogeografia USP \n- HIDROWEB/ANA - Agência Nacional de Águas: vazão, cotas e precipitação, \nprovenientes\nde \nestações \nmeteorológicas \nde \ntodo \no \nBrasil, \n<http://hidroweb.ana.gov.br/>; \n- INMET - Instituto Nacional de Meteorologia: precipitação, temperatura e \noutros parâmetros meteorológicos de estações automáticas, analógicas e de \nradiossonda, <www.inmet.gov.br>;\n- CPTEC/INPE - Centro de Previsão de Tempo e Estudos Climáticos - Instituto \nNacional de Pesquisas Espaciais: diversos formatos de dados de precipitação \ne outros parâmetros meteorológicos <http://www.cptec.inpe.br/>; \n- Sistemas estaduais ou regionais; \n- CETESB – Companhia Ambiental do Estado de São Paulo (dados da\nqualidade do ar: são diversos parâmetros, em vários períodos temporais, \ndistribuídos por postos de coleta na cidade de São Paulo, que podem ser \nacessados pelo sistema Qualar, mediante cadastro prévio, no site < \nhttp://qualar.cetesb.sp.gov.br/qualar/home.do>.\n- CRU - Climate Research Unit: precipitação mensal, resolução de 0,5º x 0,5º, \ndados de 1910-2010, <https://badc.nerc.ac.uk/data/>; \n- DELAWARE - Universidade de Delaware - EUA: precipitação mensal e \ntemperatura, \nresolução \nde \n0,5º \nx \n0,5º, \ndados \nde \n1910-2010, \n<http://www.esrl.noaa.gov/psd/data/gridded/data.UDel_AirT_Precip.html>;\n- GPCC - Global Precipitation Climatology Centre (precipitação mensal, \nresolução \nde \n0,5º \nx \n0,5º, \ndados \nde \n1910-2010, \n< \nhttp://www.esrl.noaa.gov/psd/data/gridded/data.gpcc.html>\n- GPCP - Global Precipitation Climatology Project: precipitação diária, para o \nperíodo \nde \n1996 \na \n2015, \n< \nhttp://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html> \nou \n< \nhttp://precip.gsfc.nasa.gov/>\n- CHIRPS – Climate Hazards Group InfraRed Precipitation with Station data  \n(precipitação \ndiária, \n0,05º \nde \nresolução \nespacial, \ndesde \n1981) \nhttp://chg.geog.ucsb.edu/data/chirps/ \n- LBA - Large-Scale Biosphere-Atmosphere in Amazônia: precipitação e\ntemperatura de 1960-1990, grade de 0,5º x 0,5º, <https://daac.ornl.gov/cgi-\nbin/dsviewer.pl?ds_id=673>; \n- Reanálise NCEP/NCAR I: grade de dados globais de diversos dados\nmeteorológicos em 17 níveis de pressão, com dados em quatro horários \ndiários, \ndiários \ne \nmensais \nde \n01/01/1948 \nao \npresente, \n< \nhttp://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.html>\n- Reanálise NCEP/NCAR II ou NCEP/DOE: é um update dos dados de \nReanálise NCEP/NCAR I, com dados disponíveis em quatro horários diários, \ndiários \ne \nmensais \nde \njaneiro \nde \n1979 \na \ndezembro\nde \n2014, \n<http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis2.html>; \n- Reanálise ECMWF - European Centre for Medium-Range Weather Forecasts:  \npossui sete conjuntos de dados, com diferentes características de resolução \nespacial, temporal e de dados; os mais utilizados são o ERA-40 (de 1957 a\n2002) \ne \no \nERA-Interim \n(de \n1979 \naté \no \npresente), \n< \nhttp://www.ecmwf.int/en/research/climate-reanalysis/browse-reanalysis-\ndatasets>;\n...\nSpace Administration: dados observados e simulados com várias aplicações, \n<http://data.giss.nasa.gov/>;  \n- TRMM - Tropical Rainfall Measuring Mission: um projeto da NASA e JAXA\n...\nchuvas na região tropical do globo entre novembro de 1997 e abril de 2015, \n...\nRelatórios do IPCC, disponíveis para download em sua página inicial, também \né possível fazer o download dos dados utilizados para elaboração dos modelos \nno DDC - Data Distribution Centre (<http://www.ipcc-data.org/>), onde estão \ndisponíveis dados climáticos observados, dados sócio-econômicos, dados dos \nimpactos das mudanças climáticas, e dados observados de dióxido de carbono.\nSISTEMA HIDROWEB/ANA \n- Acesse o site http://hidroweb.ana.gov.br/ \n- Acesse \"Dados Hidrológicos\" e \"Séries Históricas\" \n- Nesta nova página você poderá optar por inserir o código da estação \ndesejada, ou o nome da estação, ou o nome do rio, da bacia hidrográfica, etc...\nNão é necessário preencher todos os campos; somente um já lhe trará um \nresultado, que deverá ser analisado posteriormente.\nDigamos que você queira \ntodas as estações da bacia do rio São Francisco.\nNo campo \"Rio:\" escreva o \nnome do rio que você está interessado.\nOs resultados vão aparecer para todos\nos rios no Brasil que tenham nomes semelhantes (e que possuam uma \nestação) ao que você inseriu no campo de busca.\nClique em \"Listar\".\n- No retorno da busca é possível visualizar uma lista de estações, com o \ncódigo, nome, sub-bacia, o nome do rio, município, responsável pela coleta e\narmazenamento dos dados e a operadora.\n...\n- Se você clicar no código da estação poderá ver detalhes da referida estação: \n- Na parte inferior da tabela com os dados é possível visualizar o campo \n\"Consultar série de\",  onde serão listados os tipos de dados disponíveis para \naquela estação.\nNo caso da estação de Porto Sabino temos Cotas (cm),\nVazões (m3/s) e Resumo de Descarga.\n- Após selecionar o tipo de dado desejado, escolha o formato o qual você \ndeseja que os dados sejam baixados: Acces ou Texto.\n- Ao clicar sobre o formato que deseja os dados, na parte superior da página \nserá mostrado o resultado da pesquisa.\nPara baixar, clique em \"Clique aqui\".\nOs dados serão baixados em formato .zip.\n- Ao clicar no download, será aberta a janela do seu descompactador e o \narquivo em TXT.\nAssim, será somente dar dois cliques no arquivo para abrir em \num editor de textos.\n- Para abrir no software Microsoft Excel basta salvar o arquivo .TXT e, com o \nExcel aberto, clicar em Dados, importar dados de texto, delimitar por espaço.\n...\nAcessando o site www.inmet.gov.br, você poderá acessar a aba \n“Estações e Dados” e escolher entre dados de estações automáticas, \nconvencionais e radiossondas, além de dados de dados meteorológicos ou \ndados em gráficos para diversas estações (seriam dados já tratados).\nVocê\ntambém pode acessar o mapa com a rede de dados meteorológicos, além de \ninformações sobre as estações que você esteja interessado.\nPorém, para ter dados da série histórica, sugerimos o seguinte \nprocedimento: \n- www.inmet.gov.br \n- Estações e Dados \n- BDMEP - Dados Históricos\n- Novo Cadastro ou Acessar o BDMEP \n- Acessando o BDMEP, serão apresentadas as opções de dados horários, \ndiários e mensais.\nVamos simular o acesso aos dados mensais.\n- Então será apresentada uma página com uma série de dados que poderão \nser acessados.\nEscolha o período (dd/mm/aaaa), a região e/ou Estado e a \nvariável de interesse.\nOs dados que poderão ser acessados são:\n- Após feita a pesquisa, resultará uma lista com as cidades onde há estações \ncom os dados e período selecionado.\n- Clique na cidade de interesse, que aparecerá no mapa, juntamente com \ndados básicos sobre a estação.\nClique em “Baixar os dados”.\n- Os dados aparecerão em formato .txt (dica: não esqueça de colocar dia, mês \ne ano; se inserir somente o ano, a pesquisa será feita, mas resultará em erro).\nCPTEC \n- Acesse o site www.cptec.inpe.br  \n- Aba “Dados Observacionais” \n- Dados Históricos, onde há opções de Banco de Dados Meteorológicos \n(Estatísticas, Cobertura e Download), Banco de Dados de Grades (Por \nmodelos numéricos) e Metadados (Geonetwork)\n- Clique em Download (é preciso ter o cadastro no BDM/CPTEC/INPE).\n- Digite as coordenadas da região de onde precisa dos dados ou clique no \nquadrante de seu interesse \n- Os dados são disponíveis a partir de 1999.\nPorém aqui você poderá baixar \nsomente mês a mês.\nTodas as estações presentes neste quadrante serão\napresentadas, com dados horários sobre uma série de variáveis.\nOs dados \npodem ser exportados em formato CSV e Excel.",
+      "source_domain": "lcb.fflch.usp.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://portal.inmet.gov.br/servicos/bdmep-dados-hist%C3%B3ricos",
+      "title": "BDMEP - Instituto Nacional de Meteorologia - INMET",
+      "snippet": "**Descrição: ** O BDMEP abriga dados meteorológicos diários em forma digital, de séries históricas das várias estações meteorológicas convencionais da rede de estações do INMET com milhões de informações, referentes às medições diárias, de acordo com as normas técnicas internacionais da Organização Meteorológica Mundial.\n**Compromisso assumido para a prestação dos produtos/serviços (prazo para conclusão - horário de funcionamento em caso de atendimento pessoal): ** Atualizado a cada 90 dias.\n**Link:** https://bdmep.inmet.gov.br/\n...\n**Contatos e Meios de comunicação do cidadão/usuário com a unidade responsável: **\nE-mail: sim.df@inmet.gov.br\nTelefone: (61) 2102-4722",
+      "source_domain": "portal.inmet.gov.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://bancodedados.cptec.inpe.br/",
+      "title": "Centro de Previsão de Tempo e Estudos Climáticos - INPE",
+      "snippet": "",
+      "source_domain": "bancodedados.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://ojs.revistacontribuciones.com/ojs/index.php/clcs/article/download/15195/8868/43618",
+      "title": "1",
+      "snippet": "No Brasil, em nível nacional, a Agência Nacional das Águas e Saneamento Básico \n(ANA), o Instituto Nacional de Meteorologia (INMET) e o Centro Nacional de Monitoramento \ne Alerta de Desastres Naturais (CEMADEN), disponibilizam dados mensurados, além desses, há\noutras instituições de abrangência estadual e municipal.\nQuanto aos dados estimados, temos o \nCentro de Previsão de Tempo e Estudos Climáticos (CPTEC) que disponibiliza dados em nível \nnacional.\n...\ndados de precipitação estão disponíveis na aba \"Dados Meteorológicos\", acessíveis por três\ncaminhos possíveis: 1) em \"Histórico de Dados Meteorológicos\", que disponibiliza pacotes de \ndados anuais de todas as estações automáticas da instituição, a partir de 2000 e separados por \nano; 2) em \"Tabela de Dados das Estações\", para consulta de dados horários de curta duração\n(até 6 meses) de uma estação específica; e 3) em \"Banco de Dados Meteorológicos – BDMEP\", \n...\nabrangência, período, variáveis (precipitação, temperatura, por exemplo) e estação de interesse",
+      "source_domain": "ojs.revistacontribuciones.com",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://clima.cptec.inpe.br/monitoramentobrasil/pt",
+      "title": "Clima Monitoramento Brasil - CPTEC/INPE",
+      "snippet": "",
+      "source_domain": "clima.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.hydroinfo.com.br/wp-content/uploads/links.pdf",
+      "title": "[PDF] INMET (Instituto Nacional de Meteorologia) (p. ex.: BDMEP)",
+      "snippet": "INMET (Instituto Nacional de Meteorologia)\n(p. ex.: BDMEP)\nhttps://bdmep.inmet.gov.br\nANA (Agência Nacional de Águas)\n(p. ex.: HIDROWEB)\nhttps://www.snirh.gov.br/hidroweb\nCEMADEN (Centro Nacional de Monitoramento e\nAlertas de Desastres Naturais)\nhttp://www2.cemaden.gov.br/mapainterativo\nClimate Hazards Group InfraRed Precipitation with \nStation data (CHIRPS)\nhttps://chc.ucsb.edu/data/chirps\nMulti-Source Weighted-Ensemble Precipitation \n(MSWEP)\nhttp://www.gloh2o.org/mswep/\nClimatic Research Unit (CRU)\nhttps://crudata.uea.ac.uk/cru/data/hrg\nEuropean ReAnalysis 5 (ERA5)\nhttps://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5\nMaking Earth System Data Records for Use in \nResearch Environments (MEaSUREs)\nhttps://climatesciences.jpl.nasa.gov/projects/measures\nProdutos de clima e \nreanálise\nDados de estações \nhidrometeoceonográficas",
+      "source_domain": "hydroinfo.com.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://www3.cptec.inpe.br/eta/capes-ana-pro-recursos-hidricos-acesso-aos-dados",
+      "title": "CAPES-ANA PRÓ RECURSOS HÍDRICOS – Acesso aos Dados",
+      "snippet": "As previsões sazonais disponíveis (Clique aqui para acessar ) resultam da integração do modelo regional Eta aninhado às condições de contorno do modelo global acoplado CFS (Climate Forecast System) do NCEP (National Center for Environmental Prediction).\n...\nSão disponibilizados dados diários de precipitação, radiação de onda curta incidente, pressão à superfície, temperatura do ar a 2 m, umidade relativa do ar a 2 m e componente zonal e meridional do vento a 10 m no formato NetCDF (.nc).",
+      "source_domain": "www3.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://portal.inmet.gov.br/dadoshistoricos",
+      "title": "dados históricos anuais - Instituto Nacional de Meteorologia - INMET",
+      "snippet": "",
+      "source_domain": "portal.inmet.gov.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.geoaplicada.com/dados/dados-meteorologicos-e-climatologicos-historicos-do-brasil",
+      "title": "Dados meteorológicos e climatológicos históricos do Brasil",
+      "snippet": "O Banco de Dados Meteorológicos do INMET (BDMEP) contém dados meteorológicos e climatológicos históricos do Brasil desde o ano 2000.\nVocê pode baixar as tabelas no formato CSV para cada ano com dados coletados de todas as estações meteorológicos do Brasil.\n...\nTambém é possível baixar dados coletados de estações específicas podendo escolher a estação no mapa do INMET com diversos filtros.\n...\nPara baixar dados climáticos mundiais, acesse esse link.",
+      "source_domain": "geoaplicada.com",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://basedosdados.org/dataset/782c5607-9f69-4e12-b0d5-aa0f1a7a94e2",
+      "title": "Banco de Dados Meteorológicos (INMET) - Base dos Dados",
+      "snippet": "O BDMEP abriga dados meteorológicos diários em forma digital, de séries históricas das várias estações meteorológicas convencionais da rede de estações do INMET com milhões de informações, referentes às medições diárias, de acordo com as normas técnicas internacionais da Organização Meteorológica Mundial.",
+      "source_domain": "basedosdados.org",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/6749d278-ca5e-40e9-b648-20d6382f57df/attachments/Cartilha_EstatisticasFluPlu_VF.pdf",
+      "title": "[PDF] CARTILHA DE USO - Catálogo de Metadados da ANA",
+      "snippet": "",
+      "source_domain": "metadados.snirh.gov.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "http://www2.cemaden.gov.br/",
+      "title": "Cemaden – Centro Nacional de Monitoramento e Alertas de ...",
+      "snippet": "",
+      "source_domain": "www2.cemaden.gov.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://clima1.cptec.inpe.br/evolucao/pt",
+      "title": "Clima Evolução",
+      "snippet": "",
+      "source_domain": "clima1.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "http://infoclima.cptec.inpe.br/",
+      "title": "Infoclima",
+      "snippet": "",
+      "source_domain": "infoclima.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://clima.cptec.inpe.br/",
+      "title": "Centro de Previsão de Tempo e Estudos Climáticos - CPTEC/INPE",
+      "snippet": "",
+      "source_domain": "clima.cptec.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://data.inpe.br/dados/category/meteorologicos",
+      "title": "Meteorológicos – Dados Geoespaciais - BIG",
+      "snippet": "",
+      "source_domain": "data.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.scielo.br/j/rbmet/a/d6smph7RGwzv4d6XDnnh4kd",
+      "title": "Banco de Dados Espacial de Precipitação do Estado do Rio Grande do Sul",
+      "snippet": "Atualmente, as principais fontes de obtenção de dados de precipitação no Brasil, são as plataformas Hidroweb e o Banco de Dados Meteorológicos para Ensino e Pesquisa (BDMEP).O Hidroweb é uma ferramenta do Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH) e oferece acesso ao banco de dados das informações coletadas pela Rede Hidrometeorológica Nacional (RHN), reúne dados de níveis fluviais, vazões, chuvas, climatologia, qualidade da água e sedimentos.\n...\nO BDMEP do Instituto Nacional de Meteorologia (INMET) permite o acesso ao banco de dados meteorológicos, que inclui mais de 400 estações.",
+      "source_domain": "scielo.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://duoteb.com.br/dados-pluviometricos-onde-acessar-e-os-cuidados-necessarios-para-utilizacao",
+      "title": "Dados pluviométricos: onde acessar e os cuidados necessários ...",
+      "snippet": "A análise sobre a precipitação inicia com a definição da área de estudos e a busca de dados históricos.\nDentre os locais para aquisição de dados, podemos citar as seguintes fontes:\nAgência Nacional de Águas e Saneamento Básico (ANA): Fornece dados das estações pluviométricas e fluviométricas de sua rede hidrometeorológica nacional, sendo uma das fontes mais robustas e confiáveis no Brasil.\nO portal utilizado para busca e aquisição de dados é o Hidroweb.\nInstituto Nacional de Meteorologia (INMET): também disponibiliza séries históricas de precipitação de estações meteorológicas em todo o Brasil, podendo ser acessada aqui.\nSecretarias estaduais de meio ambiente e órgãos de gerenciamento de recursos hídricos: Alguns estados têm suas próprias redes de monitoramento de precipitação.\nNo caso do Rio Grande do Sul tem-se o portal da sala de situação.\nProjetos de reanálise climática e dados de satélite: menos usual para trabalhos pontuais, mas também é uma fonte de dados, para regiões com pouca cobertura por estações terrestres, é possível recorrer a projetos como TRMM (Tropical Rainfall Measuring Mission) ou GPM (Global Precipitation Measurement), que oferecem estimativas baseadas em satélites.\nUniversidades e centros de pesquisa: Muitas vezes, essas instituições possuem dados específicos para estudos regionais.\nEste é o caso da Univates no Vale do Taquari.\nSituada na cidade de Lajeado/RS a universidade possui uma estação com dados de cerca de 20 anos.",
+      "source_domain": "duoteb.com.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://mtc-m21d.sid.inpe.br/col/sid.inpe.br/mtc-m21d/2021/12.27.14.14/doc/Relatorio_Final_PIBITI_2020_2021_Breno_Hideki_Nakagawa.pdf",
+      "title": "MONITORAMENTO DE BACIAS HIDROGRÁFICAS",
+      "snippet": "Sendo assim, o primeiro passo consiste na obtenção dos dados\nclimáticos que são disponibilizados gratuitamente na internet.\n...\nPara realizar a climatologia das bacias hidrográficas, neste\nprojeto foram utilizados principalmente os conjuntos de dados do INMET e do GPCC.",
+      "source_domain": "mtc-m21d.sid.inpe.br",
+      "track_origin": "n2_clima_chuva_seca_jupia",
+      "track_priority": "medium",
+      "track_intent": "dataset_discovery",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://bdta.abcd.usp.br/directbitstream/3115e04c-cf59-4e19-8b12-94437553cc23/Cardoso_Felipe_de_Lima_Andrade.pdf",
+      "title": "[PDF] universidade de são paulo",
+      "snippet": "O Reservatório da Usina Hidrelétrica (UHE) Souza Dias (Jupiá) apresenta grandes \nproblemas no que diz respeito à infestação de plantas aquáticas submersas e \nmexilhões-dourados, que comprometem cada vez mais a eficiência do processo de\ngeração de energia.\nEm determinados períodos do ano, sobretudo naqueles onde há \nmaior vazão dos principais rios que abastecem Jupiá (Paraná, Tietê e Sucuriú), a \nhidrelétrica pode ser praticamente parada devido ao entupimento das grades de \nproteção das turbinas em razão do acúmulo de plantas submersas.\n...\nSituada no Rio Paraná, entre as cidades de Andradina e Castilho (SP) e Três \nLagoas (MS), a UHE Jupiá é a terceira maior usina hidrelétrica do Brasil e também\n…\nreservatório 330 km².\nA usina dispõe ainda de uma eclusa, que possibilita a \nnavegação no Rio Paraná e a integração hidroviária com o Rio Tietê.\n...\nO reservatório da Usina Hidrelétrica Engenheiro Souza Dias (Jupiá), \napresenta grande problemas devido à presença de uma elevada concentração de \nplantas aquáticas submersas na água de seu reservatório, sobretudo das espécies \nEgeria densa, Egeria najas e Ceratophyllum demersum.",
+      "source_domain": "bdta.abcd.usp.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://pem.assis.unesp.br/index.php/pem/article/download/3603/2829/14416",
+      "title": "Memórias e Discursos na construção Hidrelétrica no Alto ...",
+      "snippet": "Resumo: Objetiva-se, neste trabalho, analisar o Complexo Hidrelétrico Urubupungá, \nimplantado na fronteira entre os Estados de São Paulo e Mato Grosso do Sul, a partir da \n...\nmaior bacia de aproveitamento hidrelétrico do país.\nDestacam-se em seu complexo \nhidrelétrico, usinas como a Engenheiro Souza Dias, conhecida como “Jupiá” (Três",
+      "source_domain": "pem.assis.unesp.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://teses.usp.br/teses/disponiveis/100/100136/tde-25042025-171351/publico/DissertacaoMestrado_LygiaFragaBellintani.pdf",
+      "title": "universidade de são paulo",
+      "snippet": "",
+      "source_domain": "teses.usp.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.scielo.br/j/pd/a/JrmFcCtsDxBLZPfVQcczMwQ",
+      "title": "Estudo da movimentação de plantas aquáticas imersas presentes no reservatório da UHE Eng. Souza Dias - Jupiá",
+      "snippet": "",
+      "source_domain": "scielo.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://pdfs.semanticscholar.org/4891/df43706ade9803db4400a79fcbd9a8b1792c.pdf",
+      "title": "(Microsoft Word - Constru\\347\\343o Cen\\341rios Texto -  Corrigido)",
+      "snippet": "em \nMilão/Itália, apresentou um projeto propondo a \nconstrução das usinas Jupiá e Ilha Solteira, \nconstituindo o complexo hidrelétrico Urubupungá \n(Complexo Francisco Lima de Souza Dias Filho).\n...\nO complexo hidrelétrico Urubupungá \naproveitou uma série de saltos nos rios Paraná e \nTietê constituindo-se, na época de sua construção, \nno maior complexo hidrelétrico do Hemisfério \nSul.\nA área diretamente influenciada pelo \n...\nSegundo CESP (1988), a UHE (Usina \nHidrelétrica) de Jupiá iniciou a operação em abril\n...\nCESP (2000) descreve que a UHE de Ilha\nSolteira iniciou a operação em julho de 1973 e foi \nconcluída em dezembro de 1978, formando um \nreservatório de 1.231 km2.\nAs obras da UHE de Três \nIrmãos iniciaram-se em julho de 1980 e a construção \nfoi finalizada em janeiro de 1999 com todo o potencial\ninstalado.",
+      "source_domain": "pdfs.semanticscholar.org",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/monitoramento-e-eventos-criticos/eventos-criticos/salas-de-acompanhamento/parana/documentos/relatorios-de-monitoramento/relatorio_ctg-brasil_19062021.pdf",
+      "title": "relatório de atividades diário de prevenção e controle de ...",
+      "snippet": "Nos três trechos monitorados existem extensas áreas de plantas aquáticas (Egeria sp) que entraram\nem um processo irreversível de desidratação.",
+      "source_domain": "gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "http://observatoriodageografia.uepg.br/files/original/7027c7bfa58fc5f533b3ee1a8d336918bb15bc40.pdf",
+      "title": "[PDF] GEOTECNOLOGIAS APLICADAS AO COMPARATIVO DAS ... - Sites",
+      "snippet": "reservatório de Jupiá está inserido na bacia hidrográfi ca do Rio Paraná, entre as cidades de \nAndradina, Castilho (SP) e Três Lagoas (MS).\n...\nLogo, o presente trabalho teve como objetivo fornecer subsídios para o monitoramento \ndo reservatório da Usina Hidrelétrica de Jupiá.\nBuscou-se realizar esse controle a partir\ndos traçados das Áreas de Preservação Permanente, localizadas nas margens da rede \nde drenagem que compõem a Bacia Hidrográfi ca do Rio Sucuriú, no município de \nTrês Lagoas, MS, defi nido pelo Código Florestal que entrou em vigor em 2012 e pela",
+      "source_domain": "observatoriodageografia.uepg.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://bdta.abcd.usp.br/item/003171906",
+      "title": "Estudo conceitual e projeto do raspador do sistema limpa grades da ...",
+      "snippet": "# Estudo conceitual e projeto do raspador do sistema limpa grades da usina hidrelétrica de Jupiá (2011)\n...\nAbstract: O Reservatório da Usina Hidrelétrica (UHE) Souza Dias (Jupiá) apresenta grandes problemas no que diz respeito à infestação de plantas aquáticas submersas e mexilhões-dourados, que comprometem cada vez mais a eficiência do processo de geração de energia.\nEm determinados períodos do ano, sobretudo naqueles onde há maior vazão dos principais rios que abastecem Jupiá (Paraná, Tietê e Sucuriú), a hidrelétrica pode ser praticamente parada devido ao entupimento das grades de proteção das turbinas em razão do acúmulo de plantas submersas.\n...\nEstudos revelam que o alto fluxo de água ao longo dos rios Tietê e Paraná é a maior restrição ao uso do controle químico de plantas imersas, uma vez que é necessário um longo período de contato para a ação destes compostos.\nAlternativamente, desenvolveram-se equipamentos para o controle mecânico destas plantas, que consistem em um sistema de limpeza de grades composto por um raspador e uma caçamba de coleta de resíduos.\nDevido às constantes paradas de produção de energia, a Escola de Engenharia de São Carlos, em conjunto com a CESP, atua no desenvolvimento de um novo sistema de limpeza para as grades da UHE de Jupiá; sendo o escopo deste projeto o estudo conceitual e projeto do raspador deste novo sistema de limpeza\n- Imprenta: - Publisher place: São Carlos\n- Date published: 2011\n...\nDisponível em: https://bdta.abcd.usp.br/directbitstream/3115e04c-cf59-4e19-8b12-94437553cc23/Cardoso_Felipe_de_Lima_Andrade.pdf.\nAcesso em: 06 abr.\n2026.",
+      "source_domain": "bdta.abcd.usp.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://licenciamento.ibama.gov.br/Hidreletricas/Jupia/UHE%20ENG.%20SOUZA%20DIAS%20(JUPI%C3%81)_PACUERA/PACUERA_Volume%201_Relat%C3%B3rio/3.3%20Diagnostico%20do%20meio%20socioeconomico.pdf",
+      "title": "Microsoft Word - 3.3 Diagnostico do meio socioeconomico.doc",
+      "snippet": "",
+      "source_domain": "licenciamento.ibama.gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.memoriadaeletricidade.com.br/acervo/26022/cpjrc314-enchimento-do-reservatorio-da-usina-hidreletrica-de-jupia",
+      "title": "Enchimento do reservatório da Usina Hidrelétrica de Jupiá",
+      "snippet": "DescritorEnchimento de reservatórioManutençãoAproveitamento hidrelétricoItaipu BinacionalRio MondayRio ParanáUsina Hidrelétrica de ItaipuArgentina compartilhar Informações geraisNúmero de RegistroCP.JRC.314FundoSérie Usina Hidrelétrica de ItaipuArranjoNúmero de documentos59Número de páginas258Tipo DocumentalRelatórioTipo documentalCarta Tipo documentalResoluçãoTipo documentalDeclaraçãoTipo documentalDesenho técnicoTipo documentalIdiomaPortuguêsIdiomaDescriçãoDocumentos produzidos e acumulados a respeito do enchimento do reservatório da Usina Jupiá.\nInclui documentos que contam a história da região, dados técnicos e geográficos.Data de aquisição23/05/1996DoadorHeitor Mendes GonçalvesPessoaEstado de conservaçãoBomEstado de ConservaçãoDocumentos RelacionadosCP.JRC.314.pdf238,98MItens RelacionadosUsinas 1Organizações 1",
+      "source_domain": "memoriadaeletricidade.com.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://licenciamento.ibama.gov.br/PBAs%20Hidrel%C3%A9tricas/UHE%20Jupi%C3%A1/PBA%20jupi%C3%A1.pdf",
+      "title": "Microsoft Word - pba jupiá final 04 11",
+      "snippet": "",
+      "source_domain": "licenciamento.ibama.gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://www.wikiwand.com/pt/articles/UHE%20Engenheiro%20Sousa%20Dias%20(Jupi%C3%A1)",
+      "title": "Usina Hidrelétrica Engenheiro Souza Dias",
+      "snippet": "A\n**Usina Hidrelétrica de Jupiá (Engenheiro Souza Dias)** está situada sobre o Rio Paraná, na intersecção com o rio Sucuriú, no ponto chamado Jupiá, entre as cidades de Três Lagoas (Mato Grosso do Sul) e Castilho (São Paulo).\n...\n|Localização|Castilho (São Paulo)/Três Lagoas (Mato Grosso do Sul)|\n|Bacia hidrográfica|Bacia do rio da Prata|\n|Rio|Rio Paraná|\n|Coordenadas|20°46'45\"S, 51°37'45\"W|\n...\n|Proprietário|CTG Brasil|\n...\n|Área alagada|330 km² km²|\n|Capacidade de geração|1 551,2 megawatt|\n...\nA Usina de Jupiá, do tipo fio d'água, integrou junto com a Usina Hidrelétrica Ilha Solteira, o Complexo Hidrelétrico Eng.\nFrancisco Lima de Souza Dias, também denominado Complexo Hidrelétrico de Urubupungá que foi reaproveitado na década de 1950 por sua proximidade com a foz do rio Tietê e do rio Paraná .\n...\nA construção da Usina de Jupiá foi iniciada na primeira metade da década de 1960 pelo governador Ademar Pereira de Barros, e finalizada no ano de 1974, utilizando tecnologia inteiramente brasileira.\n...\nA usina possui 14 unidades geradoras (tipo Kaplan), que geram até 1.551,2 MW, a partir de um desnível de 21,3 m.\nTem, também, dois grupos turbina-gerador para serviço auxiliar, com potência instalada de 4.750 kW em cada grupo.\nSua barragem tem 5.495 m de comprimento e seu reservatório, que capta água de uma região de 470.000 km²., alaga uma área máxima de 330 km².\nOpera com o nível constante de 280 metros acima do nível do mar.\nÉ considerada uma usina hidrelétrica a fio d'água.\n...\nAlém disso, a Usina hidrelétrica Engenheiro Souza Dias tem a seu dispôr uma eclusa que permite a navegação do Rio Paraná, além da integração hidroviária com o Rio Tietê.",
+      "source_domain": "wikiwand.com",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.ctgbr.com.br/unidade/uhe-jupia",
+      "title": "UHE Jupiá",
+      "snippet": "### A UHE Jupiá foi o primeiro grande aproveitamento hidrelétrico do Estado de São Paulo e do Brasil.\nLocalizada no Rio Paraná, entre os municípios de Andradina e Castilho (SP) e Três Lagoas (MS), a Usina Hidrelétrica Jupiá dispõe de eclusa, sob a responsabilidade do DNIT (Departamento Nacional de Infraestrutura de Transportes) que possibilita a navegação e a integração hidroviária entre os rios Paraná e Tietê.",
+      "source_domain": "ctgbr.com.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo",
+      "title": "IBGE | Biblioteca",
+      "snippet": "Notas: A Usina Hidrelétrica Engenheiro Souza Dias, conhecida como Usina Jupiá, foi construída com tecnologia inteiramente brasileira e concluída em 1974.\nEstá localizada no Rio Paraná, entre as cidades de Andradina e Castilho (SP) e Três Lagoas (MS).\nSua barragem tem 5.495 m de comprimento e seu reservatório tem 330 km2.\nA Usina dispõe de eclusa, que possibilita a navegação no Rio Paraná e a integração hidroviária com o Rio Tietê.\n...\nO Rio Paraná é o segundo rio da América do Sul em extensão (superado apenas pelo rio Amazonas), e o décimo do mundo em vazão de água.\nEsse rio nasce da união dos rios Grande e Paranaíba, no encontro das divisas dos estados de São Paulo, Minas Gerais e Mato Grosso do Sul.",
+      "source_domain": "biblioteca.ibge.gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.gov.br/ana/pt-br/assuntos/governanca-regulatoria/analise-de-impacto-regulatorio-air/dispensas-de-air/Res.140141142.2022NTDispensa2.pdf",
+      "title": "nota técnica nº 14/2022/corsh/soe - Portal Gov.br",
+      "snippet": "Sistema Interligado Nacional - SIN, as UHEs Jupiá e Porto Primavera, ambas no rio Paraná, têm \ncomo restrições permanentes defluências mínimas de 4.000 m³/s 1 e 4.600 m³/s 2, \nrespectivamente.\n...\nA proposta é que a defluência média de Emborcação, de dezembro a abril, seja \nigual ou inferior a 140 m³/s.\nNeste mesmo período, a máxima vazão defluente da semana \noperativa desse reservatório não poderá superar 200 m³/s.",
+      "source_domain": "gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://rigeo.sgb.gov.br/jspui/bitstream/doc/16394/1/Rel_Jupi.pdf",
+      "title": "JUPI - RIGeo",
+      "snippet": "",
+      "source_domain": "rigeo.sgb.gov.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://pt.scribd.com/document/946380982/GGH-0821",
+      "title": "GGH_0821 | PDF | Hidroeletricidade | Engenharia",
+      "snippet": "A UHE Jupiá opera em conjunto com a UHE Ilha Solteira, formando o sexto maior complexohidrelétrico do mundo, com capacidade instalada de 1.551,2 MW (CTG Brasil, 2022).\nSua importânciaestratégica reside tanto na notável capacidade de geração de energia, quanto na estabilidade que ofereceao sistema interligado nacional.",
+      "source_domain": "pt.scribd.com",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    },
+    {
+      "url": "https://www.projetorioparana.com.br/wp-content/uploads/2019/10/Guia-CTG_300919_1_ENVIADO_final.pdf",
+      "title": "PDF Usinas hidrelétricas jUpiá e ilha soltei - projetorioparana.com.br",
+      "snippet": "",
+      "source_domain": "projetorioparana.com.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": true,
+      "filter_notes": [
+        "snippet_curto"
+      ]
+    },
+    {
+      "url": "https://repositorio.usp.br/item/000979573",
+      "title": "Diversidade ictiofaunística da represa de Jupiá, Rio Paraná, SP/MS",
+      "snippet": "**ABNT**TOMAZELA, C P C e SALES, D S.\nDiversidade ictiofaunística da represa de Jupiá, Rio Paraná, SP/MS.\n1997, Anais..\nPirassununga: FZEA-USP, 1997.\n. Acesso em: 22 abr. 2025.\n...\n- Atracao entre coespecificos em macrobrachium rosenbergi (crustacea, palaemonidae)\n- Ictiofauna de jupia: semelhanca entre montante e justante\n- Atracao entre coespecificos em lebistes cf reticulatus ( pisces , cyprimodontiformes )\n- Ictiofauna de jupia: composicao a montante e a justante\n- Crescimento heterogêneo em Prochilodus lineatus (Valenciennes, 1847) (Pisces, prochilodontidae): ação de fatores químicos liberados por coespecíficos e por outras espécies\n- Influencia da represa de itaipu na colonizacao da bacia do parana superior\n- Crescimento heterogênio em Tainha Mugil Platanus: influência de níveis protéicos na ração",
+      "source_domain": "repositorio.usp.br",
+      "track_origin": "n4_literatura_contexto_integrado_jupia",
+      "track_priority": "medium",
+      "track_intent": "academic_knowledge",
+      "needs_review": false,
+      "filter_notes": []
+    }
+  ],
+  "filter_meta": {
+    "total_sessions": 10,
+    "ok_sessions": 10,
+    "error_sessions": 0,
+    "total_links_seen": 200,
+    "filtered_source_count": 175,
+    "skipped_malformed": 0,
+    "skipped_short_snippet": 69,
+    "skipped_duplicate": 25,
+    "needs_review_count": 69
+  }
+}
